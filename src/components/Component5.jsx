@@ -1,5 +1,4 @@
 import React from 'react';
-import { MdArrowOutward } from 'react-icons/md';
 import img1 from '../Assets/image 37.png';
 import img2 from '../Assets/image 38.png';
 import img3 from '../Assets/image 39.png';
@@ -8,28 +7,9 @@ import img5 from '../Assets/image 41.png';
 import img6 from '../Assets/Mask group.png';
 import img7 from '../Assets/image 42.png';
 import { FaArrowRight } from 'react-icons/fa6';
+import BoxComponents from './BoxComponents';
 
 const Component5 = () => {
-  const BoxComponents = ({ color }) => {
-    return (
-      <div
-        className={`border-[1px] border-black max-w-[18rem] p-4 bg-[${color}] `}
-      >
-        <div className='flex items-center justify-center'>
-          <div className='text-2xl font-medium'>I WANT TO IMMIGRATE</div>
-          <div className='text-2xl relative right-2 -top-2'>
-            <MdArrowOutward />
-          </div>
-        </div>
-        <div className='text-[11px] mt-10 font-light font-mono pr-2 mb-2'>
-          The Express Entry system involves submitting an online profile that is
-          scored by Canada’s Comprehensive Ranking System (CRS). To submit
-          an Express Entry profile, you must first be eligible under one of
-          Canada’s above three federal streams.
-        </div>
-      </div>
-    );
-  };
   return (
     <div className='w-[99%] h-auto px-[8rem]'>
       <div className='w-[90%] flex items-center justify-center'>
