@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
-import logo from '../Assets/logo.png';
+import logo from '../Assets/logo1.png';
 import logo3 from '../Assets/logo3.png';
 import logo2 from '../Assets/logo2.png';
 import { RiMenu2Fill } from 'react-icons/ri';
@@ -71,8 +71,8 @@ const Header = () => {
               </div>
             </div>
           </div>
-          <div className='flex items-center justify-start mt-10'>
-            <img src={logo} alt='logo' className='cursor-pointer' />
+          <div className='flex items-center justify-start mt-8 '>
+            <img src={logo} alt='logo' className='cursor-pointer w-[18rem]' />
             <ul className='flex items-center justify-center text-white text-[14px] gap-8 mx-10'>
               <li className='cursor-pointer border-b-[3px] border-b-transparent hover:border-b-[#01F9E1] transition ease-in delay-100 duration-300'>
                 Home
@@ -114,7 +114,7 @@ const Header = () => {
           <div className='flex items-center justify-start'>
             <img src={logo2} alt='logo' className='cursor-pointer w-[4.2rem]' />
           </div>
-          <div className='flex items-center justify-start'>
+          <div className='flex items-start justify-start'>
             <img src={logo3} alt='logo' className='cursor-pointer w-40' />
           </div>
           <div

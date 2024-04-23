@@ -58,7 +58,7 @@ const Banner = () => {
       ) : (
         <img src={thumbnail} alt='Thumbnail' className='w-[90%]' />
       )}
-      <button className='relative -top-[22rem] bg-black text-white px-16 py-3 rounded-xl text-lg border-[2px] border-[#01F9E1] font-bold transition ease-in-out delay-70 hover:scale-y-[1.1] hover:scale-x-[1.2]  duration-300'>
+      <button className='relative -top-[19rem] bg-black text-white px-16 py-3 rounded-xl text-lg border-[2px] border-[#01F9E1] font-bold transition ease-in-out delay-70 hover:scale-y-[1.1] hover:scale-x-[1.2]  duration-300'>
         Start Your Journey NOW!!!
       </button>
       {/* {!isPlaying ? (
