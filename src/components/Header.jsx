@@ -72,7 +72,11 @@ const Header = () => {
             </div>
           </div>
           <div className='flex items-center justify-start mt-8 '>
-            <img src={logo} alt='logo' className='cursor-pointer w-[18rem]' />
+            <img
+              src={logo}
+              alt='logo'
+              className='cursor-pointer w-[18rem] mr-20'
+            />
             <ul className='flex items-center justify-center text-white text-[14px] gap-8 mx-10'>
               <li className='cursor-pointer border-b-[3px] border-b-transparent hover:border-b-[#01F9E1] transition ease-in delay-100 duration-300'>
                 Home
@@ -102,7 +106,7 @@ const Header = () => {
                 <CiSearch />
               </li>
               <li className='cursor-pointer'>
-                <button className='bg-[#01F9E1] font-thin text-black px-4 py-2 rounded-[10px] text-[16px] hover:scale-105 transition ease-in delay-60 duration-150 mr-10'>
+                <button className='bg-[#01F9E1] font-normal text-black px-4 py-2 rounded-[10px] text-[16px] hover:scale-105 transition ease-in delay-60 duration-150 mr-10'>
                   Book Appointment
                 </button>
               </li>
