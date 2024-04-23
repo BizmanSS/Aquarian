@@ -40,16 +40,16 @@ const Header = () => {
     }, 200);
   };
   return (
-    <div className='bg-[#000000] rounded-2xl h-[18rem] flex flex-col items-center w-[93.3%]'>
+    <div className='bg-[#000000] rounded-2xl h-[12rem] flex flex-col items-center w-[100%]'>
       {!ismobile ? (
         <>
           {' '}
-          <div className='bg-[#343436] w-full h-[40px] rounded-md text-sm'>
+          <div className='bg-[#242525] fixed w-full h-[40px] text-[13px] z-10 flex items-center justify-end'>
             <div className='flex items-center justify-end mr-[7rem]'>
-              <p className='px-4 py-1 text-[#939393] cursor-pointer text-sm'>
+              <p className='px-4 py-1 text-[#939393] cursor-pointer'>
                 About Us
               </p>
-              <p className='px-4 py-1 text-[#939393] cursor-pointer text-sm'>
+              <p className='px-4 py-1 text-[#939393] cursor-pointer'>
                 Contact Us
               </p>
               <div className='px-4 py-1 text-[#939393] flex items-center justify-center text-[0.6rem]'>
@@ -71,9 +71,9 @@ const Header = () => {
               </div>
             </div>
           </div>
-          <div className='flex items-center justify-start'>
+          <div className='flex items-center justify-start mt-10'>
             <img src={logo} alt='logo' className='cursor-pointer' />
-            <ul className='flex items-center justify-center text-white text-[18px] gap-8 mx-10'>
+            <ul className='flex items-center justify-center text-white text-[14px] gap-8 mx-10'>
               <li className='cursor-pointer border-b-[3px] border-b-transparent hover:border-b-[#01F9E1] transition ease-in delay-100 duration-300'>
                 Home
               </li>
@@ -93,7 +93,7 @@ const Header = () => {
                 Visit
               </li>
               <li className='cursor-pointer border-b-[3px] border-b-transparent hover:border-b-[#01F9E1] transition ease-in delay-100 duration-300'>
-                For Employers
+                Employers
               </li>
               <li className='cursor-pointer border-b-[3px] border-b-transparent hover:border-b-[#01F9E1] transition ease-in delay-100 duration-300'>
                 Sponsorship
@@ -102,7 +102,7 @@ const Header = () => {
                 <CiSearch />
               </li>
               <li className='cursor-pointer'>
-                <button className='bg-[#01F9E1] text-black px-4 py-2 rounded-[10px] text-[18px]'>
+                <button className='bg-[#01F9E1] font-thin text-black px-4 py-2 rounded-[10px] text-[16px] hover:scale-105 transition ease-in delay-60 duration-150 mr-10'>
                   Book Appointment
                 </button>
               </li>

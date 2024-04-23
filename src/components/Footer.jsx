@@ -1,6 +1,7 @@
 import React from 'react';
 import logo from '../Assets/logo2.png';
 import logo2 from '../Assets/image 43.png';
+import logo4 from '../Assets/logo3.png';
 import { FaInstagram, FaFacebookF, FaXTwitter } from 'react-icons/fa6';
 import { FaTelegramPlane } from 'react-icons/fa';
 import { SlSocialVkontakte } from 'react-icons/sl';
@@ -10,12 +11,18 @@ const Footer = () => {
   return (
     <div className='w-[94%] h-auto bg-black mt-6'>
       <div className='flex items-start justify-around text-white pt-20 border-b-[1px] border-gray-500 pb-6'>
-        <div className='flex items-center justify-center gap-20'>
-          <div>
+        <div className='flex items-start justify-center gap-20'>
+          <div className='flex flex-col items-center justify-center'>
             <img src={logo} alt='logo' className='w-40' />
+            <img src={logo4} alt='logo' className='w-40' />
           </div>
-          <div>
+          <div className='flex flex-col items-center justify-center'>
             <img src={logo2} alt='logo' className='w-[12rem]' />
+            <div className='text-sm text-[#B4B5B4] mt-3 ml-4'>
+              122a, Suncity Success Tower,
+              <br /> Sector 65, Gurugram,
+              <br /> Haryana 122102
+            </div>
           </div>
         </div>
         <ul className='text-[#B4B5B4]'>
@@ -82,7 +89,7 @@ const Footer = () => {
           </li>
         </ul>
       </div>
-      <div className='flex items-center justify-between text-[#B4B5B4] text-sm mt-4'>
+      <div className='flex items-center justify-between text-[#B4B5B4] text-sm mt-4 px-4'>
         <div> Copyright © 2021 Bookmate. All rights reserved.</div>
         <div className='flex items-center justify-center gap-10 mr-10'>
           <div>About</div>
