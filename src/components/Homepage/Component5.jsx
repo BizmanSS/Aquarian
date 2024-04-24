@@ -1,11 +1,11 @@
 import React from 'react';
-import img1 from '../Assets/image 37.png';
-import img2 from '../Assets/image 38.png';
-import img3 from '../Assets/image 39.png';
-import img4 from '../Assets/image 40.png';
-import img5 from '../Assets/image 41.png';
-import img6 from '../Assets/Mask group.png';
-import img7 from '../Assets/image 42.png';
+import img1 from '../../Assets/image 37.png';
+import img2 from '../../Assets/image 38.png';
+import img3 from '../../Assets/image 39.png';
+import img4 from '../../Assets/image 40.png';
+import img5 from '../../Assets/image 41.png';
+import img6 from '../../Assets/Mask group.png';
+import img7 from '../../Assets/image 42.png';
 import { FaArrowRight } from 'react-icons/fa6';
 import BoxComponents from './BoxComponents';
 

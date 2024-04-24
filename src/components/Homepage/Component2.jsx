@@ -1,8 +1,8 @@
 import React from 'react';
 import Card from './CardElement';
-import cardimg1 from '../Assets/cardimg1.png';
-import cardimg2 from '../Assets/cardimg2.png';
-import cardimg3 from '../Assets/cardimg3.png';
+import cardimg1 from '../../Assets/cardimg1.png';
+import cardimg2 from '../../Assets/cardimg2.png';
+import cardimg3 from '../../Assets/cardimg3.png';
 const Component2 = () => {
   const array = [
     {

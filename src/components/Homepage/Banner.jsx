@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
-import banner from '../Assets/video/banner.mp4';
-import thumbnail from '../Assets/banner.png';
+import banner from '../../Assets/video/banner.mp4';
+import thumbnail from '../../Assets/banner.png';
 import { FaPauseCircle, FaPlayCircle } from 'react-icons/fa';
 
 const Banner = () => {

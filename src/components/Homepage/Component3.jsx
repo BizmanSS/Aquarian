@@ -1,5 +1,5 @@
 import React from 'react';
-import banner from '../Assets/Rectangle 133.png';
+import banner from '../../Assets/Rectangle 133.png';
 
 const Component3 = () => {
   return (

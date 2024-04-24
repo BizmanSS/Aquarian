@@ -1,7 +1,7 @@
 import React from 'react';
-import img1 from '../Assets/image 44.png';
-import img2 from '../Assets/image 52.png';
-import img3 from '../Assets/image 56.png';
+import img1 from '../../Assets/image 44.png';
+import img2 from '../../Assets/image 52.png';
+import img3 from '../../Assets/image 56.png';
 const Component1 = () => {
   return (
     <div className='w-[97%] flex items-center justify-center gap-[4rem] relative -top-[4rem]'>

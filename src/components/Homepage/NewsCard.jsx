@@ -1,5 +1,5 @@
 import React from 'react';
-import img1 from '../Assets/cardimg1.png';
+import img1 from '../../Assets/cardimg1.png';
 const NewsCard = () => {
   return (
     <div className='w-full max-w-[21rem] overflow-hidden bg-slate-50 rounded-lg shadow-lg py-4 px-2'>

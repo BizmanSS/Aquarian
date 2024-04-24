@@ -1,11 +1,11 @@
 import React from 'react';
-import logo from '../Assets/logo2.png';
-import logo2 from '../Assets/image 43.png';
-import logo4 from '../Assets/logo3.png';
+import logo from '../../Assets/logo2.png';
+import logo2 from '../../Assets/image 43.png';
+import logo4 from '../../Assets/logo3.png';
 import { FaInstagram, FaFacebookF, FaXTwitter } from 'react-icons/fa6';
 import { FaTelegramPlane } from 'react-icons/fa';
 import { SlSocialVkontakte } from 'react-icons/sl';
-import logo3 from '../Assets/AQUARIAN.png';
+import logo3 from '../../Assets/AQUARIAN.png';
 
 const Footer = () => {
   return (

@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
-import logo from '../Assets/logo1.png';
-import logo3 from '../Assets/logo3.png';
-import logo2 from '../Assets/logo2.png';
+import logo from '../../Assets/logo1.png';
+import logo3 from '../../Assets/logo3.png';
+import logo2 from '../../Assets/logo2.png';
 import { RiMenu2Fill } from 'react-icons/ri';
 import {
   FaFacebookF,
@@ -77,7 +77,7 @@ const Header = () => {
               alt='logo'
               className='cursor-pointer w-[18rem] mr-20'
             />
-            <ul className='flex items-center justify-center text-white text-[14px] gap-8 mx-10'>
+            <ul className='flex items-center justify-center text-white text-[14px] gap-8 mr-20'>
               <li className='cursor-pointer border-b-[3px] border-b-transparent hover:border-b-[#01F9E1] transition ease-in delay-100 duration-300'>
                 Home
               </li>
