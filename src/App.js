@@ -1,13 +1,23 @@
-import React from 'react';
-
-import { Route, Routes } from 'react-router-dom';
-import Homepage from './Pages/Homepage';
-
+import React from "react";
+import HomePage from "./components/Pages/HomePages/HomePage";
+import Sidebar from "./components/globalComponents/Sidebar/Sidebar";
+import Header from "./components/globalComponents/Header/Header";
+import Footer from "./components/globalComponents/Footer/Footer";
+import AboutUs from "./components/Pages/AboutUs/AboutUs";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 const App = () => {
   return (
-    <Routes>
-      <Route path='/' element={<Homepage />} />
-    </Routes>
+    <div>
+      <BrowserRouter>
+        <Sidebar />
+        <Header />
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/about-us" element={<AboutUs />} />
+        </Routes>
+        <Footer />
+      </BrowserRouter>
+    </div>
   );
 };
 

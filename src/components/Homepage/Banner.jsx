@@ -1,7 +1,6 @@
-import React, { useState, useRef, useEffect } from 'react';
-import banner from '../../Assets/video/banner.mp4';
-import thumbnail from '../../Assets/banner.png';
-import { FaPauseCircle, FaPlayCircle } from 'react-icons/fa';
+import React, { useState, useRef, useEffect } from "react";
+import banner from "../../Assets/video/banner.mp4";
+import thumbnail from "../../Assets/banner.png";
 
 const Banner = () => {
   const [isPlaying, setIsPlaying] = useState(false);
@@ -40,7 +39,7 @@ const Banner = () => {
   };
 
   return (
-    <div className='w-full flex flex-col items-center justify-center mt-[8rem] -mb-[4rem] -ml-[2.8rem]'>
+    <div className="w-full flex flex-col items-center justify-center mt-[8rem] -mb-[4rem] -ml-[2.8rem]">
       {!showThumbnail ? (
         <video
           ref={videoRef}
@@ -48,17 +47,17 @@ const Banner = () => {
           autoPlay
           // poster={thumbnail}
           muted
-          className='relative -top-40 -left-[2px] w-[80%] h-auto rounded-3xl' // Set height to auto to maintain aspect ratio
+          className="relative -top-40 -left-[2px] w-[80%] h-auto rounded-3xl" // Set height to auto to maintain aspect ratio
           onClick={togglePlay}
           // onEnded={onVideoEnd}
         >
-          <source src={banner} type='video/mp4' />
+          <source src={banner} type="video/mp4" />
           Your browser does not support the video tag.
         </video>
       ) : (
-        <img src={thumbnail} alt='Thumbnail' className='w-[90%]' />
+        <img src={thumbnail} alt="Thumbnail" className="w-[90%]" />
       )}
-      <button className='relative -top-[19rem] bg-black text-white px-16 py-3 rounded-xl text-lg border-[2px] border-[#01F9E1] font-bold transition ease-in-out delay-70 hover:scale-y-[1.1] hover:scale-x-[1.2]  duration-300'>
+      <button className="relative -top-[19rem] bg-black text-white px-16 py-3 rounded-xl text-lg border-[2px] border-[#01F9E1] font-bold transition ease-in-out delay-70 hover:scale-y-[1.1] hover:scale-x-[1.2]  duration-300">
         Start Your Journey NOW!!!
       </button>
       {/* {!isPlaying ? (
