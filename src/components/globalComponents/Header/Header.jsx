@@ -47,7 +47,7 @@ const Header = () => {
           <div className="bg-[#242525] fixed w-full h-[40px] text-[13px] z-10 flex items-center justify-end">
             <div className="flex items-center justify-end mr-[7rem]">
               <p className="px-4 py-1 text-[#939393] cursor-pointer">
-                About Us
+                <a href="/about-us"> About Us </a>
               </p>
               <p className="px-4 py-1 text-[#939393] cursor-pointer">
                 Contact Us
@@ -79,7 +79,7 @@ const Header = () => {
             />
             <ul className="flex items-center justify-center text-white text-[14px] gap-8 mx-10">
               <li className="cursor-pointer border-b-[3px] border-b-transparent hover:border-b-[#01F9E1] transition ease-in delay-100 duration-300">
-                Home
+                <a href="/">Home</a>
               </li>
               <li className="cursor-pointer border-b-[3px] border-b-transparent hover:border-b-[#01F9E1] transition ease-in delay-100 duration-300">
                 Immigrate
