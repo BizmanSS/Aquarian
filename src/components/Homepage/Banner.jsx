@@ -39,7 +39,7 @@ const Banner = () => {
   };
 
   return (
-    <div className="w-full flex flex-col items-center justify-center mt-[8rem] -mb-[4rem] -ml-[2.8rem]">
+    <div className="w-full flex flex-col items-center justify-center mt-[15rem] -mb-[4rem] -ml-[2.8rem]">
       {!showThumbnail ? (
         <video
           ref={videoRef}

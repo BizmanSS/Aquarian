@@ -6,10 +6,10 @@ import { FaInstagram, FaFacebookF, FaXTwitter } from "react-icons/fa6";
 import { FaTelegramPlane } from "react-icons/fa";
 import { SlSocialVkontakte } from "react-icons/sl";
 import logo3 from "../../../Assets/AQUARIAN.png";
-
+import "../../../styles/AboutUs.css";
 const Footer = () => {
   return (
-    <div className="w-[94%] h-auto bg-black mt-6 ">
+    <div className="footer">
       <div className="flex items-start justify-around text-white pt-20 border-b-[1px] border-gray-500 pb-6">
         <div className="flex items-start justify-center gap-20">
           <div className="flex flex-col items-center justify-center">
@@ -99,8 +99,8 @@ const Footer = () => {
           <div>For publishers & authors</div>
         </div>
       </div>
-      <div className="w-[98%] mt-8">
-        <img src={logo3} alt="logo3" />
+      <div>
+        <img className="w-[90%] block mt-8 mx-auto " src={logo3} alt="logo3" />
       </div>
     </div>
   );

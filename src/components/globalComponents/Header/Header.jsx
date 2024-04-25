@@ -3,13 +3,11 @@ import logo from "../../../Assets/logo1.png";
 import logo3 from "../../../Assets/logo3.png";
 import logo2 from "../../../Assets/logo2.png";
 import { RiMenu2Fill } from "react-icons/ri";
-import {
-  FaFacebookF,
-  FaInstagram,
-  FaLinkedinIn,
-  FaYoutube,
-} from "react-icons/fa";
-import { FaXTwitter } from "react-icons/fa6";
+import Instagram from "../../../Assets/Instagram_logo.svg";
+import Youtube from "../../../Assets/youtube.png";
+import Twitter from "../../../Assets/Twitter.png";
+import LinkedIn from "../../../Assets/LinkedIn.png";
+import facebook from "../../../Assets/Facebook.png";
 import { CiSearch } from "react-icons/ci";
 
 const Header = () => {
@@ -40,33 +38,33 @@ const Header = () => {
     }, 200);
   };
   return (
-    <div className="bg-[#000000] rounded-2xl h-[12rem] flex flex-col items-center w-[100%]">
+    <div className="bg-[#000000] fixed z-20 top-0 rounded-2xl h-[12rem] flex flex-col items-center w-[100%]">
       {!ismobile ? (
         <>
           {" "}
           <div className="bg-[#242525] fixed w-full h-[40px] text-[13px] z-10 flex items-center justify-end">
             <div className="flex items-center justify-end mr-[7rem]">
               <p className="px-4 py-1 text-[#939393] cursor-pointer">
-                <a href="/about-us"> About Us </a>
+                <a href="/about-us">About Us</a>
               </p>
               <p className="px-4 py-1 text-[#939393] cursor-pointer">
                 Contact Us
               </p>
               <div className="px-4 py-1 text-[#939393] flex items-center justify-center text-[0.6rem]">
-                <div className="mx-1 border border-[#939393] rounded-full p-2">
-                  <FaLinkedinIn className="cursor-pointer" />
+                <div className="mx-0 p-2">
+                  <img src={LinkedIn} className="cursor-pointer w-[1.2rem]" />
                 </div>
-                <div className="mx-1 border border-[#939393] rounded-full p-2">
-                  <FaFacebookF className="cursor-pointer" />
+                <div className="mx-0 p-2">
+                  <img src={facebook} className="cursor-pointer w-[1.2rem]" />
                 </div>
-                <div className="mx-1 border border-[#939393] rounded-full p-2">
-                  <FaXTwitter className="cursor-pointer" />
+                <div className="mx-0 p-2">
+                  <img src={Twitter} className="cursor-pointer w-[1.2rem]" />
                 </div>
-                <div className="mx-1 border border-[#939393] rounded-full p-2">
-                  <FaInstagram className="cursor-pointer" />
+                <div className="mx-0 p-2">
+                  <img src={Instagram} className="cursor-pointer w-[1.2rem]" />
                 </div>
-                <div className="mx-1 border border-[#939393] rounded-full p-2">
-                  <FaYoutube className="cursor-pointer" />
+                <div className="mx-0 p-2">
+                  <img src={Youtube} className="cursor-pointer w-[1.2rem]" />
                 </div>
               </div>
             </div>
