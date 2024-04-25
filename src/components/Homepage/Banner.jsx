@@ -44,7 +44,6 @@ const Banner = () => {
       {!showThumbnail ? (
         <video
           ref={videoRef}
-          loop
           autoPlay
           // poster={thumbnail}
           muted

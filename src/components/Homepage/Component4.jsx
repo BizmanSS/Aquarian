@@ -1,5 +1,6 @@
 import React from 'react';
 import NewsCard from './NewsCard';
+import Clbcalculator from '../ClbCalculator.jsx/Clbcalculator';
 
 const Component4 = () => {
   return (

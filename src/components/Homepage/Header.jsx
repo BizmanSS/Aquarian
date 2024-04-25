@@ -11,9 +11,13 @@ import {
 } from 'react-icons/fa';
 import { FaXTwitter } from 'react-icons/fa6';
 import { CiSearch } from 'react-icons/ci';
+import { IoIosArrowForward } from 'react-icons/io';
 
 const Header = () => {
   const [ismobile, setIsMobile] = useState(false);
+  const [isHovering, setIsHovering] = useState(false);
+  const [activeItem, setActiveItem] = useState(0);
+
   const menuRef = useRef(null);
   useEffect(() => {
     const handleResize = () => {
@@ -32,15 +36,25 @@ const Header = () => {
       window.removeEventListener('resize', handleResize);
     };
   }, []);
-
+  const handleItemClick = (index) => {
+    setActiveItem(index);
+  };
   const handleMenuClick = () => {
     menuRef.current.classList.add('scale-90');
     setTimeout(() => {
       menuRef.current.classList.remove('scale-90');
     }, 200);
   };
+  const handleMouseEnter = () => {
+    setIsHovering(true);
+  };
+
+  const handleMouseLeave = () => {
+    setIsHovering(false);
+  };
+  // console.log(activeItem);
   return (
-    <div className='bg-[#000000] rounded-2xl h-[12rem] flex flex-col items-center w-[100%]'>
+    <div className='bg-[#000000] rounded-2xl h-[12rem] flex flex-col items-center justify-start w-[100%]'>
       {!ismobile ? (
         <>
           {' '}
@@ -71,46 +85,221 @@ const Header = () => {
               </div>
             </div>
           </div>
-          <div className='flex items-center justify-start mt-8 '>
+          <div className='w-[100%] flex items-center justify-between mt-8 ml-10 relative'>
             <img
               src={logo}
               alt='logo'
-              className='cursor-pointer w-[18rem] mr-20'
+              className='cursor-pointer w-[18rem] mr-10'
             />
-            <ul className='flex items-center justify-center text-white text-[14px] gap-8 mr-20'>
-              <li className='cursor-pointer border-b-[3px] border-b-transparent hover:border-b-[#01F9E1] transition ease-in delay-100 duration-300'>
+            <ul
+              className='flex items-center justify-center text-white text-[14px] gap-8 hover:bg-[#FFFEFE] py-3 px-4 absolute left-[22rem] rounded-t-xl hover:text-black overflow-hidden'
+              onMouseEnter={handleMouseEnter}
+              onMouseLeave={handleMouseLeave}
+            >
+              <li
+                onClick={() => handleItemClick(0)}
+                className={`cursor-pointer border-b-[3px] border-b-transparent transition ease-in delay-100 duration-300 ${
+                  activeItem === 0 ? 'border-b-[#009889]' : ''
+                }`}
+              >
                 Home
               </li>
-              <li className='cursor-pointer border-b-[3px] border-b-transparent hover:border-b-[#01F9E1] transition ease-in delay-100 duration-300'>
+              <li
+                onClick={() => handleItemClick(1)}
+                className={`cursor-pointer border-b-[3px] border-b-transparent transition ease-in delay-100 duration-300 ${
+                  activeItem === 1 ? 'border-b-[#009889]' : ''
+                }`}
+              >
                 Immigrate
               </li>
-              <li className='cursor-pointer border-b-[3px] border-b-transparent hover:border-b-[#01F9E1] transition ease-in delay-100 duration-300'>
+              <li
+                onClick={() => handleItemClick(2)}
+                className={`cursor-pointer border-b-[3px] border-b-transparent transition ease-in delay-100 duration-300 ${
+                  activeItem === 2 ? 'border-b-[#009889]' : ''
+                }`}
+              >
                 Work
               </li>
-              <li className='cursor-pointer border-b-[3px] border-b-transparent hover:border-b-[#01F9E1] transition ease-in delay-100 duration-300'>
+              <li
+                onClick={() => handleItemClick(3)}
+                className={`cursor-pointer border-b-[3px] border-b-transparent transition ease-in delay-100 duration-300 ${
+                  activeItem === 3 ? 'border-b-[#009889]' : ''
+                }`}
+              >
                 Study
               </li>
-              <li className='cursor-pointer border-b-[3px] border-b-transparent hover:border-b-[#01F9E1] transition ease-in delay-100 duration-300'>
+              <li
+                onClick={() => handleItemClick(4)}
+                className={`cursor-pointer border-b-[3px] border-b-transparent transition ease-in delay-100 duration-300 ${
+                  activeItem === 4 ? 'border-b-[#009889]' : ''
+                }`}
+              >
                 Invest
               </li>
-              <li className='cursor-pointer border-b-[3px] border-b-transparent hover:border-b-[#01F9E1] transition ease-in delay-100 duration-300'>
+              <li
+                onClick={() => handleItemClick(5)}
+                className={`cursor-pointer border-b-[3px] border-b-transparent transition ease-in delay-100 duration-300 ${
+                  activeItem === 5 ? 'border-b-[#009889]' : ''
+                }`}
+              >
                 Visit
               </li>
-              <li className='cursor-pointer border-b-[3px] border-b-transparent hover:border-b-[#01F9E1] transition ease-in delay-100 duration-300'>
+              <li
+                onClick={() => handleItemClick(6)}
+                className={`cursor-pointer border-b-[3px] border-b-transparent transition ease-in delay-100 duration-300 ${
+                  activeItem === 6 ? 'border-b-[#009889]' : ''
+                }`}
+              >
                 Employers
               </li>
-              <li className='cursor-pointer border-b-[3px] border-b-transparent hover:border-b-[#01F9E1] transition ease-in delay-100 duration-300'>
+              <li
+                onClick={() => handleItemClick(7)}
+                className={`cursor-pointer border-b-[3px] border-b-transparent transition ease-in delay-100 duration-300 ${
+                  activeItem === 7 ? 'border-b-[#009889]' : ''
+                }`}
+              >
                 Sponsorship
               </li>
-              <li className='cursor-pointer text-xl'>
+            </ul>
+            {isHovering && (
+              <div className='h-[20rem] bg-[#FFFEFE] z-40 absolute top-[5.8rem] left-[22rem] w-[39.2rem] rounded-b-xl'>
+                <div className='flex flex-col items-center justify-center'>
+                  <div className='w-[90%] h-[1.2px] bg-[#009889]'></div>
+                </div>
+                <div className='flex items-center justify-between p-4'>
+                  <div className=' w-[30%] h-[16rem] flex flex-col items-start justify-start mt-4'>
+                    {activeItem === 0 && (
+                      <div className='font-semibold ml-6 text-xl border-b-[2px] border-[#009889] pb-[2px] border-w-[50%]'>
+                        Home
+                      </div>
+                    )}
+                    {activeItem === 1 && (
+                      <>
+                        <div className='font-semibold ml-6 text-xl border-b-[2px] border-[#009889] pb-[2px] border-w-[50%]'>
+                          Immigration
+                        </div>
+                        <div className='pl-6 text-[13px] text-left mt-4 '>
+                          Make Canada your permanent home! PR allows you to
+                          live, work and study in Canada{' '}
+                        </div>
+                        <div className='text-[11px] text-[#009889] pl-6 flex items-center justify-center mt-4'>
+                          Explore Immigration{' '}
+                          <IoIosArrowForward className='relative top-[1px]' />
+                        </div>
+                      </>
+                    )}
+                    {activeItem === 2 && (
+                      <>
+                        <div className='font-semibold ml-6 text-xl border-b-[2px] border-[#009889] pb-[2px] border-w-[50%]'>
+                          Work
+                        </div>
+                        <div className='pl-6 text-[13px] text-left mt-4 '>
+                          Lorem ipsum dolor sit amet consectetur adipisicing
+                          elit. Blanditiis quos in nesciunt ratione autem ut
+                          numquam voluptate
+                        </div>
+                        <div className='text-[11px] text-[#009889] pl-6 flex items-center justify-center mt-4'>
+                          Explore Work{' '}
+                          <IoIosArrowForward className='relative top-[1px]' />
+                        </div>
+                      </>
+                    )}
+                    {activeItem === 3 && (
+                      <>
+                        <div className='font-semibold ml-6 text-xl border-b-[2px] border-[#009889] pb-[2px] border-w-[50%]'>
+                          Study
+                        </div>
+                        <div className='pl-6 text-[13px] text-left mt-4 '>
+                          Lorem ipsum dolor sit amet consectetur adipisicing
+                          elit. Blanditiis quos in nesciunt ratione autem ut
+                          numquam voluptate
+                        </div>
+                        <div className='text-[11px] text-[#009889] pl-6 flex items-center justify-center mt-4'>
+                          Explore Study{' '}
+                          <IoIosArrowForward className='relative top-[1px]' />
+                        </div>
+                      </>
+                    )}
+                    {activeItem === 4 && (
+                      <>
+                        <div className='font-semibold ml-6 text-xl border-b-[2px] border-[#009889] pb-[2px] border-w-[50%]'>
+                          Invest
+                        </div>
+                        <div className='pl-6 text-[13px] text-left mt-4 '>
+                          Lorem ipsum dolor sit amet consectetur adipisicing
+                          elit. Blanditiis quos in nesciunt ratione autem ut
+                          numquam voluptate
+                        </div>
+                        <div className='text-[11px] text-[#009889] pl-6 flex items-center justify-center mt-4'>
+                          Explore Invest{' '}
+                          <IoIosArrowForward className='relative top-[1px]' />
+                        </div>
+                      </>
+                    )}
+                    {activeItem === 5 && (
+                      <>
+                        <div className='font-semibold ml-6 text-xl border-b-[2px] border-[#009889] pb-[2px] border-w-[50%]'>
+                          Visit
+                        </div>
+                        <div className='pl-6 text-[13px] text-left mt-4 '>
+                          Lorem ipsum dolor sit amet consectetur adipisicing
+                          elit. Blanditiis quos in nesciunt ratione autem ut
+                          numquam voluptate
+                        </div>
+                        <div className='text-[11px] text-[#009889] pl-6 flex items-center justify-center mt-4'>
+                          Explore Visit{' '}
+                          <IoIosArrowForward className='relative top-[1px]' />
+                        </div>
+                      </>
+                    )}
+                    {activeItem === 6 && (
+                      <>
+                        <div className='font-semibold ml-6 text-xl border-b-[2px] border-[#009889] pb-[2px] border-w-[50%]'>
+                          Employers
+                        </div>
+                        <div className='pl-6 text-[13px] text-left mt-4 '>
+                          Lorem ipsum dolor sit amet consectetur adipisicing
+                          elit. Blanditiis quos in nesciunt ratione autem ut
+                          numquam voluptate
+                        </div>
+                        <div className='text-[11px] text-[#009889] pl-6 flex items-center justify-center mt-4'>
+                          Explore Employers{' '}
+                          <IoIosArrowForward className='relative top-[1px]' />
+                        </div>
+                      </>
+                    )}
+                    {activeItem === 7 && (
+                      <>
+                        <div className='font-semibold ml-6 text-xl border-b-[2px] border-[#009889] pb-[2px] border-w-[50%]'>
+                          Sponsorship
+                        </div>
+                        <div className='pl-6 text-[13px] text-left mt-4 '>
+                          Lorem ipsum dolor sit amet consectetur adipisicing
+                          elit. Blanditiis quos in nesciunt ratione autem ut
+                          numquam voluptate
+                        </div>
+                        <div className='text-[11px] text-[#009889] pl-6 flex items-center justify-center mt-4'>
+                          Explore Sponsorship{' '}
+                          <IoIosArrowForward className='relative top-[1px]' />
+                        </div>
+                      </>
+                    )}
+                  </div>
+                  <div className=' w-[38%] h-[17rem] flex items-center justify-center'></div>
+                  <div className=' w-[30%] h-[17rem] flex items-center justify-center'></div>
+                </div>
+              </div>
+            )}
+            <div className='flex items-center justify-center gap-6 relative right-[7rem]'>
+              <div className='cursor-pointer text-xl text-white text-[14px] '>
                 <CiSearch />
-              </li>
-              <li className='cursor-pointer'>
+              </div>
+              <div className='cursor-pointer text-white text-[14px]'>
                 <button className='bg-[#01F9E1] font-normal text-black px-4 py-2 rounded-[10px] text-[16px] hover:scale-105 transition ease-in delay-60 duration-150 mr-10'>
                   Book Appointment
                 </button>
-              </li>
-            </ul>
+              </div>
+            </div>
           </div>
         </>
       ) : (

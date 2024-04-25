@@ -10,7 +10,11 @@ const Component3 = () => {
         </div>
         <div className='flex items-center justify-center'>
           <div className='w-[600px]'>
-            <img src={banner} alt='banner' className='w-[99%] mt-[3rem]' />
+            <img
+              src={banner}
+              alt='banner'
+              className='w-[99%] mt-[3rem] rounded-3xl'
+            />
           </div>
           <div className='bg-[#343436] w-[60%] rounded-3xl px-12 py-6 relative top-[7rem] right-[6rem]'>
             <div className='text-[#FEFFFE] my-[4rem] text-xl'>
