@@ -1,130 +1,110 @@
-import React, { useRef, useEffect } from 'react';
-import '../../../styles/AboutUs.css';
-import Instagram from '../../../Assets/Instagram_logo.svg';
-import Youtube from '../../../Assets/youtube.png';
-import Twitter from '../../../Assets/Twitter.png';
-import LinkedIn from '../../../Assets/LinkedIn.png';
-import facebook from '../../../Assets/Facebook.png';
-import WhoWeAre from '../../AboutUs/WhoWeAre.js';
-import Competitive from '../../AboutUs/Competitive.js';
-import Expertise from '../../../Assets/Expertise.png';
-import OurTeam from '../../AboutUs/OurTeam.js';
-import Tanpreet from '../../../Assets/Tanpreet.jpg';
-import OurServices from '../../AboutUs/OurServices.js';
-import TheAquarian from '../../AboutUs/TheAquarian.js';
-import AquarianFlower from '../../../Assets/AquarianFlower.jpg';
+import React, { useRef, useEffect } from "react";
+import "../../../styles/AboutUs.css";
+import Instagram from "../../../Assets/Instagram_logo.svg";
+import Youtube from "../../../Assets/youtube.png";
+import Twitter from "../../../Assets/Twitter.png";
+import LinkedIn from "../../../Assets/LinkedIn.png";
+import facebook from "../../../Assets/Facebook.png";
+import WhoWeAre from "../../AboutUs/WhoWeAre.js";
+import Competitive from "../../AboutUs/Competitive.js";
+import Expertise from "../../../Assets/Expertise.png";
+import OurTeam from "../../AboutUs/OurTeam.js";
+import Tanpreet from "../../../Assets/Tanpreet.jpg";
+import OurServices from "../../AboutUs/OurServices.js";
+import TheAquarian from "../../AboutUs/TheAquarian.js";
+//import AquarianFlower from "../../../Assets/AquarianFlower.jpg";
 const AboutUsPage = () => {
   const whoWeAreRef = useRef(null);
   const competitiveRef = useRef(null);
   const ourTeamRef = useRef(null);
   const ourServicesRef = useRef(null);
   const theAquarianRef = useRef(null);
-  const buttonBelowRef = useRef(null);
-  const subHeadingContentRef = useRef(null);
 
   const scrollToRef = (ref) => {
     const scrollTop = ref.current.offsetTop - window.innerHeight * 0.25; // 10% of the window height
-    window.scrollTo({ top: scrollTop, behavior: 'smooth' });
+    window.scrollTo({ top: scrollTop, behavior: "smooth" });
   };
 
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        if (entries[0].isIntersecting) {
-          subHeadingContentRef.current.style.position = 'absolute';
-        } else {
-          subHeadingContentRef.current.style.position = 'fixed';
-        }
-      },
-      { threshold: 0.5 }
-    );
-
-    observer.observe(buttonBelowRef.current);
-
-    return () => {
-      observer.unobserve(buttonBelowRef.current);
-    };
-  }, []);
   return (
-    <div style={{ marginTop: '10rem', background: '#E0E0E0' }}>
-      <div className='AboutUsHeader'>
-        <p className='link'>Home {' > '}About Us</p>
-        <div className='header-content'>
-          <h1 className='heading-about'>About Us.</h1>
-          <p1 className='text-heading'>
+    <div style={{ marginTop: "10rem", background: "#E0E0E0" }}>
+      <div className="AboutUsHeader">
+        <p className="link">Home {" > "}About Us</p>
+        <div className="header-content">
+          <h1 className="heading-about">About Us.</h1>
+          <p1 className="text-heading">
             The Federal Skilled Worker (FSW) program
             <br /> is one of the three programs contained <br />
             within Canada’s Express
           </p1>
         </div>
       </div>
-      <div className='sub-heading-content' ref={subHeadingContentRef}>
+      <div className="sub-heading-content">
         <div
           style={{
-            display: 'flex',
-            marginLeft: '2%',
-            paddingTop: '20%',
-            width: '80%',
-            justifyContent: 'center',
-            gap: '1rem',
+            display: "flex",
+            marginLeft: "2%",
+            paddingTop: "20%",
+            width: "80%",
+            justifyContent: "center",
+            gap: "1rem",
           }}
         >
-          <div className='line-heading'></div>
-          <div style={{ display: 'block' }}>
-            <p onClick={() => scrollToRef(whoWeAreRef)} className='sub-heading'>
+          <div className="line-heading"></div>
+          <div style={{ display: "block" }}>
+            <p onClick={() => scrollToRef(whoWeAreRef)} className="sub-heading">
               Who We Are
             </p>
             <p
               onClick={() => scrollToRef(competitiveRef)}
-              className='sub-heading'
+              className="sub-heading"
             >
               Competitive Advantages
             </p>
-            <p onClick={() => scrollToRef(ourTeamRef)} className='sub-heading'>
+            <p onClick={() => scrollToRef(ourTeamRef)} className="sub-heading">
               Our Team
             </p>
             <p
               onClick={() => scrollToRef(ourServicesRef)}
-              className='sub-heading'
+              className="sub-heading"
             >
               Our Services
             </p>
             <p
               onClick={() => scrollToRef(theAquarianRef)}
-              className='sub-heading'
+              className="sub-heading"
             >
               The Aquarian Community
             </p>
           </div>
         </div>
         <div>
-          <h1 className='follow'>Follow Us</h1>
+          <h1 className="follow">Follow Us</h1>
         </div>
-        <div className='logos'>
-          <div className='mx-0 p-2'>
-            <img src={LinkedIn} className='cursor-pointer w-[2.2rem]' />
+        <div className="logos">
+          <div className="mx-0 p-2">
+            <img src={LinkedIn} className="cursor-pointer w-[2.2rem]" />
           </div>
-          <div className='mx-0 p-2'>
-            <img src={facebook} className='cursor-pointer w-[2.2rem]' />
+          <div className="mx-0 p-2">
+            <img src={facebook} className="cursor-pointer w-[2.2rem]" />
           </div>
-          <div className='mx-0 p-2'>
-            <img src={Twitter} className='cursor-pointer w-[2.2rem]' />
+          <div className="mx-0 p-2">
+            <img src={Twitter} className="cursor-pointer w-[2.2rem]" />
           </div>
-          <div className='mx-0 p-2'>
-            <img src={Instagram} className='cursor-pointer w-[2.2rem]' />
+          <div className="mx-0 p-2">
+            <img src={Instagram} className="cursor-pointer w-[2.2rem]" />
           </div>
-          <div className='mx-0 p-2'>
-            <img src={Youtube} className='cursor-pointer w-[2.2rem]' />
+          <div className="mx-0 p-2">
+            <img src={Youtube} className="cursor-pointer w-[2.2rem]" />
           </div>
         </div>
       </div>
       <div
         style={{
-          background: '#FFF',
-          width: '80%',
-          display: 'block',
-          marginLeft: '20%',
-          paddingBottom: '3rem',
+          background: "#FFF",
+          width: "80%",
+          display: "block",
+          marginLeft: "20%",
+          paddingBottom: "3rem",
         }}
       >
         <div ref={whoWeAreRef}>
@@ -135,29 +115,29 @@ const AboutUsPage = () => {
         </div>
       </div>
       <div
-        className='WhoWe'
-        style={{ marginLeft: '24%', paddingTop: '1%', paddingBottom: '1%' }}
+        className="WhoWe"
+        style={{ marginLeft: "24%", paddingTop: "1%", paddingBottom: "1%" }}
       >
         <div
           style={{
-            background: '#C2C2C2',
-            marginTop: '3rem',
-            marginLeft: '3rem',
-            width: '64%',
+            background: "#C2C2C2",
+            marginTop: "3rem",
+            marginLeft: "3rem",
+            width: "64%",
           }}
         >
           <div
-            className='text-div'
+            className="text-div"
             style={{
-              background: '#C2C2C2',
-              paddingTop: '3rem',
-              marginLeft: '3rem',
-              paddingBottom: '3rem',
-              width: '90%',
+              background: "#C2C2C2",
+              paddingTop: "3rem",
+              marginLeft: "3rem",
+              paddingBottom: "3rem",
+              width: "90%",
             }}
           >
-            <div style={{ display: 'flex', gap: '3rem' }}>
-              <img style={{ width: '10%' }} alt='' src={Expertise} />
+            <div style={{ display: "flex", gap: "3rem" }}>
+              <img style={{ width: "10%" }} alt="" src={Expertise} />
               <h1>Integrity and Trust</h1>
             </div>
             <p1>
@@ -175,29 +155,29 @@ const AboutUsPage = () => {
         </div>
       </div>
       <div
-        className='WhoWe'
-        style={{ marginLeft: '24%', paddingTop: '1%', paddingBottom: '1%' }}
+        className="WhoWe"
+        style={{ marginLeft: "24%", paddingTop: "1%", paddingBottom: "1%" }}
       >
         <div
           style={{
-            background: '#C2C2C2',
-            marginTop: '3rem',
-            marginLeft: '3rem',
-            width: '64%',
+            background: "#C2C2C2",
+            marginTop: "3rem",
+            marginLeft: "3rem",
+            width: "64%",
           }}
         >
           <div
-            className='text-div'
+            className="text-div"
             style={{
-              background: '#C2C2C2',
-              paddingTop: '3rem',
-              marginLeft: '3rem',
-              paddingBottom: '3rem',
-              width: '90%',
+              background: "#C2C2C2",
+              paddingTop: "3rem",
+              marginLeft: "3rem",
+              paddingBottom: "3rem",
+              width: "90%",
             }}
           >
-            <div style={{ display: 'flex', gap: '3rem' }}>
-              <img style={{ width: '10%' }} alt='' src={Expertise} />
+            <div style={{ display: "flex", gap: "3rem" }}>
+              <img style={{ width: "10%" }} alt="" src={Expertise} />
               <h1>One-on-One Solutions</h1>
             </div>
             <p1>
@@ -214,29 +194,29 @@ const AboutUsPage = () => {
         </div>
       </div>
       <div
-        className='WhoWe'
-        style={{ marginLeft: '24%', paddingTop: '1%', paddingBottom: '1%' }}
+        className="WhoWe"
+        style={{ marginLeft: "24%", paddingTop: "1%", paddingBottom: "1%" }}
       >
         <div
           style={{
-            background: '#C2C2C2',
-            marginTop: '3rem',
-            marginLeft: '3rem',
-            width: '64%',
+            background: "#C2C2C2",
+            marginTop: "3rem",
+            marginLeft: "3rem",
+            width: "64%",
           }}
         >
           <div
-            className='text-div'
+            className="text-div"
             style={{
-              background: '#C2C2C2',
-              paddingTop: '3rem',
-              marginLeft: '3rem',
-              paddingBottom: '3rem',
-              width: '90%',
+              background: "#C2C2C2",
+              paddingTop: "3rem",
+              marginLeft: "3rem",
+              paddingBottom: "3rem",
+              width: "90%",
             }}
           >
-            <div style={{ display: 'flex', gap: '3rem' }}>
-              <img style={{ width: '10%' }} alt='' src={Expertise} />
+            <div style={{ display: "flex", gap: "3rem" }}>
+              <img style={{ width: "10%" }} alt="" src={Expertise} />
               <h1>Efficiency and Accuracy</h1>
             </div>
             <p1>
@@ -254,36 +234,36 @@ const AboutUsPage = () => {
       </div>
       <div
         style={{
-          background: '#FFF',
-          width: '80%',
-          display: 'block',
-          marginLeft: '0%',
-          paddingBottom: '2rem',
+          background: "#FFF",
+          width: "80%",
+          display: "block",
+          marginLeft: "0%",
+          paddingBottom: "2rem",
         }}
       >
         <div
-          className='WhoWe'
-          style={{ marginLeft: '30%', paddingTop: '0.1%' }}
+          className="WhoWe"
+          style={{ marginLeft: "30%", paddingTop: "0.1%" }}
         >
           <div
             style={{
-              background: '#C2C2C2',
-              marginLeft: '3rem',
-              width: '80%',
+              background: "#C2C2C2",
+              marginLeft: "3rem",
+              width: "80%",
             }}
           >
             <div
-              className='text-div'
+              className="text-div"
               style={{
-                background: '#C2C2C2',
-                paddingTop: '3rem',
-                marginLeft: '3rem',
-                paddingBottom: '3rem',
-                width: '90%',
+                background: "#C2C2C2",
+                paddingTop: "3rem",
+                marginLeft: "3rem",
+                paddingBottom: "3rem",
+                width: "90%",
               }}
             >
-              <div style={{ display: 'flex', gap: '3rem' }}>
-                <img style={{ width: '10%' }} alt='' src={Expertise} />
+              <div style={{ display: "flex", gap: "3rem" }}>
+                <img style={{ width: "10%" }} alt="" src={Expertise} />
                 <h1>FREE ONLINE ASSESSMENT</h1>
               </div>
               <p1>
@@ -293,7 +273,7 @@ const AboutUsPage = () => {
                 <br />
                 <br />
               </p1>
-              <div className='button'>
+              <div className="button">
                 <br />
                 FREE ASSESSMENT
                 <br />
@@ -308,29 +288,29 @@ const AboutUsPage = () => {
       </div>
       <div
         style={{
-          display: 'flex',
-          position: 'relative',
-          background: '#343436',
-          marginLeft: '32%',
-          marginTop: '3rem',
-          width: '43%',
-          gap: '3rem',
+          display: "flex",
+          position: "relative",
+          background: "#343436",
+          marginLeft: "32%",
+          marginTop: "3rem",
+          width: "43%",
+          gap: "3rem",
         }}
       >
         <div
           style={{
-            width: '25%',
-            paddingTop: '2rem',
-            paddingBottom: '2rem',
-            marginLeft: '-13%',
+            width: "25%",
+            paddingTop: "2rem",
+            paddingBottom: "2rem",
+            marginLeft: "-13%",
           }}
         >
-          <img src={Tanpreet} alt='' />
+          <img src={Tanpreet} alt="" />
         </div>
-        <div style={{ width: '70%', paddingTop: '5%' }}>
-          <h1 className='Name'>Tanpreet Sawhney</h1>
-          <h2 className='designation'>Director</h2>
-          <p1 className='about'>
+        <div style={{ width: "70%", paddingTop: "5%" }}>
+          <h1 className="Name">Tanpreet Sawhney</h1>
+          <h2 className="designation">Director</h2>
+          <p1 className="about">
             <br />
             With a strong staff of over 20+ Immigration Lawyers, Regulated
             Canadian Immigration Consultants, immigration advisors and support
@@ -344,13 +324,13 @@ const AboutUsPage = () => {
       </div>
       <div
         style={{
-          background: '#FFF',
-          width: '80%',
-          display: 'block',
-          marginTop: '3rem',
-          marginLeft: '20%',
-          paddingTop: '3rem',
-          paddingBottom: '3rem',
+          background: "#FFF",
+          width: "80%",
+          display: "block",
+          marginTop: "3rem",
+          marginLeft: "20%",
+          paddingTop: "3rem",
+          paddingBottom: "3rem",
         }}
       >
         <div ref={ourServicesRef}>
@@ -360,7 +340,7 @@ const AboutUsPage = () => {
           <TheAquarian />
         </div>
       </div>
-      <div
+      {/*<div
         className='below-section'
         style={{ marginTop: '8rem', paddingBottom: '8rem' }}
       >
@@ -420,7 +400,7 @@ const AboutUsPage = () => {
             <br />
           </div>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 };
