@@ -1,8 +1,7 @@
 .AboutUsHeader {
-  z-index: 99;
+  z-index: 1;
   position: relative;
   display: block;
-
   background-repeat: no-repeat;
   background-size: auto;
   width: 90%;
@@ -14,23 +13,23 @@
 .AboutUsHeader .link {
   color: #e2e2e2;
   font-family: 'TT Chocolates';
-  font-size: 18px;
+  font-size: 16px;
   font-style: normal;
   font-weight: 500;
   line-height: normal;
-  padding-top: 4%;
+  padding-top: 2%;
   padding-left: 3%;
 }
 .AboutUsHeader .header-content {
-  padding-top: 8%;
-  padding-bottom: 2rem;
+  padding-top: 6%;
   margin-left: 45%;
+  padding-bottom: 2rem;
   width: 50%;
 }
 .heading-about {
   color: #e2e2e2;
   font-family: Joane;
-  font-size: 60px;
+  font-size: 55px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
@@ -67,11 +66,12 @@
   font-weight: 500;
   line-height: normal;
   margin-bottom: 0.8rem;
+  cursor: pointer;
 }
 .follow {
   color: #555;
   font-family: 'TT Chocolates';
-  font-size: 25px;
+  font-size: 22px;
   font-style: normal;
   font-weight: 500;
   line-height: normal;
@@ -126,10 +126,11 @@
   text-align: center;
   color: #000;
   font-family: 'Goudy Old Style';
-  font-size: 20px;
+  font-size: 22px;
   font-style: normal;
   font-weight: 600;
   line-height: normal;
+  cursor: pointer;
 }
 .Name {
   color: #fff;
@@ -163,6 +164,121 @@
   background-color: rgb(0 0 0 / var(--tw-bg-opacity));
   z-index: 999;
 }
+.image {
+  height: 22rem;
+}
+.content {
+  font-size: 55px;
+  font-family: 'freight-big-pro';
+}
+.below-image {
+  background-color: #343436;
+}
+.text-div-below-image p1 {
+  font-size: 20px;
+}
+.buttonBelow {
+  background: #d84e40;
+  height: auto;
+  width: 70%;
+  text-align: center;
+  color: #fff;
+  font-family: 'Goudy Old Style';
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  cursor: pointer;
+}
+.answer-content {
+  transition: height 0.3s ease;
+}
+@media (max-width: 1700px) {
+  .sub-heading {
+    font-size: 19px;
+  }
+  .WhoWe .text-div p1 {
+    font-size: 20px;
+  }
+  .follow {
+    font-size: 24px;
+  }
+  .WhoWe h1 {
+    font-size: 20px;
+  }
+  .AboutUsHeader .link {
+    font-size: 18px;
+  }
+  .AboutUsHeader .header-content {
+    padding-top: 10%;
+  }
+  .heading-about {
+    font-size: 57px;
+  }
+  .text-heading {
+    font-size: 20px;
+  }
+  .Name {
+    font-size: 32px;
+  }
+  .designation {
+    font-size: 24px;
+  }
+  .about {
+    font-size: 20px;
+  }
+  .image {
+    height: 20rem;
+  }
+  .content {
+    font-size: 52px;
+  }
+}
+@media (max-width: 1590px) {
+  .sub-heading {
+    font-size: 17px;
+  }
+  .WhoWe .text-div p1 {
+    font-size: 18px;
+  }
+  .follow {
+    font-size: 22px;
+  }
+  .WhoWe h1 {
+    font-size: 18px;
+  }
+  .AboutUsHeader .link {
+    font-size: 16px;
+  }
+  .AboutUsHeader .header-content {
+    padding-top: 10%;
+  }
+  .heading-about {
+    font-size: 55px;
+  }
+  .text-heading {
+    font-size: 22px;
+  }
+  .Name {
+    font-size: 30px;
+  }
+  .designation {
+    font-size: 22px;
+  }
+  .about {
+    font-size: 18px;
+  }
+  .button {
+    width: 40%;
+  }
+  .image {
+    height: 18rem;
+  }
+  .content {
+    font-size: 48px;
+  }
+}
+
 @media (max-width: 1400px) {
   .sub-heading-content {
     width: 20%;
@@ -184,5 +300,14 @@
   }
   .text-heading {
     font-size: 18px;
+  }
+  .button {
+    width: 45%;
+  }
+  .image {
+    height: 17rem;
+  }
+  .content {
+    font-size: 45px;
   }
 }
