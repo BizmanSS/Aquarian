@@ -105,12 +105,12 @@ const Header = () => {
     );
   };
   return (
-    <div className='bg-[#000000] rounded-2xl h-[10rem] fixed z-20 top-0 flex flex-col items-center justify-start w-[100%]'>
+    <div className='bg-[#000000] rounded-2xl h-[10rem] fixed z-20 top-0 flex flex-col items-center justify-start w-[94%]'>
       {!ismobile ? (
         <>
           {' '}
-          <div className='bg-[#242525] fixed w-full h-[40px] text-[13px] z-10 flex items-center justify-end'>
-            <div className='flex items-center justify-end mr-[7rem]'>
+          <div className='bg-[#242525] fixed w-[94%] h-[40px] text-[13px] z-10 flex items-center justify-end'>
+            <div className='flex items-center justify-end mr-[0rem]'>
               <p className='px-4 py-1 text-[#939393] cursor-pointer'>
                 <a href='/about-us'>About Us</a>
               </p>
@@ -1105,7 +1105,7 @@ const Header = () => {
                 </div>
               </div>
             )}
-            <div className='flex items-center justify-center gap-6 relative right-[7rem]'>
+            <div className='flex items-center justify-center gap-6 relative right-[1rem]'>
               <div className='cursor-pointer text-xl text-white text-[14px] '>
                 <CiSearch />
               </div>
