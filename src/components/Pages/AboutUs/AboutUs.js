@@ -23,7 +23,7 @@ const AboutUsPage = () => {
   const subHeadingContentRef = useRef(null);
 
   const scrollToRef = (ref) => {
-    const scrollTop = ref.current.offsetTop - window.innerHeight * 0.15; // 10% of the window height
+    const scrollTop = ref.current.offsetTop - window.innerHeight * 0.25; // 10% of the window height
     window.scrollTo({ top: scrollTop, behavior: 'smooth' });
   };
 
