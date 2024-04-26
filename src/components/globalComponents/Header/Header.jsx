@@ -14,8 +14,10 @@ import { IoIosArrowForward } from 'react-icons/io';
 const Header = () => {
   const [ismobile, setIsMobile] = useState(false);
   const [isHovering, setIsHovering] = useState(false);
-  const [activeItem, setActiveItem] = useState(0);
+  const [activeItem, setActiveItem] = useState(1);
   const [selectedProgram, setSelectedProgram] = useState('PNP');
+  const [isOpen, setIsOpen] = useState(false);
+
   const menuRef = useRef(null);
   useEffect(() => {
     const handleResize = () => {
@@ -50,9 +52,28 @@ const Header = () => {
   const handleMouseLeave = () => {
     setIsHovering(false);
   };
-  // console.log(activeItem);
+
   const handleItemProgramClick = (program) => {
     setSelectedProgram(program);
+  };
+  const SvgComponent = () => {
+    return (
+      <svg
+        className={`w-3 h-3 text-gray-500 transition group-open:rotate-90 ${
+          isOpen ? 'rotate-90' : ''
+        }`}
+        xmlns='http://www.w3.org/2000/svg'
+        width='16'
+        height='16'
+        fill='currentColor'
+        viewBox='0 0 16 16'
+      >
+        <path
+          fill-rule='evenodd'
+          d='M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z'
+        ></path>
+      </svg>
+    );
   };
 
   const HeaderComponent = ({ text, textContent }) => {
@@ -60,41 +81,31 @@ const Header = () => {
       <ul class='flex flex-col gap-0 -mt-2'>
         <li>
           <details class='group'>
-            <summary class='flex items-center justify-between gap-2 p-2 font-normal marker:content-none hover:cursor-pointer'>
-              <span class='flex gap-2'>
+            <summary class='flex items-center justify-between  p-2 font-normal marker:content-none hover:cursor-pointer'>
+              <span class='flex '>
                 <span>{text}</span>
               </span>
-              <svg
-                class='w-3 h-3 text-gray-500 transition group-open:rotate-90'
-                xmlns='http://www.w3.org/2000/svg'
-                width='16'
-                height='16'
-                fill='currentColor'
-                viewBox='0 0 16 16'
-              >
-                <path
-                  fill-rule='evenodd'
-                  d='M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z'
-                ></path>
-              </svg>
+              {textContent?.length > 0 && <SvgComponent />}
             </summary>
-            <article class='px-4 pb-4'>
-              <ul class='flex flex-col gap-4 pl-2 mt-1 font-thin'>
-                {textContent &&
-                  textContent.map((item, index) => (
-                    <li class='flex gap-2' key={index}>
-                      <a href='/'>{textContent[index]}</a>
-                    </li>
-                  ))}
-              </ul>
-            </article>
+            {textContent?.length && (
+              <article class='px-4 pb-4'>
+                <ul class='flex flex-col gap-2 pl-2 mt-1 font-thin'>
+                  {textContent &&
+                    textContent.map((item, index) => (
+                      <li class='flex gap-2' key={index}>
+                        <a href='/'>{textContent[index]}</a>
+                      </li>
+                    ))}
+                </ul>
+              </article>
+            )}
           </details>
         </li>
       </ul>
     );
   };
   return (
-    <div className='bg-[#000000] rounded-2xl h-[12rem] fixed z-20 top-0 flex flex-col items-center justify-start w-[100%]'>
+    <div className='bg-[#000000] rounded-2xl h-[10rem] fixed z-20 top-0 flex flex-col items-center justify-start w-[100%]'>
       {!ismobile ? (
         <>
           {' '}
@@ -151,96 +162,174 @@ const Header = () => {
               alt='logo'
               className='cursor-pointer w-[18rem] mr-10'
             />
-            <ul
-              className='flex items-center justify-center text-white text-[14px] gap-8 hover:bg-[#FFFEFE] py-3 px-4 absolute left-[22rem] rounded-t-xl hover:text-black overflow-hidden'
-              onMouseEnter={handleMouseEnter}
-              onMouseLeave={handleMouseLeave}
-            >
-              <li
-                onClick={() => handleItemClick(0)}
-                className={`cursor-pointer border-b-[3px] border-b-transparent transition ease-in delay-100 duration-300 ${
-                  activeItem === 0 ? 'border-b-[#009889]' : ''
-                }`}
+
+            {isHovering ? (
+              <ul
+                className={`flex items-center justify-center  text-[14px] gap-8 bg-[#FFFEFE] py-3 px-4 absolute left-[22rem] rounded-t-xl overflow-hidden `}
+                onMouseEnter={handleMouseEnter}
+                onMouseLeave={handleMouseLeave}
               >
-                <a href='/'>Home</a>
-              </li>
-              <li
-                onClick={() => handleItemClick(1)}
-                className={`cursor-pointer border-b-[3px] border-b-transparent transition ease-in delay-100 duration-300 ${
-                  activeItem === 1 ? 'border-b-[#009889]' : ''
-                }`}
+                <li
+                  onClick={() => handleItemClick(0)}
+                  className={`cursor-pointer border-b-[3px] border-b-transparent transition ease-in delay-100 duration-300 ${
+                    activeItem === 0 ? 'border-b-[#009889]' : ''
+                  }`}
+                >
+                  <a href='/'>Home</a>
+                </li>
+                <li
+                  onClick={() => handleItemClick(1)}
+                  className={`cursor-pointer border-b-[3px] border-b-transparent transition ease-in delay-100 duration-300 ${
+                    activeItem === 1 ? 'border-b-[#009889]' : ''
+                  }`}
+                >
+                  Immigrate
+                </li>
+                <li
+                  onClick={() => handleItemClick(2)}
+                  className={`cursor-pointer border-b-[3px] border-b-transparent transition ease-in delay-100 duration-300 ${
+                    activeItem === 2 ? 'border-b-[#009889]' : ''
+                  }`}
+                >
+                  Work
+                </li>
+                <li
+                  onClick={() => handleItemClick(3)}
+                  className={`cursor-pointer border-b-[3px] border-b-transparent transition ease-in delay-100 duration-300 ${
+                    activeItem === 3 ? 'border-b-[#009889]' : ''
+                  }`}
+                >
+                  Study
+                </li>
+                <li
+                  onClick={() => handleItemClick(4)}
+                  className={`cursor-pointer border-b-[3px] border-b-transparent transition ease-in delay-100 duration-300 ${
+                    activeItem === 4 ? 'border-b-[#009889]' : ''
+                  }`}
+                >
+                  Invest
+                </li>
+                <li
+                  onClick={() => handleItemClick(5)}
+                  className={`cursor-pointer border-b-[3px] border-b-transparent transition ease-in delay-100 duration-300 ${
+                    activeItem === 5 ? 'border-b-[#009889]' : ''
+                  }`}
+                >
+                  Visit
+                </li>
+                <li
+                  onClick={() => handleItemClick(6)}
+                  className={`cursor-pointer border-b-[3px] border-b-transparent transition ease-in delay-100 duration-300 ${
+                    activeItem === 6 ? 'border-b-[#009889]' : ''
+                  }`}
+                >
+                  Employers
+                </li>
+                <li
+                  onClick={() => handleItemClick(7)}
+                  className={`cursor-pointer border-b-[3px] border-b-transparent transition ease-in delay-100 duration-300 ${
+                    activeItem === 7 ? 'border-b-[#009889]' : ''
+                  }`}
+                >
+                  Sponsorship
+                </li>
+              </ul>
+            ) : (
+              <ul
+                className={`flex items-center justify-center text-white text-[14px] gap-8 hover:bg-[#FFFEFE] py-3 px-4 absolute left-[22rem] rounded-t-xl hover:text-black overflow-hidden`}
+                onMouseEnter={handleMouseEnter}
+                onMouseLeave={handleMouseLeave}
               >
-                Immigrate
-              </li>
-              <li
-                onClick={() => handleItemClick(2)}
-                className={`cursor-pointer border-b-[3px] border-b-transparent transition ease-in delay-100 duration-300 ${
-                  activeItem === 2 ? 'border-b-[#009889]' : ''
-                }`}
-              >
-                Work
-              </li>
-              <li
-                onClick={() => handleItemClick(3)}
-                className={`cursor-pointer border-b-[3px] border-b-transparent transition ease-in delay-100 duration-300 ${
-                  activeItem === 3 ? 'border-b-[#009889]' : ''
-                }`}
-              >
-                Study
-              </li>
-              <li
-                onClick={() => handleItemClick(4)}
-                className={`cursor-pointer border-b-[3px] border-b-transparent transition ease-in delay-100 duration-300 ${
-                  activeItem === 4 ? 'border-b-[#009889]' : ''
-                }`}
-              >
-                Invest
-              </li>
-              <li
-                onClick={() => handleItemClick(5)}
-                className={`cursor-pointer border-b-[3px] border-b-transparent transition ease-in delay-100 duration-300 ${
-                  activeItem === 5 ? 'border-b-[#009889]' : ''
-                }`}
-              >
-                Visit
-              </li>
-              <li
-                onClick={() => handleItemClick(6)}
-                className={`cursor-pointer border-b-[3px] border-b-transparent transition ease-in delay-100 duration-300 ${
-                  activeItem === 6 ? 'border-b-[#009889]' : ''
-                }`}
-              >
-                Employers
-              </li>
-              <li
-                onClick={() => handleItemClick(7)}
-                className={`cursor-pointer border-b-[3px] border-b-transparent transition ease-in delay-100 duration-300 ${
-                  activeItem === 7 ? 'border-b-[#009889]' : ''
-                }`}
-              >
-                Sponsorship
-              </li>
-            </ul>
+                <li
+                  onClick={() => handleItemClick(0)}
+                  className={`cursor-pointer border-b-[3px] border-b-transparent transition ease-in delay-100 duration-300 ${
+                    activeItem === 0 ? 'border-b-[#009889]' : ''
+                  }`}
+                >
+                  <a href='/'>Home</a>
+                </li>
+                <li
+                  onClick={() => handleItemClick(1)}
+                  className={`cursor-pointer border-b-[3px] border-b-transparent transition ease-in delay-100 duration-300 ${
+                    activeItem === 1 ? 'border-b-[#009889]' : ''
+                  }`}
+                >
+                  Immigrate
+                </li>
+                <li
+                  onClick={() => handleItemClick(2)}
+                  className={`cursor-pointer border-b-[3px] border-b-transparent transition ease-in delay-100 duration-300 ${
+                    activeItem === 2 ? 'border-b-[#009889]' : ''
+                  }`}
+                >
+                  Work
+                </li>
+                <li
+                  onClick={() => handleItemClick(3)}
+                  className={`cursor-pointer border-b-[3px] border-b-transparent transition ease-in delay-100 duration-300 ${
+                    activeItem === 3 ? 'border-b-[#009889]' : ''
+                  }`}
+                >
+                  Study
+                </li>
+                <li
+                  onClick={() => handleItemClick(4)}
+                  className={`cursor-pointer border-b-[3px] border-b-transparent transition ease-in delay-100 duration-300 ${
+                    activeItem === 4 ? 'border-b-[#009889]' : ''
+                  }`}
+                >
+                  Invest
+                </li>
+                <li
+                  onClick={() => handleItemClick(5)}
+                  className={`cursor-pointer border-b-[3px] border-b-transparent transition ease-in delay-100 duration-300 ${
+                    activeItem === 5 ? 'border-b-[#009889]' : ''
+                  }`}
+                >
+                  Visit
+                </li>
+                <li
+                  onClick={() => handleItemClick(6)}
+                  className={`cursor-pointer border-b-[3px] border-b-transparent transition ease-in delay-100 duration-300 ${
+                    activeItem === 6 ? 'border-b-[#009889]' : ''
+                  }`}
+                >
+                  Employers
+                </li>
+                <li
+                  onClick={() => handleItemClick(7)}
+                  className={`cursor-pointer border-b-[3px] border-b-transparent transition ease-in delay-100 duration-300 ${
+                    activeItem === 7 ? 'border-b-[#009889]' : ''
+                  }`}
+                >
+                  Sponsorship
+                </li>
+              </ul>
+            )}
             {isHovering && (
               <div
-                className='h-auto bg-[#FFFEFE] z-40 absolute top-[5.8rem] left-[22rem] w-[39.2rem] rounded-b-xl'
+                className={`h-auto bg-[#FFFEFE] z-40 absolute top-[5.8rem] left-[22rem] w-[39.2rem] rounded-b-xl `}
                 onMouseEnter={handleMouseEnter}
                 onMouseLeave={handleMouseLeave}
               >
                 <div className='flex flex-col items-center justify-center'>
                   <div className='w-[90%] h-[1.2px] bg-[#009889]'></div>
                 </div>
-                <div className='flex items-start justify-between p-4'>
-                  <div className=' w-[30%] h-auto flex flex-col items-start justify-start'>
+                <div
+                  className={`flex items-start justify-start p-4 ${
+                    activeItem === 0 ? 'none' : 'block'
+                  }`}
+                >
+                  <div className=' w-[30%] h-auto flex flex-col items-start justify-start '>
                     {activeItem === 0 && (
-                      <div className='font-semibold ml-6 text-xl border-b-[2px] border-[#009889] pb-[2px]'>
+                      <div className='font-semibold ml-6 text-xl border-b-[2px] border-[#009889] pb-[2px] -mt-4'>
                         Home
                       </div>
                     )}
                     {activeItem === 1 && (
                       <div className='flex items-start justify-center'>
                         <div className='flex flex-col items-start justify-center'>
-                          <div className='font-semibold ml-6 text-xl border-b-[2px] border-[#009889] pb-[2px]'>
+                          <div className='font-semibold ml-6 text-xl border-b-[2px] border-[#009889] pb-[2px] '>
                             Immigration
                           </div>
                           <div className='pl-6 text-[13px] text-left mt-4 '>
@@ -351,83 +440,379 @@ const Header = () => {
                       </>
                     )}
                   </div>
-                  <div className=' w-[38%] h-auto flex items-start justify-start'>
-                    <div className='flex flex-col items-start justify-start'>
-                      <ul className='text-[11px] flex flex-col items-start justify-start gap-3'>
-                        <li onClick={() => handleItemProgramClick('PNP')}>
-                          PNP
-                        </li>
-                        <li
-                          onClick={() =>
-                            handleItemProgramClick('Express Entry')
-                          }
-                        >
-                          Express Entry
-                        </li>
-                        <li
-                          onClick={() =>
-                            handleItemProgramClick('After Permanent Residency')
-                          }
-                        >
-                          After Permanent Residency
-                        </li>
-                        <li
-                          onClick={() =>
-                            handleItemProgramClick('AGRI FOOD PILOT')
-                          }
-                        >
-                          AGRI FOOD PILOT
-                        </li>
-                        <li
-                          onClick={() =>
-                            handleItemProgramClick(
-                              'Atlantic Immigration Programme'
-                            )
-                          }
-                        >
-                          Atlantic Immigration Programme{' '}
-                        </li>
-                        <li
-                          onClick={() =>
-                            handleItemProgramClick('Business Class')
-                          }
-                        >
-                          Business Class
-                        </li>
-                        <li
-                          onClick={() =>
-                            handleItemProgramClick('Caregiver Program')
-                          }
-                        >
-                          Caregiver Program
-                        </li>
-                        <li
-                          onClick={() =>
-                            handleItemProgramClick('Canadian Immigration FAQs')
-                          }
-                        >
-                          Canadian Immigration FAQs
-                        </li>
-                        <li
-                          onClick={() =>
-                            handleItemProgramClick(
-                              'Rural And Northern Immigration Pilot'
-                            )
-                          }
-                        >
-                          Rural And Northern Immigration Pilot
-                        </li>
-                        <li
-                          onClick={() =>
-                            handleItemProgramClick('TR to PR Route')
-                          }
-                        >
-                          TR to PR Route
-                        </li>
-                      </ul>
+                  {activeItem === 1 && (
+                    <div className=' w-[38%] h-auto flex items-start justify-start'>
+                      <div className='flex flex-col items-start justify-start'>
+                        <ul className='text-[11px] flex flex-col items-start justify-start gap-3 '>
+                          <li
+                            onClick={() => handleItemProgramClick('PNP')}
+                            className='flex items-center justify-between w-full '
+                          >
+                            PNP <SvgComponent isOpen={isOpen} />
+                          </li>
+                          <li
+                            onClick={() =>
+                              handleItemProgramClick('Express Entry')
+                            }
+                            className='flex items-center justify-between w-full'
+                          >
+                            Express Entry <SvgComponent isOpen={isOpen} />
+                          </li>
+                          <li
+                            onClick={() =>
+                              handleItemProgramClick(
+                                'After Permanent Residency'
+                              )
+                            }
+                            className='flex items-center justify-between w-full'
+                          >
+                            After Permanent Residency{' '}
+                            <SvgComponent isOpen={isOpen} />
+                          </li>
+                          <li
+                            onClick={() =>
+                              handleItemProgramClick('AGRI FOOD PILOT')
+                            }
+                            className='flex items-center justify-between w-full'
+                          >
+                            AGRI FOOD PILOT
+                          </li>
+                          <li
+                            onClick={() =>
+                              handleItemProgramClick(
+                                'Atlantic Immigration Programme'
+                              )
+                            }
+                            className='flex items-center justify-between w-full'
+                          >
+                            Atlantic Immigration Programme{' '}
+                          </li>
+                          <li
+                            onClick={() =>
+                              handleItemProgramClick('Business Class')
+                            }
+                            className='flex items-center justify-between w-full'
+                          >
+                            Business Class <SvgComponent isOpen={isOpen} />
+                          </li>
+                          <li
+                            onClick={() =>
+                              handleItemProgramClick('Caregiver Program')
+                            }
+                            className='flex items-center justify-between w-full'
+                          >
+                            Caregiver Program <SvgComponent isOpen={isOpen} />
+                          </li>
+                          <li
+                            onClick={() =>
+                              handleItemProgramClick(
+                                'Canadian Immigration FAQs'
+                              )
+                            }
+                            className='flex items-center justify-between w-full'
+                          >
+                            Canadian Immigration FAQs{' '}
+                          </li>
+                          <li
+                            onClick={() =>
+                              handleItemProgramClick(
+                                'Rural And Northern Immigration Pilot'
+                              )
+                            }
+                            className='flex items-center justify-between w-full'
+                          >
+                            Rural And Northern Immigration Pilot{' '}
+                          </li>
+                          <li
+                            onClick={() =>
+                              handleItemProgramClick('TR to PR Route')
+                            }
+                            className='flex items-center justify-between w-full'
+                          >
+                            TR to PR Route
+                          </li>
+                        </ul>
+                      </div>
                     </div>
-                  </div>
-                  {selectedProgram === 'PNP' && (
+                  )}
+                  {activeItem === 2 && (
+                    <div className=' w-[38%] h-auto flex items-start justify-start'>
+                      <div className='flex flex-col items-start justify-start'>
+                        <ul className='text-[11px] flex flex-col items-start justify-start gap-3 '>
+                          <li
+                            onClick={() =>
+                              handleItemProgramClick('Work In Canada')
+                            }
+                            className='flex items-center justify-between w-full '
+                          >
+                            Work In Canada <SvgComponent isOpen={isOpen} />
+                          </li>
+                          <li
+                            onClick={() =>
+                              handleItemProgramClick('Work Without a Permit ')
+                            }
+                            className='flex items-center justify-between w-full'
+                          >
+                            Work Without a Permit{' '}
+                            <SvgComponent isOpen={isOpen} />
+                          </li>
+                          <li
+                            onClick={() =>
+                              handleItemProgramClick(
+                                ' Temporary Foreign Worker Program'
+                              )
+                            }
+                            className='flex items-center justify-between w-full'
+                          >
+                            Temporary Foreign Worker Program{' '}
+                            <SvgComponent isOpen={isOpen} />
+                          </li>
+                          <li
+                            onClick={() =>
+                              handleItemProgramClick(
+                                'International Mobility Program (IMP)'
+                              )
+                            }
+                            className='flex items-center justify-between w-full'
+                          >
+                            International Mobility Program (IMP){' '}
+                            <SvgComponent isOpen={isOpen} />
+                          </li>
+                          <li
+                            onClick={() =>
+                              handleItemProgramClick('Open Work Permits')
+                            }
+                            className='flex items-center justify-between w-full'
+                          >
+                            Open Work Permits <SvgComponent isOpen={isOpen} />
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  )}
+                  {activeItem === 3 && (
+                    <div className=' w-[38%] h-auto flex items-start justify-start'>
+                      <div className='flex flex-col items-start justify-start'>
+                        <ul className='text-[11px] flex flex-col items-start justify-start gap-3 '>
+                          <li
+                            onClick={() =>
+                              handleItemProgramClick('Study In Canada')
+                            }
+                            className='flex items-center justify-between w-full '
+                          >
+                            Study In Canada <SvgComponent isOpen={isOpen} />
+                          </li>
+                          <li
+                            onClick={() => handleItemProgramClick('DLI ')}
+                            className='flex items-center justify-between w-full'
+                          >
+                            DLI <SvgComponent isOpen={isOpen} />
+                          </li>
+                          <li
+                            onClick={() =>
+                              handleItemProgramClick(' Levels of Study')
+                            }
+                            className='flex items-center justify-between w-full'
+                          >
+                            Levels of Study <SvgComponent isOpen={isOpen} />
+                          </li>
+                          <li
+                            onClick={() =>
+                              handleItemProgramClick('Study Permit In Canada')
+                            }
+                            className='flex items-center justify-between w-full'
+                          >
+                            Study Permit In Canada{' '}
+                            <SvgComponent isOpen={isOpen} />
+                          </li>
+                          <li
+                            onClick={() =>
+                              handleItemProgramClick(
+                                'Refusals and Appeals of Study Permits'
+                              )
+                            }
+                            className='flex items-center justify-between w-full'
+                          >
+                            Refusals and Appeals of Study Permits{' '}
+                            <SvgComponent isOpen={isOpen} />
+                          </li>
+                          <li
+                            onClick={() =>
+                              handleItemProgramClick('Extend a Study Control')
+                            }
+                            className='flex items-center justify-between w-full'
+                          >
+                            Extend a Study Control
+                            <SvgComponent isOpen={isOpen} />
+                          </li>
+                          <li
+                            onClick={() => handleItemProgramClick('PGWP')}
+                            className='flex items-center justify-between w-full'
+                          >
+                            PGWP <SvgComponent isOpen={isOpen} />
+                          </li>
+                          <li
+                            onClick={() =>
+                              handleItemProgramClick(
+                                'Study Pathways to Permanent REsidence'
+                              )
+                            }
+                            className='flex items-center justify-between w-full'
+                          >
+                            Study Pathways to Permanent REsidence{' '}
+                            <SvgComponent isOpen={isOpen} />
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  )}
+                  {activeItem === 4 && (
+                    <div className=' w-[38%] h-auto flex items-start justify-start'>
+                      <div className='flex flex-col items-start justify-start'>
+                        <ul className='text-[11px] flex flex-col items-start justify-start gap-3 '>
+                          <li
+                            onClick={() =>
+                              handleItemProgramClick(' Business/Invest')
+                            }
+                            className='flex items-center justify-between w-full '
+                          >
+                            Business/Invest <SvgComponent isOpen={isOpen} />
+                          </li>
+                          <li
+                            onClick={() =>
+                              handleItemProgramClick('PNP Entrepreneur Streams')
+                            }
+                            className='flex items-center justify-between w-full'
+                          >
+                            PNP Entrepreneur Streams{' '}
+                            <SvgComponent isOpen={isOpen} />
+                          </li>
+                          <li
+                            onClick={() =>
+                              handleItemProgramClick(
+                                ' Work Permit to PR Pathways'
+                              )
+                            }
+                            className='flex items-center justify-between w-full'
+                          >
+                            Work Permit to PR Pathways{' '}
+                            <SvgComponent isOpen={isOpen} />
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  )}
+                  {activeItem === 5 && (
+                    <div className=' w-[38%] h-auto flex items-start justify-start'>
+                      <div className='flex flex-col items-start justify-start'>
+                        <ul className='text-[11px] flex flex-col items-start justify-start gap-3 '>
+                          <li
+                            onClick={() =>
+                              handleItemProgramClick('TRV-Visitor Visa')
+                            }
+                            className='flex items-center justify-between w-full '
+                          >
+                            TRV-Visitor Visa
+                          </li>
+                          <li
+                            onClick={() =>
+                              handleItemProgramClick('Visa Extension')
+                            }
+                            className='flex items-center justify-between w-full'
+                          >
+                            Visa Extension
+                          </li>
+                          <li
+                            onClick={() =>
+                              handleItemProgramClick(' Super visa (linked)')
+                            }
+                            className='flex items-center justify-between'
+                          >
+                            Super visa (linked)
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  )}
+                  {activeItem === 6 && (
+                    <div className=' w-[38%] h-auto flex items-start justify-start'>
+                      <div className='flex flex-col items-start justify-start'>
+                        <ul className='text-[11px] flex flex-col items-start justify-start gap-3 '>
+                          <li
+                            onClick={() =>
+                              handleItemProgramClick(
+                                ' Employers Outside Canada'
+                              )
+                            }
+                            className='flex items-center justify-between w-full '
+                          >
+                            Employers Outside Canada{' '}
+                            <SvgComponent isOpen={isOpen} />
+                          </li>
+                          <li
+                            onClick={() =>
+                              handleItemProgramClick('Canadian Employers')
+                            }
+                            className='flex items-center justify-between w-full'
+                          >
+                            Canadian Employers
+                            <SvgComponent isOpen={isOpen} />
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  )}
+                  {activeItem === 7 && (
+                    <div className=' w-[38%] h-auto flex items-start justify-start'>
+                      <div className='flex flex-col items-start justify-start'>
+                        <ul className='text-[11px] flex flex-col items-start justify-start gap-3 '>
+                          <li
+                            onClick={() =>
+                              handleItemProgramClick(
+                                'Canadian spousal sponsorship '
+                              )
+                            }
+                            className='flex items-center justify-between  '
+                          >
+                            Canadian spousal sponsorship{' '}
+                          </li>
+                          <li
+                            onClick={() =>
+                              handleItemProgramClick(
+                                'Child or Other Dependent Sponsorship'
+                              )
+                            }
+                            className='flex items-center justify-between '
+                          >
+                            Child or Other Dependent Sponsorship
+                          </li>
+                          <li
+                            onClick={() =>
+                              handleItemProgramClick(
+                                'Parents and Grandparents Program (PGP)'
+                              )
+                            }
+                            className='flex items-center justify-between '
+                          >
+                            Parents and Grandparents Program (PGP)
+                          </li>
+                          <li
+                            onClick={() => handleItemProgramClick('Super Visa')}
+                            className='flex items-center justify-between'
+                          >
+                            Super Visa
+                          </li>
+                          <li
+                            onClick={() => handleItemProgramClick('MNI')}
+                            className='flex items-center justify-between'
+                          >
+                            MNI
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  )}
+                  {selectedProgram === 'PNP' && activeItem === 1 && (
                     <div className=' w-[30%] auto flex items-start justify-center'>
                       <div className='flex flex-col items-center justify-center'>
                         <ul className='text-[11px]'>
@@ -567,7 +952,7 @@ const Header = () => {
                       </div>
                     </div>
                   )}
-                  {selectedProgram === 'Express Entry' && (
+                  {selectedProgram === 'Express Entry' && activeItem === 1 && (
                     <div className=' w-[30%] auto flex items-start justify-center'>
                       <div className='flex flex-col items-center justify-center'>
                         <ul className='text-[11px]'>
@@ -613,54 +998,57 @@ const Header = () => {
                       </div>
                     </div>
                   )}
-                  {selectedProgram === 'After Permanent Residency' && (
-                    <div className=' w-[30%] auto flex items-start justify-center'>
-                      <div className='flex flex-col items-center justify-center'>
-                        <ul className='text-[11px]'>
-                          <li>
-                            <HeaderComponent
-                              text={'Permanent Resident Cards'}
-                            />
-                          </li>
-                          <li>
-                            {' '}
-                            <HeaderComponent
-                              text={'Permanent Resident Card Renewal'}
-                            />
-                          </li>
-                          <li>
-                            {' '}
-                            <HeaderComponent
-                              text={'Permanent Resident Travel Document'}
-                            />
-                          </li>
-                          <li>
-                            {' '}
-                            <HeaderComponent text={'Residency Obligations'} />
-                          </li>
-                          <li>
-                            {' '}
-                            <HeaderComponent
-                              text={'Canadian Citizenship'}
-                            />{' '}
-                          </li>
-                        </ul>
+                  {selectedProgram === 'After Permanent Residency' &&
+                    activeItem === 1 && (
+                      <div className=' w-[30%] auto flex items-start justify-center'>
+                        <div className='flex flex-col items-center justify-center'>
+                          <ul className='text-[11px]'>
+                            <li>
+                              <HeaderComponent
+                                text={'Permanent Resident Cards'}
+                              />
+                            </li>
+                            <li>
+                              {' '}
+                              <HeaderComponent
+                                text={'Permanent Resident Card Renewal'}
+                              />
+                            </li>
+                            <li>
+                              {' '}
+                              <HeaderComponent
+                                text={'Permanent Resident Travel Document'}
+                              />
+                            </li>
+                            <li>
+                              {' '}
+                              <HeaderComponent text={'Residency Obligations'} />
+                            </li>
+                            <li>
+                              {' '}
+                              <HeaderComponent
+                                text={'Canadian Citizenship'}
+                              />{' '}
+                            </li>
+                          </ul>
+                        </div>
                       </div>
-                    </div>
-                  )}
-                  {selectedProgram === 'AGRI FOOD PILOT' && (
-                    <div className=' w-[30%] auto flex items-start justify-center'>
-                      <div className='flex flex-col items-center justify-center'>
-                        <ul className='text-[11px]'></ul>
+                    )}
+                  {selectedProgram === 'AGRI FOOD PILOT' &&
+                    activeItem === 1 && (
+                      <div className=' w-[30%] auto flex items-start justify-center'>
+                        <div className='flex flex-col items-center justify-center'>
+                          <ul className='text-[11px]'></ul>
+                        </div>
                       </div>
-                    </div>
-                  )}
-                  {selectedProgram === 'Atlantic Immigration Programme' && (
-                    <div className=' w-[30%] auto flex items-start justify-center'>
-                      <div className='flex flex-col items-center justify-center'></div>
-                    </div>
-                  )}
-                  {selectedProgram === 'Business Class' && (
+                    )}
+                  {selectedProgram === 'Atlantic Immigration Programme' &&
+                    activeItem === 1 && (
+                      <div className=' w-[30%] auto flex items-start justify-center'>
+                        <div className='flex flex-col items-center justify-center'></div>
+                      </div>
+                    )}
+                  {selectedProgram === 'Business Class' && activeItem === 1 && (
                     <div className=' w-[30%] auto flex items-start justify-center'>
                       <div className='flex flex-col items-center justify-center'>
                         <ul className='text-[11px]'>
@@ -677,36 +1065,38 @@ const Header = () => {
                       </div>
                     </div>
                   )}
-                  {selectedProgram === 'Caregiver Program' && (
-                    <div className=' w-[30%] auto flex items-start justify-center'>
-                      <div className='flex flex-col items-center justify-center'>
-                        <ul className='text-[11px]'>
-                          <li>
-                            <HeaderComponent
-                              text={'Home Child Care Provider Pilot'}
-                            />
-                          </li>
-                          <li>
-                            {' '}
-                            <HeaderComponent
-                              text={'Home Support Worker Pilot	'}
-                            />
-                          </li>
-                        </ul>
+                  {selectedProgram === 'Caregiver Program' &&
+                    activeItem === 1 && (
+                      <div className=' w-[30%] auto flex items-start justify-center'>
+                        <div className='flex flex-col items-center justify-center'>
+                          <ul className='text-[11px]'>
+                            <li>
+                              <HeaderComponent
+                                text={'Home Child Care Provider Pilot'}
+                              />
+                            </li>
+                            <li>
+                              {' '}
+                              <HeaderComponent
+                                text={'Home Support Worker Pilot	'}
+                              />
+                            </li>
+                          </ul>
+                        </div>
                       </div>
-                    </div>
-                  )}
-                  {selectedProgram === 'Canadian Immigration FAQs' && (
-                    <div className=' w-[30%] auto flex items-start justify-center'>
-                      <div className='flex flex-col items-center justify-center'></div>
-                    </div>
-                  )}
-                  {selectedProgram ===
-                    'Rural And Northern Immigration Pilot' && (
-                    <div className=' w-[30%] auto flex items-start justify-center'>
-                      <div className='flex flex-col items-center justify-center'></div>
-                    </div>
-                  )}
+                    )}
+                  {selectedProgram === 'Canadian Immigration FAQs' &&
+                    activeItem === 1 && (
+                      <div className=' w-[30%] auto flex items-start justify-center'>
+                        <div className='flex flex-col items-center justify-center'></div>
+                      </div>
+                    )}
+                  {selectedProgram === 'Rural And Northern Immigration Pilot' &&
+                    activeItem === 1 && (
+                      <div className=' w-[30%] auto flex items-start justify-center'>
+                        <div className='flex flex-col items-center justify-center'></div>
+                      </div>
+                    )}
                   {selectedProgram === 'TR to PR Route' && (
                     <div className=' w-[30%] auto flex items-start justify-center'>
                       <div className='flex flex-col items-center justify-center'></div>
