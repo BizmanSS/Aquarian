@@ -115,7 +115,7 @@ const Header = () => {
                 <a href='/about-us'>About Us</a>
               </p>
               <p className='px-4 py-1 text-[#939393] cursor-pointer'>
-                Contact Us
+                <a href='/contact-us'>Contact Us</a>
               </p>
               <div className='px-4 py-1 text-[#939393] flex items-center justify-center text-[0.6rem]'>
                 <div className='mx-0 p-2'>

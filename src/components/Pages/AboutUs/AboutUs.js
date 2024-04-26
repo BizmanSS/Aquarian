@@ -12,39 +12,19 @@ import OurTeam from '../../AboutUs/OurTeam.js';
 import Tanpreet from '../../../Assets/Tanpreet.jpg';
 import OurServices from '../../AboutUs/OurServices.js';
 import TheAquarian from '../../AboutUs/TheAquarian.js';
-import AquarianFlower from '../../../Assets/AquarianFlower.jpg';
+//import AquarianFlower from "../../../Assets/AquarianFlower.jpg";
 const AboutUsPage = () => {
   const whoWeAreRef = useRef(null);
   const competitiveRef = useRef(null);
   const ourTeamRef = useRef(null);
   const ourServicesRef = useRef(null);
   const theAquarianRef = useRef(null);
-  const buttonBelowRef = useRef(null);
-  const subHeadingContentRef = useRef(null);
 
   const scrollToRef = (ref) => {
     const scrollTop = ref.current.offsetTop - window.innerHeight * 0.25; // 10% of the window height
     window.scrollTo({ top: scrollTop, behavior: 'smooth' });
   };
 
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        if (entries[0].isIntersecting) {
-          subHeadingContentRef.current.style.position = 'absolute';
-        } else {
-          subHeadingContentRef.current.style.position = 'fixed';
-        }
-      },
-      { threshold: 0.5 }
-    );
-
-    observer.observe(buttonBelowRef.current);
-
-    return () => {
-      observer.unobserve(buttonBelowRef.current);
-    };
-  }, []);
   return (
     <div style={{ marginTop: '10rem', background: '#E0E0E0' }}>
       <div className='AboutUsHeader'>
@@ -58,7 +38,7 @@ const AboutUsPage = () => {
           </p1>
         </div>
       </div>
-      <div className='sub-heading-content' ref={subHeadingContentRef}>
+      <div className='sub-heading-content'>
         <div
           style={{
             display: 'flex',
@@ -360,14 +340,14 @@ const AboutUsPage = () => {
           <TheAquarian />
         </div>
       </div>
-      <div
+      {/*<div
         className='below-section'
         style={{ marginTop: '8rem', paddingBottom: '8rem' }}
       >
         <div
           className='image'
           style={{
-            backgroundImage: `url(${AquarianFlower})`,
+            backgroundImage: url(${AquarianFlower}),
             width: '30%',
             marginLeft: '28%',
             marginRight: 'auto',
@@ -420,7 +400,7 @@ const AboutUsPage = () => {
             <br />
           </div>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 };
