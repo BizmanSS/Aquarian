@@ -336,10 +336,10 @@ const Header = () => {
                             Make Canada your permanent home! PR allows you to
                             live, work and study in Canada{' '}
                           </div>
-                          <div className='text-[11px] text-[#009889] pl-6 flex items-center justify-center mt-4'>
+                          {/* <div className='text-[11px] text-[#009889] pl-6 flex items-center justify-center mt-4'>
                             Explore Immigration{' '}
                             <IoIosArrowForward className='relative top-[1px]' />
-                          </div>
+                          </div> */}
                         </div>
                       </div>
                     )}
@@ -353,10 +353,10 @@ const Header = () => {
                           elit. Blanditiis quos in nesciunt ratione autem ut
                           numquam voluptate
                         </div>
-                        <div className='text-[11px] text-[#009889] pl-6 flex items-center justify-center mt-4'>
+                        {/* <div className='text-[11px] text-[#009889] pl-6 flex items-center justify-center mt-4'>
                           Explore Work{' '}
                           <IoIosArrowForward className='relative top-[1px]' />
-                        </div>
+                        </div> */}
                       </>
                     )}
                     {activeItem === 3 && (
@@ -369,10 +369,10 @@ const Header = () => {
                           elit. Blanditiis quos in nesciunt ratione autem ut
                           numquam voluptate
                         </div>
-                        <div className='text-[11px] text-[#009889] pl-6 flex items-center justify-center mt-4'>
+                        {/* <div className='text-[11px] text-[#009889] pl-6 flex items-center justify-center mt-4'>
                           Explore Study{' '}
                           <IoIosArrowForward className='relative top-[1px]' />
-                        </div>
+                        </div> */}
                       </>
                     )}
                     {activeItem === 4 && (
@@ -385,10 +385,10 @@ const Header = () => {
                           elit. Blanditiis quos in nesciunt ratione autem ut
                           numquam voluptate
                         </div>
-                        <div className='text-[11px] text-[#009889] pl-6 flex items-center justify-center mt-4'>
+                        {/* <div className='text-[11px] text-[#009889] pl-6 flex items-center justify-center mt-4'>
                           Explore Invest{' '}
                           <IoIosArrowForward className='relative top-[1px]' />
-                        </div>
+                        </div> */}
                       </>
                     )}
                     {activeItem === 5 && (
@@ -401,10 +401,10 @@ const Header = () => {
                           elit. Blanditiis quos in nesciunt ratione autem ut
                           numquam voluptate
                         </div>
-                        <div className='text-[11px] text-[#009889] pl-6 flex items-center justify-center mt-4'>
+                        {/* <div className='text-[11px] text-[#009889] pl-6 flex items-center justify-center mt-4'>
                           Explore Visit{' '}
                           <IoIosArrowForward className='relative top-[1px]' />
-                        </div>
+                        </div> */}
                       </>
                     )}
                     {activeItem === 6 && (
@@ -417,10 +417,10 @@ const Header = () => {
                           elit. Blanditiis quos in nesciunt ratione autem ut
                           numquam voluptate
                         </div>
-                        <div className='text-[11px] text-[#009889] pl-6 flex items-center justify-center mt-4'>
+                        {/* <div className='text-[11px] text-[#009889] pl-6 flex items-center justify-center mt-4'>
                           Explore Employers{' '}
                           <IoIosArrowForward className='relative top-[1px]' />
-                        </div>
+                        </div> */}
                       </>
                     )}
                     {activeItem === 7 && (
@@ -433,10 +433,10 @@ const Header = () => {
                           elit. Blanditiis quos in nesciunt ratione autem ut
                           numquam voluptate
                         </div>
-                        <div className='text-[11px] text-[#009889] pl-6 flex items-center justify-center mt-4'>
+                        {/* <div className='text-[11px] text-[#009889] pl-6 flex items-center justify-center mt-4'>
                           Explore Sponsorship{' '}
                           <IoIosArrowForward className='relative top-[1px]' />
-                        </div>
+                        </div> */}
                       </>
                     )}
                   </div>

@@ -22,7 +22,7 @@ const Component2 = () => {
       img: cardimg2,
       title: 'Family Sponsorship',
       description:
-        'Bring your family together! Canadians and permanent residents can sponsor spouses, children, parents and grandparents to join them in Canada.',
+        'Canadians and permanent residents can sponsor spouses, children, parents and grandparents to bring their family together!',
     },
     {
       img: cardimg3,
@@ -34,7 +34,7 @@ const Component2 = () => {
       img: cardimg4,
       title: 'Work Visa',
       description:
-        'Explore infinite career opportunities in Canada! With a Work Visa, you can legally work, gain valuable experience, advance your career, and contribute to the countrys thriving workforce.',
+        'Canadians and permanent residents can sponsor spouses, children, parents and grandparents to bring their family together!',
     },
     {
       img: cardimg5,
