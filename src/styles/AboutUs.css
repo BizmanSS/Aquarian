@@ -5,6 +5,7 @@
   background-repeat: no-repeat;
   background-size: auto;
   width: 90%;
+  top: -40px;
   margin-left: 2%;
   border-radius: 25px;
   background: url(../Assets/AboutUsHeader.png) lightgray 50% / cover no-repeat;
@@ -12,7 +13,7 @@
 }
 .AboutUsHeader .link {
   color: #e2e2e2;
-  font-family: 'TT Chocolates';
+  font-family: "TT Chocolates";
   font-size: 16px;
   font-style: normal;
   font-weight: 500;
@@ -36,7 +37,7 @@
 }
 .text-heading {
   color: #d3d3d3;
-  font-family: 'TT Chocolates';
+  font-family: "TT Chocolates";
   font-size: 20px;
   font-style: normal;
   font-weight: 500;
@@ -60,7 +61,7 @@
 }
 .sub-heading {
   color: #009889;
-  font-family: 'TT Chocolates';
+  font-family: "TT Chocolates";
   font-size: 20px;
   font-style: normal;
   font-weight: 500;
@@ -70,7 +71,7 @@
 }
 .follow {
   color: #555;
-  font-family: 'TT Chocolates';
+  font-family: "TT Chocolates";
   font-size: 22px;
   font-style: normal;
   font-weight: 500;
@@ -87,20 +88,82 @@
   width: 80%;
   padding-bottom: 20%;
 }
-.WhoWe {
-  padding-top: 5%;
-  margin-left: 15%;
+.background-div {
+  background: #fff;
+  width: 80%;
+  display: block;
+  margin-left: 20%;
+  padding-bottom: 3rem;
+}
+.background-div-left {
+  background: #fff;
+  width: 80%;
+  display: block;
+  margin-left: 0%;
+  padding-bottom: 3rem;
+}
+.Competitve {
+  margin-left: 5%;
+}
+.Free {
+  margin-left: 30%;
+  padding-top: 1rem;
   width: 70%;
 }
-.WhoWe h1 {
+.gapImage {
+  display: flex;
+  gap: 3rem;
+}
+.Integrity {
+  margin-left: 24%;
+  padding-top: 1%;
+  padding-bottom: 1%;
+  width: 70%;
+}
+.OurTeam {
+  padding-top: 5%;
+  margin-left: 40%;
+  width: 50%;
+  padding-bottom: 5%;
+}
+.WhoWe,
+.OurServices,
+.TheAquarian {
+  margin-left: 15%;
+}
+.WhoWe,
+.OurServices,
+.Competitve,
+.TheAquarian {
+  width: 70%;
+  padding-top: 5%;
+}
+.Competitve h1 {
+  margin-left: 15%;
+}
+.Competitve .text-color h1 {
+  margin-left: 0%;
+}
+.WhoWe h1,
+.OurServices h1,
+.OurTeam h1,
+.Free h1,
+.TheAquarian h1,
+.Competitve h1,
+.Integrity h1 {
   color: #000;
-  font-family: 'Goudy Old Style';
+  font-family: "Goudy Old Style";
   font-size: 40px;
   font-style: normal;
   font-weight: 600;
   line-height: normal;
 }
-.WhoWe .line {
+.WhoWe .line,
+.OurTeam .line,
+.OurServices .line,
+.TheAquarian .line,
+.Competitve .line,
+.Integrity .line {
   border-radius: 3.5px;
   background: #009889;
   height: 3px;
@@ -111,9 +174,36 @@
   margin-left: 5%;
   margin-top: 2rem;
 }
-.WhoWe .text-div p1 {
+.OurServices .text-div,
+.TheAquarian .text-div {
+  width: 70%;
+}
+.text-div-color img {
+  width: 10%;
+}
+.text-color {
+  background: #c2c2c2;
+  margin-top: 3rem;
+  margin-left: 3rem;
+  width: 80%;
+}
+.Integrity .text-color {
+  width: 64%;
+}
+.text-div-color {
+  background: #c2c2c2;
+  padding-top: 3rem;
+  margin-left: 3rem;
+  padding-bottom: 3rem;
+  width: 90%;
+}
+.WhoWe .text-div p1,
+.OurServices .text-div p1,
+.OurTeam .text-div p1,
+.TheAquarian .text-div p1,
+.text-div-color p1 {
   color: #000;
-  font-family: 'TT Chocolates';
+  font-family: "TT Chocolates";
   font-size: 22px;
   font-style: normal;
   font-weight: 400;
@@ -125,16 +215,44 @@
   width: 35%;
   text-align: center;
   color: #000;
-  font-family: 'Goudy Old Style';
+  font-family: "Goudy Old Style";
   font-size: 22px;
   font-style: normal;
   font-weight: 600;
   line-height: normal;
   cursor: pointer;
 }
+.team-background {
+  display: flex;
+  position: relative;
+  background: #343436;
+  margin-left: 40%;
+  margin-bottom: 3rem;
+  width: 50%;
+  gap: 3rem;
+}
+.team-background-outer {
+  display: flex;
+  position: relative;
+  background: #343436;
+  margin-left: 32%;
+  margin-top: 3rem;
+  width: 40%;
+  gap: 3rem;
+}
+.imageTeam {
+  width: 25%;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  margin-left: -13%;
+}
+.textOurTeam {
+  width: 70%;
+  padding-top: 5%;
+}
 .Name {
   color: #fff;
-  font-family: 'Goudy Old Style';
+  font-family: "Goudy Old Style";
   font-size: 35px;
   font-style: normal;
   font-weight: 600;
@@ -142,7 +260,7 @@
 }
 .designation {
   color: #d2d2d2;
-  font-family: 'Goudy Old Style';
+  font-family: "Goudy Old Style";
   font-size: 25px;
   font-style: normal;
   font-weight: 600;
@@ -150,7 +268,7 @@
 }
 .about {
   color: #fff;
-  font-family: 'TT Chocolates';
+  font-family: "TT Chocolates";
   font-size: 20px;
   font-style: normal;
   font-weight: 400;
@@ -169,7 +287,7 @@
 }
 .content {
   font-size: 55px;
-  font-family: 'freight-big-pro';
+  font-family: "freight-big-pro";
 }
 .below-image {
   background-color: #343436;
@@ -183,7 +301,7 @@
   width: 70%;
   text-align: center;
   color: #fff;
-  font-family: 'Goudy Old Style';
+  font-family: "Goudy Old Style";
   font-size: 22px;
   font-style: normal;
   font-weight: 600;
@@ -198,15 +316,25 @@
     font-size: 19px;
   }
   .sub-heading-content {
-  margin-top: -13%;
-}
-  .WhoWe .text-div p1 {
+    margin-top: -13%;
+  }
+  .WhoWe .text-div p1,
+  .OurServices .text-div p1,
+  .TheAquarian .text-div p1,
+  .OurTeam .text-div p1,
+  .text-div-color p1 {
     font-size: 20px;
   }
   .follow {
     font-size: 24px;
   }
-  .WhoWe h1 {
+  .WhoWe h1,
+  .Free h1,
+  .OurServices h1,
+  .OurTeam h1,
+  .TheAquarian h1,
+  .Competitve h1,
+  .Integrity h1 {
     font-size: 20px;
   }
   .AboutUsHeader .link {
@@ -241,16 +369,26 @@
   .sub-heading {
     font-size: 17px;
   }
-  .WhoWe .text-div p1 {
+  .WhoWe .text-div p1,
+  .OurServices .text-div p1,
+  .OurTeam .text-div p1,
+  .TheAquarian .text-div p1,
+  .text-div-color p1 {
     font-size: 18px;
   }
-    .sub-heading-content {
-  margin-top: -16%;
-}
+  .sub-heading-content {
+    margin-top: -16%;
+  }
   .follow {
     font-size: 22px;
   }
-  .WhoWe h1 {
+  .WhoWe h1,
+  .Competitve h1,
+  .OurServices h1,
+  .OurTeam h1,
+  .TheAquarian h1,
+  .Free h1,
+  .Integrity h1 {
     font-size: 18px;
   }
   .AboutUsHeader .link {
@@ -292,9 +430,9 @@
   .sub-heading {
     font-size: 17px;
   }
-    .sub-heading-content {
-  margin-top: -19%;
-}
+  .sub-heading-content {
+    margin-top: -19%;
+  }
   .follow {
     font-size: 22px;
   }
@@ -318,5 +456,154 @@
   }
   .content {
     font-size: 45px;
+  }
+}
+@media (max-width: 768px) {
+  .footer {
+    width: 100%;
+  }
+  .AboutUsHeader {
+    width: 94%;
+    margin-left: 3%;
+  }
+  .AboutUsHeader .link {
+    font-size: 13px;
+    padding-top: 15%;
+  }
+  .heading-about {
+    font-size: 28px;
+  }
+  .text-heading {
+    font-size: 14px;
+  }
+  .AboutUsHeader .header-content {
+    padding-top: 20%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 2rem;
+  }
+  .background-div {
+    background: none;
+    width: 100%;
+    margin-left: 0%;
+    padding-bottom: 0rem;
+  }
+  .background-div-left {
+    background: none;
+    width: 100%;
+    margin-right: 0%;
+    padding-bottom: 0rem;
+  }
+  .WhoWe .line,
+  .OurServices .line,
+  .Competitve .line,
+  .TheAquarian .line,
+  .OurTeam .line,
+  .Integrity .line {
+    width: 4rem;
+  }
+  .text-div-color img {
+    width: 30%;
+  }
+  .text-div-color {
+    width: 90%;
+    margin-left: 1rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+  .text-color,
+  .Integrity .text-color {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+  }
+  .Integrity {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+  }
+  .Free {
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 0rem;
+    width: 90%;
+  }
+  .Competitve {
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+  }
+
+  .gapImage {
+    gap: 1rem;
+  }
+  .Competitve h1 {
+    margin-left: 5%;
+  }
+  .WhoWe,
+  .OurServices,
+  .TheAquarian {
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+  }
+  .button {
+    width: 60%;
+    font-size: 18px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .OurTeam {
+    padding-top: 2rem;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+    padding-bottom: 2rem;
+  }
+  .text-div {
+    width: 95%;
+  }
+  .OurServices .text-div,
+  .TheAquarian .text-div {
+    width: 95%;
+  }
+  .team-background {
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 3rem;
+    width: 95%;
+  }
+  .team-background-outer {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 3rem;
+    width: 95%;
+  }
+  .imageTeam {
+    width: 70%;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .Name {
+    text-align: center;
+  }
+  .designation {
+    text-align: center;
+  }
+  .about {
+    text-align: center;
+  }
+  .textOurTeam {
+    width: 90%;
+    padding-top: 1rem;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
