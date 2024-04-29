@@ -1,10 +1,11 @@
 import React from 'react';
 import { MdArrowOutward } from 'react-icons/md';
 
-const BoxComponents = ({ color }) => {
+const BoxComponents = ({ color, style }) => {
   return (
     <div
       className={`border-[1px] border-black max-w-[18rem] p-4 bg-[${color}] `}
+      style={{ ...style, backgroundColor: color }}
     >
       <div className='flex items-center justify-center'>
         <div className='text-2xl font-medium'>I WANT TO IMMIGRATE</div>
