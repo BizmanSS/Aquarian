@@ -56,6 +56,7 @@ const Header = () => {
   const handleItemProgramClick = (program) => {
     setSelectedProgram(program);
   };
+  console.log(selectedProgram);
   const SvgComponent = () => {
     return (
       <svg
@@ -441,7 +442,7 @@ const Header = () => {
                     )}
                   </div>
                   {activeItem === 1 && (
-                    <div className=' w-[38%] h-auto flex items-start justify-start'>
+                    <div className=' w-[38%] h-auto flex items-start justify-start mt-4'>
                       <div className='flex flex-col items-start justify-start'>
                         <ul className='text-[11px] flex flex-col items-start justify-start gap-3 '>
                           <li
@@ -536,7 +537,7 @@ const Header = () => {
                     </div>
                   )}
                   {activeItem === 2 && (
-                    <div className=' w-[38%] h-auto flex items-start justify-start'>
+                    <div className=' w-[38%] h-auto flex items-start justify-start mt-4 mb-4'>
                       <div className='flex flex-col items-start justify-start'>
                         <ul className='text-[11px] flex flex-col items-start justify-start gap-3 '>
                           <li
@@ -545,7 +546,7 @@ const Header = () => {
                             }
                             className='flex items-center justify-between w-full '
                           >
-                            Work In Canada <SvgComponent isOpen={isOpen} />
+                            Work In Canada
                           </li>
                           <li
                             onClick={() =>
@@ -591,7 +592,7 @@ const Header = () => {
                     </div>
                   )}
                   {activeItem === 3 && (
-                    <div className=' w-[38%] h-auto flex items-start justify-start'>
+                    <div className=' w-[38%] h-auto flex items-start justify-start mt-4 mb-4'>
                       <div className='flex flex-col items-start justify-start'>
                         <ul className='text-[11px] flex flex-col items-start justify-start gap-3 '>
                           <li
@@ -600,13 +601,13 @@ const Header = () => {
                             }
                             className='flex items-center justify-between w-full '
                           >
-                            Study In Canada <SvgComponent isOpen={isOpen} />
+                            Study In Canada
                           </li>
                           <li
                             onClick={() => handleItemProgramClick('DLI ')}
                             className='flex items-center justify-between w-full'
                           >
-                            DLI <SvgComponent isOpen={isOpen} />
+                            DLI
                           </li>
                           <li
                             onClick={() =>
@@ -614,7 +615,7 @@ const Header = () => {
                             }
                             className='flex items-center justify-between w-full'
                           >
-                            Levels of Study <SvgComponent isOpen={isOpen} />
+                            Levels of Study
                           </li>
                           <li
                             onClick={() =>
@@ -634,7 +635,6 @@ const Header = () => {
                             className='flex items-center justify-between w-full'
                           >
                             Refusals and Appeals of Study Permits{' '}
-                            <SvgComponent isOpen={isOpen} />
                           </li>
                           <li
                             onClick={() =>
@@ -643,13 +643,12 @@ const Header = () => {
                             className='flex items-center justify-between w-full'
                           >
                             Extend a Study Control
-                            <SvgComponent isOpen={isOpen} />
                           </li>
                           <li
                             onClick={() => handleItemProgramClick('PGWP')}
                             className='flex items-center justify-between w-full'
                           >
-                            PGWP <SvgComponent isOpen={isOpen} />
+                            PGWP
                           </li>
                           <li
                             onClick={() =>
@@ -659,15 +658,14 @@ const Header = () => {
                             }
                             className='flex items-center justify-between w-full'
                           >
-                            Study Pathways to Permanent REsidence{' '}
-                            <SvgComponent isOpen={isOpen} />
+                            Study Pathways to Permanent Residence{' '}
                           </li>
                         </ul>
                       </div>
                     </div>
                   )}
                   {activeItem === 4 && (
-                    <div className=' w-[38%] h-auto flex items-start justify-start'>
+                    <div className=' w-[38%] h-auto flex items-start justify-start mt-4 mb-4'>
                       <div className='flex flex-col items-start justify-start'>
                         <ul className='text-[11px] flex flex-col items-start justify-start gap-3 '>
                           <li
@@ -703,7 +701,7 @@ const Header = () => {
                     </div>
                   )}
                   {activeItem === 5 && (
-                    <div className=' w-[38%] h-auto flex items-start justify-start'>
+                    <div className=' w-[38%] h-auto flex items-start justify-start mt-4 mb-4'>
                       <div className='flex flex-col items-start justify-start'>
                         <ul className='text-[11px] flex flex-col items-start justify-start gap-3 '>
                           <li
@@ -735,7 +733,7 @@ const Header = () => {
                     </div>
                   )}
                   {activeItem === 6 && (
-                    <div className=' w-[38%] h-auto flex items-start justify-start'>
+                    <div className=' w-[38%] h-auto flex items-start justify-start mt-4 mb-4'>
                       <div className='flex flex-col items-start justify-start'>
                         <ul className='text-[11px] flex flex-col items-start justify-start gap-3 '>
                           <li
@@ -763,7 +761,7 @@ const Header = () => {
                     </div>
                   )}
                   {activeItem === 7 && (
-                    <div className=' w-[38%] h-auto flex items-start justify-start'>
+                    <div className=' w-[38%] h-auto flex items-start justify-start mt-4 mb-4'>
                       <div className='flex flex-col items-start justify-start'>
                         <ul className='text-[11px] flex flex-col items-start justify-start gap-3 '>
                           <li
@@ -813,7 +811,7 @@ const Header = () => {
                     </div>
                   )}
                   {selectedProgram === 'PNP' && activeItem === 1 && (
-                    <div className=' w-[30%] auto flex items-start justify-center'>
+                    <div className=' w-[30%] auto flex items-start justify-center mt-4 mb-4'>
                       <div className='flex flex-col items-center justify-center'>
                         <ul className='text-[11px]'>
                           <li>
@@ -953,7 +951,7 @@ const Header = () => {
                     </div>
                   )}
                   {selectedProgram === 'Express Entry' && activeItem === 1 && (
-                    <div className=' w-[30%] auto flex items-start justify-center'>
+                    <div className=' w-[30%] auto flex items-start justify-center mt-4 mb-4'>
                       <div className='flex flex-col items-center justify-center'>
                         <ul className='text-[11px]'>
                           <li>
@@ -1000,7 +998,7 @@ const Header = () => {
                   )}
                   {selectedProgram === 'After Permanent Residency' &&
                     activeItem === 1 && (
-                      <div className=' w-[30%] auto flex items-start justify-center'>
+                      <div className=' w-[30%] auto flex items-start justify-center mt-4 mb-4'>
                         <div className='flex flex-col items-center justify-center'>
                           <ul className='text-[11px]'>
                             <li>
@@ -1034,22 +1032,9 @@ const Header = () => {
                         </div>
                       </div>
                     )}
-                  {selectedProgram === 'AGRI FOOD PILOT' &&
-                    activeItem === 1 && (
-                      <div className=' w-[30%] auto flex items-start justify-center'>
-                        <div className='flex flex-col items-center justify-center'>
-                          <ul className='text-[11px]'></ul>
-                        </div>
-                      </div>
-                    )}
-                  {selectedProgram === 'Atlantic Immigration Programme' &&
-                    activeItem === 1 && (
-                      <div className=' w-[30%] auto flex items-start justify-center'>
-                        <div className='flex flex-col items-center justify-center'></div>
-                      </div>
-                    )}
+
                   {selectedProgram === 'Business Class' && activeItem === 1 && (
-                    <div className=' w-[30%] auto flex items-start justify-center'>
+                    <div className=' w-[30%] auto flex items-start justify-center mt-4 mb-4'>
                       <div className='flex flex-col items-center justify-center'>
                         <ul className='text-[11px]'>
                           <li>
@@ -1067,7 +1052,7 @@ const Header = () => {
                   )}
                   {selectedProgram === 'Caregiver Program' &&
                     activeItem === 1 && (
-                      <div className=' w-[30%] auto flex items-start justify-center'>
+                      <div className=' w-[30%] auto flex items-start justify-center mt-4 mb-4'>
                         <div className='flex flex-col items-center justify-center'>
                           <ul className='text-[11px]'>
                             <li>
@@ -1085,23 +1070,232 @@ const Header = () => {
                         </div>
                       </div>
                     )}
-                  {selectedProgram === 'Canadian Immigration FAQs' &&
-                    activeItem === 1 && (
-                      <div className=' w-[30%] auto flex items-start justify-center'>
-                        <div className='flex flex-col items-center justify-center'></div>
+
+                  {selectedProgram === 'Work Without a Permit ' &&
+                    activeItem === 2 && (
+                      <div className=' w-[30%] auto flex items-start justify-center mt-4 mb-4'>
+                        <div className='flex flex-col items-center justify-center'>
+                          <ul className='text-[11px]'>
+                            <li>
+                              <HeaderComponent text={'Business Visas'} />
+                            </li>
+                          </ul>
+                        </div>
                       </div>
                     )}
-                  {selectedProgram === 'Rural And Northern Immigration Pilot' &&
-                    activeItem === 1 && (
-                      <div className=' w-[30%] auto flex items-start justify-center'>
-                        <div className='flex flex-col items-center justify-center'></div>
+                  {selectedProgram === ' Temporary Foreign Worker Program' &&
+                    activeItem === 2 && (
+                      <div className=' w-[30%] auto flex items-start justify-center mt-4 mb-4'>
+                        <div className='flex flex-col items-center justify-center'>
+                          <ul className='text-[11px]'>
+                            <li>
+                              <HeaderComponent text={'LMIA'} />
+                            </li>
+                            <li>
+                              <HeaderComponent
+                                text={'Canada Global Talent Stream'}
+                              />
+                            </li>
+                          </ul>
+                        </div>
                       </div>
                     )}
-                  {selectedProgram === 'TR to PR Route' && (
-                    <div className=' w-[30%] auto flex items-start justify-center'>
-                      <div className='flex flex-col items-center justify-center'></div>
-                    </div>
-                  )}
+                  {selectedProgram === 'International Mobility Program (IMP)' &&
+                    activeItem === 2 && (
+                      <div className=' w-[30%] auto flex items-start justify-center mt-4 mb-4'>
+                        <div className='flex flex-col items-center justify-center'>
+                          <ul className='text-[11px]'>
+                            <li>
+                              <HeaderComponent
+                                text={'Intra Company Transfer'}
+                              />
+                            </li>
+                            <li>
+                              <HeaderComponent text={'CUSMA'} />
+                            </li>
+                            <li>
+                              <HeaderComponent text={'CETA Work Permits'} />
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    )}
+                  {selectedProgram === 'Open Work Permits' &&
+                    activeItem === 2 && (
+                      <div className=' w-[30%] auto flex items-start justify-center mt-4 mb-4'>
+                        <div className='flex flex-col items-center justify-center'>
+                          <ul className='text-[11px]'>
+                            <li>
+                              <HeaderComponent text={'PGWP'} />
+                            </li>
+                            <li>
+                              <HeaderComponent
+                                text={'IEC-International Experience Class'}
+                              />
+                            </li>
+                            <li>
+                              <HeaderComponent text={'SOWP'} />
+                            </li>
+                            <li>
+                              <HeaderComponent text={'BOWP'} />
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    )}
+                  {selectedProgram === 'Study Permit In Canada' &&
+                    activeItem === 3 && (
+                      <div className=' w-[30%] auto flex items-start justify-center mt-4 mb-4'>
+                        <div className='flex flex-col items-center justify-center'>
+                          <ul className='text-[11px]'>
+                            <li>
+                              <HeaderComponent text={'SDS'} />
+                            </li>
+
+                            <li>
+                              <HeaderComponent text={'CAQ'} />
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    )}
+                  {selectedProgram === ' Business/Invest' &&
+                    activeItem === 4 && (
+                      <div className=' w-[30%] auto flex items-start justify-center mt-4 mb-4'>
+                        <div className='flex flex-col items-center justify-center'>
+                          <ul className='text-[11px]'>
+                            <li>
+                              <HeaderComponent text={'Start-up'} />
+                            </li>
+                            <li>
+                              <HeaderComponent
+                                text={' Entrepreneur – self employed'}
+                              />
+                            </li>
+                            <li>
+                              <HeaderComponent
+                                text={'Start a business in Canada'}
+                              />
+                            </li>
+                            <li>
+                              <HeaderComponent
+                                text={'Buy an existing Business in Canada'}
+                              />
+                            </li>
+                            <li>
+                              <HeaderComponent
+                                text={'Expand Your Business in Canada'}
+                              />
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    )}
+                  {selectedProgram === 'PNP Entrepreneur Streams' &&
+                    activeItem === 4 && (
+                      <div className=' w-[30%] auto flex items-start justify-center mt-4 mb-4'>
+                        <div className='flex flex-col items-center justify-center'>
+                          <ul className='text-[11px]'>
+                            <li>
+                              <HeaderComponent text={'Alberta'} />
+                            </li>
+                            <li>
+                              <HeaderComponent text={' British Columbia'} />
+                            </li>
+                            <li>
+                              <HeaderComponent text={' Manitoba'} />
+                            </li>
+                            <li>
+                              <HeaderComponent text={' New Brunswick'} />
+                            </li>
+                            <li>
+                              <HeaderComponent
+                                text={' Newfoundland and Labrador'}
+                              />
+                            </li>
+                            <li>
+                              <HeaderComponent text={'Northwest Territories'} />
+                            </li>
+                            <li>
+                              <HeaderComponent text={'Nova Scotia'} />
+                            </li>
+                            <li>
+                              <HeaderComponent text={'Ontario'} />
+                            </li>
+                            <li>
+                              <HeaderComponent text={' Prince Edward Island'} />
+                            </li>
+                            <li>
+                              <HeaderComponent text={'Saskatchewan'} />
+                            </li>
+                            <li>
+                              <HeaderComponent text={' Yukon'} />
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    )}
+                  {selectedProgram === ' Work Permit to PR Pathways' &&
+                    activeItem === 4 && (
+                      <div className=' w-[30%] auto flex items-start justify-center mt-4 mb-4'>
+                        <div className='flex flex-col items-center justify-center'>
+                          <ul className='text-[11px]'>
+                            <li>
+                              <HeaderComponent text={'ICT'} />
+                            </li>
+                            <li>
+                              <HeaderComponent text={'C11 work visa'} />
+                            </li>
+                            <li>
+                              <HeaderComponent text={'C10 Work visa'} />
+                            </li>
+                            <li>
+                              <HeaderComponent
+                                text={'Entrepreneur LMIA-Owner Operated'}
+                              />
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    )}
+                  {selectedProgram === ' Employers Outside Canada' &&
+                    activeItem === 6 && (
+                      <div className=' w-[30%] auto flex items-start justify-center mt-4 mb-4'>
+                        <div className='flex flex-col items-center justify-center'>
+                          <ul className='text-[11px]'>
+                            <li>
+                              <HeaderComponent
+                                text={'Intra Company Transfer of Employees'}
+                              />
+                            </li>
+                            <li>
+                              <HeaderComponent
+                                text={'Business Visit visa (LMIA Exempt)'}
+                              />
+                            </li>
+                            <li>
+                              <HeaderComponent
+                                text={'Expand Business In Canada (linked)'}
+                              />
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    )}
+                  {selectedProgram === 'Canadian Employers' &&
+                    activeItem === 6 && (
+                      <div className=' w-[30%] auto flex items-start justify-center mt-4 mb-4'>
+                        <div className='flex flex-col items-center justify-center'>
+                          <ul className='text-[11px]'>
+                            <li>
+                              <HeaderComponent
+                                text={'Hiring Foreign Workers'}
+                              />
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    )}
                 </div>
               </div>
             )}
