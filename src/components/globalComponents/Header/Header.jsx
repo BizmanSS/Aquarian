@@ -56,7 +56,7 @@ const Header = () => {
   const handleItemProgramClick = (program) => {
     setSelectedProgram(program);
   };
-  console.log(selectedProgram);
+  // console.log(selectedProgram);
   const SvgComponent = () => {
     return (
       <svg
@@ -172,64 +172,80 @@ const Header = () => {
               >
                 <li
                   onClick={() => handleItemClick(0)}
-                  className={`cursor-pointer border-b-[3px] border-b-transparent transition ease-in delay-100 duration-300 ${
-                    activeItem === 0 ? 'border-b-[#009889]' : ''
+                  className={`cursor-pointer transition ease-in delay-100 duration-300 ${
+                    activeItem === 0
+                      ? 'border-b-[3px] border-b-[#009889]'
+                      : 'border-b-[3px] border-b-transparent'
                   }`}
                 >
                   <a href='/'>Home</a>
                 </li>
                 <li
                   onClick={() => handleItemClick(1)}
-                  className={`cursor-pointer border-b-[3px] border-b-transparent transition ease-in delay-100 duration-300 ${
-                    activeItem === 1 ? 'border-b-[#009889]' : ''
+                  className={`cursor-pointer transition ease-in delay-100 duration-300 ${
+                    activeItem === 1
+                      ? 'border-b-[3px] border-b-[#009889]'
+                      : 'border-b-[3px] border-b-transparent'
                   }`}
                 >
                   Immigrate
                 </li>
                 <li
                   onClick={() => handleItemClick(2)}
-                  className={`cursor-pointer border-b-[3px] border-b-transparent transition ease-in delay-100 duration-300 ${
-                    activeItem === 2 ? 'border-b-[#009889]' : ''
+                  className={`cursor-pointer transition ease-in delay-100 duration-300 ${
+                    activeItem === 2
+                      ? 'border-b-[3px] border-b-[#009889]'
+                      : 'border-b-[3px] border-b-transparent'
                   }`}
                 >
                   Work
                 </li>
                 <li
                   onClick={() => handleItemClick(3)}
-                  className={`cursor-pointer border-b-[3px] border-b-transparent transition ease-in delay-100 duration-300 ${
-                    activeItem === 3 ? 'border-b-[#009889]' : ''
+                  className={`cursor-pointer transition ease-in delay-100 duration-300 ${
+                    activeItem === 3
+                      ? 'border-b-[3px] border-b-[#009889]'
+                      : 'border-b-[3px] border-b-transparent'
                   }`}
                 >
                   Study
                 </li>
                 <li
                   onClick={() => handleItemClick(4)}
-                  className={`cursor-pointer border-b-[3px] border-b-transparent transition ease-in delay-100 duration-300 ${
-                    activeItem === 4 ? 'border-b-[#009889]' : ''
+                  className={`cursor-pointer transition ease-in delay-100 duration-300 ${
+                    activeItem === 4
+                      ? 'border-b-[3px] border-b-[#009889]'
+                      : 'border-b-[3px] border-b-transparent'
                   }`}
                 >
                   Invest
                 </li>
                 <li
                   onClick={() => handleItemClick(5)}
-                  className={`cursor-pointer border-b-[3px] border-b-transparent transition ease-in delay-100 duration-300 ${
-                    activeItem === 5 ? 'border-b-[#009889]' : ''
+                  className={`cursor-pointer transition ease-in delay-100 duration-300 ${
+                    activeItem === 5
+                      ? 'border-b-[3px] border-b-[#009889]'
+                      : 'border-b-[3px] border-b-transparent'
                   }`}
                 >
                   Visit
                 </li>
                 <li
                   onClick={() => handleItemClick(6)}
-                  className={`cursor-pointer border-b-[3px] border-b-transparent transition ease-in delay-100 duration-300 ${
-                    activeItem === 6 ? 'border-b-[#009889]' : ''
+                  className={`cursor-pointer transition ease-in delay-100 duration-300 ${
+                    activeItem === 6
+                      ? 'border-b-[3px] border-b-[#009889]'
+                      : 'border-b-[3px] border-b-transparent'
                   }`}
                 >
                   Employers
                 </li>
                 <li
                   onClick={() => handleItemClick(7)}
-                  className={`cursor-pointer border-b-[3px] border-b-transparent transition ease-in delay-100 duration-300 ${
-                    activeItem === 7 ? 'border-b-[#009889]' : ''
+                  className={`cursor-pointer transition ease-in delay-100 duration-300 ${
+                    activeItem === 8
+                      ? 'border-b-[3px] border-b-[#009889]'
+                      : 'border-b-[3px] border-b-transparent'
                   }`}
                 >
                   Sponsorship
@@ -243,64 +259,80 @@ const Header = () => {
               >
                 <li
                   onClick={() => handleItemClick(0)}
-                  className={`cursor-pointer border-b-[3px] border-b-transparent transition ease-in delay-100 duration-300 ${
-                    activeItem === 0 ? 'border-b-[#009889]' : ''
+                  className={`cursor-pointer transition ease-in delay-100 duration-300 ${
+                    activeItem === 0
+                      ? 'border-b-[3px] border-b-[#009889]'
+                      : 'border-b-[3px] border-b-transparent'
                   }`}
                 >
                   <a href='/'>Home</a>
                 </li>
                 <li
                   onClick={() => handleItemClick(1)}
-                  className={`cursor-pointer border-b-[3px] border-b-transparent transition ease-in delay-100 duration-300 ${
-                    activeItem === 1 ? 'border-b-[#009889]' : ''
+                  className={`cursor-pointer transition ease-in delay-100 duration-300 ${
+                    activeItem === 1
+                      ? 'border-b-[3px] border-b-[#009889]'
+                      : 'border-b-[3px] border-b-transparent'
                   }`}
                 >
                   Immigrate
                 </li>
                 <li
                   onClick={() => handleItemClick(2)}
-                  className={`cursor-pointer border-b-[3px] border-b-transparent transition ease-in delay-100 duration-300 ${
-                    activeItem === 2 ? 'border-b-[#009889]' : ''
+                  className={`cursor-pointer transition ease-in delay-100 duration-300 ${
+                    activeItem === 2
+                      ? 'border-b-[3px] border-b-[#009889]'
+                      : 'border-b-[3px] border-b-transparent'
                   }`}
                 >
                   Work
                 </li>
                 <li
                   onClick={() => handleItemClick(3)}
-                  className={`cursor-pointer border-b-[3px] border-b-transparent transition ease-in delay-100 duration-300 ${
-                    activeItem === 3 ? 'border-b-[#009889]' : ''
+                  className={`cursor-pointer transition ease-in delay-100 duration-300 ${
+                    activeItem === 3
+                      ? 'border-b-[3px] border-b-[#009889]'
+                      : 'border-b-[3px] border-b-transparent'
                   }`}
                 >
                   Study
                 </li>
                 <li
                   onClick={() => handleItemClick(4)}
-                  className={`cursor-pointer border-b-[3px] border-b-transparent transition ease-in delay-100 duration-300 ${
-                    activeItem === 4 ? 'border-b-[#009889]' : ''
+                  className={`cursor-pointer transition ease-in delay-100 duration-300 ${
+                    activeItem === 4
+                      ? 'border-b-[3px] border-b-[#009889]'
+                      : 'border-b-[3px] border-b-transparent'
                   }`}
                 >
                   Invest
                 </li>
                 <li
                   onClick={() => handleItemClick(5)}
-                  className={`cursor-pointer border-b-[3px] border-b-transparent transition ease-in delay-100 duration-300 ${
-                    activeItem === 5 ? 'border-b-[#009889]' : ''
+                  className={`cursor-pointer transition ease-in delay-100 duration-300 ${
+                    activeItem === 5
+                      ? 'border-b-[3px] border-b-[#009889]'
+                      : 'border-b-[3px] border-b-transparent'
                   }`}
                 >
                   Visit
                 </li>
                 <li
                   onClick={() => handleItemClick(6)}
-                  className={`cursor-pointer border-b-[3px] border-b-transparent transition ease-in delay-100 duration-300 ${
-                    activeItem === 6 ? 'border-b-[#009889]' : ''
+                  className={`cursor-pointer transition ease-in delay-100 duration-300 ${
+                    activeItem === 6
+                      ? 'border-b-[3px] border-b-[#009889]'
+                      : 'border-b-[3px] border-b-transparent'
                   }`}
                 >
                   Employers
                 </li>
                 <li
                   onClick={() => handleItemClick(7)}
-                  className={`cursor-pointer border-b-[3px] border-b-transparent transition ease-in delay-100 duration-300 ${
-                    activeItem === 7 ? 'border-b-[#009889]' : ''
+                  className={`cursor-pointer transition ease-in delay-100 duration-300 ${
+                    activeItem === 8
+                      ? 'border-b-[3px] border-b-[#009889]'
+                      : 'border-b-[3px] border-b-transparent'
                   }`}
                 >
                   Sponsorship
