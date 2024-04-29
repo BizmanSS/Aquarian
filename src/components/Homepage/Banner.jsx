@@ -20,6 +20,7 @@ const Banner = () => {
 
   const togglePlay = () => {
     const video = videoRef.current;
+
     if (video.paused === null) {
       return;
     }
@@ -35,7 +36,7 @@ const Banner = () => {
   };
 
   const onVideoEnd = () => {
-    setShowThumbnail(true);
+    // setShowThumbnail(true);
     setIsPlaying(false);
   };
 
@@ -51,7 +52,7 @@ const Banner = () => {
             isPlaying ? 'w-[100%]' : 'w-[80%]'
           } h-auto rounded-3xl`}
           onClick={togglePlay}
-          // onEnded={onVideoEnd}
+          onEnded={onVideoEnd}
         >
           <source src={banner} type='video/mp4' />
           Your browser does not support the video tag.
