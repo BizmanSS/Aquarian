@@ -349,9 +349,9 @@ const Header = () => {
                           Work
                         </div>
                         <div className='pl-6 text-[13px] text-left mt-4 '>
-                          Lorem ipsum dolor sit amet consectetur adipisicing
-                          elit. Blanditiis quos in nesciunt ratione autem ut
-                          numquam voluptate
+                          Explore infinite career opportunities in Canada! With
+                          a Work Visa, you can legally work, gain valuable
+                          experience and advance your career.
                         </div>
                         {/* <div className='text-[11px] text-[#009889] pl-6 flex items-center justify-center mt-4'>
                           Explore Work{' '}
@@ -365,9 +365,9 @@ const Header = () => {
                           Study
                         </div>
                         <div className='pl-6 text-[13px] text-left mt-4 '>
-                          Lorem ipsum dolor sit amet consectetur adipisicing
-                          elit. Blanditiis quos in nesciunt ratione autem ut
-                          numquam voluptate
+                          Pursue your academic aspirations at prestigious
+                          Canadian institutions making you independent and ready
+                          for a successful career.
                         </div>
                         {/* <div className='text-[11px] text-[#009889] pl-6 flex items-center justify-center mt-4'>
                           Explore Study{' '}
@@ -381,9 +381,9 @@ const Header = () => {
                           Invest
                         </div>
                         <div className='pl-6 text-[13px] text-left mt-4 '>
-                          Lorem ipsum dolor sit amet consectetur adipisicing
-                          elit. Blanditiis quos in nesciunt ratione autem ut
-                          numquam voluptate
+                          Secure your future in Canada through our investor
+                          immigration services, designed to instill confidence
+                          and trust in your path to residency.
                         </div>
                         {/* <div className='text-[11px] text-[#009889] pl-6 flex items-center justify-center mt-4'>
                           Explore Invest{' '}
@@ -397,9 +397,9 @@ const Header = () => {
                           Visit
                         </div>
                         <div className='pl-6 text-[13px] text-left mt-4 '>
-                          Lorem ipsum dolor sit amet consectetur adipisicing
-                          elit. Blanditiis quos in nesciunt ratione autem ut
-                          numquam voluptate
+                          Explore Canada's beauty with a Visitor Visa! Temporary
+                          entry allows you to experience stunning landscapes,
+                          rich culture, and lasting memories.
                         </div>
                         {/* <div className='text-[11px] text-[#009889] pl-6 flex items-center justify-center mt-4'>
                           Explore Visit{' '}
@@ -413,9 +413,9 @@ const Header = () => {
                           Employers
                         </div>
                         <div className='pl-6 text-[13px] text-left mt-4 '>
-                          Lorem ipsum dolor sit amet consectetur adipisicing
-                          elit. Blanditiis quos in nesciunt ratione autem ut
-                          numquam voluptate
+                          Empower your workforce with global talent! Canadian
+                          businesses can sponsor skilled workers to fill
+                          essential roles, fostering growth and innovation.
                         </div>
                         {/* <div className='text-[11px] text-[#009889] pl-6 flex items-center justify-center mt-4'>
                           Explore Employers{' '}
@@ -429,9 +429,9 @@ const Header = () => {
                           Sponsorship
                         </div>
                         <div className='pl-6 text-[13px] text-left mt-4 '>
-                          Lorem ipsum dolor sit amet consectetur adipisicing
-                          elit. Blanditiis quos in nesciunt ratione autem ut
-                          numquam voluptate
+                          Canadians and permanent residents can sponsor spouses,
+                          children, parents and grandparents to bring their
+                          family together!
                         </div>
                         {/* <div className='text-[11px] text-[#009889] pl-6 flex items-center justify-center mt-4'>
                           Explore Sponsorship{' '}
