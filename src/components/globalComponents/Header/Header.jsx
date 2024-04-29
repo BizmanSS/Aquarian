@@ -90,10 +90,10 @@ const Header = () => {
             </summary>
             {textContent?.length && (
               <article class='px-4 pb-4'>
-                <ul class='flex flex-col gap-2 pl-2 mt-1 font-thin'>
+                <ul class='flex flex-col gap-1 pl-2 mt-1 font-thin'>
                   {textContent &&
                     textContent.map((item, index) => (
-                      <li class='flex gap-2' key={index}>
+                      <li class='flex gap-0' key={index}>
                         <a href='/'>{textContent[index]}</a>
                       </li>
                     ))}
@@ -868,6 +868,24 @@ const Header = () => {
                           <li>
                             {' '}
                             <HeaderComponent
+                              text={'Nova Scotia'}
+                              textContent={[
+                                'Nova Scotia Experience: Express Entry',
+                                ' Entrepreneur Category',
+                                'International Graduate Entrepreneur Category ',
+                                'International Graduates In Demand	 ',
+                                ' Skilled Worker Category',
+                                ' Physician Stream	',
+                                ' Nova Scotia Labor Market Priorities		',
+                                ' Nova Scotia Labor Market Priorities for Physicians	',
+                                ' Occupations In Demand		',
+                                ' Critical Construction Worker Pilot 	',
+                              ]}
+                            />
+                          </li>
+                          <li>
+                            {' '}
+                            <HeaderComponent
                               text={'Newfoundland and Labrador'}
                               textContent={[
                                 'Express Entry Skilled Worker Category',
@@ -892,24 +910,7 @@ const Header = () => {
                               ]}
                             />
                           </li>
-                          <li>
-                            {' '}
-                            <HeaderComponent
-                              text={'Nova Scotia'}
-                              textContent={[
-                                'Nova Scotia Experience: Express Entry',
-                                ' Entrepreneur Category',
-                                'International Graduate Entrepreneur Category ',
-                                'International Graduates In Demand	 ',
-                                ' Skilled Worker Category',
-                                ' Physician Stream	',
-                                ' Nova Scotia Labor Market Priorities		',
-                                ' Nova Scotia Labor Market Priorities for Physicians	',
-                                ' Occupations In Demand		',
-                                ' Critical Construction Worker Pilot 	',
-                              ]}
-                            />
-                          </li>
+
                           <li>
                             {' '}
                             <HeaderComponent
