@@ -1,0 +1,47 @@
+.sidebar-main-div-global {
+  height: 100%;
+  width: 22rem;
+  margin-top: 10%;
+  margin-left: 5%;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  border-radius: 25px;
+  background: #fff;
+  box-shadow: 0px 4px 23.6px 0px rgba(0, 0, 0, 0.5);
+  flex-shrink: 0;
+}
+
+.sidebar-main-div-global ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.sidebar-main-div-global ul ul {
+  display: block;
+  margin-left: 5%;
+}
+
+.sidebar-main-div-global ul li {
+  position: relative;
+}
+
+.sidebar-main-div-global ul li span {
+  cursor: pointer;
+}
+.flex-div {
+  display: flex;
+  justify-content: space-between; /* Aligns items to start and end of the flex container */
+}
+
+.flex-div span {
+  align-self: flex-start; /* Aligns the span to the start of the flex container */
+}
+
+.flex-div button {
+  align-self: flex-end; /* Aligns the button to the end of the flex container */
+}
+
+.extended-title {
+  color: #009889;
+}

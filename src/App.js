@@ -7,6 +7,7 @@ import AboutUs from "./components/Pages/AboutUs/AboutUs";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Header from "./components/globalComponents/Header/Header";
 import ContactUsPage from "./components/Pages/ContactUs/Contact";
+import SitemapDesktop from "./components/globalComponents/Sidebar/SitemapDesktop";
 import {
   useMobile,
   MobileProvider,
@@ -23,6 +24,7 @@ const App = () => {
             <Route path="/" element={<HomePage />} />
             <Route path="/about-us" element={<AboutUs />} />
             <Route path="/contact-us" element={<ContactUsPage />} />
+            <Route path="/sitemap" element={<SitemapDesktop />} />
           </Routes>
           <Footer />
         </MobileProvider>

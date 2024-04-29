@@ -6,7 +6,7 @@ const OurTeam = () => {
   return (
     <>
       <div className="OurTeam">
-        <h1>Our Team</h1>
+        <h5 className="heading">Our Team</h5>
         <div className="line"></div>
         <div className="text-div">
           <p1>

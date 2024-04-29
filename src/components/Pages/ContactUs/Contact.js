@@ -19,7 +19,9 @@ const ContactUsPage = () => {
     if (!firstName) {
       errorObject.firstName = "First Name is required";
     }
-
+    if (!lastName) {
+      errorObject.lastName = "Last Name is required";
+    }
     if (!email) {
       errorObject.email = "Email Address is required";
     }
@@ -121,11 +123,11 @@ const ContactUsPage = () => {
             </div>
 
             <div className="form-group">
-              <label>Last Name (Optional) </label>
+              <label>Last Name </label>
               <input
                 type="text"
                 value={lastName}
-                className="lastname"
+                className={errors.lastName ? "error" : ""}
                 onChange={(e) => setLastName(e.target.value)}
               />
               {errors.lastName && (

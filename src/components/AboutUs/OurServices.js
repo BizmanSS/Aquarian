@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import "../../styles/AboutUs.css";
 import { IoMdAdd, IoMdRemove } from "react-icons/io";
 const OurServices = () => {
@@ -38,7 +38,7 @@ const OurServices = () => {
 
   return (
     <div className="OurServices">
-      <h1>Our Services</h1>
+      <h5 className="heading">Our Services</h5>
       <div className="line"></div>
       <div className="text-div">
         <p1>

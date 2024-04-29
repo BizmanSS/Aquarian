@@ -4,7 +4,7 @@ import "../../styles/AboutUs.css";
 const TheAquarian = () => {
   return (
     <div className="TheAquarian">
-      <h1>The Aquarian Community</h1>
+      <h5 className="heading">The Aquarian Community</h5>
       <div className="line"></div>
       <div className="text-div">
         <p1>

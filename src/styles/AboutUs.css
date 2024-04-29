@@ -18,7 +18,7 @@
   font-style: normal;
   font-weight: 500;
   line-height: normal;
-  padding-top: 4%;
+  padding-top: 65px;
   padding-left: 3%;
 }
 .AboutUsHeader .header-content {
@@ -138,7 +138,7 @@
   width: 70%;
   padding-top: 5%;
 }
-.Competitve h1 {
+.Competitve h5 {
   margin-left: 15%;
 }
 .Competitve .text-color h1 {
@@ -158,6 +158,7 @@
   font-weight: 600;
   line-height: normal;
 }
+
 .WhoWe .line,
 .OurTeam .line,
 .OurServices .line,
@@ -311,6 +312,19 @@
 .answer-content {
   transition: height 0.3s ease;
 }
+.WhoWe h5,
+.Competitve h5,
+.OurServices h5,
+.OurTeam h5,
+.TheAquarian h5 {
+  color: #000;
+  font-family: "Goudy Old Style";
+  font-size: 45px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
 @media (max-width: 1700px) {
   .sub-heading {
     font-size: 19px;
@@ -468,7 +482,6 @@
   }
   .AboutUsHeader .link {
     font-size: 13px;
-    padding-top: 15%;
   }
   .heading-about {
     font-size: 28px;
@@ -540,9 +553,10 @@
   .gapImage {
     gap: 1rem;
   }
-  .Competitve h1 {
+  .Competitve h5 {
     margin-left: 5%;
   }
+
   .WhoWe,
   .OurServices,
   .TheAquarian {
@@ -583,6 +597,13 @@
     margin-right: auto;
     margin-bottom: 3rem;
     width: 95%;
+  }
+  .WhoWe h5,
+  .Competitve h5,
+  .OurServices h5,
+  .OurTeam h5,
+  .TheAquarian h5 {
+    font-size: 30px;
   }
   .imageTeam {
     width: 70%;
