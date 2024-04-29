@@ -330,7 +330,7 @@ const Header = () => {
                 <li
                   onClick={() => handleItemClick(7)}
                   className={`cursor-pointer transition ease-in delay-100 duration-300 ${
-                    activeItem === 8
+                    activeItem === 7
                       ? 'border-b-[3px] border-b-[#009889]'
                       : 'border-b-[3px] border-b-transparent'
                   }`}
