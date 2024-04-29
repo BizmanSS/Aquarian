@@ -332,7 +332,7 @@ const Header = () => {
                           <div className='font-semibold ml-6 text-xl border-b-[2px] border-[#009889] pb-[2px] '>
                             Immigration
                           </div>
-                          <div className='pl-6 text-[13px] text-left mt-4 '>
+                          <div className='px-6 text-[13px] text-left mt-4 '>
                             Make Canada your permanent home! PR allows you to
                             live, work and study in Canada{' '}
                           </div>
@@ -348,7 +348,7 @@ const Header = () => {
                         <div className='font-semibold ml-6 text-xl border-b-[2px] border-[#009889] pb-[2px]'>
                           Work
                         </div>
-                        <div className='pl-6 text-[13px] text-left mt-4 '>
+                        <div className='px-6 text-[13px] text-left mt-4 '>
                           Explore infinite career opportunities in Canada! With
                           a Work Visa, you can legally work, gain valuable
                           experience and advance your career.
@@ -364,7 +364,7 @@ const Header = () => {
                         <div className='font-semibold ml-6 text-xl border-b-[2px] border-[#009889] pb-[2px]'>
                           Study
                         </div>
-                        <div className='pl-6 text-[13px] text-left mt-4 '>
+                        <div className='px-6 text-[13px] text-left mt-4 '>
                           Pursue your academic aspirations at prestigious
                           Canadian institutions making you independent and ready
                           for a successful career.
@@ -380,7 +380,7 @@ const Header = () => {
                         <div className='font-semibold ml-6 text-xl border-b-[2px] border-[#009889] pb-[2px]'>
                           Invest
                         </div>
-                        <div className='pl-6 text-[13px] text-left mt-4 '>
+                        <div className='px-6 text-[13px] text-left mt-4 '>
                           Secure your future in Canada through our investor
                           immigration services, designed to instill confidence
                           and trust in your path to residency.
@@ -396,7 +396,7 @@ const Header = () => {
                         <div className='font-semibold ml-6 text-xl border-b-[2px] border-[#009889] pb-[2px]'>
                           Visit
                         </div>
-                        <div className='pl-6 text-[13px] text-left mt-4 '>
+                        <div className='px-6 text-[13px] text-left mt-4 '>
                           Explore Canada's beauty with a Visitor Visa! Temporary
                           entry allows you to experience stunning landscapes,
                           rich culture, and lasting memories.
@@ -412,7 +412,7 @@ const Header = () => {
                         <div className='font-semibold ml-6 text-xl border-b-[2px] border-[#009889] pb-[2px]'>
                           Employers
                         </div>
-                        <div className='pl-6 text-[13px] text-left mt-4 '>
+                        <div className='px-6 text-[13px] text-left mt-4 '>
                           Empower your workforce with global talent! Canadian
                           businesses can sponsor skilled workers to fill
                           essential roles, fostering growth and innovation.
@@ -428,7 +428,7 @@ const Header = () => {
                         <div className='font-semibold ml-6 text-xl border-b-[2px] border-[#009889] pb-[2px]'>
                           Sponsorship
                         </div>
-                        <div className='pl-6 text-[13px] text-left mt-4 '>
+                        <div className='px-6 text-[13px] text-left mt-4 '>
                           Canadians and permanent residents can sponsor spouses,
                           children, parents and grandparents to bring their
                           family together!
