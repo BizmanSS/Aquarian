@@ -35,14 +35,6 @@
   font-weight: 400;
   line-height: normal;
 }
-.text-heading {
-  color: #d3d3d3;
-  font-family: "TT Chocolates";
-  font-size: 20px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: normal;
-}
 .sub-heading-content {
   position: fixed;
   z-index: 99;
@@ -367,9 +359,7 @@
   .heading-about {
     font-size: 57px;
   }
-  .text-heading {
-    font-size: 20px;
-  }
+
   .Name {
     font-size: 32px;
   }
@@ -424,9 +414,7 @@
   .heading-about {
     font-size: 55px;
   }
-  .text-heading {
-    font-size: 22px;
-  }
+
   .Name {
     font-size: 30px;
   }
@@ -472,9 +460,6 @@
   .heading-about {
     font-size: 55px;
   }
-  .text-heading {
-    font-size: 18px;
-  }
   .button {
     width: 45%;
   }
@@ -499,9 +484,7 @@
   .heading-about {
     font-size: 28px;
   }
-  .text-heading {
-    font-size: 14px;
-  }
+
   .text-color p {
     font-size: 16px;
   }

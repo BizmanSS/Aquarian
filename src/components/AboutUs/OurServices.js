@@ -54,7 +54,7 @@ const OurServices = () => {
                   display: "flex",
                   justifyContent: "space-between",
                   background: "#C9C9C9",
-                  marginTop: "3rem",
+                  marginTop: "0.1rem",
                 }}
               >
                 <div

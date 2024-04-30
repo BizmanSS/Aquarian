@@ -39,11 +39,6 @@ const AboutUsPage = () => {
         <p className="link">Home {" > "}About Us</p>
         <div className="header-content">
           <h1 className="heading-about">About Us.</h1>
-          <p1 className="text-heading">
-            The Federal Skilled Worker (FSW) program {!isMobile && <br />} is
-            one of the three programs contained {!isMobile && <br />}
-            within Canada’s Express
-          </p1>
         </div>
       </div>
       {!isMobile && (
