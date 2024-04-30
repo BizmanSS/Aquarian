@@ -166,19 +166,21 @@ const Header = () => {
             </div>
           </div>
           <div className='w-[100%] flex items-center justify-between mt-8 relative'>
-            <img
-              src={logo}
-              alt='logo'
-              className='cursor-pointer w-[13rem] ml-10'
-            />
+            <a href='/'>
+              <img
+                src={logo}
+                alt='logo'
+                className='cursor-pointer w-[13rem] ml-10'
+              />
+            </a>
 
             {isHovering ? (
               <ul
-                className={`flex items-center justify-center text-[14px] gap-10 bg-[#FFFEFE] py-3 px-4 absolute left-[17rem] xl:left-[19rem] 2xl:left-[23rem] 3xl:left-[27rem] 4xl:left-[32rem] rounded-t-xl overflow-hidden `}
+                className={`flex items-center justify-center text-[16px] gap-12 bg-[#FFFEFE] py-3 px-4 absolute left-[17rem] xl:left-[19rem] 2xl:left-[23rem] 3xl:left-[27rem] 4xl:left-[32rem] rounded-t-xl overflow-hidden `}
                 onMouseEnter={handleMouseEnter}
                 onMouseLeave={handleMouseLeave}
               >
-                <li
+                {/* <li
                   onMouseEnter={() => handleItemHover(0)}
                   className={`cursor-pointer transition ease-in delay-100 duration-300 ${
                     activeItem === 0
@@ -187,7 +189,7 @@ const Header = () => {
                   }`}
                 >
                   <a href='/'>Home</a>
-                </li>
+                </li> */}
                 <li
                   onMouseEnter={() => handleItemHover(1)}
                   className={`cursor-pointer transition ease-in delay-100 duration-300 ${
@@ -261,11 +263,11 @@ const Header = () => {
               </ul>
             ) : (
               <ul
-                className={`flex items-center justify-center text-white text-[14px] gap-10 hover:bg-[#FFFEFE] py-3 px-4 absolute left-[17rem] xl:left-[19rem] 2xl:left-[23rem] 3xl:left-[27rem] 4xl:left-[32rem] rounded-t-xl hover:text-black overflow-hidden `}
+                className={`flex items-center justify-center text-white text-[16px] gap-12 hover:bg-[#FFFEFE] py-3 px-4 absolute left-[17rem] xl:left-[19rem] 2xl:left-[23rem] 3xl:left-[27rem] 4xl:left-[32rem] rounded-t-xl hover:text-black overflow-hidden `}
                 onMouseEnter={handleMouseEnter}
                 onMouseLeave={handleMouseLeave}
               >
-                <li
+                {/* <li
                   onMouseEnter={() => handleItemHover(0)}
                   className={`cursor-pointer transition ease-in delay-100 duration-300 ${
                     activeItem === 0
@@ -274,7 +276,7 @@ const Header = () => {
                   }`}
                 >
                   <a href='/'>Home</a>
-                </li>
+                </li> */}
                 <li
                   onMouseEnter={() => handleItemHover(1)}
                   className={`cursor-pointer transition ease-in delay-100 duration-300 ${
@@ -349,7 +351,7 @@ const Header = () => {
             )}
             {isHovering && (
               <div
-                className={`h-auto bg-[#FFFEFE] z-40 absolute top-[4.6rem] left-[17rem] xl:left-[19rem] 2xl:left-[23rem] 3xl:left-[27rem] 4xl:left-[32rem] w-[42.68rem] rounded-b-xl `}
+                className={`h-auto bg-[#FFFEFE] z-40 absolute top-[4.6rem] left-[17rem] xl:left-[19rem] 2xl:left-[23rem] 3xl:left-[27rem] 4xl:left-[32rem] w-[43.815rem] rounded-b-xl `}
                 onMouseEnter={handleMouseEnter}
                 onMouseLeave={handleMouseLeave}
               >
@@ -473,13 +475,13 @@ const Header = () => {
                       <div className='flex flex-col items-start justify-start'>
                         <ul className='text-[15px] flex flex-col items-start justify-start gap-3 '>
                           <li
-                            onClick={() => handleItemProgramClick('PNP')}
+                            onMouseEnter={() => handleItemProgramClick('PNP')}
                             className='flex items-center justify-between w-full '
                           >
                             PNP <SvgComponent isOpen={isOpen} />
                           </li>
                           <li
-                            onClick={() =>
+                            onMouseEnter={() =>
                               handleItemProgramClick('Express Entry')
                             }
                             className='flex items-center justify-between w-full'
@@ -487,7 +489,7 @@ const Header = () => {
                             Express Entry <SvgComponent isOpen={isOpen} />
                           </li>
                           <li
-                            onClick={() =>
+                            onMouseEnter={() =>
                               handleItemProgramClick(
                                 'After Permanent Residency'
                               )
@@ -498,7 +500,7 @@ const Header = () => {
                             <SvgComponent isOpen={isOpen} />
                           </li>
                           <li
-                            onClick={() =>
+                            onMouseEnter={() =>
                               handleItemProgramClick('AGRI FOOD PILOT')
                             }
                             className='flex items-center justify-between w-full'
@@ -506,7 +508,7 @@ const Header = () => {
                             AGRI FOOD PILOT
                           </li>
                           <li
-                            onClick={() =>
+                            onMouseEnter={() =>
                               handleItemProgramClick(
                                 'Atlantic Immigration Programme'
                               )
@@ -516,7 +518,7 @@ const Header = () => {
                             Atlantic Immigration Programme{' '}
                           </li>
                           <li
-                            onClick={() =>
+                            onMouseEnter={() =>
                               handleItemProgramClick('Business Class')
                             }
                             className='flex items-center justify-between w-full'
@@ -524,7 +526,7 @@ const Header = () => {
                             Business Class <SvgComponent isOpen={isOpen} />
                           </li>
                           <li
-                            onClick={() =>
+                            onMouseEnter={() =>
                               handleItemProgramClick('Caregiver Program')
                             }
                             className='flex items-center justify-between w-full'
@@ -532,7 +534,7 @@ const Header = () => {
                             Caregiver Program <SvgComponent isOpen={isOpen} />
                           </li>
                           <li
-                            onClick={() =>
+                            onMouseEnter={() =>
                               handleItemProgramClick(
                                 'Canadian Immigration FAQs'
                               )
@@ -542,7 +544,7 @@ const Header = () => {
                             Canadian Immigration FAQs{' '}
                           </li>
                           <li
-                            onClick={() =>
+                            onMouseEnter={() =>
                               handleItemProgramClick(
                                 'Rural And Northern Immigration Pilot'
                               )
@@ -552,7 +554,7 @@ const Header = () => {
                             Rural And Northern Immigration Pilot{' '}
                           </li>
                           <li
-                            onClick={() =>
+                            onMouseEnter={() =>
                               handleItemProgramClick('TR to PR Route')
                             }
                             className='flex items-center justify-between w-full'
@@ -568,7 +570,7 @@ const Header = () => {
                       <div className='flex flex-col items-start justify-start'>
                         <ul className='text-[15px] flex flex-col items-start justify-start gap-3 '>
                           <li
-                            onClick={() =>
+                            onMouseEnter={() =>
                               handleItemProgramClick('Work In Canada')
                             }
                             className='flex items-center justify-between w-full '
@@ -576,7 +578,7 @@ const Header = () => {
                             Work In Canada
                           </li>
                           <li
-                            onClick={() =>
+                            onMouseEnter={() =>
                               handleItemProgramClick('Work Without a Permit ')
                             }
                             className='flex items-center justify-between w-full'
@@ -585,7 +587,7 @@ const Header = () => {
                             <SvgComponent isOpen={isOpen} />
                           </li>
                           <li
-                            onClick={() =>
+                            onMouseEnter={() =>
                               handleItemProgramClick(
                                 ' Temporary Foreign Worker Program'
                               )
@@ -596,7 +598,7 @@ const Header = () => {
                             <SvgComponent isOpen={isOpen} />
                           </li>
                           <li
-                            onClick={() =>
+                            onMouseEnter={() =>
                               handleItemProgramClick(
                                 'International Mobility Program (IMP)'
                               )
@@ -607,7 +609,7 @@ const Header = () => {
                             <SvgComponent isOpen={isOpen} />
                           </li>
                           <li
-                            onClick={() =>
+                            onMouseEnter={() =>
                               handleItemProgramClick('Open Work Permits')
                             }
                             className='flex items-center justify-between w-full'
@@ -623,7 +625,7 @@ const Header = () => {
                       <div className='flex flex-col items-start justify-start'>
                         <ul className='text-[15px] flex flex-col items-start justify-start gap-3 '>
                           <li
-                            onClick={() =>
+                            onMouseEnter={() =>
                               handleItemProgramClick('Study In Canada')
                             }
                             className='flex items-center justify-between w-full '
@@ -631,13 +633,13 @@ const Header = () => {
                             Study In Canada
                           </li>
                           <li
-                            onClick={() => handleItemProgramClick('DLI ')}
+                            onMouseEnter={() => handleItemProgramClick('DLI ')}
                             className='flex items-center justify-between w-full'
                           >
                             DLI
                           </li>
                           <li
-                            onClick={() =>
+                            onMouseEnter={() =>
                               handleItemProgramClick(' Levels of Study')
                             }
                             className='flex items-center justify-between w-full'
@@ -645,7 +647,7 @@ const Header = () => {
                             Levels of Study
                           </li>
                           <li
-                            onClick={() =>
+                            onMouseEnter={() =>
                               handleItemProgramClick('Study Permit In Canada')
                             }
                             className='flex items-center justify-between w-full'
@@ -654,7 +656,7 @@ const Header = () => {
                             <SvgComponent isOpen={isOpen} />
                           </li>
                           <li
-                            onClick={() =>
+                            onMouseEnter={() =>
                               handleItemProgramClick(
                                 'Refusals and Appeals of Study Permits'
                               )
@@ -664,7 +666,7 @@ const Header = () => {
                             Refusals and Appeals of Study Permits{' '}
                           </li>
                           <li
-                            onClick={() =>
+                            onMouseEnter={() =>
                               handleItemProgramClick('Extend a Study Control')
                             }
                             className='flex items-center justify-between w-full'
@@ -672,13 +674,13 @@ const Header = () => {
                             Extend a Study Control
                           </li>
                           <li
-                            onClick={() => handleItemProgramClick('PGWP')}
+                            onMouseEnter={() => handleItemProgramClick('PGWP')}
                             className='flex items-center justify-between w-full'
                           >
                             PGWP
                           </li>
                           <li
-                            onClick={() =>
+                            onMouseEnter={() =>
                               handleItemProgramClick(
                                 'Study Pathways to Permanent REsidence'
                               )
@@ -696,7 +698,7 @@ const Header = () => {
                       <div className='flex flex-col items-start justify-start'>
                         <ul className='text-[15px] flex flex-col items-start justify-start gap-3 '>
                           <li
-                            onClick={() =>
+                            onMouseEnter={() =>
                               handleItemProgramClick(' Business/Invest')
                             }
                             className='flex items-center justify-between w-full '
@@ -704,7 +706,7 @@ const Header = () => {
                             Business/Invest <SvgComponent isOpen={isOpen} />
                           </li>
                           <li
-                            onClick={() =>
+                            onMouseEnter={() =>
                               handleItemProgramClick('PNP Entrepreneur Streams')
                             }
                             className='flex items-center justify-between w-full'
@@ -713,7 +715,7 @@ const Header = () => {
                             <SvgComponent isOpen={isOpen} />
                           </li>
                           <li
-                            onClick={() =>
+                            onMouseEnter={() =>
                               handleItemProgramClick(
                                 ' Work Permit to PR Pathways'
                               )
@@ -732,7 +734,7 @@ const Header = () => {
                       <div className='flex flex-col items-start justify-start'>
                         <ul className='text-[15px] flex flex-col items-start justify-start gap-3 '>
                           <li
-                            onClick={() =>
+                            onMouseEnter={() =>
                               handleItemProgramClick('TRV-Visitor Visa')
                             }
                             className='flex items-center justify-between w-full '
@@ -740,7 +742,7 @@ const Header = () => {
                             TRV-Visitor Visa
                           </li>
                           <li
-                            onClick={() =>
+                            onMouseEnter={() =>
                               handleItemProgramClick('Visa Extension')
                             }
                             className='flex items-center justify-between w-full'
@@ -748,7 +750,7 @@ const Header = () => {
                             Visa Extension
                           </li>
                           <li
-                            onClick={() =>
+                            onMouseEnter={() =>
                               handleItemProgramClick(' Super visa (linked)')
                             }
                             className='flex items-center justify-between'
@@ -764,7 +766,7 @@ const Header = () => {
                       <div className='flex flex-col items-start justify-start'>
                         <ul className='text-[15px] flex flex-col items-start justify-start gap-3 '>
                           <li
-                            onClick={() =>
+                            onMouseEnter={() =>
                               handleItemProgramClick(
                                 ' Employers Outside Canada'
                               )
@@ -775,7 +777,7 @@ const Header = () => {
                             <SvgComponent isOpen={isOpen} />
                           </li>
                           <li
-                            onClick={() =>
+                            onMouseEnter={() =>
                               handleItemProgramClick('Canadian Employers')
                             }
                             className='flex items-center justify-between w-full'
@@ -792,7 +794,7 @@ const Header = () => {
                       <div className='flex flex-col items-start justify-start'>
                         <ul className='text-[15px] flex flex-col items-start justify-start gap-3 '>
                           <li
-                            onClick={() =>
+                            onMouseEnter={() =>
                               handleItemProgramClick(
                                 'Canadian spousal sponsorship '
                               )
@@ -802,7 +804,7 @@ const Header = () => {
                             Canadian spousal sponsorship{' '}
                           </li>
                           <li
-                            onClick={() =>
+                            onMouseEnter={() =>
                               handleItemProgramClick(
                                 'Child or Other Dependent Sponsorship'
                               )
@@ -812,7 +814,7 @@ const Header = () => {
                             Child or Other Dependent Sponsorship
                           </li>
                           <li
-                            onClick={() =>
+                            onMouseEnter={() =>
                               handleItemProgramClick(
                                 'Parents and Grandparents Program (PGP)'
                               )
@@ -822,13 +824,15 @@ const Header = () => {
                             Parents and Grandparents Program (PGP)
                           </li>
                           <li
-                            onClick={() => handleItemProgramClick('Super Visa')}
+                            onMouseEnter={() =>
+                              handleItemProgramClick('Super Visa')
+                            }
                             className='flex items-center justify-between'
                           >
                             Super Visa
                           </li>
                           <li
-                            onClick={() => handleItemProgramClick('MNI')}
+                            onMouseEnter={() => handleItemProgramClick('MNI')}
                             className='flex items-center justify-between'
                           >
                             MNI
