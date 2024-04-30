@@ -24,7 +24,7 @@ const Footer = () => {
           </div>
           <div className="flex flex-col items-center justify-center">
             <img src={logoccic} alt="logo" className="w-[15rem]" />
-            <div className="text-sm text-[#B4B5B4] mt-3 ml-4">
+            <div className="text-sm text-[#B4B5B4]">
               <a
                 href="https://www.google.com/maps/place/Aquarian+Immigration+Services/@28.4082328,77.070377,15z/data=!4m6!3m5!1s0x390d23f44c7f8021:0x589c7dd32b5c2779!8m2!3d28.4082328!4d77.070377!16s%2Fg%2F11vqm85pq7?entry=ttu"
                 className="address"
