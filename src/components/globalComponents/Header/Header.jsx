@@ -165,7 +165,7 @@ const Header = () => {
 
             {isHovering ? (
               <ul
-                className={`flex items-center justify-center text-[14px] gap-10 bg-[#FFFEFE] py-3 px-4 absolute left-[20rem] rounded-t-xl overflow-hidden `}
+                className={`flex items-center justify-center text-[14px] gap-10 bg-[#FFFEFE] py-3 px-4 absolute left-[20rem] xl:left-[20rem] 2xl:left-[23rem] rounded-t-xl overflow-hidden `}
                 onMouseEnter={handleMouseEnter}
                 onMouseLeave={handleMouseLeave}
               >
@@ -252,7 +252,7 @@ const Header = () => {
               </ul>
             ) : (
               <ul
-                className={`flex items-center justify-center text-white text-[14px] gap-10 hover:bg-[#FFFEFE] py-3 px-4 absolute left-[20rem] rounded-t-xl hover:text-black overflow-hidden`}
+                className={`flex items-center justify-center text-white text-[14px] gap-10 hover:bg-[#FFFEFE] py-3 px-4 absolute left-[20rem] xl:left-[20rem] 2xl:left-[23rem] rounded-t-xl hover:text-black overflow-hidden `}
                 onMouseEnter={handleMouseEnter}
                 onMouseLeave={handleMouseLeave}
               >
@@ -340,7 +340,7 @@ const Header = () => {
             )}
             {isHovering && (
               <div
-                className={`h-auto bg-[#FFFEFE] z-40 absolute top-[4.6rem] left-[20rem] w-[42.7rem] rounded-b-xl `}
+                className={`h-auto bg-[#FFFEFE] z-40 absolute top-[4.6rem] left-[20rem] xl:left-[20rem] 2xl:left-[23rem] w-[42.7rem] rounded-b-xl `}
                 onMouseEnter={handleMouseEnter}
                 onMouseLeave={handleMouseLeave}
               >
