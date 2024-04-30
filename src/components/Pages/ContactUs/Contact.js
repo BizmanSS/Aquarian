@@ -106,7 +106,7 @@ const ContactUsPage = () => {
         )}
       </div>
 
-      <div className="registration-form">
+      <div className="registration-form" style={{ marginTop: "-50px" }}>
         <form onSubmit={handleSubmit}>
           <div className="form-row">
             <div className="form-group">

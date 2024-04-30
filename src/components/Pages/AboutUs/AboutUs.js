@@ -115,7 +115,7 @@ const AboutUsPage = () => {
         </div>
       )}
 
-      <div className="background-div">
+      <div className="background-div" style={{ marginTop: "-80px" }}>
         <div ref={whoWeAreRef}>
           <WhoWeAre />
         </div>
