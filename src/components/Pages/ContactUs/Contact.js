@@ -123,7 +123,7 @@ const ContactUsPage = () => {
             </div>
 
             <div className="form-group">
-              <label>Last Name </label>
+              <label>Last Name * </label>
               <input
                 type="text"
                 value={lastName}
