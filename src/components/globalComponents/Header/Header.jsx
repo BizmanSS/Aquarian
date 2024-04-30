@@ -156,16 +156,16 @@ const Header = () => {
               </div>
             </div>
           </div>
-          <div className='w-[100%] flex items-center justify-between mt-8 ml-10 relative'>
+          <div className='w-[100%] flex items-center justify-between mt-8 relative'>
             <img
               src={logo}
               alt='logo'
-              className='cursor-pointer w-[13rem] mr-10'
+              className='cursor-pointer w-[13rem] ml-10'
             />
 
             {isHovering ? (
               <ul
-                className={`flex items-center justify-center text-[14px] gap-10 bg-[#FFFEFE] py-3 px-4 absolute left-[22rem] rounded-t-xl overflow-hidden `}
+                className={`flex items-center justify-center text-[14px] gap-10 bg-[#FFFEFE] py-3 px-4 absolute left-[20rem] rounded-t-xl overflow-hidden `}
                 onMouseEnter={handleMouseEnter}
                 onMouseLeave={handleMouseLeave}
               >
@@ -252,7 +252,7 @@ const Header = () => {
               </ul>
             ) : (
               <ul
-                className={`flex items-center justify-center text-white text-[14px] gap-10 hover:bg-[#FFFEFE] py-3 px-4 absolute left-[22rem] rounded-t-xl hover:text-black overflow-hidden`}
+                className={`flex items-center justify-center text-white text-[14px] gap-10 hover:bg-[#FFFEFE] py-3 px-4 absolute left-[20rem] rounded-t-xl hover:text-black overflow-hidden`}
                 onMouseEnter={handleMouseEnter}
                 onMouseLeave={handleMouseLeave}
               >
@@ -340,7 +340,7 @@ const Header = () => {
             )}
             {isHovering && (
               <div
-                className={`h-auto bg-[#FFFEFE] z-40 absolute top-[4.6rem] left-[22rem] w-[42.7rem] rounded-b-xl `}
+                className={`h-auto bg-[#FFFEFE] z-40 absolute top-[4.6rem] left-[20rem] w-[42.7rem] rounded-b-xl `}
                 onMouseEnter={handleMouseEnter}
                 onMouseLeave={handleMouseLeave}
               >
