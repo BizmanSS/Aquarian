@@ -9,13 +9,12 @@ import Twitter from '../../../Assets/Twitter.png';
 import LinkedIn from '../../../Assets/LinkedIn.png';
 import facebook from '../../../Assets/Facebook.png';
 import { CiSearch } from 'react-icons/ci';
-import { IoIosArrowForward } from 'react-icons/io';
 
 const Header = () => {
   const [ismobile, setIsMobile] = useState(false);
   const [isHovering, setIsHovering] = useState(false);
-  const [activeItem, setActiveItem] = useState(1);
-  const [selectedProgram, setSelectedProgram] = useState('PNP');
+  const [activeItem, setActiveItem] = useState(0);
+  const [selectedProgram, setSelectedProgram] = useState('');
   const [isOpen, setIsOpen] = useState(false);
 
   const menuRef = useRef(null);
@@ -106,11 +105,11 @@ const Header = () => {
     );
   };
   return (
-    <div className='bg-[#000000] rounded-2xl h-[10rem] fixed z-20 top-0 flex flex-col items-center justify-start w-[94%]'>
+    <div className='bg-[#000000] rounded-2xl h-[8rem] fixed z-20 top-0 flex flex-col items-center justify-start w-[94%]'>
       {!ismobile ? (
         <>
           {' '}
-          <div className='bg-[#242525] fixed w-[94%] h-[40px] text-[13px] z-10 flex items-center justify-end'>
+          <div className='bg-[#242525] fixed w-[94%] h-[35px] text-[13px] z-10 flex items-center justify-end'>
             <div className='flex items-center justify-end mr-[0rem]'>
               <p className='px-4 py-1 text-[#939393] cursor-pointer'>
                 <a href='/about-us'>About Us</a>
@@ -161,12 +160,12 @@ const Header = () => {
             <img
               src={logo}
               alt='logo'
-              className='cursor-pointer w-[18rem] mr-10'
+              className='cursor-pointer w-[13rem] mr-10'
             />
 
             {isHovering ? (
               <ul
-                className={`flex items-center justify-center  text-[14px] gap-8 bg-[#FFFEFE] py-3 px-4 absolute left-[22rem] rounded-t-xl overflow-hidden `}
+                className={`flex items-center justify-center text-[14px] gap-10 bg-[#FFFEFE] py-3 px-4 absolute left-[22rem] rounded-t-xl overflow-hidden `}
                 onMouseEnter={handleMouseEnter}
                 onMouseLeave={handleMouseLeave}
               >
@@ -253,7 +252,7 @@ const Header = () => {
               </ul>
             ) : (
               <ul
-                className={`flex items-center justify-center text-white text-[14px] gap-8 hover:bg-[#FFFEFE] py-3 px-4 absolute left-[22rem] rounded-t-xl hover:text-black overflow-hidden`}
+                className={`flex items-center justify-center text-white text-[14px] gap-10 hover:bg-[#FFFEFE] py-3 px-4 absolute left-[22rem] rounded-t-xl hover:text-black overflow-hidden`}
                 onMouseEnter={handleMouseEnter}
                 onMouseLeave={handleMouseLeave}
               >
@@ -341,7 +340,7 @@ const Header = () => {
             )}
             {isHovering && (
               <div
-                className={`h-auto bg-[#FFFEFE] z-40 absolute top-[5.8rem] left-[22rem] w-[39.2rem] rounded-b-xl `}
+                className={`h-auto bg-[#FFFEFE] z-40 absolute top-[4.6rem] left-[22rem] w-[42.7rem] rounded-b-xl `}
                 onMouseEnter={handleMouseEnter}
                 onMouseLeave={handleMouseLeave}
               >
@@ -476,7 +475,7 @@ const Header = () => {
                   {activeItem === 1 && (
                     <div className=' w-[38%] h-auto flex items-start justify-start mt-4'>
                       <div className='flex flex-col items-start justify-start'>
-                        <ul className='text-[11px] flex flex-col items-start justify-start gap-3 '>
+                        <ul className='text-[13px] flex flex-col items-start justify-start gap-3 '>
                           <li
                             onClick={() => handleItemProgramClick('PNP')}
                             className='flex items-center justify-between w-full '
@@ -571,7 +570,7 @@ const Header = () => {
                   {activeItem === 2 && (
                     <div className=' w-[38%] h-auto flex items-start justify-start mt-4 mb-4'>
                       <div className='flex flex-col items-start justify-start'>
-                        <ul className='text-[11px] flex flex-col items-start justify-start gap-3 '>
+                        <ul className='text-[13px] flex flex-col items-start justify-start gap-3 '>
                           <li
                             onClick={() =>
                               handleItemProgramClick('Work In Canada')
@@ -626,7 +625,7 @@ const Header = () => {
                   {activeItem === 3 && (
                     <div className=' w-[38%] h-auto flex items-start justify-start mt-4 mb-4'>
                       <div className='flex flex-col items-start justify-start'>
-                        <ul className='text-[11px] flex flex-col items-start justify-start gap-3 '>
+                        <ul className='text-[13px] flex flex-col items-start justify-start gap-3 '>
                           <li
                             onClick={() =>
                               handleItemProgramClick('Study In Canada')
@@ -699,7 +698,7 @@ const Header = () => {
                   {activeItem === 4 && (
                     <div className=' w-[38%] h-auto flex items-start justify-start mt-4 mb-4'>
                       <div className='flex flex-col items-start justify-start'>
-                        <ul className='text-[11px] flex flex-col items-start justify-start gap-3 '>
+                        <ul className='text-[13px] flex flex-col items-start justify-start gap-3 '>
                           <li
                             onClick={() =>
                               handleItemProgramClick(' Business/Invest')
@@ -735,7 +734,7 @@ const Header = () => {
                   {activeItem === 5 && (
                     <div className=' w-[38%] h-auto flex items-start justify-start mt-4 mb-4'>
                       <div className='flex flex-col items-start justify-start'>
-                        <ul className='text-[11px] flex flex-col items-start justify-start gap-3 '>
+                        <ul className='text-[13px] flex flex-col items-start justify-start gap-3 '>
                           <li
                             onClick={() =>
                               handleItemProgramClick('TRV-Visitor Visa')
@@ -767,7 +766,7 @@ const Header = () => {
                   {activeItem === 6 && (
                     <div className=' w-[38%] h-auto flex items-start justify-start mt-4 mb-4'>
                       <div className='flex flex-col items-start justify-start'>
-                        <ul className='text-[11px] flex flex-col items-start justify-start gap-3 '>
+                        <ul className='text-[13px] flex flex-col items-start justify-start gap-3 '>
                           <li
                             onClick={() =>
                               handleItemProgramClick(
@@ -795,7 +794,7 @@ const Header = () => {
                   {activeItem === 7 && (
                     <div className=' w-[38%] h-auto flex items-start justify-start mt-4 mb-4'>
                       <div className='flex flex-col items-start justify-start'>
-                        <ul className='text-[11px] flex flex-col items-start justify-start gap-3 '>
+                        <ul className='text-[13px] flex flex-col items-start justify-start gap-3 '>
                           <li
                             onClick={() =>
                               handleItemProgramClick(
@@ -845,7 +844,7 @@ const Header = () => {
                   {selectedProgram === 'PNP' && activeItem === 1 && (
                     <div className=' w-[30%] auto flex items-start justify-center mt-4 mb-4'>
                       <div className='flex flex-col items-center justify-center'>
-                        <ul className='text-[11px]'>
+                        <ul className='text-[13px]'>
                           <li>
                             <HeaderComponent
                               text={'Alberta Immigrant Nominee Program'}
@@ -986,7 +985,7 @@ const Header = () => {
                   {selectedProgram === 'Express Entry' && activeItem === 1 && (
                     <div className=' w-[30%] auto flex items-start justify-center mt-4 mb-4'>
                       <div className='flex flex-col items-center justify-center'>
-                        <ul className='text-[11px]'>
+                        <ul className='text-[13px]'>
                           <li>
                             <HeaderComponent
                               text={'Federal Skilled Worker Class'}
@@ -1033,7 +1032,7 @@ const Header = () => {
                     activeItem === 1 && (
                       <div className=' w-[30%] auto flex items-start justify-center mt-4 mb-4'>
                         <div className='flex flex-col items-center justify-center'>
-                          <ul className='text-[11px]'>
+                          <ul className='text-[13px]'>
                             <li>
                               <HeaderComponent
                                 text={'Permanent Resident Cards'}
@@ -1069,7 +1068,7 @@ const Header = () => {
                   {selectedProgram === 'Business Class' && activeItem === 1 && (
                     <div className=' w-[30%] auto flex items-start justify-center mt-4 mb-4'>
                       <div className='flex flex-col items-center justify-center'>
-                        <ul className='text-[11px]'>
+                        <ul className='text-[13px]'>
                           <li>
                             <HeaderComponent text={'Federal Self-Employed'} />
                           </li>
@@ -1108,7 +1107,7 @@ const Header = () => {
                     activeItem === 2 && (
                       <div className=' w-[30%] auto flex items-start justify-center mt-4 mb-4'>
                         <div className='flex flex-col items-center justify-center'>
-                          <ul className='text-[11px]'>
+                          <ul className='text-[13px]'>
                             <li>
                               <HeaderComponent text={'Business Visas'} />
                             </li>
@@ -1120,7 +1119,7 @@ const Header = () => {
                     activeItem === 2 && (
                       <div className=' w-[30%] auto flex items-start justify-center mt-4 mb-4'>
                         <div className='flex flex-col items-center justify-center'>
-                          <ul className='text-[11px]'>
+                          <ul className='text-[13px]'>
                             <li>
                               <HeaderComponent text={'LMIA'} />
                             </li>
@@ -1137,7 +1136,7 @@ const Header = () => {
                     activeItem === 2 && (
                       <div className=' w-[30%] auto flex items-start justify-center mt-4 mb-4'>
                         <div className='flex flex-col items-center justify-center'>
-                          <ul className='text-[11px]'>
+                          <ul className='text-[13px]'>
                             <li>
                               <HeaderComponent
                                 text={'Intra Company Transfer'}
@@ -1157,7 +1156,7 @@ const Header = () => {
                     activeItem === 2 && (
                       <div className=' w-[30%] auto flex items-start justify-center mt-4 mb-4'>
                         <div className='flex flex-col items-center justify-center'>
-                          <ul className='text-[11px]'>
+                          <ul className='text-[13px]'>
                             <li>
                               <HeaderComponent text={'PGWP'} />
                             </li>
@@ -1180,7 +1179,7 @@ const Header = () => {
                     activeItem === 3 && (
                       <div className=' w-[30%] auto flex items-start justify-center mt-4 mb-4'>
                         <div className='flex flex-col items-center justify-center'>
-                          <ul className='text-[11px]'>
+                          <ul className='text-[13px]'>
                             <li>
                               <HeaderComponent text={'SDS'} />
                             </li>
@@ -1196,7 +1195,7 @@ const Header = () => {
                     activeItem === 4 && (
                       <div className=' w-[30%] auto flex items-start justify-center mt-4 mb-4'>
                         <div className='flex flex-col items-center justify-center'>
-                          <ul className='text-[11px]'>
+                          <ul className='text-[13px]'>
                             <li>
                               <HeaderComponent text={'Start-up'} />
                             </li>
@@ -1228,7 +1227,7 @@ const Header = () => {
                     activeItem === 4 && (
                       <div className=' w-[30%] auto flex items-start justify-center mt-4 mb-4'>
                         <div className='flex flex-col items-center justify-center'>
-                          <ul className='text-[11px]'>
+                          <ul className='text-[13px]'>
                             <li>
                               <HeaderComponent text={'Alberta'} />
                             </li>
@@ -1272,7 +1271,7 @@ const Header = () => {
                     activeItem === 4 && (
                       <div className=' w-[30%] auto flex items-start justify-center mt-4 mb-4'>
                         <div className='flex flex-col items-center justify-center'>
-                          <ul className='text-[11px]'>
+                          <ul className='text-[13px]'>
                             <li>
                               <HeaderComponent text={'ICT'} />
                             </li>
@@ -1295,7 +1294,7 @@ const Header = () => {
                     activeItem === 6 && (
                       <div className=' w-[30%] auto flex items-start justify-center mt-4 mb-4'>
                         <div className='flex flex-col items-center justify-center'>
-                          <ul className='text-[11px]'>
+                          <ul className='text-[13px]'>
                             <li>
                               <HeaderComponent
                                 text={'Intra Company Transfer of Employees'}
@@ -1319,7 +1318,7 @@ const Header = () => {
                     activeItem === 6 && (
                       <div className=' w-[30%] auto flex items-start justify-center mt-4 mb-4'>
                         <div className='flex flex-col items-center justify-center'>
-                          <ul className='text-[11px]'>
+                          <ul className='text-[13px]'>
                             <li>
                               <HeaderComponent
                                 text={'Hiring Foreign Workers'}
