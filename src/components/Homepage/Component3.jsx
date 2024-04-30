@@ -14,7 +14,7 @@ const Component3 = () => {
             <img
               src={banner}
               alt='banner'
-              className='w-[99%] mt-[3rem] rounded-3xl'
+              className='w-[95%] mt-[3rem] rounded-3xl'
             />
           </div>
           <div className='bg-[#343436] w-[60%] rounded-3xl px-12 py-10 relative top-[8rem] right-[6rem]'>
