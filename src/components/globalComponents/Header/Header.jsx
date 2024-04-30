@@ -165,7 +165,7 @@ const Header = () => {
 
             {isHovering ? (
               <ul
-                className={`flex items-center justify-center text-[14px] gap-10 bg-[#FFFEFE] py-3 px-4 absolute left-[20rem] xl:left-[20rem] 2xl:left-[23rem] rounded-t-xl overflow-hidden `}
+                className={`flex items-center justify-center text-[14px] gap-10 bg-[#FFFEFE] py-3 px-4 absolute left-[20rem] xl:left-[20rem] 2xl:left-[23rem] 3xl:left-[24rem] 4xl:left-[25rem] rounded-t-xl overflow-hidden `}
                 onMouseEnter={handleMouseEnter}
                 onMouseLeave={handleMouseLeave}
               >
@@ -252,7 +252,7 @@ const Header = () => {
               </ul>
             ) : (
               <ul
-                className={`flex items-center justify-center text-white text-[14px] gap-10 hover:bg-[#FFFEFE] py-3 px-4 absolute left-[20rem] xl:left-[20rem] 2xl:left-[23rem] rounded-t-xl hover:text-black overflow-hidden `}
+                className={`flex items-center justify-center text-white text-[14px] gap-10 hover:bg-[#FFFEFE] py-3 px-4 absolute left-[20rem] xl:left-[20rem] 2xl:left-[23rem] 3xl:left-[24rem] 4xl:left-[25rem] rounded-t-xl hover:text-black overflow-hidden `}
                 onMouseEnter={handleMouseEnter}
                 onMouseLeave={handleMouseLeave}
               >
@@ -340,7 +340,7 @@ const Header = () => {
             )}
             {isHovering && (
               <div
-                className={`h-auto bg-[#FFFEFE] z-40 absolute top-[4.6rem] left-[20rem] xl:left-[20rem] 2xl:left-[23rem] w-[42.7rem] rounded-b-xl `}
+                className={`h-auto bg-[#FFFEFE] z-40 absolute top-[4.6rem] left-[20rem] xl:left-[20rem] 2xl:left-[23rem] 3xl:left-[24rem] 4xl:left-[25rem] w-[42.7rem] rounded-b-xl `}
                 onMouseEnter={handleMouseEnter}
                 onMouseLeave={handleMouseLeave}
               >
@@ -364,10 +364,10 @@ const Header = () => {
                           <div className='font-semibold ml-6 text-xl border-b-[2px] border-[#009889] pb-[2px] '>
                             Immigration
                           </div>
-                          <div className='px-6 text-[13px] text-left mt-4 '>
+                          {/* <div className='px-6 text-[13px] text-left mt-4 '>
                             Make Canada your permanent home! PR allows you to
                             live, work and study in Canada{' '}
-                          </div>
+                          </div> */}
                           {/* <div className='text-[11px] text-[#009889] pl-6 flex items-center justify-center mt-4'>
                             Explore Immigration{' '}
                             <IoIosArrowForward className='relative top-[1px]' />
@@ -380,11 +380,11 @@ const Header = () => {
                         <div className='font-semibold ml-6 text-xl border-b-[2px] border-[#009889] pb-[2px]'>
                           Work
                         </div>
-                        <div className='px-6 text-[13px] text-left mt-4 '>
+                        {/* <div className='px-6 text-[13px] text-left mt-4 '>
                           Explore infinite career opportunities in Canada! With
                           a Work Visa, you can legally work, gain valuable
                           experience and advance your career.
-                        </div>
+                        </div> */}
                         {/* <div className='text-[11px] text-[#009889] pl-6 flex items-center justify-center mt-4'>
                           Explore Work{' '}
                           <IoIosArrowForward className='relative top-[1px]' />
@@ -396,11 +396,11 @@ const Header = () => {
                         <div className='font-semibold ml-6 text-xl border-b-[2px] border-[#009889] pb-[2px]'>
                           Study
                         </div>
-                        <div className='px-6 text-[13px] text-left mt-4 '>
+                        {/* <div className='px-6 text-[13px] text-left mt-4 '>
                           Pursue your academic aspirations at prestigious
                           Canadian institutions making you independent and ready
                           for a successful career.
-                        </div>
+                        </div> */}
                         {/* <div className='text-[11px] text-[#009889] pl-6 flex items-center justify-center mt-4'>
                           Explore Study{' '}
                           <IoIosArrowForward className='relative top-[1px]' />
@@ -412,11 +412,11 @@ const Header = () => {
                         <div className='font-semibold ml-6 text-xl border-b-[2px] border-[#009889] pb-[2px]'>
                           Invest
                         </div>
-                        <div className='px-6 text-[13px] text-left mt-4 '>
+                        {/* <div className='px-6 text-[13px] text-left mt-4 '>
                           Secure your future in Canada through our investor
                           immigration services, designed to instill confidence
                           and trust in your path to residency.
-                        </div>
+                        </div> */}
                         {/* <div className='text-[11px] text-[#009889] pl-6 flex items-center justify-center mt-4'>
                           Explore Invest{' '}
                           <IoIosArrowForward className='relative top-[1px]' />
@@ -428,11 +428,11 @@ const Header = () => {
                         <div className='font-semibold ml-6 text-xl border-b-[2px] border-[#009889] pb-[2px]'>
                           Visit
                         </div>
-                        <div className='px-6 text-[13px] text-left mt-4 '>
+                        {/* <div className='px-6 text-[13px] text-left mt-4 '>
                           Explore Canada's beauty with a Visitor Visa! Temporary
                           entry allows you to experience stunning landscapes,
                           rich culture, and lasting memories.
-                        </div>
+                        </div> */}
                         {/* <div className='text-[11px] text-[#009889] pl-6 flex items-center justify-center mt-4'>
                           Explore Visit{' '}
                           <IoIosArrowForward className='relative top-[1px]' />
@@ -444,11 +444,11 @@ const Header = () => {
                         <div className='font-semibold ml-6 text-xl border-b-[2px] border-[#009889] pb-[2px]'>
                           Employers
                         </div>
-                        <div className='px-6 text-[13px] text-left mt-4 '>
+                        {/* <div className='px-6 text-[13px] text-left mt-4 '>
                           Empower your workforce with global talent! Canadian
                           businesses can sponsor skilled workers to fill
                           essential roles, fostering growth and innovation.
-                        </div>
+                        </div> */}
                         {/* <div className='text-[11px] text-[#009889] pl-6 flex items-center justify-center mt-4'>
                           Explore Employers{' '}
                           <IoIosArrowForward className='relative top-[1px]' />
@@ -460,11 +460,11 @@ const Header = () => {
                         <div className='font-semibold ml-6 text-xl border-b-[2px] border-[#009889] pb-[2px]'>
                           Sponsorship
                         </div>
-                        <div className='px-6 text-[13px] text-left mt-4 '>
+                        {/* <div className='px-6 text-[13px] text-left mt-4 '>
                           Canadians and permanent residents can sponsor spouses,
                           children, parents and grandparents to bring their
                           family together!
-                        </div>
+                        </div> */}
                         {/* <div className='text-[11px] text-[#009889] pl-6 flex items-center justify-center mt-4'>
                           Explore Sponsorship{' '}
                           <IoIosArrowForward className='relative top-[1px]' />
