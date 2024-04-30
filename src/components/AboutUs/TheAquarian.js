@@ -1,12 +1,12 @@
-import React from 'react';
-import '../../styles/AboutUs.css';
+import React from "react";
+import "../../styles/AboutUs.css";
 
 const TheAquarian = () => {
   return (
-    <div className='WhoWe' style={{ marginBottom: '10rem' }}>
-      <h1>The Aquarian Community</h1>
-      <div className='line'></div>
-      <div className='text-div' style={{ width: '70%' }}>
+    <div className="TheAquarian">
+      <h5 className="heading">The Aquarian Community</h5>
+      <div className="line"></div>
+      <div className="text-div">
         <p1>
           With Facebook, Instagram and other social media outlets, any person
           can post, tweet, comment and let their voice be heard by millions. We
@@ -24,7 +24,7 @@ const TheAquarian = () => {
       </div>
       <br />
       <br />
-      <div className='button'>
+      <div className="button">
         <br />
         JOIN COMMUNITY
         <br />

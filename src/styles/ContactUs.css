@@ -5,6 +5,7 @@
   background-repeat: no-repeat;
   background-size: auto;
   width: 90%;
+  top: -40px;
   margin-left: 2%;
   border-radius: 25px;
   background: url(../Assets/map.png) lightgray 20% / cover no-repeat;
@@ -12,12 +13,12 @@
 }
 .ContactUsHeader .link {
   color: #e2e2e2;
-  font-family: 'TT Chocolates';
+  font-family: "TT Chocolates";
   font-size: 16px;
   font-style: normal;
   font-weight: 500;
   line-height: normal;
-  padding-top: 4%;
+  padding-top: 65px;
   padding-left: 3%;
 }
 .ContactUsHeader .header-content {
@@ -39,7 +40,7 @@
 }
 .address-heading {
   color: #009889;
-  font-family: 'TT Chocolates';
+  font-family: "TT Chocolates";
   font-size: 20px;
   font-style: normal;
   font-weight: 500;
@@ -84,7 +85,7 @@ textarea {
 }
 .error {
   border-color: #b90124;
-  background-color: '#ffe6e6';
+  background-color: "#ffe6e6";
   width: 23.8rem;
 }
 .registration-form button {
@@ -107,11 +108,12 @@ textarea {
 
 @media (max-width: 1700px) {
   .address-content {
-    margin-top: -13%;
+    margin-top: -10%;
   }
   input,
   select,
-  .lastname {
+  .lastname,
+  .error {
     width: 20.8rem;
   }
   textarea {
@@ -120,10 +122,11 @@ textarea {
 }
 @media (max-width: 1590px) {
   .address-content {
-    margin-top: -13%;
+    margin-top: -8%;
   }
   input,
   select,
+  .error,
   .lastname {
     width: 19.8rem;
   }
@@ -133,10 +136,11 @@ textarea {
 }
 @media (max-width: 1400px) {
   .address-content {
-    margin-top: -13%;
+    margin-top: -6%;
   }
   input,
   select,
+  .error,
   .lastname {
     width: 17.8rem;
   }
@@ -147,8 +151,84 @@ textarea {
     margin-left: 50%;
   }
 }
+
+@media (max-width: 1300px) {
+  .address-content {
+    margin-top: -5%;
+  }
+  input,
+  select,
+  .error,
+  .lastname {
+    width: 14.8rem;
+  }
+  textarea {
+    width: 37.4rem;
+  }
+  .ContactUsHeader .header-content {
+    margin-left: 50%;
+  }
+}
+@media (max-width: 1000px) {
+  .address-content {
+    margin-top: -3%;
+  }
+  input,
+  select,
+  .error,
+  .lastname {
+    width: 12.8rem;
+  }
+  textarea {
+    width: 30.7rem;
+  }
+  .ContactUsHeader .header-content {
+    margin-left: 50%;
+  }
+}
 @media (max-width: 768px) {
   .registration-form {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 2rem;
+    margin-top: 1rem;
+  }
+
+  .form-row {
+    display: block;
+    justify-content: gap-between;
+    gap: 20%;
+  }
+  .ContactUsHeader .header-content {
+    padding-top: 25%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 1rem;
+    width: 50%;
+  }
+  .ContactUsHeader {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  input,
+  select,
+  .error,
+  .lastname {
+    width: 100%;
+  }
+  textarea {
+    width: 100%;
+  }
+  .address-content {
+    position: relative;
+    margin-top: 0%;
     width: 95%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 2rem;
   }
 }

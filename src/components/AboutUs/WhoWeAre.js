@@ -4,7 +4,7 @@ import "../../styles/AboutUs.css";
 const WhoWeAre = () => {
   return (
     <div className="WhoWe">
-      <h1>Who We Are</h1>
+      <h5 className="heading">Who We Are</h5>
       <div className="line"></div>
       <div className="text-div">
         <p1>

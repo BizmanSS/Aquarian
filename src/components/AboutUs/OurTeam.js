@@ -5,16 +5,8 @@ import Puneet from "../../Assets/Puneet.jpg";
 const OurTeam = () => {
   return (
     <>
-      <div
-        className="WhoWe"
-        style={{
-          paddingTop: "5%",
-          marginLeft: "40%",
-          width: "50%",
-          paddingBottom: "5%",
-        }}
-      >
-        <h1>Our Team</h1>
+      <div className="OurTeam">
+        <h5 className="heading">Our Team</h5>
         <div className="line"></div>
         <div className="text-div">
           <p1>
@@ -26,31 +18,14 @@ const OurTeam = () => {
           </p1>
         </div>
       </div>
-      <div
-        style={{
-          display: "flex",
-          position: "relative",
-          background: "#343436",
-          marginLeft: "40%",
-          marginBottom: "3rem",
-          width: "54%",
-          gap: "3rem",
-        }}
-      >
-        <div
-          style={{
-            width: "25%",
-            paddingTop: "2rem",
-            paddingBottom: "2rem",
-            marginLeft: "-13%",
-          }}
-        >
+      <div className="team-background">
+        <div className="imageTeam">
           <img src={Puneet} alt="" />
         </div>
-        <div style={{ width: "70%", paddingTop: "5%" }}>
+        <div className="textOurTeam">
           <h1 className="Name">Puneet Sawhney</h1>
           <h2 className="designation">Business Head</h2>
-          <p1 className="about">
+          <h3 className="about">
             <br />
             With a strong staff of over 20+ Immigration Lawyers, Regulated
             Canadian Immigration Consultants, immigration advisors and support
@@ -59,7 +34,7 @@ const OurTeam = () => {
             Canadim the great company it is:
             <br />
             <br />
-          </p1>
+          </h3>
         </div>
       </div>
     </>
