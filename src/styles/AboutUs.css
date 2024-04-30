@@ -153,7 +153,7 @@
 .Integrity h1 {
   color: #000;
   font-family: "Goudy Old Style";
-  font-size: 40px;
+  font-size: 32px;
   font-style: normal;
   font-weight: 600;
   line-height: normal;
@@ -179,14 +179,17 @@
 .TheAquarian .text-div {
   width: 70%;
 }
-.text-div-color img {
-  width: 10%;
+.gapImage img {
+  width: 9%;
 }
 .text-color {
   background: #c2c2c2;
   margin-top: 3rem;
-  margin-left: 3rem;
+  margin-left: 10%;
   width: 80%;
+}
+.text-color p {
+  font-size: 20px;
 }
 .Integrity .text-color {
   width: 64%;
@@ -342,6 +345,9 @@
   .follow {
     font-size: 24px;
   }
+  .text-color p {
+    font-size: 19px;
+  }
   .WhoWe h1,
   .Free h1,
   .OurServices h1,
@@ -349,7 +355,7 @@
   .TheAquarian h1,
   .Competitve h1,
   .Integrity h1 {
-    font-size: 20px;
+    font-size: 28px;
   }
   .AboutUsHeader .link {
     font-size: 18px;
@@ -403,7 +409,10 @@
   .TheAquarian h1,
   .Free h1,
   .Integrity h1 {
-    font-size: 18px;
+    font-size: 26px;
+  }
+  .text-color p {
+    font-size: 18.5px;
   }
   .AboutUsHeader .link {
     font-size: 16px;
@@ -443,6 +452,9 @@
   }
   .sub-heading {
     font-size: 17px;
+  }
+  .text-color p {
+    font-size: 18px;
   }
   .sub-heading-content {
     margin-top: -19%;
@@ -488,6 +500,18 @@
   }
   .text-heading {
     font-size: 14px;
+  }
+  .text-color p {
+    font-size: 16px;
+  }
+  .WhoWe h1,
+  .Competitve h1,
+  .OurServices h1,
+  .OurTeam h1,
+  .TheAquarian h1,
+  .Free h1,
+  .Integrity h1 {
+    font-size: 20px;
   }
   .AboutUsHeader .header-content {
     padding-top: 20%;
@@ -565,7 +589,7 @@
     width: 90%;
   }
   .button {
-    width: 60%;
+    width: 80%;
     font-size: 18px;
     margin-left: auto;
     margin-right: auto;
