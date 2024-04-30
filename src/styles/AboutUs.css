@@ -23,7 +23,7 @@
 }
 .AboutUsHeader .header-content {
   padding-top: 6%;
-  margin-left: 45%;
+  margin-left: 52%;
   padding-bottom: 2rem;
   width: 50%;
 }
@@ -455,7 +455,7 @@
     font-size: 16px;
   }
   .AboutUsHeader .header-content {
-    padding-top: 10%;
+    margin-left: 50%;
   }
   .heading-about {
     font-size: 55px;
@@ -498,11 +498,11 @@
     font-size: 20px;
   }
   .AboutUsHeader .header-content {
-    padding-top: 20%;
-    display: block;
+    padding-top: 25%;
     margin-left: auto;
     margin-right: auto;
-    padding-bottom: 2rem;
+    padding-bottom: 1rem;
+    width: 50%;
   }
   .background-div {
     background: none;
