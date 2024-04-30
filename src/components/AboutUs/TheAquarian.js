@@ -26,7 +26,7 @@ const TheAquarian = () => {
       <br />
       <div className="button">
         <br />
-        JOIN COMMUNITY
+        Join The Community
         <br />
         <br />
       </div>

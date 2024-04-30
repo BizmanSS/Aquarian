@@ -320,7 +320,11 @@
   font-weight: 600;
   line-height: normal;
 }
-
+.AddressHeading {
+  color: aqua;
+  font-size: large;
+  margin-bottom: 3%;
+}
 @media (max-width: 1700px) {
   .sub-heading {
     font-size: 19px;

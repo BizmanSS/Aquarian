@@ -22,7 +22,6 @@ function SitemapDesktop() {
   const arrowIconRotate = (
     <svg
       stroke="currentColor"
-      fill="#009889"
       stroke-width="0"
       viewBox="0 0 448 512"
       class="arrow-icon"
