@@ -41,7 +41,10 @@ const Header = () => {
       window.removeEventListener('resize', handleResize);
     };
   }, []);
-  const handleItemClick = (index) => {
+  // const handleItemClick = (index) => {
+  //   setActiveItem(index);
+  // };
+  const handleItemHover = (index) => {
     setActiveItem(index);
   };
   const handleMenuClick = () => {
@@ -171,12 +174,12 @@ const Header = () => {
 
             {isHovering ? (
               <ul
-                className={`flex items-center justify-center text-[14px] gap-10 bg-[#FFFEFE] py-3 px-4 absolute left-[17rem] xl:left-[19rem] 2xl:left-[23rem] 3xl:left-[25rem] 4xl:left-[30rem] rounded-t-xl overflow-hidden `}
+                className={`flex items-center justify-center text-[14px] gap-10 bg-[#FFFEFE] py-3 px-4 absolute left-[17rem] xl:left-[19rem] 2xl:left-[23rem] 3xl:left-[27rem] 4xl:left-[30rem] rounded-t-xl overflow-hidden `}
                 onMouseEnter={handleMouseEnter}
                 onMouseLeave={handleMouseLeave}
               >
                 <li
-                  onClick={() => handleItemClick(0)}
+                  onMouseEnter={() => handleItemHover(0)}
                   className={`cursor-pointer transition ease-in delay-100 duration-300 ${
                     activeItem === 0
                       ? 'border-b-[3px] border-b-[#009889]'
@@ -186,7 +189,7 @@ const Header = () => {
                   <a href='/'>Home</a>
                 </li>
                 <li
-                  onClick={() => handleItemClick(1)}
+                  onMouseEnter={() => handleItemHover(1)}
                   className={`cursor-pointer transition ease-in delay-100 duration-300 ${
                     activeItem === 1
                       ? 'border-b-[3px] border-b-[#009889]'
@@ -196,7 +199,7 @@ const Header = () => {
                   Immigrate
                 </li>
                 <li
-                  onClick={() => handleItemClick(2)}
+                  onMouseEnter={() => handleItemHover(2)}
                   className={`cursor-pointer transition ease-in delay-100 duration-300 ${
                     activeItem === 2
                       ? 'border-b-[3px] border-b-[#009889]'
@@ -206,7 +209,7 @@ const Header = () => {
                   Work
                 </li>
                 <li
-                  onClick={() => handleItemClick(3)}
+                  onMouseEnter={() => handleItemHover(3)}
                   className={`cursor-pointer transition ease-in delay-100 duration-300 ${
                     activeItem === 3
                       ? 'border-b-[3px] border-b-[#009889]'
@@ -216,7 +219,7 @@ const Header = () => {
                   Study
                 </li>
                 <li
-                  onClick={() => handleItemClick(4)}
+                  onMouseEnter={() => handleItemHover(4)}
                   className={`cursor-pointer transition ease-in delay-100 duration-300 ${
                     activeItem === 4
                       ? 'border-b-[3px] border-b-[#009889]'
@@ -226,7 +229,7 @@ const Header = () => {
                   Invest
                 </li>
                 <li
-                  onClick={() => handleItemClick(5)}
+                  onMouseEnter={() => handleItemHover(5)}
                   className={`cursor-pointer transition ease-in delay-100 duration-300 ${
                     activeItem === 5
                       ? 'border-b-[3px] border-b-[#009889]'
@@ -236,7 +239,7 @@ const Header = () => {
                   Visit
                 </li>
                 <li
-                  onClick={() => handleItemClick(6)}
+                  onMouseEnter={() => handleItemHover(6)}
                   className={`cursor-pointer transition ease-in delay-100 duration-300 ${
                     activeItem === 6
                       ? 'border-b-[3px] border-b-[#009889]'
@@ -246,7 +249,7 @@ const Header = () => {
                   Employers
                 </li>
                 <li
-                  onClick={() => handleItemClick(7)}
+                  onMouseEnter={() => handleItemHover(7)}
                   className={`cursor-pointer transition ease-in delay-100 duration-300 ${
                     activeItem === 7
                       ? 'border-b-[3px] border-b-[#009889]'
@@ -258,12 +261,12 @@ const Header = () => {
               </ul>
             ) : (
               <ul
-                className={`flex items-center justify-center text-white text-[14px] gap-10 hover:bg-[#FFFEFE] py-3 px-4 absolute left-[17rem] xl:left-[19rem] 2xl:left-[23rem] 3xl:left-[25rem] 4xl:left-[30rem] rounded-t-xl hover:text-black overflow-hidden `}
+                className={`flex items-center justify-center text-white text-[14px] gap-10 hover:bg-[#FFFEFE] py-3 px-4 absolute left-[17rem] xl:left-[19rem] 2xl:left-[23rem] 3xl:left-[27rem] 4xl:left-[30rem] rounded-t-xl hover:text-black overflow-hidden `}
                 onMouseEnter={handleMouseEnter}
                 onMouseLeave={handleMouseLeave}
               >
                 <li
-                  onClick={() => handleItemClick(0)}
+                  onMouseEnter={() => handleItemHover(0)}
                   className={`cursor-pointer transition ease-in delay-100 duration-300 ${
                     activeItem === 0
                       ? 'border-b-[3px] border-b-[#009889]'
@@ -273,7 +276,7 @@ const Header = () => {
                   <a href='/'>Home</a>
                 </li>
                 <li
-                  onClick={() => handleItemClick(1)}
+                  onMouseEnter={() => handleItemHover(1)}
                   className={`cursor-pointer transition ease-in delay-100 duration-300 ${
                     activeItem === 1
                       ? 'border-b-[3px] border-b-[#009889]'
@@ -283,7 +286,7 @@ const Header = () => {
                   Immigrate
                 </li>
                 <li
-                  onClick={() => handleItemClick(2)}
+                  onMouseEnter={() => handleItemHover(2)}
                   className={`cursor-pointer transition ease-in delay-100 duration-300 ${
                     activeItem === 2
                       ? 'border-b-[3px] border-b-[#009889]'
@@ -293,7 +296,7 @@ const Header = () => {
                   Work
                 </li>
                 <li
-                  onClick={() => handleItemClick(3)}
+                  onMouseEnter={() => handleItemHover(3)}
                   className={`cursor-pointer transition ease-in delay-100 duration-300 ${
                     activeItem === 3
                       ? 'border-b-[3px] border-b-[#009889]'
@@ -303,7 +306,7 @@ const Header = () => {
                   Study
                 </li>
                 <li
-                  onClick={() => handleItemClick(4)}
+                  onMouseEnter={() => handleItemHover(4)}
                   className={`cursor-pointer transition ease-in delay-100 duration-300 ${
                     activeItem === 4
                       ? 'border-b-[3px] border-b-[#009889]'
@@ -313,7 +316,7 @@ const Header = () => {
                   Invest
                 </li>
                 <li
-                  onClick={() => handleItemClick(5)}
+                  onMouseEnter={() => handleItemHover(5)}
                   className={`cursor-pointer transition ease-in delay-100 duration-300 ${
                     activeItem === 5
                       ? 'border-b-[3px] border-b-[#009889]'
@@ -323,7 +326,7 @@ const Header = () => {
                   Visit
                 </li>
                 <li
-                  onClick={() => handleItemClick(6)}
+                  onMouseEnter={() => handleItemHover(6)}
                   className={`cursor-pointer transition ease-in delay-100 duration-300 ${
                     activeItem === 6
                       ? 'border-b-[3px] border-b-[#009889]'
@@ -333,7 +336,7 @@ const Header = () => {
                   Employers
                 </li>
                 <li
-                  onClick={() => handleItemClick(7)}
+                  onMouseEnter={() => handleItemHover(7)}
                   className={`cursor-pointer transition ease-in delay-100 duration-300 ${
                     activeItem === 7
                       ? 'border-b-[3px] border-b-[#009889]'
@@ -346,7 +349,7 @@ const Header = () => {
             )}
             {isHovering && (
               <div
-                className={`h-auto bg-[#FFFEFE] z-40 absolute top-[4.6rem] left-[17rem] xl:left-[19rem] 2xl:left-[23rem] 3xl:left-[25rem] 4xl:left-[30rem] w-[42.7rem] rounded-b-xl `}
+                className={`h-auto bg-[#FFFEFE] z-40 absolute top-[4.6rem] left-[17rem] xl:left-[19rem] 2xl:left-[23rem] 3xl:left-[27rem] 4xl:left-[30rem] w-[42.68rem] rounded-b-xl `}
                 onMouseEnter={handleMouseEnter}
                 onMouseLeave={handleMouseLeave}
               >

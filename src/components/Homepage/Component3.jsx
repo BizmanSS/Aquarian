@@ -17,7 +17,7 @@ const Component3 = () => {
               className='w-[95%] mt-[3rem] rounded-3xl'
             />
           </div>
-          <div className='bg-[#343436] w-[60%] rounded-3xl px-12 py-10 relative top-[8rem] right-[6rem]'>
+          <div className='bg-[#343436] w-[60%] rounded-3xl px-14 py-12 relative top-[9rem] right-[6rem]'>
             <div className='text-[#FEFFFE] my-[4rem] text-xl'>
               <span className='text-[#019989]'>Aquarian</span> is a Canadian
               immigration Law Firm.
