@@ -27,7 +27,7 @@ const Component1 = () => {
         <div className='text-center text-[#E22726] font-normal text-[1.5rem] -mt-1 mb-2'>
           30 Year Experience
         </div>
-        <p className='text-[15px] text-center mb-4'>
+        <p className='text-[16px] text-center mb-4'>
           Make Canada your permanent home! PR allows you to live, work{' '}
         </p>
       </div>
