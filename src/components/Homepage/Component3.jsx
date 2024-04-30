@@ -1,5 +1,6 @@
 import React from 'react';
 import banner from '../../Assets/Rectangle 133.png';
+import { Link } from 'react-router-dom';
 
 const Component3 = () => {
   return (
@@ -16,7 +17,7 @@ const Component3 = () => {
               className='w-[99%] mt-[3rem] rounded-3xl'
             />
           </div>
-          <div className='bg-[#343436] w-[60%] rounded-3xl px-12 py-6 relative top-[7rem] right-[6rem]'>
+          <div className='bg-[#343436] w-[60%] rounded-3xl px-12 py-10 relative top-[8rem] right-[6rem]'>
             <div className='text-[#FEFFFE] my-[4rem] text-xl'>
               <span className='text-[#019989]'>Aquarian</span> is a Canadian
               immigration Law Firm.
@@ -30,9 +31,11 @@ const Component3 = () => {
               <button className='bg-[#01F9E1] text-black px-8 py-3 rounded-sm text-[15px]'>
                 Book Now
               </button>
-              <button className='bg-[#3E3E41] text-[#EEEEEE] px-8 py-3 rounded-sm text-[15px]'>
-                About Us
-              </button>
+              <Link to='about-us'>
+                <button className='bg-[#3E3E41] text-[#EEEEEE] px-8 py-3 rounded-sm text-[15px]'>
+                  About Us
+                </button>
+              </Link>
             </div>
           </div>
         </div>
