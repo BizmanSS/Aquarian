@@ -23,7 +23,7 @@ const Component1 = () => {
         </p>
       </div>
       <div className='w-[18rem] h-[17rem] flex flex-col items-center justify-center px-8 py-2 rounded-2xl border-[1px] border-[#38AB9F] hover:border-transparent hover:scale-105 shadow-xl transition ease-in delay-50 duration-300 cursor-pointer'>
-        <img src={img3} alt={'logo'} className='w-20' />
+        <img src={img3} alt={'logo'} className='w-[7rem]' />
         <div className='text-center text-[#E22726] font-normal text-[1.5rem] -mt-1 mb-2'>
           30 Year Experience
         </div>

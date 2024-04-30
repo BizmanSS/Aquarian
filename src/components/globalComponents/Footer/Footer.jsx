@@ -9,7 +9,7 @@ import {
   FaYoutube,
   FaLinkedin,
 } from 'react-icons/fa6';
-import { FaTelegramPlane } from 'react-icons/fa';
+
 import logo3 from '../../../Assets/AQUARIAN.png';
 import '../../../styles/AboutUs.css';
 import logoccic from '../../../Assets/image52.png';
