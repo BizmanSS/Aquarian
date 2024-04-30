@@ -7,7 +7,6 @@ import LinkedIn from "../../../Assets/LinkedIn.png";
 import facebook from "../../../Assets/Facebook.png";
 import WhoWeAre from "../../AboutUs/WhoWeAre.js";
 import Competitive from "../../AboutUs/Competitive.js";
-import Expertise from "../../../Assets/Expertise.png";
 import OurTeam from "../../AboutUs/OurTeam.js";
 import Tanpreet from "../../../Assets/Tanpreet.jpg";
 import OurServices from "../../AboutUs/OurServices.js";
@@ -91,21 +90,27 @@ const AboutUsPage = () => {
             <h1 className="follow">Follow Us</h1>
           </div>
           <div className="logos">
-            <div className="mx-0 p-2">
+            <a href="" className="mx-0 p-2">
               <img src={LinkedIn} className="cursor-pointer w-[2.2rem]" />
-            </div>
-            <div className="mx-0 p-2">
+            </a>
+            <a
+              href="https://www.facebook.com/people/Aquarian-Immigration/61558242973262/"
+              className="mx-0 p-2"
+            >
               <img src={facebook} className="cursor-pointer w-[2.2rem]" />
-            </div>
-            <div className="mx-0 p-2">
+            </a>
+            <a href="" className="mx-0 p-2">
               <img src={Twitter} className="cursor-pointer w-[2.2rem]" />
-            </div>
-            <div className="mx-0 p-2">
+            </a>
+            <a
+              href="https://www.instagram.com/aquarian_immigration/"
+              className="mx-0 p-2"
+            >
               <img src={Instagram} className="cursor-pointer w-[2.2rem]" />
-            </div>
-            <div className="mx-0 p-2">
+            </a>
+            <a href="" className="mx-0 p-2">
               <img src={Youtube} className="cursor-pointer w-[2.2rem]" />
-            </div>
+            </a>
           </div>
         </div>
       )}
