@@ -1,7 +1,20 @@
-import React from "react";
+import React, { useState } from "react";
 import "../../styles/AboutUs.css";
-
+import Instagram from "../../Assets/Instagram_logo.svg";
+import Youtube from "../../Assets/youtube.png";
+import Twitter from "../../Assets/Twitter.png";
+import LinkedIn from "../../Assets/LinkedIn.png";
+import facebook from "../../Assets/Facebook.png";
+import { useMobile } from "../globalComponents/MobileContext/IsMobileContext";
 const TheAquarian = () => {
+  const { isMobile } = useMobile();
+  const [isActive, setIsActive] = useState(false);
+
+  const handleClick = () => {
+    if (isMobile) {
+      setIsActive(!isActive);
+    }
+  };
   return (
     <div className="TheAquarian">
       <h5 className="heading">The Aquarian Community</h5>
@@ -24,12 +37,47 @@ const TheAquarian = () => {
       </div>
       <br />
       <br />
-      <div className="button">
-        <br />
-        JOIN COMMUNITY
-        <br />
-        <br />
-      </div>
+      {!isActive && (
+        <div
+          className="button"
+          onMouseEnter={() => !isMobile && setIsActive(true)}
+          onMouseLeave={() => !isMobile && setIsActive(false)}
+          onClick={handleClick}
+        >
+          Join The Community
+        </div>
+      )}
+      {isActive && (
+        <div
+          className="button2"
+          onMouseLeave={() => !isMobile && setIsActive(false)}
+          onClick={handleClick}
+        >
+          <div className="logos2">
+            <a href="" className="mx-0 p-2">
+              <img src={LinkedIn} className="cursor-pointer" />
+            </a>
+            <a
+              href="https://www.facebook.com/people/Aquarian-Immigration/61558242973262/"
+              className="mx-0 p-2"
+            >
+              <img src={facebook} className="cursor-pointer" />
+            </a>
+            <a href="" className="mx-0 p-2">
+              <img src={Twitter} className="cursor-pointer" />
+            </a>
+            <a
+              href="https://www.instagram.com/aquarian_immigration/"
+              className="mx-0 p-2"
+            >
+              <img src={Instagram} className="cursor-pointer" />
+            </a>
+            <a href="" className="mx-0 p-2">
+              <img src={Youtube} className="cursor-pointer" />
+            </a>
+          </div>
+        </div>
+      )}
     </div>
   );
 };

@@ -164,7 +164,7 @@ const ContactUsPage = () => {
           </div>
           <div className="form-row">
             <div className="form-group">
-              <label>Time Slot *</label>
+              <label>Preferred Time Slot *</label>
               <select
                 value={timeSlot}
                 className={errors.timeSlot ? "error" : ""}
@@ -174,6 +174,7 @@ const ContactUsPage = () => {
                 <option value="9 A.M. - 12 P.M.">9 A.M. - 12 P.M.</option>
                 <option value="12 P.M. - 3 P.M.">12 P.M. - 3 P.M.</option>
                 <option value="3 P.M. - 6 P.M.">3 P.M. - 6 P.M.</option>
+                <option value="Anytime">Anytime</option>
               </select>
               {errors.timeSlot && (
                 <div className="error-message">{errors.timeSlot}</div>

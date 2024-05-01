@@ -8,7 +8,7 @@ import facebook from '../../../Assets/Facebook.png';
 import WhoWeAre from '../../AboutUs/WhoWeAre.js';
 import Competitive from '../../AboutUs/Competitive.js';
 import OurTeam from '../../AboutUs/OurTeam.js';
-import Tanpreet from '../../../Assets/Tanpreet.jpg';
+
 import OurServices from '../../AboutUs/OurServices.js';
 import TheAquarian from '../../AboutUs/TheAquarian.js';
 //import AquarianFlower from "../../../Assets/AquarianFlower.jpg";
@@ -127,25 +127,6 @@ const AboutUsPage = () => {
       <div className='background-div-left'>
         <div ref={ourTeamRef}>
           <OurTeam />
-        </div>
-      </div>
-      <div className='team-background-outer'>
-        <div className='imageTeam'>
-          <img src={Tanpreet} alt='' />
-        </div>
-        <div className='textOurTeam'>
-          <h1 className='Name'>Tanpreet Sawhney</h1>
-          <h2 className='designation'>Director</h2>
-          <h3 className='about'>
-            <br />
-            With a strong staff of over 20+ Immigration Lawyers, Regulated
-            Canadian Immigration Consultants, immigration advisors and support
-            staff, we are in the best position to help you reach your
-            immigration goals. Here are just some of the people that make
-            Canadim the great company it is:
-            <br />
-            <br />
-          </h3>
         </div>
       </div>
       <div className='background-div' style={{ marginTop: '2rem' }}>
