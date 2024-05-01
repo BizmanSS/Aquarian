@@ -9,6 +9,7 @@ const ContactUsPage = () => {
   const [contactNumber, setContactNumber] = useState("");
   const [timeSlot, setTimeSlot] = useState("");
   const [service, setService] = useState("");
+  const [serviceOther, setServiceOther] = useState("");
   const [comments, setComments] = useState("");
   const [errors, setErrors] = useState({});
 
@@ -33,6 +34,9 @@ const ContactUsPage = () => {
     }
     if (!service) {
       errorObject.service = "Service is required";
+    }
+    if (service === "Other" && !serviceOther) {
+      errorObject.serviceOther = "Please specify your service";
     }
 
     if (Object.keys(errorObject).length > 0) {
@@ -200,6 +204,20 @@ const ContactUsPage = () => {
               </select>
               {errors.service && (
                 <div className="error-message">{errors.service}</div>
+              )}
+              {service === "Other" && (
+                <div>
+                  <label>Please Specify Your Service *</label>
+                  <input
+                    type="text"
+                    value={serviceOther}
+                    onChange={(e) => setServiceOther(e.target.value)}
+                    className={errors.serviceOther ? "error" : ""}
+                  />
+                  {errors.serviceOther && (
+                    <div className="error-message">{errors.serviceOther}</div>
+                  )}
+                </div>
               )}
             </div>
           </div>
