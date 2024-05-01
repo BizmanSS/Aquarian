@@ -7,6 +7,9 @@ module.exports = {
         '3xl': '1636px',
         '4xl': '1736px',
       },
+      backgroundImage: {
+        banner: "url('/src/Assets/Rectangle 156.png')",
+      },
     },
   },
   plugins: [],

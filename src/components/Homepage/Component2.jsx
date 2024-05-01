@@ -1,11 +1,11 @@
 import React from 'react';
 import Card from './CardElement';
-import cardimg1 from '../../Assets/PR 1.jpg';
-import cardimg2 from '../../Assets/Family Sponsorship 1.jpg';
-import cardimg3 from '../../Assets/Super Visa 1.jpg';
+import cardimg1 from '../../Assets/PR 1.png';
+import cardimg2 from '../../Assets/Family Sponsorship 1.png';
+import cardimg3 from '../../Assets/Super Visa 1.png';
 import cardimg4 from '../../Assets/Work Visa 3.jpg';
 import cardimg5 from '../../Assets/Studnet Visa 3.jpg';
-import cardimg6 from '../../Assets/Visa Extension 2.jpg';
+import cardimg6 from '../../Assets/Visa Extension 2.png';
 import cardimg7 from '../../Assets/Business Visa 2.jpg';
 import cardimg8 from '../../Assets/Visitor visa 2.jpg';
 import cardimg9 from '../../Assets/investors 2.jpg';
