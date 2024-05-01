@@ -210,10 +210,10 @@ const sitemap = [
               { title: "Canadian Citizenship", linkTo: "" },
             ],
           },
-          { title: "AGRI FOOD PILOT", linkTo: "" },
-          { title: "ATLANTIC IMMIGRATION PROGRAM", linkTo: "" },
+          { title: "Agri Food Pilot", linkTo: "" },
+          { title: "Atlantic Immigration Program", linkTo: "" },
           {
-            title: "BUSINESS CLASS",
+            title: "Business Class",
             linkTo: "",
             nestedLinks: [
               { title: "Federal Self-Employed", linkTo: "" },
@@ -221,7 +221,7 @@ const sitemap = [
             ],
           },
           {
-            title: "CAREGIVER PROGRAM",
+            title: "Caregiver Program",
             linkTo: "",
             nestedLinks: [
               { title: "Home Child Care Provider Pilot", linkTo: "" },
@@ -229,8 +229,8 @@ const sitemap = [
             ],
           },
           { title: "Canadian Immigration FAQs", linkTo: "" },
-          { title: "RURAL AND NORTHERN IMMIGRATION PILOT", linkTo: "" },
-          { title: "TR TO PR ROUTE", linkTo: "" },
+          { title: "Rural And Northern Immigration Pilot", linkTo: "" },
+          { title: "TR to PR Route", linkTo: "" },
         ],
       },
       {
