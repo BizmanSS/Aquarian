@@ -111,7 +111,7 @@ const ContactUsPage = () => {
       </div>
 
       <div className="registration-form" style={{ marginTop: "-50px" }}>
-        <form onSubmit={handleSubmit}>
+        <form onChange={handleSubmit}>
           <div className="form-row">
             <div className="form-group">
               <label>First Name *</label>

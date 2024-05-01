@@ -103,6 +103,13 @@ const Competitive = () => {
 
                 {expandedIndex === index && (
                   <div
+                    onMouseEnter={() =>
+                      !isMobile ? setExpandedIndex(index) : null
+                    }
+                    onMouseLeave={() =>
+                      !isMobile ? setExpandedIndex(null) : null
+                    }
+                    onClick={() => (isMobile ? handleToggle(index) : null)}
                     className="text-color"
                     style={{
                       marginTop: "0rem",
