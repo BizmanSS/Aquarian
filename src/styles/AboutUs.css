@@ -88,7 +88,7 @@
   width: 90%;
 }
 .logos2 img {
-  width: 70%;
+  width: 90%;
 }
 .background-div {
   background: #fff;
@@ -121,6 +121,10 @@
   display: block;
   gap: 3rem;
 }
+.downArrow {
+  position: relative;
+  padding-left: 12rem;
+}
 .Integrity {
   margin-left: 24%;
   padding-top: 1%;
@@ -135,19 +139,13 @@
 }
 .WhoWe,
 .OurServices,
-.TheAquarian {
-  margin-left: 15%;
-}
-.WhoWe,
-.OurServices,
 .Competitve,
 .TheAquarian {
+  margin-left: 15%;
   width: 70%;
   padding-top: 5%;
 }
-.Competitve h5 {
-  margin-left: 15%;
-}
+
 .Competitve .text-color h1 {
   text-align: center;
   margin-left: 0%;
@@ -161,12 +159,19 @@
 .Integrity h1 {
   color: #000;
   font-family: "Goudy Old Style";
+  font-size: 35px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+.WhoWe h3 {
+  color: #000;
+  font-family: "Goudy Old Style";
   font-size: 25px;
   font-style: normal;
   font-weight: 600;
   line-height: normal;
 }
-
 .WhoWe .line,
 .OurTeam .line,
 .OurServices .line,
@@ -188,7 +193,7 @@
   width: 70%;
 }
 .gapImage img {
-  width: 20%;
+  width: 50%;
   margin-left: auto;
   margin-right: auto;
   display: block;
@@ -196,7 +201,6 @@
 .text-color2 {
   display: flex;
   justify-content: space-between;
-  background: #c9c9c9;
   margin-top: 0.35rem;
   width: 40%;
   margin-left: 35%;
@@ -211,13 +215,25 @@
   text-align: center;
 }
 .text-color {
-  background: #c2c2c2;
   margin-top: 3rem;
   margin-left: 20%;
-  width: 80%;
+  width: 18rem;
+  height: 18rem;
 }
-.text-color p {
-  font-size: 20px;
+.text-color-expanded {
+  position: absolute;
+  margin-top: -20rem;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 30rem;
+  height: 20rem;
+  padding: 3rem;
+  border-radius: 80px;
+  margin-left: -3%;
+  z-index: 9;
+}
+.text-color-expanded p {
+  font-size: 16px;
 }
 .Integrity .text-color {
   width: 64%;
@@ -230,6 +246,7 @@
   width: 90%;
 }
 .WhoWe .text-div p1,
+.Competitve .text-div p1,
 .OurServices .text-div p1,
 .OurTeam .text-div p1,
 .TheAquarian .text-div p1,
@@ -242,7 +259,7 @@
   line-height: normal;
 }
 .button {
-  background: #009889;
+  background: #01f9e1;
   height: auto;
   width: 35%;
   padding: 25px;
@@ -258,7 +275,7 @@
 .button2 {
   background: #01f9e1;
   height: auto;
-  padding: 12.5px 2px;
+  padding: 18px;
   width: 35%;
 }
 .team-background {
@@ -280,7 +297,7 @@
   gap: 3rem;
 }
 .imageTeam {
-  width: 25%;
+  width: 30%;
   padding-top: 2rem;
   padding-bottom: 2rem;
   margin-left: -13%;
@@ -311,7 +328,6 @@
   font-size: 20px;
   font-style: normal;
   font-weight: 400;
-  line-height: 2rem;
 }
 .footer {
   width: 94%;
@@ -377,6 +393,7 @@
   .WhoWe .text-div p1,
   .OurServices .text-div p1,
   .TheAquarian .text-div p1,
+  .Competitve .text-div p1,
   .OurTeam .text-div p1,
   .text-div-color p1 {
     font-size: 20px;
@@ -387,6 +404,9 @@
   .text-color p {
     font-size: 19px;
   }
+  .imageTeam {
+    width: 35%;
+  }
   .WhoWe h1,
   .Free h1,
   .OurServices h1,
@@ -394,7 +414,7 @@
   .TheAquarian h1,
   .Competitve h1,
   .Integrity h1 {
-    font-size: 24px;
+    font-size: 28px;
   }
   .AboutUsHeader .link {
     font-size: 18px;
@@ -421,6 +441,10 @@
   .content {
     font-size: 52px;
   }
+  .button,
+  .button2 {
+    width: 40%;
+  }
 }
 @media (max-width: 1590px) {
   .sub-heading {
@@ -429,6 +453,7 @@
   .WhoWe .text-div p1,
   .OurServices .text-div p1,
   .OurTeam .text-div p1,
+  .Competitve .text-div p1,
   .TheAquarian .text-div p1,
   .text-div-color p1 {
     font-size: 18px;
@@ -439,7 +464,9 @@
   .follow {
     font-size: 22px;
   }
-
+  .imageTeam {
+    width: 38%;
+  }
   .text-color p {
     font-size: 18.5px;
   }
@@ -462,11 +489,10 @@
   .about {
     font-size: 18px;
   }
-  .button {
-    width: 40%;
-  }
+  .button,
   .button2 {
-    width: 40%;
+    width: 45%;
+    font-size: 19px;
   }
   .image {
     height: 18rem;
@@ -498,6 +524,9 @@
   .AboutUsHeader .header-content {
     margin-left: 50%;
   }
+  .imageTeam {
+    width: 45%;
+  }
   .heading-about {
     font-size: 55px;
   }
@@ -508,19 +537,35 @@
   .TheAquarian h1,
   .Free h1,
   .Integrity h1 {
-    font-size: 22px;
+    font-size: 26px;
   }
-  .button {
-    width: 45%;
-  }
+  .button,
   .button2 {
-    width: 45%;
+    font-size: 18px;
+    width: 50%;
   }
   .image {
     height: 17rem;
   }
   .content {
     font-size: 45px;
+  }
+  .text-color {
+    width: 14rem;
+    height: 14rem;
+  }
+  .text-color-expanded {
+    width: 25rem;
+    height: 18rem;
+    z-index: 9;
+    margin-left: -7%;
+    z-index: 999;
+  }
+  .text-color-expanded p {
+    font-size: 14px;
+  }
+  .downArrow {
+    padding-left: 9.5rem;
   }
 }
 @media (max-width: 1210px) {
@@ -531,42 +576,13 @@
   .TheAquarian h1,
   .Free h1,
   .Integrity h1 {
-    font-size: 20px;
+    font-size: 24px;
+  }
+  .imageTeam {
+    width: 47%;
   }
 }
-@media (max-width: 1100px) {
-  .WhoWe h1,
-  .Competitve h1,
-  .OurServices h1,
-  .OurTeam h1,
-  .TheAquarian h1,
-  .Free h1,
-  .Integrity h1 {
-    font-size: 18px;
-  }
-}
-@media (max-width: 1100px) {
-  .WhoWe h1,
-  .Competitve h1,
-  .OurServices h1,
-  .OurTeam h1,
-  .TheAquarian h1,
-  .Free h1,
-  .Integrity h1 {
-    font-size: 15px;
-  }
-}
-@media (max-width: 830px) {
-  .WhoWe h1,
-  .Competitve h1,
-  .OurServices h1,
-  .OurTeam h1,
-  .TheAquarian h1,
-  .Free h1,
-  .Integrity h1 {
-    font-size: 13px;
-  }
-}
+
 @media (max-width: 768px) {
   .footer {
     width: 100%;

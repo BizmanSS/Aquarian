@@ -1,18 +1,17 @@
-import React, { useRef, useEffect } from 'react';
-import '../../../styles/AboutUs.css';
-import Instagram from '../../../Assets/Instagram_logo.svg';
-import Youtube from '../../../Assets/youtube.png';
-import Twitter from '../../../Assets/Twitter.png';
-import LinkedIn from '../../../Assets/LinkedIn.png';
-import facebook from '../../../Assets/Facebook.png';
-import WhoWeAre from '../../AboutUs/WhoWeAre.js';
-import Competitive from '../../AboutUs/Competitive.js';
-import OurTeam from '../../AboutUs/OurTeam.js';
-
-import OurServices from '../../AboutUs/OurServices.js';
-import TheAquarian from '../../AboutUs/TheAquarian.js';
+import React, { useRef, useEffect } from "react";
+import "../../../styles/AboutUs.css";
+import Instagram from "../../../Assets/Instagram_logo.svg";
+import Youtube from "../../../Assets/youtube.png";
+import Twitter from "../../../Assets/Twitter.png";
+import LinkedIn from "../../../Assets/LinkedIn.png";
+import facebook from "../../../Assets/Facebook.png";
+import WhoWeAre from "../../AboutUs/WhoWeAre.js";
+import Competitive from "../../AboutUs/Competitive.js";
+import OurTeam from "../../AboutUs/OurTeam.js";
+import OurServices from "../../AboutUs/OurServices.js";
+import TheAquarian from "../../AboutUs/TheAquarian.js";
 //import AquarianFlower from "../../../Assets/AquarianFlower.jpg";
-import { useMobile } from '../../globalComponents/MobileContext/IsMobileContext.js';
+import { useMobile } from "../../globalComponents/MobileContext/IsMobileContext.js";
 const AboutUsPage = () => {
   const { isMobile } = useMobile();
   const whoWeAreRef = useRef(null);
@@ -23,99 +22,99 @@ const AboutUsPage = () => {
 
   const scrollToRef = (ref) => {
     const scrollTop = ref.current.offsetTop - window.innerHeight * 0.25; // 10% of the window height
-    window.scrollTo({ top: scrollTop, behavior: 'smooth' });
+    window.scrollTo({ top: scrollTop, behavior: "smooth" });
   };
 
   return (
     <div
       style={{
-        marginTop: '10rem',
-        background: '#E0E0E0',
-        paddingBottom: '3rem',
+        marginTop: "10rem",
+        background: "#E0E0E0",
+        paddingBottom: "3rem",
       }}
     >
-      <div className='AboutUsHeader'>
-        <p className='link'>Home {' > '}About Us</p>
-        <div className='header-content'>
-          <h1 className='heading-about'>About Us.</h1>
+      <div className="AboutUsHeader">
+        <p className="link">Home {" > "}About Us</p>
+        <div className="header-content">
+          <h1 className="heading-about">About Us.</h1>
         </div>
       </div>
       {!isMobile && (
-        <div className='sub-heading-content'>
+        <div className="sub-heading-content">
           <div
             style={{
-              display: 'flex',
-              marginLeft: '2%',
-              paddingTop: '20%',
-              width: '80%',
-              justifyContent: 'center',
-              gap: '1rem',
+              display: "flex",
+              marginLeft: "2%",
+              paddingTop: "20%",
+              width: "80%",
+              justifyContent: "center",
+              gap: "1rem",
             }}
           >
-            <div className='line-heading'></div>
-            <div style={{ display: 'block' }}>
+            <div className="line-heading"></div>
+            <div style={{ display: "block" }}>
               <p
                 onClick={() => scrollToRef(whoWeAreRef)}
-                className='sub-heading'
+                className="sub-heading"
               >
                 Who We Are
               </p>
               <p
                 onClick={() => scrollToRef(competitiveRef)}
-                className='sub-heading'
+                className="sub-heading"
               >
                 Competitive Advantages
               </p>
               <p
                 onClick={() => scrollToRef(ourTeamRef)}
-                className='sub-heading'
+                className="sub-heading"
               >
                 Our Team
               </p>
               <p
                 onClick={() => scrollToRef(ourServicesRef)}
-                className='sub-heading'
+                className="sub-heading"
               >
                 Our Services
               </p>
               <p
                 onClick={() => scrollToRef(theAquarianRef)}
-                className='sub-heading'
+                className="sub-heading"
               >
                 The Aquarian Community
               </p>
             </div>
           </div>
           <div>
-            <h1 className='follow'>Follow Us</h1>
+            <h1 className="follow">Follow Us</h1>
           </div>
-          <div className='logos'>
-            <a href='' className='mx-0 p-2'>
-              <img src={LinkedIn} className='cursor-pointer w-[2.2rem]' />
+          <div className="logos">
+            <a href="" className="mx-0 p-2">
+              <img src={LinkedIn} className="cursor-pointer w-[2.2rem]" />
             </a>
             <a
-              href='https://www.facebook.com/people/Aquarian-Immigration/61558242973262/'
-              className='mx-0 p-2'
+              href="https://www.facebook.com/people/Aquarian-Immigration/61558242973262/"
+              className="mx-0 p-2"
             >
-              <img src={facebook} className='cursor-pointer w-[2.2rem]' />
+              <img src={facebook} className="cursor-pointer w-[2.2rem]" />
             </a>
-            <a href='' className='mx-0 p-2'>
-              <img src={Twitter} className='cursor-pointer w-[2.2rem]' />
+            <a href="" className="mx-0 p-2">
+              <img src={Twitter} className="cursor-pointer w-[2.2rem]" />
             </a>
             <a
-              href='https://www.instagram.com/aquarian_immigration/'
-              className='mx-0 p-2'
+              href="https://www.instagram.com/aquarian_immigration/"
+              className="mx-0 p-2"
             >
-              <img src={Instagram} className='cursor-pointer w-[2.2rem]' />
+              <img src={Instagram} className="cursor-pointer w-[2.2rem]" />
             </a>
-            <a href='' className='mx-0 p-2'>
-              <img src={Youtube} className='cursor-pointer w-[2.2rem]' />
+            <a href="" className="mx-0 p-2">
+              <img src={Youtube} className="cursor-pointer w-[2.2rem]" />
             </a>
           </div>
         </div>
       )}
 
-      <div className='background-div' style={{ marginTop: '-80px' }}>
+      <div className="background-div" style={{ marginTop: "-80px" }}>
         <div ref={whoWeAreRef}>
           <WhoWeAre />
         </div>
@@ -124,12 +123,12 @@ const AboutUsPage = () => {
         </div>
       </div>
 
-      <div className='background-div-left'>
+      <div className="background-div-left">
         <div ref={ourTeamRef}>
           <OurTeam />
         </div>
       </div>
-      <div className='background-div' style={{ marginTop: '2rem' }}>
+      <div className="background-div" style={{ marginTop: "2rem" }}>
         <div ref={ourServicesRef}>
           <OurServices />
         </div>
