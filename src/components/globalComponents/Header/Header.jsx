@@ -127,7 +127,7 @@ const Header = () => {
                 <a href='/contact-us'>Contact Us</a>
               </p>
               <div className='px-4 py-1 text-[#939393] flex items-center justify-center text-[0.6rem]'>
-                <a href='' className='mx-0 p-2'>
+                <a href='/' className='mx-0 p-2'>
                   <img
                     src={LinkedIn}
                     className='cursor-pointer w-[1.2rem]'
@@ -144,7 +144,7 @@ const Header = () => {
                     alt=''
                   />
                 </a>
-                <a href='' className='mx-0 p-2'>
+                <a href='/' className='mx-0 p-2'>
                   <img
                     src={Twitter}
                     className='cursor-pointer w-[1.2rem]'
@@ -161,7 +161,7 @@ const Header = () => {
                     alt=''
                   />
                 </a>
-                <a href='' className='mx-0 p-2'>
+                <a href='/' className='mx-0 p-2'>
                   <img
                     src={Youtube}
                     className='cursor-pointer w-[1.2rem]'
@@ -182,7 +182,7 @@ const Header = () => {
 
             {isHovering ? (
               <ul
-                className={`flex items-center justify-center text-[16px] gap-12 bg-[#FFFEFE] py-3 px-4 absolute left-[17rem] xl:left-[19rem] 2xl:left-[23rem] 3xl:left-[27rem] 4xl:left-[32rem] rounded-t-xl overflow-hidden `}
+                className={`flex items-center justify-center text-[16px] text-white gap-6 py-3 px-4 absolute left-[16rem] xl:left-[18rem] 2xl:left-[20rem] 3xl:left-[25rem] 4xl:left-[30rem] rounded-t-xl overflow-hidden `}
                 onMouseEnter={handleMouseEnter}
                 onMouseLeave={handleMouseLeave}
               >
@@ -198,9 +198,9 @@ const Header = () => {
                 </li> */}
                 <li
                   onMouseEnter={() => handleItemHover(1)}
-                  className={`cursor-pointer transition ease-in delay-100 duration-300 ${
+                  className={`cursor-pointer px-4 py-2.5 ${
                     activeItem === 1
-                      ? 'border-b-[3px] border-b-[#009889]'
+                      ? 'border-b-[3px] border-b-[#009889] bg-white text-black'
                       : 'border-b-[3px] border-b-transparent'
                   }`}
                 >
@@ -208,9 +208,9 @@ const Header = () => {
                 </li>
                 <li
                   onMouseEnter={() => handleItemHover(2)}
-                  className={`cursor-pointer transition ease-in delay-100 duration-300 ${
+                  className={`cursor-pointer  px-4 py-2.5 ${
                     activeItem === 2
-                      ? 'border-b-[3px] border-b-[#009889]'
+                      ? 'border-b-[3px] border-b-[#009889] bg-white text-black'
                       : 'border-b-[3px] border-b-transparent'
                   }`}
                 >
@@ -218,9 +218,9 @@ const Header = () => {
                 </li>
                 <li
                   onMouseEnter={() => handleItemHover(3)}
-                  className={`cursor-pointer transition ease-in delay-100 duration-300 ${
+                  className={`cursor-pointer  px-4 py-2.5 ${
                     activeItem === 3
-                      ? 'border-b-[3px] border-b-[#009889]'
+                      ? 'border-b-[3px] border-b-[#009889] bg-white text-black'
                       : 'border-b-[3px] border-b-transparent'
                   }`}
                 >
@@ -228,9 +228,9 @@ const Header = () => {
                 </li>
                 <li
                   onMouseEnter={() => handleItemHover(4)}
-                  className={`cursor-pointer transition ease-in delay-100 duration-300 ${
+                  className={`cursor-pointer  px-4 py-2.5 ${
                     activeItem === 4
-                      ? 'border-b-[3px] border-b-[#009889]'
+                      ? 'border-b-[3px] border-b-[#009889] bg-white text-black'
                       : 'border-b-[3px] border-b-transparent'
                   }`}
                 >
@@ -238,9 +238,9 @@ const Header = () => {
                 </li>
                 <li
                   onMouseEnter={() => handleItemHover(5)}
-                  className={`cursor-pointer transition ease-in delay-100 duration-300 ${
+                  className={`cursor-pointer  px-4 py-2.5 ${
                     activeItem === 5
-                      ? 'border-b-[3px] border-b-[#009889]'
+                      ? 'border-b-[3px] border-b-[#009889] bg-white text-black'
                       : 'border-b-[3px] border-b-transparent'
                   }`}
                 >
@@ -248,9 +248,9 @@ const Header = () => {
                 </li>
                 <li
                   onMouseEnter={() => handleItemHover(6)}
-                  className={`cursor-pointer transition ease-in delay-100 duration-300 ${
+                  className={`cursor-pointer  px-4 py-2.5 ${
                     activeItem === 6
-                      ? 'border-b-[3px] border-b-[#009889]'
+                      ? 'border-b-[3px] border-b-[#009889] bg-white text-black'
                       : 'border-b-[3px] border-b-transparent'
                   }`}
                 >
@@ -258,9 +258,9 @@ const Header = () => {
                 </li>
                 <li
                   onMouseEnter={() => handleItemHover(7)}
-                  className={`cursor-pointer transition ease-in delay-100 duration-300 ${
+                  className={`cursor-pointer  px-4 py-2.5 ${
                     activeItem === 7
-                      ? 'border-b-[3px] border-b-[#009889]'
+                      ? 'border-b-[3px] border-b-[#009889] bg-white text-black'
                       : 'border-b-[3px] border-b-transparent'
                   }`}
                 >
@@ -269,7 +269,7 @@ const Header = () => {
               </ul>
             ) : (
               <ul
-                className={`flex items-center justify-center text-white text-[16px] gap-12 hover:bg-[#FFFEFE] py-3 px-4 absolute left-[17rem] xl:left-[19rem] 2xl:left-[23rem] 3xl:left-[27rem] 4xl:left-[32rem] rounded-t-xl hover:text-black overflow-hidden `}
+                className={`flex items-center justify-center text-white text-[16px] gap-6 py-3 px-4 absolute left-[16rem] xl:left-[18rem] 2xl:left-[20rem] 3xl:left-[25rem] 4xl:left-[30rem] rounded-t-xl hover:text-black overflow-hidden `}
                 onMouseEnter={handleMouseEnter}
                 onMouseLeave={handleMouseLeave}
               >
@@ -285,7 +285,7 @@ const Header = () => {
                 </li> */}
                 <li
                   onMouseEnter={() => handleItemHover(1)}
-                  className={`cursor-pointer transition ease-in delay-100 duration-300 ${
+                  className={`cursor-pointer transition ease-in delay-100 duration-300 px-4 py-2.5 ${
                     activeItem === 1
                       ? 'border-b-[3px] border-b-[#009889]'
                       : 'border-b-[3px] border-b-transparent'
@@ -295,7 +295,7 @@ const Header = () => {
                 </li>
                 <li
                   onMouseEnter={() => handleItemHover(2)}
-                  className={`cursor-pointer transition ease-in delay-100 duration-300 ${
+                  className={`cursor-pointer transition ease-in delay-100 duration-300 px-4 py-2.5 ${
                     activeItem === 2
                       ? 'border-b-[3px] border-b-[#009889]'
                       : 'border-b-[3px] border-b-transparent'
@@ -305,7 +305,7 @@ const Header = () => {
                 </li>
                 <li
                   onMouseEnter={() => handleItemHover(3)}
-                  className={`cursor-pointer transition ease-in delay-100 duration-300 ${
+                  className={`cursor-pointer transition ease-in delay-100 duration-300 px-4 py-2.5 ${
                     activeItem === 3
                       ? 'border-b-[3px] border-b-[#009889]'
                       : 'border-b-[3px] border-b-transparent'
@@ -315,7 +315,7 @@ const Header = () => {
                 </li>
                 <li
                   onMouseEnter={() => handleItemHover(4)}
-                  className={`cursor-pointer transition ease-in delay-100 duration-300 ${
+                  className={`cursor-pointer transition ease-in delay-100 duration-300 px-4 py-2.5 ${
                     activeItem === 4
                       ? 'border-b-[3px] border-b-[#009889]'
                       : 'border-b-[3px] border-b-transparent'
@@ -325,7 +325,7 @@ const Header = () => {
                 </li>
                 <li
                   onMouseEnter={() => handleItemHover(5)}
-                  className={`cursor-pointer transition ease-in delay-100 duration-300 ${
+                  className={`cursor-pointer transition ease-in delay-100 duration-300 px-4 py-2.5 ${
                     activeItem === 5
                       ? 'border-b-[3px] border-b-[#009889]'
                       : 'border-b-[3px] border-b-transparent'
@@ -335,7 +335,7 @@ const Header = () => {
                 </li>
                 <li
                   onMouseEnter={() => handleItemHover(6)}
-                  className={`cursor-pointer transition ease-in delay-100 duration-300 ${
+                  className={`cursor-pointer transition ease-in delay-100 duration-300 px-4 py-2.5 ${
                     activeItem === 6
                       ? 'border-b-[3px] border-b-[#009889]'
                       : 'border-b-[3px] border-b-transparent'
@@ -345,7 +345,7 @@ const Header = () => {
                 </li>
                 <li
                   onMouseEnter={() => handleItemHover(7)}
-                  className={`cursor-pointer transition ease-in delay-100 duration-300 ${
+                  className={`cursor-pointer transition ease-in delay-100 duration-300 px-4 py-2.5 ${
                     activeItem === 7
                       ? 'border-b-[3px] border-b-[#009889]'
                       : 'border-b-[3px] border-b-transparent'
@@ -355,15 +355,15 @@ const Header = () => {
                 </li>
               </ul>
             )}
-            {isHovering && (
+            {isHovering && activeItem > 0 && (
               <div
-                className={`h-auto bg-[#FFFEFE] z-40 absolute top-[4.6rem] left-[17rem] xl:left-[19rem] 2xl:left-[23rem] 3xl:left-[27rem] 4xl:left-[32rem] w-[43.815rem] rounded-b-xl `}
+                className={`h-auto bg-[#FFFEFE] z-40 absolute shadow-2xl top-[4.5rem] left-[17rem] xl:left-[19rem] 2xl:left-[21rem] 3xl:left-[26rem] 4xl:left-[31rem] w-[46.815rem] rounded-b-xl `}
                 onMouseEnter={handleMouseEnter}
                 onMouseLeave={handleMouseLeave}
               >
-                <div className='flex flex-col items-center justify-center'>
+                {/* <div className='flex flex-col items-center justify-center'>
                   <div className='w-[90%] h-[1.2px] bg-[#009889]'></div>
-                </div>
+                </div> */}
                 <div
                   className={`flex items-start justify-start p-4 ${
                     activeItem === 0 ? 'none' : 'block'
@@ -482,7 +482,7 @@ const Header = () => {
                         <ul className='text-[15px] flex flex-col items-start justify-start gap-3 '>
                           <li
                             onMouseEnter={() => handleItemProgramClick('PNP')}
-                            className='flex items-center justify-between w-full '
+                            className='flex items-center justify-between w-full'
                           >
                             PNP <SvgComponent isOpen={isOpen} />
                           </li>

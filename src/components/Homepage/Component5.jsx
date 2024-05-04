@@ -8,7 +8,9 @@ import img6 from '../../Assets/Mask group.png';
 import img7 from '../../Assets/image 42.png';
 import { FaArrowRight } from 'react-icons/fa6';
 import BoxComponents from './BoxComponents';
-
+import hoveredimg from '../../Assets/Rectangle 62.png';
+import hoveredimg2 from '../../Assets/Rectangle 63.png';
+import { PaginationNav1Presentation } from '../Pagination/Pagination';
 const Component5 = () => {
   return (
     <div className='w-[99%] h-auto px-[8rem]'>
@@ -44,10 +46,12 @@ const Component5 = () => {
         <BoxComponents
           color={'#FEFFFE'}
           style={{ backgroundColor: '#FEFFFE' }}
+          imageUrl={hoveredimg}
         />
         <BoxComponents
           color={'#01F8E0'}
           style={{ backgroundColor: '#01F8E0' }}
+          imageUrl={hoveredimg2}
         />
       </div>
       <div className='flex items-center justify-end gap-4 my-4 relative'>
@@ -64,19 +68,48 @@ const Component5 = () => {
             className='w-[6rem] relative top-[5rem] left-[6rem]'
           />
         </div>
-        <BoxComponents color={'#FEFFFE'} />
-        <BoxComponents color={'#01F8E0'} />
-        <BoxComponents color={'#FEFFFE'} />
+        <BoxComponents
+          color={'#FEFFFE'}
+          style={{ backgroundColor: '#01F8E0' }}
+          imageUrl={hoveredimg}
+        />
+        <BoxComponents
+          color={'#01F8E0'}
+          style={{ backgroundColor: '#01F8E0' }}
+          imageUrl={hoveredimg2}
+        />
+        <BoxComponents
+          color={'#FEFFFE'}
+          style={{ backgroundColor: '#01F8E0' }}
+          imageUrl={hoveredimg}
+        />
       </div>
       <div className='flex items-center justify-end gap-4 my-4'>
-        <BoxComponents color={'#FEFFFE'} />
-        <BoxComponents color={'#01F8E0'} />
-        <BoxComponents color={'#FEFFFE'} />
-        <BoxComponents color={'#01F8E0'} />
+        <BoxComponents
+          color={'#FEFFFE'}
+          style={{ backgroundColor: '#01F8E0' }}
+          imageUrl={hoveredimg}
+        />
+        <BoxComponents
+          color={'#01F8E0'}
+          style={{ backgroundColor: '#01F8E0' }}
+          imageUrl={hoveredimg2}
+        />
+        <BoxComponents
+          color={'#FEFFFE'}
+          style={{ backgroundColor: '#01F8E0' }}
+          imageUrl={hoveredimg}
+        />
+        <BoxComponents
+          color={'#01F8E0'}
+          style={{ backgroundColor: '#01F8E0' }}
+          imageUrl={hoveredimg2}
+        />
       </div>
-      <button className='w-full flex items-center justify-end text-[#019989] gap-2 cursor-pointer'>
-        Know More <FaArrowRight />
-      </button>
+
+      <div className='w-full flex items-center justify-end  gap-2 cursor-pointer'>
+        <PaginationNav1Presentation />
+      </div>
     </div>
   );
 };
