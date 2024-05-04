@@ -57,7 +57,7 @@ const ClbCalculator = () => {
     }
   }, [inputData]);
   return (
-    <div className='flex flex-col items-start justify-center w-[94%]'>
+    <div className='flex flex-col items-start justify-center w-[95%]'>
       {confettiActive && <Confetti numberOfPieces={500} />}
       <div className='mt-[6.9rem]'>
         <div className='w-full bg-banner text-white bg-cover bg-no-repeat h-[500px]'>
