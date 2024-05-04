@@ -42,7 +42,15 @@ const ContactUsPage = () => {
     if (Object.keys(errorObject).length > 0) {
       setErrors(errorObject);
     } else {
-      // Form submission logic here
+      setFirstName("");
+      setLastName("");
+      setEmail("");
+      setContactNumber("");
+      setTimeSlot("");
+      setService("");
+      setServiceOther("");
+      setComments("");
+      setErrors("");
       console.log("Form submitted successfully!");
     }
   };
@@ -111,7 +119,7 @@ const ContactUsPage = () => {
       </div>
 
       <div className="registration-form" style={{ marginTop: "-50px" }}>
-        <form onChange={handleSubmit}>
+        <form onSubmit={handleSubmit}>
           <div className="form-row">
             <div className="form-group">
               <label>First Name *</label>
