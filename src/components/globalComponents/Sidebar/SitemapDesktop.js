@@ -35,7 +35,7 @@ function SitemapDesktop() {
   );
   const toggleExpand = (index) => {
     if (expanded.includes(index)) {
-      setExpanded(expanded.filter((i) => i !== index));
+      setExpanded(expanded.filter((i) => !i.startsWith(index)));
     } else {
       setExpanded([...expanded, index]);
     }
