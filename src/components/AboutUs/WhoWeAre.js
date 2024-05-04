@@ -4,26 +4,32 @@ import "../../styles/AboutUs.css";
 const WhoWeAre = () => {
   return (
     <div className="WhoWe">
-      <h5 className="heading">Who We Are</h5>
+      <h5 className="heading">Our Story</h5>
       <div className="line"></div>
       <div className="text-div">
+        <h3
+          style={{
+            textAlign: "center",
+            marginBottom: "2rem",
+          }}
+        >
+          {" "}
+          “Experience speaks for itself”
+        </h3>
         <p1>
-          Welcome to Aquarian Immigration Services, your premier destination for
-          expert immigration assistance tailored to your needs. Specialising in
-          high-quality services for those seeking to make Canada their new home,
-          whether permanently or temporarily, as workers, students, or visitors,
-          we guarantee a seamless transition. As licensed Regulated Canadian
-          Immigration Consultants (RCIC), our seasoned team of experts ensures
-          that every step of your journey is met with precision and confidence.
-          <br />
-          <br />
-          With over 30 years of collective experience, our dedicated team
-          prioritises your satisfaction above all else. We measure our success
-          not just by outcomes but by the heartfelt testimonials of families who
-          have realised their Canadian dreams with our unwavering support. At
-          Aquarian Immigration, we're not just committed; we're resolutely
-          determined to turn your Canadian aspirations into a resounding
-          reality.
+          We have a combined experience of over 30 years. Our founders have
+          always had an inclination towards immigration and counselling which
+          has allowed them to guide over 5000 immigrants. We recognised the need
+          for qualified and trained professionals in the immigration industry.
+          Most agents lack the certifications, knowledge, experience and the
+          general quality of being abreast with all the dynamic trends. This
+          drove us to establish Aquarian Immigrations Services. We aim at
+          providing our clients with the best advice tailored to their unique
+          case. We understand the drastic transition that is caused by
+          immigration and we stand by our clients to smoothly help them start
+          this new chapter of their lives. From the beginning, right to the end,
+          we are there for our clients fulfilling all their needs;
+          documentation, to adjusting to life in Canada.
         </p1>
       </div>
     </div>

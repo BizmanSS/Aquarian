@@ -4,26 +4,35 @@ import { IoMdAdd, IoMdRemove } from "react-icons/io";
 const OurServices = () => {
   const [expanded, setExpanded] = useState({});
   const questions = [
-    "Consultation and assessment of eligibility for various Canadian immigration programs",
+    "Consultation and assessment",
     "Preparation and submission of application forms and supporting documents",
-    "Regular follow-ups and communication with immigration authorities on behalf of clients",
-    "Assistance with interview preparation, if required",
-    "Guidance on settlement and post-arrival services in Canada",
+    "Regular follow-ups",
+    "Assistance with interview preparation",
+    "Post-arrival services",
   ];
 
   const answers = [
     <p>
-      Receive expert consultation and precise eligibility assessments for
-      diverse immigration programs, ensuring a smooth pathway to your Canadian
-      dream. <br /> <br />
+      We begin by doing an assessment to understand the eligibility of our
+      client for the diverse immigration programs, ensuring a smooth pathway to
+      your Canadian dream.
+      <br /> <br />
+      Which is followed by a consultation for various entry paths such as
       Permanent Residency, Express Entry, PNP, Work Visas, Student Visas,
       Business Visas, Family Sponsorship, Visitor Visa, Start-up Visas,
-      Investors, Extensions & Refusals
+      Investors, Extensions & even Refusals if any.
     </p>,
-    "Prepare application forms and gather supporting documents efficiently. Streamline the process with our assistance, ensuring accuracy and completeness. Trust in our expertise to guide you through smooth submission procedures, saving time and eliminating stress along the way.",
-    "We handle regular follow-ups and maintain open communication with immigration authorities on behalf of our clients. Our dedicated approach ensures timely updates and resolves any queries.",
-    "We offer on-point assistance for interview preparation, ensuring you're ready to shine when it counts. Benefit from personalised guidance and mock sessions to refine your responses. Our support minimises stress and maximises your chances of success, making your interview experience a smooth and rewarding one.",
-    "Receive comprehensive guidance on settlement and post-arrival services in Canada. From housing assistance to cultural integration support, we ensure a smooth transition into your new environment.",
+    <p>
+      Next, we prepare the application forms and gather all the supporting
+      documents efficiently. We assist in streamlining this process ensuring
+      accuracy and completeness.
+      <br /> <br />
+      Trust in our experts to guide you through the smooth submission
+      procedures, saving time and eliminating stress along the way.
+    </p>,
+    "Post which we make sure we do regular follow-ups and maintain open communication with immigration authorities on behalf of our clients. Our dedicated approach ensures timely updates and resolves any queries.",
+    "We also offer on-point assistance for interview preparation, ensuring that you're ready to shine when it counts. Benefit from personalised guidance and mock sessions to refine your responses. Our support minimises stress and enhances your chances of success, making your interview experience a smooth and rewarding one.",
+    "After your application is successful you will also receive comprehensive guidance on settlement and post-arrival in Canada. From housing assistance to cultural integration support, we ensure a smooth transition into your new environment.",
   ];
   const toggleExpand = (index) => {
     setExpanded((prevExpanded) => {
@@ -38,13 +47,14 @@ const OurServices = () => {
 
   return (
     <div className="OurServices">
-      <h5 className="heading">Our Services</h5>
+      <h5 className="heading">What We Can Do For You?</h5>
       <div className="line"></div>
       <div className="text-div">
         <p1>
-          As a Canadian Immigration Law Firm which has been in operation for
-          almost 20 years, Canadim has a range of legal departments providing
-          personalized guidance for Canada’s many immigration pathways.
+          Join our community and set off on a unique immigration experience.
+          With more than 30 years of combined experience, we've developed the
+          knowledge to help you at every stage, making the move to a new chapter
+          in your life smooth and successful.
           <br />
           <br />
           {questions.map((item, index) => (

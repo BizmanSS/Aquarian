@@ -114,7 +114,7 @@ const Header = () => {
     );
   };
   return (
-    <div className='bg-[#000000] rounded-2xl h-[8rem] fixed z-20 top-0 flex flex-col items-center justify-start w-[94%]'>
+    <div className='bg-[#000000] rounded-2xl h-[8rem] fixed z-40 top-0 flex flex-col items-center justify-start w-[94%]'>
       {!ismobile ? (
         <>
           {' '}
@@ -127,7 +127,7 @@ const Header = () => {
                 <a href='/contact-us'>Contact Us</a>
               </p>
               <div className='px-4 py-1 text-[#939393] flex items-center justify-center text-[0.6rem]'>
-                <a href='/' className='mx-0 p-2'>
+                <a href='' className='mx-0 p-2'>
                   <img
                     src={LinkedIn}
                     className='cursor-pointer w-[1.2rem]'
@@ -144,7 +144,7 @@ const Header = () => {
                     alt=''
                   />
                 </a>
-                <a href='/' className='mx-0 p-2'>
+                <a href='' className='mx-0 p-2'>
                   <img
                     src={Twitter}
                     className='cursor-pointer w-[1.2rem]'
@@ -161,7 +161,7 @@ const Header = () => {
                     alt=''
                   />
                 </a>
-                <a href='/' className='mx-0 p-2'>
+                <a href='' className='mx-0 p-2'>
                   <img
                     src={Youtube}
                     className='cursor-pointer w-[1.2rem]'
@@ -200,7 +200,7 @@ const Header = () => {
                   onMouseEnter={() => handleItemHover(1)}
                   className={`cursor-pointer px-4 py-2.5 ${
                     activeItem === 1
-                      ? 'border-b-[3px] border-b-[#009889] bg-white text-black'
+                      ? 'border-b-[3px] border-b-[#009889]'
                       : 'border-b-[3px] border-b-transparent'
                   }`}
                 >
@@ -210,7 +210,7 @@ const Header = () => {
                   onMouseEnter={() => handleItemHover(2)}
                   className={`cursor-pointer  px-4 py-2.5 ${
                     activeItem === 2
-                      ? 'border-b-[3px] border-b-[#009889] bg-white text-black'
+                      ? 'border-b-[3px] border-b-[#009889]'
                       : 'border-b-[3px] border-b-transparent'
                   }`}
                 >
@@ -220,7 +220,7 @@ const Header = () => {
                   onMouseEnter={() => handleItemHover(3)}
                   className={`cursor-pointer  px-4 py-2.5 ${
                     activeItem === 3
-                      ? 'border-b-[3px] border-b-[#009889] bg-white text-black'
+                      ? 'border-b-[3px] border-b-[#009889]'
                       : 'border-b-[3px] border-b-transparent'
                   }`}
                 >
@@ -230,7 +230,7 @@ const Header = () => {
                   onMouseEnter={() => handleItemHover(4)}
                   className={`cursor-pointer  px-4 py-2.5 ${
                     activeItem === 4
-                      ? 'border-b-[3px] border-b-[#009889] bg-white text-black'
+                      ? 'border-b-[3px] border-b-[#009889]'
                       : 'border-b-[3px] border-b-transparent'
                   }`}
                 >
@@ -240,7 +240,7 @@ const Header = () => {
                   onMouseEnter={() => handleItemHover(5)}
                   className={`cursor-pointer  px-4 py-2.5 ${
                     activeItem === 5
-                      ? 'border-b-[3px] border-b-[#009889] bg-white text-black'
+                      ? 'border-b-[3px] border-b-[#009889]'
                       : 'border-b-[3px] border-b-transparent'
                   }`}
                 >
@@ -250,7 +250,7 @@ const Header = () => {
                   onMouseEnter={() => handleItemHover(6)}
                   className={`cursor-pointer  px-4 py-2.5 ${
                     activeItem === 6
-                      ? 'border-b-[3px] border-b-[#009889] bg-white text-black'
+                      ? 'border-b-[3px] border-b-[#009889]'
                       : 'border-b-[3px] border-b-transparent'
                   }`}
                 >
@@ -260,7 +260,7 @@ const Header = () => {
                   onMouseEnter={() => handleItemHover(7)}
                   className={`cursor-pointer  px-4 py-2.5 ${
                     activeItem === 7
-                      ? 'border-b-[3px] border-b-[#009889] bg-white text-black'
+                      ? 'border-b-[3px] border-b-[#009889]'
                       : 'border-b-[3px] border-b-transparent'
                   }`}
                 >
@@ -361,9 +361,9 @@ const Header = () => {
                 onMouseEnter={handleMouseEnter}
                 onMouseLeave={handleMouseLeave}
               >
-                {/* <div className='flex flex-col items-center justify-center'>
+                <div className='flex flex-col items-center justify-center'>
                   <div className='w-[90%] h-[1.2px] bg-[#009889]'></div>
-                </div> */}
+                </div>
                 <div
                   className={`flex items-start justify-start p-4 ${
                     activeItem === 0 ? 'none' : 'block'
@@ -482,7 +482,7 @@ const Header = () => {
                         <ul className='text-[15px] flex flex-col items-start justify-start gap-3 '>
                           <li
                             onMouseEnter={() => handleItemProgramClick('PNP')}
-                            className='flex items-center justify-between w-full'
+                            className='flex items-center justify-between w-full '
                           >
                             PNP <SvgComponent isOpen={isOpen} />
                           </li>

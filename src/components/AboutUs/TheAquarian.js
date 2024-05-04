@@ -21,63 +21,71 @@ const TheAquarian = () => {
       <div className="line"></div>
       <div className="text-div">
         <p1>
-          With Facebook, Instagram and other social media outlets, any person
-          can post, tweet, comment and let their voice be heard by millions. We
-          invite you to become part of our online community and check out what
-          our clients have to say about the quality services we’ve provided for
-          them and their families.
+          Join our online community and become a part of our 7000+ Aquarianite
+          family. Read testimonials from our happy customers who benefited from
+          the quality services we successfully provide for them and their
+          families.
           <br />
           <br />
-          If you are interested in learning more about the immigration process,
-          or if you are ready to embark on the journey that will lead you to
-          Canada, fill out an assessment using the link below, or give us a call
-          at +1-514-989-9700. We look forward to serving your needs in a
-          professional manner!
+          If you have questions about the immigration procedure and are ready to
+          begin your immigration journey to Canada; Call us at{" "}
+          <a href="tel:+919810892192">+91 9810892192</a> /{" "}
+          <a href="tel:+911244671300">+91 124 4671300</a> Write to us at{" "}
+          <a href="mailto:enq@iaquarian.com">enq@iaquarian.com</a>
+          <br />
+          <br />
+          <div style={{ display: "flex", gap: "20%" }}>
+            {!isActive && (
+              <div
+                className="button"
+                onMouseEnter={() => !isMobile && setIsActive(true)}
+                onMouseLeave={() => !isMobile && setIsActive(false)}
+                onClick={handleClick}
+              >
+                Join The Community
+              </div>
+            )}
+            {isActive && (
+              <div
+                className="button2"
+                onMouseLeave={() => !isMobile && setIsActive(false)}
+                onClick={handleClick}
+              >
+                <div className="logos2">
+                  <a href="" className="mx-0 p-2">
+                    <img src={LinkedIn} className="cursor-pointer" />
+                  </a>
+                  <a
+                    href="https://www.facebook.com/people/Aquarian-Immigration/61558242973262/"
+                    className="mx-0 p-2"
+                  >
+                    <img src={facebook} className="cursor-pointer" />
+                  </a>
+                  <a href="" className="mx-0 p-2">
+                    <img src={Twitter} className="cursor-pointer" />
+                  </a>
+                  <a
+                    href="https://www.instagram.com/aquarian_immigration/"
+                    className="mx-0 p-2"
+                  >
+                    <img src={Instagram} className="cursor-pointer" />
+                  </a>
+                  <a href="" className="mx-0 p-2">
+                    <img src={Youtube} className="cursor-pointer" />
+                  </a>
+                </div>
+              </div>
+            )}
+            <a href="/contact-us" className="button">
+              Lets get in touch
+            </a>
+          </div>
+          <br /> We are happy to assist you in an efficient and committed
+          manner!
         </p1>
       </div>
       <br />
       <br />
-      {!isActive && (
-        <div
-          className="button"
-          onMouseEnter={() => !isMobile && setIsActive(true)}
-          onMouseLeave={() => !isMobile && setIsActive(false)}
-          onClick={handleClick}
-        >
-          Join The Community
-        </div>
-      )}
-      {isActive && (
-        <div
-          className="button2"
-          onMouseLeave={() => !isMobile && setIsActive(false)}
-          onClick={handleClick}
-        >
-          <div className="logos2">
-            <a href="" className="mx-0 p-2">
-              <img src={LinkedIn} className="cursor-pointer" />
-            </a>
-            <a
-              href="https://www.facebook.com/people/Aquarian-Immigration/61558242973262/"
-              className="mx-0 p-2"
-            >
-              <img src={facebook} className="cursor-pointer" />
-            </a>
-            <a href="" className="mx-0 p-2">
-              <img src={Twitter} className="cursor-pointer" />
-            </a>
-            <a
-              href="https://www.instagram.com/aquarian_immigration/"
-              className="mx-0 p-2"
-            >
-              <img src={Instagram} className="cursor-pointer" />
-            </a>
-            <a href="" className="mx-0 p-2">
-              <img src={Youtube} className="cursor-pointer" />
-            </a>
-          </div>
-        </div>
-      )}
     </div>
   );
 };
