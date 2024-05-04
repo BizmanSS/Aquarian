@@ -34,7 +34,7 @@ const TheAquarian = () => {
           <a href="mailto:enq@iaquarian.com">enq@iaquarian.com</a>
           <br />
           <br />
-          <div className="flex">
+          <div className="flexgap">
             {!isActive && (
               <div
                 className="button"

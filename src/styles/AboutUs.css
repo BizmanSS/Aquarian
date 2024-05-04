@@ -306,7 +306,7 @@
   width: 70%;
   padding-top: 5%;
 }
-.flex {
+.flexgap {
   display: flex;
   gap: 20%;
 }
@@ -605,7 +605,7 @@
   .text-color p {
     font-size: 16px;
   }
-  .flex {
+  .flexgap {
     display: block;
     gap: 0%;
   }
