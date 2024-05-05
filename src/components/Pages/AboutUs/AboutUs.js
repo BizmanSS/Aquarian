@@ -57,25 +57,25 @@ const AboutUsPage = () => {
                 onClick={() => scrollToRef(whoWeAreRef)}
                 className="sub-heading"
               >
-                Who We Are
+                Our Story
               </p>
               <p
                 onClick={() => scrollToRef(competitiveRef)}
                 className="sub-heading"
               >
-                Competitive Advantages
+                How We Stand Out?
               </p>
               <p
                 onClick={() => scrollToRef(ourTeamRef)}
                 className="sub-heading"
               >
-                Our Team
+                Meet Our Visionaries
               </p>
               <p
                 onClick={() => scrollToRef(ourServicesRef)}
                 className="sub-heading"
               >
-                Our Services
+                What We Can Do For You?
               </p>
               <p
                 onClick={() => scrollToRef(theAquarianRef)}
