@@ -56,11 +56,13 @@ const Competitive = () => {
     </div>,
   ];
   const handleToggleMobile = (index) => {
-    if (expandedIndex === index) {
-      setExpandedIndex(null); // Close if already expanded
-    } else {
-      setExpandedIndex(index); // Expand if not already expanded
-    }
+    setExpandedIndex((prevIndex) => {
+      if (prevIndex === index) {
+        return null; // Close if already expanded
+      } else {
+        return index; // Expand if not already expanded
+      }
+    });
   };
   const handleToggleMobile2 = (index) => {
     setExpanded((prevExpanded) => {

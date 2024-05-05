@@ -1,0 +1,76 @@
+.main-div {
+  width: 1190px;
+  height: 600px;
+  background-image: url(../Assets/mapService.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-left: 7%;
+}
+.infographics {
+  cursor: pointer;
+}
+.infographics .consulation {
+  position: relative;
+  left: 185px;
+  top: 460px;
+  width: 90px;
+}
+
+.infographics .assistance {
+  position: relative;
+  left: 895px;
+  top: 380px;
+  width: 80px;
+}
+
+.infographics .regular {
+  position: relative;
+  left: 350px;
+  top: 150px;
+  width: 80px;
+}
+
+.infographics .post {
+  position: relative;
+  left: 750px;
+  width: 80px;
+  top: 65px;
+}
+
+.infographics .preparation {
+  position: relative;
+  left: 520px;
+  bottom: 100px;
+  width: 130px;
+}
+.service-title {
+  color: #01f9e1;
+  font-size: 60px;
+  text-align: center;
+  font-family: "TT Chocolates";
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+.contentConsulation,
+.contentRegular,
+.contentAssistance,
+.contentPost,
+.contentPreparation {
+  color: #000;
+  position: relative;
+  text-align: center;
+
+  font-family: "TT Chocolates";
+  font-size: 16px;
+  font-style: normal;
+  width: 500px;
+  line-height: 1.2rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+.contentAssistance,
+.contentPost,
+.contentRegular {
+  top: 20px;
+}
