@@ -98,7 +98,7 @@ const Competitive = () => {
             expertise and knowledge about the ins and outs of the system.
             <br />
             <br />
-            We bring to the table certain indispensable qualities that sets
+            We bring to the table certain indispensable qualities that set
             Aquarian Immigration Services apart;
             <br />
             <br />
