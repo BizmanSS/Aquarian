@@ -7,16 +7,18 @@ import pearson from '../../../Assets/exam-logo/pearson.png';
 import gre from '../../../Assets/exam-logo/gre.png';
 import celpip from '../../../Assets/exam-logo/celpip.png';
 import Confetti from 'react-confetti';
-
+import trophy from '../../../Assets/trophy.png';
 const ClbCalculator = () => {
   const [isDisabled, setIsDisabled] = useState(true);
   const [confettiActive, setConfettiActive] = useState(false);
+  const [total, setTotal] = useState(null);
   const [inputData, setInputData] = useState({
     reading: null,
     writing: null,
     listening: null,
     speaking: null,
   });
+  const [showResult, setShowResult] = useState(false);
   const handleInputChangeMinMax = (e) => {
     const inputValue = parseFloat(e.target.value);
     const min = parseFloat(e.target.min);
@@ -40,8 +42,17 @@ const ClbCalculator = () => {
     if (!inputData) return;
     const { reading, writing, listening, speaking } = inputData;
     const total = Math.min(reading, writing, listening, speaking);
-    console.log(total);
+    setTotal(total);
+    setShowResult(true);
     setConfettiActive(true);
+    setTimeout(() => {
+      setConfettiActive(false);
+    }, [3000]);
+    const showResultElement = document.getElementById('showresult');
+    if (showResultElement) {
+      const scrollPosition = showResultElement.offsetTop - 250;
+      window.scrollTo({ top: scrollPosition, behavior: 'smooth' });
+    }
     return total;
   };
   useEffect(() => {
@@ -58,11 +69,57 @@ const ClbCalculator = () => {
   }, [inputData]);
 
   const ResultData = () => {
-    return <div>Hello world</div>;
+    return (
+      <div
+        id='showresult'
+        className='w-full h-[250px] bg-gray-50 shadow-md px-10 py-6 rounded-xl mb-8 mt-4'
+      >
+        <div className='text-4xl font-semibold flex flex-col items-center justify-center'>
+          <div className='flex items-center justify-center gap-4'>
+            <img src={trophy} alt='trophy' className='w-[6rem]' />
+            <div>
+              Congratulations, your CLB Score is{' '}
+              <span className=' mt-6 mb-3 text-white px-3 py-2 bg-red-500 bold rounded-xl '>
+                {Number.isInteger(total) ? `${total}.0` : total}
+              </span>
+            </div>
+          </div>
+
+          <div className='flex flex-col items-center justify-center'>
+            <div className='flex items-center justify-between mt-10 w-full gap-6'>
+              <div className='text-lg bg-white w-[15rem] py-4 px-6 shadow-xl rounded-lg flex items-center justify-between shadow-gray-300 tracking-wide'>
+                Reading{' '}
+                <span className='text-2xl'>
+                  {inputData && inputData.reading}
+                </span>
+              </div>
+              <div className='text-lg bg-white w-[15rem] py-4 px-6 shadow-xl rounded-lg flex items-center justify-between shadow-gray-300 tracking-wide'>
+                Listening{' '}
+                <span className='text-2xl'>
+                  {inputData && inputData.listening}
+                </span>
+              </div>
+              <div className='text-lg bg-white w-[15rem] py-4 px-6 shadow-xl rounded-lg flex items-center justify-between shadow-gray-300 tracking-wide'>
+                Writing{' '}
+                <span className='text-2xl'>
+                  {inputData && inputData.writing}
+                </span>
+              </div>
+              <div className='text-lg bg-white w-[15rem] py-4 px-6 shadow-xl rounded-lg flex items-center justify-between shadow-gray-300 tracking-wide'>
+                Speaking{' '}
+                <span className='text-2xl'>
+                  {inputData && inputData.speaking}
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    );
   };
+
   return (
     <div className='flex flex-col items-start justify-center w-[95%]'>
-      {confettiActive && <Confetti numberOfPieces={500} />}
       <div className='mt-[6.9rem]'>
         <div className='w-full bg-banner text-white bg-cover bg-no-repeat h-[500px]'>
           <div className='flex items-center justify-between w-full'>
@@ -77,46 +134,80 @@ const ClbCalculator = () => {
                 programs contained within Canada’s Express{' '}
               </p>
             </div>
+
             <div className='bg-white w-auto h-auto mt-[7rem] mr-[6rem] py-3 rounded-2xl'>
               <div className='px-4 pt-4'>
-                <input
+                {/* <input
                   type='text'
                   className='border-[2px] border-[rgba(1,153,137,0.7)] text-black focus:border-[#019989] placeholder-gray-500 text-md rounded-lg block w-full p-2.5 outline-none'
                   placeholder='IELTS English'
-                />
+                /> */}
+                <select
+                  id='countries'
+                  className='border-[2px] border-[rgba(1,153,137,0.7)] text-gray-500 focus:border-[#019989] placeholder-gray-500 text-md rounded-lg block w-full p-2.5 outline-none'
+                >
+                  {/* <option selected>Choose a country</option> */}
+                  <option className='text-black' value='IELTS'>
+                    IELTS (English)
+                  </option>
+                  <option className='text-black' value='CELPIP'>
+                    CELPIP (English)
+                  </option>
+                  <option className='text-black' value='TPE'>
+                    TPE (English)
+                  </option>
+                  <option className='text-black' value='TCF'>
+                    TCF (French)
+                  </option>
+                  <option className='text-black' value='TEF '>
+                    TEF (French)
+                  </option>
+                </select>
               </div>
-              <div className='px-4 pt-4 flex items-center justify-between -mt-3 gap-4'>
+              <div className='px-4 pt-4 flex items-center justify-between -mt-3 gap-4 min-w-full'>
                 <input
-                  type='text'
-                  className='border-[2px] border-[rgba(1,153,137,0.7)] text-black focus:border-[#019989] placeholder-gray-500 text-md rounded-lg block w-full p-2.5 outline-none'
+                  type='number'
+                  className='border-[2px] border-[rgba(1,153,137,0.7)] text-black focus:border-[#019989] placeholder-gray-500 text-md rounded-lg block w-[10rem] p-2.5 outline-none'
                   placeholder='Reading'
                   name='reading'
                   onChange={handleInputChange}
+                  min={0}
+                  max={10}
+                  step={0.5}
                 />
 
                 <input
-                  type='text'
-                  className='border-[2px] border-[rgba(1,153,137,0.7)] text-black focus:border-[#019989] placeholder-gray-500 text-md rounded-lg block w-full p-2.5 outline-none'
+                  type='number'
+                  className='border-[2px] border-[rgba(1,153,137,0.7)] text-black focus:border-[#019989] placeholder-gray-500 text-md rounded-lg block w-[10rem] p-2.5 outline-none'
                   placeholder='Listening'
                   name='listening'
                   onChange={handleInputChange}
+                  min={0}
+                  max={10}
+                  step={0.5}
                 />
               </div>
               <div className='px-4 pt-4 flex items-center justify-between -mt-3 gap-4'>
                 <input
-                  type='text'
+                  type='number'
                   className='border-[2px] border-[rgba(1,153,137,0.7)] text-black focus:border-[#019989] placeholder-gray-500 text-md rounded-lg block w-full p-2.5 outline-none'
                   placeholder='Writing'
                   name='writing'
                   onChange={handleInputChange}
+                  min={0}
+                  max={10}
+                  step={0.5}
                 />
 
                 <input
-                  type='text'
+                  type='number'
                   className='border-[2px] border-[rgba(1,153,137,0.7)] text-black focus:border-[#019989] placeholder-gray-500 text-md rounded-lg block w-full p-2.5 outline-none'
                   placeholder='Speaking'
                   name='speaking'
                   onChange={handleInputChange}
+                  min={0}
+                  max={10}
+                  step={0.5}
                 />
               </div>
               <div className='flex flex-col items-center justify-center px-4'>
@@ -135,11 +226,18 @@ const ClbCalculator = () => {
           </div>
         </div>
       </div>
+      <div className='fixed top-0 '>
+        {' '}
+        {confettiActive && (
+          <Confetti numberOfPieces={200} gravity={0.15} tweenDuration={1} />
+        )}
+      </div>
       <div className='flex flex-col items-center justify-center w-full'>
         <div className='w-[80%] flex flex-col items-start justify-center mt-8'>
           <div className='font-semibold text-3xl border-b-[4px] border-[#019989]'>
             Result
           </div>
+          {showResult && <ResultData />}
           <div className='flex items-center justify-between w-full gap-10'>
             <div className='bg-black flex flex-col items-center justify-center rounded-xl px-4 py-2 flex-wrap min-w-[15rem] mt-8'>
               <img src={freeicon} alt='icon' className='w-[4rem]' />
