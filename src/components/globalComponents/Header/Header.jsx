@@ -5,7 +5,7 @@ import logo2 from "../../../Assets/logo2.png";
 import { RiMenu2Fill } from "react-icons/ri";
 import Instagram from "../../../Assets/Instagram_logo.svg";
 import Youtube from "../../../Assets/youtube.png";
-import Twitter from "../../../Assets/Twitter.png";
+import Twitter from "../../../Assets/Thread.jpg";
 import LinkedIn from "../../../Assets/LinkedIn.png";
 import facebook from "../../../Assets/Facebook.png";
 import { CiSearch } from "react-icons/ci";
@@ -147,7 +147,10 @@ const Header = () => {
                     alt=""
                   />
                 </a>
-                <a href="" className="mx-0 p-2">
+                <a
+                  href="https://www.threads.net/@aquarian_immigration"
+                  className="mx-0 p-2"
+                >
                   <img
                     src={Twitter}
                     className="cursor-pointer w-[1.2rem]"

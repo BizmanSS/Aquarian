@@ -2,7 +2,7 @@ import React, { useRef, useEffect } from "react";
 import "../../../styles/AboutUs.css";
 import Instagram from "../../../Assets/Instagram_logo.svg";
 import Youtube from "../../../Assets/youtube.png";
-import Twitter from "../../../Assets/Twitter.png";
+import Twitter from "../../../Assets/Thread.jpg";
 import LinkedIn from "../../../Assets/LinkedIn.png";
 import facebook from "../../../Assets/Facebook.png";
 import WhoWeAre from "../../AboutUs/WhoWeAre.js";
@@ -101,7 +101,10 @@ const AboutUsPage = () => {
             >
               <img src={facebook} className="cursor-pointer w-[2.2rem]" />
             </a>
-            <a href="" className="mx-0 p-2">
+            <a
+              href="https://www.threads.net/@aquarian_immigration"
+              className="mx-0 p-2"
+            >
               <img src={Twitter} className="cursor-pointer w-[2.2rem]" />
             </a>
             <a

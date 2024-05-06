@@ -8,6 +8,7 @@ import {
   FaXTwitter,
   FaYoutube,
   FaLinkedin,
+  FaThreads,
 } from "react-icons/fa6";
 
 import logo3 from "../../../Assets/AQUARIAN.png";
@@ -97,10 +98,10 @@ const Footer = () => {
             <FaFacebookF /> Facebook
           </a>
           <a
-            href=""
+            href="https://www.threads.net/@aquarian_immigration"
             className="flex items-center justify-start gap-4 text-sm text-[#B4B5B4] my-1"
           >
-            <FaXTwitter /> Twitter
+            <FaThreads /> Thread
           </a>
           <a
             href="https://www.instagram.com/aquarian_immigration/"
