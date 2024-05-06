@@ -60,7 +60,6 @@
   color: #000;
   position: relative;
   text-align: center;
-
   font-family: "TT Chocolates";
   font-size: 16px;
   font-style: normal;
@@ -73,4 +72,151 @@
 .contentPost,
 .contentRegular {
   top: 20px;
+}
+@media (max-width: 1600px) {
+  .main-div {
+    width: 1000px;
+    height: 500px;
+  }
+  .infographics .consulation {
+    left: 165px;
+    top: 390px;
+    width: 70px;
+  }
+
+  .infographics .assistance {
+    left: 750px;
+    top: 325px;
+    width: 75px;
+  }
+
+  .infographics .regular {
+    left: 300px;
+    top: 125px;
+    width: 60px;
+  }
+
+  .infographics .post {
+    left: 630px;
+    width: 70px;
+    top: 55px;
+  }
+
+  .infographics .preparation {
+    left: 445px;
+    bottom: 85px;
+    width: 100px;
+  }
+  .service-title {
+    font-size: 55px;
+  }
+  .contentConsulation,
+  .contentRegular,
+  .contentAssistance,
+  .contentPost,
+  .contentPreparation {
+    font-size: 14px;
+    width: 400px;
+    line-height: 1.1rem;
+  }
+}
+@media (max-width: 1370px) {
+  .main-div {
+    width: 900px;
+    height: 450px;
+  }
+  .infographics .consulation {
+    left: 150px;
+    top: 360px;
+    width: 60px;
+  }
+
+  .infographics .assistance {
+    left: 680px;
+    top: 300px;
+    width: 65px;
+  }
+
+  .infographics .regular {
+    left: 270px;
+    top: 125px;
+    width: 55px;
+  }
+
+  .infographics .post {
+    left: 565px;
+    width: 70px;
+    top: 55px;
+  }
+
+  .infographics .preparation {
+    left: 400px;
+    bottom: 70px;
+    width: 90px;
+  }
+  .service-title {
+    font-size: 55px;
+  }
+  .contentConsulation,
+  .contentRegular,
+  .contentAssistance,
+  .contentPost,
+  .contentPreparation {
+    font-size: 13px;
+    width: 350px;
+    line-height: 1rem;
+  }
+  .contentAssistance {
+    top: 0px;
+  }
+}
+@media (max-width: 1200px) {
+  .main-div {
+    width: 800px;
+    height: 400px;
+  }
+  .infographics .consulation {
+    left: 135px;
+    top: 320px;
+    width: 50px;
+  }
+
+  .infographics .assistance {
+    left: 600px;
+    top: 270px;
+    width: 55px;
+  }
+
+  .infographics .regular {
+    left: 240px;
+    top: 115px;
+    width: 50px;
+  }
+
+  .infographics .post {
+    left: 505px;
+    width: 60px;
+    top: 55px;
+  }
+
+  .infographics .preparation {
+    left: 355px;
+    bottom: 55px;
+    width: 80px;
+  }
+  .service-title {
+    font-size: 55px;
+  }
+  .contentConsulation,
+  .contentRegular,
+  .contentAssistance,
+  .contentPost,
+  .contentPreparation {
+    font-size: 12px;
+    width: 300px;
+    line-height: 0.87rem;
+  }
+  .contentAssistance {
+    top: 0px;
+  }
 }

@@ -387,6 +387,12 @@
   font-size: large;
   margin-bottom: 3%;
 }
+@media (max-width: 1800px) {
+  .button,
+  .button2 {
+    font-size: 17px;
+  }
+}
 @media (max-width: 1700px) {
   .sub-heading {
     font-size: 19px;
@@ -572,7 +578,14 @@
     font-size: 45px;
   }
 }
-@media (max-width: 1210px) {
+@media (max-width: 1350px) {
+  .button,
+  .button2 {
+    font-size: 16px;
+    width: 65%;
+  }
+}
+@media (max-width: 1220px) {
   .WhoWe h1,
   .Competitve h1,
   .OurServices h1,
@@ -584,6 +597,11 @@
   }
   .imageTeam {
     width: 47%;
+  }
+  .button,
+  .button2 {
+    font-size: 14px;
+    width: 100%;
   }
 }
 
