@@ -1,7 +1,5 @@
 import React, { useState } from "react";
 import sitemap from "../../../sitemap";
-import { Link } from "react-router-dom";
-import redTriangleIcon from "../../../Assets/redTriangle.svg";
 import "../../../styles/SitemapDesktop.css";
 function SitemapDesktop() {
   const [expanded, setExpanded] = useState([]);
