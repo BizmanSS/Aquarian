@@ -5,43 +5,47 @@
   background-repeat: no-repeat;
   background-size: cover;
   margin-left: 7%;
+  margin-top: 5rem;
 }
-.infographics {
-  cursor: pointer;
-}
+
 .infographics .consulation {
   position: relative;
-  left: 185px;
-  top: 460px;
-  width: 90px;
+  left: 165px;
+  top: 160px;
+  width: 140px;
+  cursor: pointer;
 }
-
-.infographics .assistance {
-  position: relative;
-  left: 895px;
-  top: 380px;
-  width: 80px;
-}
-
 .infographics .regular {
   position: relative;
-  left: 350px;
-  top: 150px;
-  width: 80px;
+  left: 320px;
+  bottom: 315px;
+  width: 140px;
+  cursor: pointer;
 }
-
-.infographics .post {
-  position: relative;
-  left: 750px;
-  width: 80px;
-  top: 65px;
-}
-
 .infographics .preparation {
   position: relative;
-  left: 520px;
-  bottom: 100px;
-  width: 130px;
+  left: 510px;
+  bottom: 735px;
+  width: 160px;
+  cursor: pointer;
+}
+.infographics .post {
+  position: relative;
+  left: 715px;
+  width: 140px;
+  bottom: 1030px;
+  cursor: pointer;
+}
+.infographics .assistance {
+  position: relative;
+  left: 875px;
+  bottom: 1250px;
+  width: 140px;
+  cursor: pointer;
+}
+.content {
+  position: relative;
+  bottom: 1330px;
 }
 .service-title {
   color: #01f9e1;
@@ -68,10 +72,10 @@
   margin-left: auto;
   margin-right: auto;
 }
-.contentAssistance,
+.contentRegular,
 .contentPost,
-.contentRegular {
-  top: 20px;
+.contentAssistance {
+  margin-top: 2rem;
 }
 @media (max-width: 1600px) {
   .main-div {
@@ -79,33 +83,33 @@
     height: 500px;
   }
   .infographics .consulation {
-    left: 165px;
-    top: 390px;
-    width: 70px;
+    left: 140px;
+    top: 130px;
+    width: 120px;
   }
-
-  .infographics .assistance {
-    left: 750px;
-    top: 325px;
-    width: 75px;
-  }
-
   .infographics .regular {
-    left: 300px;
-    top: 125px;
-    width: 60px;
+    width: 120px;
+    left: 270px;
+    bottom: 285px;
   }
-
-  .infographics .post {
-    left: 630px;
-    width: 70px;
-    top: 55px;
-  }
-
   .infographics .preparation {
-    left: 445px;
-    bottom: 85px;
-    width: 100px;
+    width: 140px;
+    left: 420px;
+    bottom: 640px;
+  }
+  .infographics .post {
+    width: 120px;
+    left: 600px;
+    bottom: 895px;
+  }
+  .infographics .assistance {
+    width: 120px;
+    left: 730px;
+    bottom: 1085px;
+  }
+  .content {
+    position: relative;
+    bottom: 1160px;
   }
   .service-title {
     font-size: 55px;
@@ -126,33 +130,33 @@
     height: 450px;
   }
   .infographics .consulation {
-    left: 150px;
-    top: 360px;
-    width: 60px;
+    left: 120px;
+    top: 120px;
+    width: 110px;
   }
-
-  .infographics .assistance {
-    left: 680px;
-    top: 300px;
-    width: 65px;
-  }
-
   .infographics .regular {
-    left: 270px;
-    top: 125px;
-    width: 55px;
+    width: 110px;
+    left: 240px;
+    bottom: 265px;
   }
-
-  .infographics .post {
-    left: 565px;
-    width: 70px;
-    top: 55px;
-  }
-
   .infographics .preparation {
-    left: 400px;
-    bottom: 70px;
-    width: 90px;
+    width: 130px;
+    left: 380px;
+    bottom: 600px;
+  }
+  .infographics .post {
+    width: 110px;
+    left: 540px;
+    bottom: 830px;
+  }
+  .infographics .assistance {
+    width: 110px;
+    left: 655px;
+    bottom: 1000px;
+  }
+  .content {
+    position: relative;
+    bottom: 1080px;
   }
   .service-title {
     font-size: 55px;
@@ -167,7 +171,7 @@
     line-height: 1rem;
   }
   .contentAssistance {
-    top: 0px;
+    margin-top: 1rem;
   }
 }
 @media (max-width: 1200px) {
@@ -176,33 +180,33 @@
     height: 400px;
   }
   .infographics .consulation {
-    left: 135px;
-    top: 320px;
-    width: 50px;
-  }
-
-  .infographics .assistance {
-    left: 600px;
-    top: 270px;
-    width: 55px;
-  }
-
-  .infographics .regular {
-    left: 240px;
-    top: 115px;
-    width: 50px;
-  }
-
-  .infographics .post {
-    left: 505px;
-    width: 60px;
+    left: 100px;
     top: 55px;
+    width: 120px;
   }
-
+  .infographics .regular {
+    width: 100px;
+    left: 210px;
+    bottom: 290px;
+  }
   .infographics .preparation {
-    left: 355px;
-    bottom: 55px;
-    width: 80px;
+    width: 120px;
+    left: 335px;
+    bottom: 600px;
+  }
+  .infographics .post {
+    width: 100px;
+    left: 480px;
+    bottom: 815px;
+  }
+  .infographics .assistance {
+    width: 100px;
+    left: 580px;
+    bottom: 975px;
+  }
+  .content {
+    position: relative;
+    bottom: 1045px;
   }
   .service-title {
     font-size: 55px;
@@ -215,8 +219,5 @@
     font-size: 12px;
     width: 300px;
     line-height: 0.87rem;
-  }
-  .contentAssistance {
-    top: 0px;
   }
 }

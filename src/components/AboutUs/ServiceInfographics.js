@@ -20,17 +20,17 @@ const ServiceInfographics = () => {
           onMouseLeave={() => setActiveContent("")}
         />
         <img
-          className="assistance"
-          src={assistance}
-          alt=""
-          onMouseEnter={() => setActiveContent("contentAssistance")}
-          onMouseLeave={() => setActiveContent("")}
-        />
-        <img
           className="regular"
           src={regular}
           alt=""
           onMouseEnter={() => setActiveContent("contentRegular")}
+          onMouseLeave={() => setActiveContent("")}
+        />
+        <img
+          className="preparation"
+          src={preparation}
+          alt=""
+          onMouseEnter={() => setActiveContent("contentPreparation")}
           onMouseLeave={() => setActiveContent("")}
         />
         <img
@@ -41,16 +41,16 @@ const ServiceInfographics = () => {
           onMouseLeave={() => setActiveContent("")}
         />
         <img
-          className="preparation"
-          src={preparation}
+          className="assistance"
+          src={assistance}
           alt=""
-          onMouseEnter={() => setActiveContent("contentPreparation")}
+          onMouseEnter={() => setActiveContent("contentAssistance")}
           onMouseLeave={() => setActiveContent("")}
         />
       </div>
-      {!activeContent && <h1 className="service-title">Our Services</h1>}
 
       <div className={`content ${activeContent}`}>
+        {!activeContent && <h1 className="service-title">Our Services</h1>}
         {activeContent === "contentConsulation" && (
           <>
             We begin by doing an assessment to understand the eligibility of our
