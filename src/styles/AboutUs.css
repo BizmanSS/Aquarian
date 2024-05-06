@@ -38,7 +38,7 @@
 .sub-heading-content {
   position: fixed;
   z-index: 9;
-  margin-top: -10%;
+  top: 300px;
   width: 20%;
   display: block;
   margin-left: 4%;
@@ -397,9 +397,6 @@
   .sub-heading {
     font-size: 19px;
   }
-  .sub-heading-content {
-    margin-top: -13%;
-  }
   .WhoWe .text-div p1,
   .OurServices .text-div p1,
   .TheAquarian .text-div p1,
@@ -485,9 +482,6 @@
   .text-div-color p1 {
     font-size: 18px;
   }
-  .sub-heading-content {
-    margin-top: -16%;
-  }
   .follow {
     font-size: 22px;
   }
@@ -538,9 +532,6 @@
   }
   .text-color p {
     font-size: 18px;
-  }
-  .sub-heading-content {
-    margin-top: -19%;
   }
   .follow {
     font-size: 22px;
