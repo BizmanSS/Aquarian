@@ -38,7 +38,7 @@
 }
 .infographics .assistance {
   position: relative;
-  left: 875px;
+  left: 865px;
   bottom: 1250px;
   width: 140px;
   cursor: pointer;
@@ -72,7 +72,9 @@
   margin-left: auto;
   margin-right: auto;
 }
-
+.contentPreparation {
+  margin-top: -10px;
+}
 @media (max-width: 1600px) {
   .main-div {
     width: 1000px;
@@ -100,7 +102,7 @@
   }
   .infographics .assistance {
     width: 120px;
-    left: 730px;
+    left: 725px;
     bottom: 1085px;
   }
   .content {
@@ -148,7 +150,7 @@
   .infographics .assistance {
     width: 110px;
     left: 655px;
-    bottom: 1000px;
+    bottom: 1005px;
   }
   .content {
     position: relative;
