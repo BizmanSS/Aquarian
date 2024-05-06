@@ -10,10 +10,8 @@ const WhoWeAre = () => {
         <h3
           style={{
             textAlign: "center",
-            marginBottom: "2rem",
           }}
         >
-          {" "}
           “Experience speaks for itself”
         </h3>
         <p1>

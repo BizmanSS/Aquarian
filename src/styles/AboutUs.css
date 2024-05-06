@@ -170,6 +170,7 @@
   font-size: 25px;
   font-style: normal;
   font-weight: 600;
+  margin-bottom: 1.5rem;
   line-height: normal;
 }
 .WhoWe .line,
@@ -507,6 +508,10 @@
   .heading-about {
     font-size: 55px;
   }
+  .WhoWe h3 {
+    font-size: 20px;
+    margin-bottom: 1rem;
+  }
 
   .Name {
     font-size: 30px;
@@ -527,6 +532,10 @@
   }
   .content {
     font-size: 48px;
+  }
+  .text-color-expanded p {
+    padding: 5rem;
+    font-size: 12.5px;
   }
 }
 
