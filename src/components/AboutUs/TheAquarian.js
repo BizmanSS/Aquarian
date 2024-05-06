@@ -27,11 +27,23 @@ const TheAquarian = () => {
           families.
           <br />
           <br />
-          If you have questions about the immigration procedure and are ready to
-          begin your immigration journey to Canada; Call us at{" "}
-          <a href="tel:+919810892192">+91 9810892192</a> /{" "}
-          <a href="tel:+911244671300">+91 124 4671300</a> Write to us at{" "}
-          <a href="mailto:enq@iaquarian.com">enq@iaquarian.com</a>
+          If you have questions about the immigration procedure or are ready to
+          begin your immigration journey to Canada;
+          <br />
+          <span style={{ fontWeight: "700" }}>
+            Call us at{" "}
+            <a style={{ color: "blue" }} href="tel:+919810892192">
+              +91 9810892192
+            </a>{" "}
+            /{" "}
+            <a style={{ color: "blue" }} href="tel:+911244671300">
+              +91 124 4671300
+            </a>
+            <br /> Write to us at{" "}
+            <a style={{ color: "blue" }} href="mailto:enq@iaquarian.com">
+              enq@iaquarian.com
+            </a>
+          </span>
           <br />
           <br />
           <div className="flexgap">

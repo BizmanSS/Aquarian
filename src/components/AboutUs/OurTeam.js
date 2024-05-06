@@ -25,12 +25,13 @@ const OurTeam = () => {
           <h2 className="designation">Director & Founder</h2>
           <h3 className="about">
             <br />
-            Tanpreet has been granted the Regulated Canadian Immigration
-            Consultant by the College of Immigration and Citizenship
-            Consultants. She has a background in teaching combined with
-            specialisation in the immigration laws of Canada. In her almost a
-            decade of experience, she has provided clients with impeccable
-            immigration consultancy tailor made to each individualised case.
+            Tanpreet is a Regulated Canadian Immigration Consultant (RCIC), the
+            licences of which has been issued by the College of Immigration and
+            Citizenship Consultants (CICC) . She has a background in the
+            education sector which is combined with specialisation in the
+            immigration laws of Canada. In her almost a decade of experience,
+            she has provided numerous clients with impeccable immigration
+            consultancy tailor made to each individualised case.
             <br />
             <br />
           </h3>
@@ -48,11 +49,10 @@ const OurTeam = () => {
             With over 25+ years of experience, Puneet has helped countless
             individuals including students, entrepreneurs, families and many
             more turn their immigration dream into a reality. He has worked at
-            the British High Commision representing over 70 colleges. He also
-            started a private limited venture primarily based in the United
-            Kingdom. Being a Canadian permanent resident himself along with his
-            own decades of experience and knowledge, he is abreast with all the
-            ins and outs of the immigration system.
+            the British High Commision representing over 100+ colleges and
+            universities all over the world. Being a Canadian permanent resident
+            himself along with his own decades of experience and knowledge, he
+            is abreast with all the ins and outs of the immigration system.
             <br />
             <br />
           </h3>
