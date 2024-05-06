@@ -287,7 +287,7 @@ const Header = () => {
                   onMouseEnter={() => handleItemHover(1)}
                   className={`cursor-pointer transition ease-in delay-100 duration-300 px-4 py-2.5 ${
                     activeItem === 1
-                      ? 'border-b-[3px] border-b-[#009889]'
+                      ? ''
                       : 'border-b-[3px] border-b-transparent'
                   }`}
                 >
@@ -297,7 +297,7 @@ const Header = () => {
                   onMouseEnter={() => handleItemHover(2)}
                   className={`cursor-pointer transition ease-in delay-100 duration-300 px-4 py-2.5 ${
                     activeItem === 2
-                      ? 'border-b-[3px] border-b-[#009889]'
+                      ? ''
                       : 'border-b-[3px] border-b-transparent'
                   }`}
                 >
@@ -307,7 +307,7 @@ const Header = () => {
                   onMouseEnter={() => handleItemHover(3)}
                   className={`cursor-pointer transition ease-in delay-100 duration-300 px-4 py-2.5 ${
                     activeItem === 3
-                      ? 'border-b-[3px] border-b-[#009889]'
+                      ? ''
                       : 'border-b-[3px] border-b-transparent'
                   }`}
                 >
@@ -317,7 +317,7 @@ const Header = () => {
                   onMouseEnter={() => handleItemHover(4)}
                   className={`cursor-pointer transition ease-in delay-100 duration-300 px-4 py-2.5 ${
                     activeItem === 4
-                      ? 'border-b-[3px] border-b-[#009889]'
+                      ? ''
                       : 'border-b-[3px] border-b-transparent'
                   }`}
                 >
@@ -327,7 +327,7 @@ const Header = () => {
                   onMouseEnter={() => handleItemHover(5)}
                   className={`cursor-pointer transition ease-in delay-100 duration-300 px-4 py-2.5 ${
                     activeItem === 5
-                      ? 'border-b-[3px] border-b-[#009889]'
+                      ? ''
                       : 'border-b-[3px] border-b-transparent'
                   }`}
                 >
@@ -337,7 +337,7 @@ const Header = () => {
                   onMouseEnter={() => handleItemHover(6)}
                   className={`cursor-pointer transition ease-in delay-100 duration-300 px-4 py-2.5 ${
                     activeItem === 6
-                      ? 'border-b-[3px] border-b-[#009889]'
+                      ? ''
                       : 'border-b-[3px] border-b-transparent'
                   }`}
                 >
@@ -347,7 +347,7 @@ const Header = () => {
                   onMouseEnter={() => handleItemHover(7)}
                   className={`cursor-pointer transition ease-in delay-100 duration-300 px-4 py-2.5 ${
                     activeItem === 7
-                      ? 'border-b-[3px] border-b-[#009889]'
+                      ? ''
                       : 'border-b-[3px] border-b-transparent'
                   }`}
                 >

@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { MdArrowOutward } from 'react-icons/md';
 import icon from '../../Assets/icon.png';
 import Model from '../globalComponents/Model/Model';
-const BoxComponents = ({ color, style, imageUrl }) => {
+const BoxComponents = ({ color, style, imageUrl, data }) => {
   const [hovered, setHovered] = useState(false);
   const [showModal, setShowModal] = useState(false);
 

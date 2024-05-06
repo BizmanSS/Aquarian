@@ -6,11 +6,12 @@ import img4 from '../../Assets/image 40.png';
 import img5 from '../../Assets/image 41.png';
 import img6 from '../../Assets/Mask group.png';
 import img7 from '../../Assets/image 42.png';
-import { FaArrowRight } from 'react-icons/fa6';
+
 import BoxComponents from './BoxComponents';
 import hoveredimg from '../../Assets/Rectangle 62.png';
 import hoveredimg2 from '../../Assets/Rectangle 63.png';
 import { PaginationNav1Presentation } from '../Pagination/Pagination';
+
 const Component5 = () => {
   return (
     <div className='w-[99%] h-auto px-[8rem]'>

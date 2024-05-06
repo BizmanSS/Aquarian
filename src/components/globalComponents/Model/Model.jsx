@@ -2,7 +2,7 @@ import React from 'react';
 import img from '../../../Assets/Study Visa.png';
 import { FaLinkedinIn, FaTwitter } from 'react-icons/fa6';
 
-const Model = ({ showModal, setShowModal }) => {
+const Model = ({ showModal, setShowModal, data }) => {
   return (
     <>
       {showModal ? (
