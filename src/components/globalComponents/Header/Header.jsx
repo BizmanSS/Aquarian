@@ -480,17 +480,24 @@ const Header = () => {
                         <ul className='text-[15px] flex flex-col items-start justify-start gap-3 '>
                           <li
                             onMouseEnter={() => handleItemProgramClick('PNP')}
-                            className='flex items-center justify-between w-full '
+                            className='flex items-center justify-between w-full  '
                           >
-                            PNP <SvgComponent isOpen={isOpen} />
+                            <span className='flex flex-col items-center justify-center'>
+                              <span className=''>PNP</span>
+                              {/* <span className='w-10 h-[2px] hover:bg-[#009889]'></span> */}
+                            </span>
+                            <SvgComponent isOpen={isOpen} />
                           </li>
                           <li
                             onMouseEnter={() =>
                               handleItemProgramClick('Express Entry')
                             }
-                            className='flex items-center justify-between w-full'
+                            className='flex items-center justify-between w-full  '
                           >
-                            Express Entry <SvgComponent isOpen={isOpen} />
+                            <span className='inset-0 border-b-[2px] border-b-transparent hover:border-[#009889]'>
+                              Express Entry
+                            </span>{' '}
+                            <SvgComponent isOpen={isOpen} />
                           </li>
                           <li
                             onMouseEnter={() =>
@@ -498,18 +505,22 @@ const Header = () => {
                                 'After Permanent Residency'
                               )
                             }
-                            className='flex items-center justify-between w-full'
+                            className='flex items-center justify-between w-full  '
                           >
-                            After Permanent Residency{' '}
+                            <span className='inset-0 border-b-[2px] border-b-transparent hover:border-[#009889]'>
+                              After Permanent Residency
+                            </span>{' '}
                             <SvgComponent isOpen={isOpen} />
                           </li>
                           <li
                             onMouseEnter={() =>
                               handleItemProgramClick('AGRI FOOD PILOT')
                             }
-                            className='flex items-center justify-between w-full'
+                            className='flex items-center justify-between w-full  '
                           >
-                            AGRI FOOD PILOT
+                            <span className='inset-0 border-b-[2px] border-b-transparent hover:border-[#009889]'>
+                              AGRI FOOD PILOT
+                            </span>
                           </li>
                           <li
                             onMouseEnter={() =>
@@ -517,25 +528,33 @@ const Header = () => {
                                 'Atlantic Immigration Programme'
                               )
                             }
-                            className='flex items-center justify-between w-full'
+                            className='flex items-center justify-between w-full  '
                           >
-                            Atlantic Immigration Programme{' '}
+                            <span className='inset-0 border-b-[2px] border-b-transparent hover:border-[#009889]'>
+                              Atlantic Immigration Programme
+                            </span>{' '}
                           </li>
                           <li
                             onMouseEnter={() =>
                               handleItemProgramClick('Business Class')
                             }
-                            className='flex items-center justify-between w-full'
+                            className='flex items-center justify-between w-full  '
                           >
-                            Business Class <SvgComponent isOpen={isOpen} />
+                            <span className='inset-0 border-b-[2px] border-b-transparent hover:border-[#009889]'>
+                              Business Class
+                            </span>{' '}
+                            <SvgComponent isOpen={isOpen} />
                           </li>
                           <li
                             onMouseEnter={() =>
                               handleItemProgramClick('Caregiver Program')
                             }
-                            className='flex items-center justify-between w-full'
+                            className='flex items-center justify-between w-full  '
                           >
-                            Caregiver Program <SvgComponent isOpen={isOpen} />
+                            <span className='inset-0 border-b-[2px] border-b-transparent hover:border-[#009889]'>
+                              Caregiver Program
+                            </span>{' '}
+                            <SvgComponent isOpen={isOpen} />
                           </li>
                           <li
                             onMouseEnter={() =>
@@ -543,9 +562,11 @@ const Header = () => {
                                 'Canadian Immigration FAQs'
                               )
                             }
-                            className='flex items-center justify-between w-full'
+                            className='flex items-center justify-between w-full  '
                           >
-                            Canadian Immigration FAQs{' '}
+                            <span className='inset-0 border-b-[2px] border-b-transparent hover:border-[#009889]'>
+                              Canadian Immigration FAQs
+                            </span>{' '}
                           </li>
                           <li
                             onMouseEnter={() =>
@@ -553,17 +574,21 @@ const Header = () => {
                                 'Rural And Northern Immigration Pilot'
                               )
                             }
-                            className='flex items-center justify-between w-full'
+                            className='flex items-center justify-between w-full  '
                           >
-                            Rural And Northern Immigration Pilot{' '}
+                            <span className='inset-0 border-b-[2px] border-b-transparent hover:border-[#009889]'>
+                              Rural And Northern Immigration Pilot
+                            </span>{' '}
                           </li>
                           <li
                             onMouseEnter={() =>
                               handleItemProgramClick('TR to PR Route')
                             }
-                            className='flex items-center justify-between w-full'
+                            className='flex items-center justify-between w-full  '
                           >
-                            TR to PR Route
+                            <span className='inset-0 border-b-[2px] border-b-transparent hover:border-[#009889]'>
+                              TR to PR Route
+                            </span>
                           </li>
                         </ul>
                       </div>
