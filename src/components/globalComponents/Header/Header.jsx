@@ -149,11 +149,11 @@ const Header = () => {
                 </a>
                 <a
                   href="https://www.threads.net/@aquarian_immigration"
-                  className="mx-0 p-2"
+                  className="mx-0 p-2 "
                 >
                   <img
                     src={Twitter}
-                    className="cursor-pointer w-[1.2rem]"
+                    className="cursor-pointer w-[1.2rem] rounded-lg"
                     alt=""
                   />
                 </a>
