@@ -34,7 +34,7 @@ const TheAquarian = () => {
           <a href="mailto:enq@iaquarian.com">enq@iaquarian.com</a>
           <br />
           <br />
-          <div style={{ display: "flex", gap: "20%" }}>
+          <div className="flexgap">
             {!isActive && (
               <div
                 className="button"
@@ -76,9 +76,9 @@ const TheAquarian = () => {
                 </div>
               </div>
             )}
-            <a href="/contact-us" className="button">
-              Lets get in touch
-            </a>
+            <div className="button">
+              <a href="/contact-us">Lets get in touch</a>
+            </div>
           </div>
           <br /> We are happy to assist you in an efficient and committed
           manner!
