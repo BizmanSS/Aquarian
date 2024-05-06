@@ -30,13 +30,9 @@ const OurServices = () => {
   const answers = [
     <p>
       We begin by doing an assessment to understand the eligibility of our
-      client for the diverse immigration programs, ensuring a smooth pathway to
-      your Canadian dream.
-      <br /> <br />
-      Which is followed by a consultation for various entry paths such as
-      Permanent Residency, Express Entry, PNP, Work Visas, Student Visas,
-      Business Visas, Family Sponsorship, Visitor Visa, Start-up Visas,
-      Investors, Extensions & even Refusals if any.
+      client for the diverse immigration programs, which is then followed by a
+      consultation for various entry paths such as Permanent Residency, Express
+      Entry, Visas- Work, Student, Business and many more.
     </p>,
     <p>
       Next, we prepare the application forms and gather all the supporting

@@ -65,28 +65,12 @@
   position: relative;
   text-align: center;
   font-family: "TT Chocolates";
-  font-size: 16px;
+  font-size: 22px;
   font-style: normal;
   width: 500px;
-  line-height: 1.2rem;
+  line-height: 1.32rem;
   margin-left: auto;
   margin-right: auto;
-}
-.contentRegular {
-  font-size: 22px;
-  line-height: 1.3rem;
-}
-.contentPreparation {
-  font-size: 21px;
-  line-height: 1.28rem;
-}
-.contentPost {
-  font-size: 22px;
-  line-height: 1.32rem;
-}
-.contentAssistance {
-  font-size: 22px;
-  line-height: 1.32rem;
 }
 
 @media (max-width: 1600px) {
@@ -131,21 +115,9 @@
   .contentAssistance,
   .contentPost,
   .contentPreparation {
-    font-size: 14px;
+    font-size: 17px;
     width: 400px;
-    line-height: 1.1rem;
-  }
-  .contentRegular {
-    font-size: 18px;
-  }
-  .contentPreparation {
-    font-size: 16px;
-  }
-  .contentPost {
-    font-size: 18px;
-  }
-  .contentAssistance {
-    font-size: 16px;
+    line-height: 1.2rem;
   }
 }
 @media (max-width: 1370px) {
@@ -190,21 +162,9 @@
   .contentAssistance,
   .contentPost,
   .contentPreparation {
-    font-size: 13px;
+    font-size: 15px;
     width: 350px;
     line-height: 1rem;
-  }
-  .contentRegular {
-    font-size: 15px;
-  }
-  .contentPreparation {
-    font-size: 14px;
-  }
-  .contentPost {
-    font-size: 15px;
-  }
-  .contentAssistance {
-    font-size: 15px;
   }
 }
 @media (max-width: 1200px) {
@@ -249,24 +209,8 @@
   .contentAssistance,
   .contentPost,
   .contentPreparation {
-    font-size: 12px;
+    font-size: 14px;
     width: 300px;
-    line-height: 0.87rem;
-  }
-  .contentRegular {
-    font-size: 14px;
-    line-height: 1rem;
-  }
-  .contentPreparation {
-    font-size: 13.5px;
-    line-height: 1rem;
-  }
-  .contentPost {
-    font-size: 14px;
-    line-height: 1rem;
-  }
-  .contentAssistance {
-    font-size: 14px;
     line-height: 1rem;
   }
 }
