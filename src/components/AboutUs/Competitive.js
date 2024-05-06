@@ -46,9 +46,10 @@ const Competitive = () => {
       <div
         className="button"
         style={{
-          width: "60%",
+          width: "80%",
           marginLeft: "auto",
           marginRight: "auto",
+          borderRadius: "20px",
         }}
       >
         Free Assessment
@@ -229,12 +230,7 @@ const Competitive = () => {
                         }}
                       >
                         {/* Content when the box is expanded */}
-                        <p>
-                          <br />
-                          {answers[index]}
-                          <br />
-                          <br />
-                        </p>
+                        <p>{answers[index]}</p>
                       </div>
                     )}
                     <div
@@ -283,12 +279,7 @@ const Competitive = () => {
                         }}
                       >
                         {/* Content when the box is expanded */}
-                        <p>
-                          <br />
-                          {answers2[index]}
-                          <br />
-                          <br />
-                        </p>
+                        <p>{answers2[index]}</p>
                       </div>
                     )}
                     <div
