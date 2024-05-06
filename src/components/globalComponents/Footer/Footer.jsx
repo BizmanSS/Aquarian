@@ -85,7 +85,7 @@ const Footer = () => {
           <br />
           <br />
           <a
-            href=""
+            href="https://www.linkedin.com/company/aquarian-immigration-services/"
             className="flex items-center justify-start gap-4 text-sm text-[#B4B5B4] my-1"
           >
             <FaLinkedin /> LinkedIn

@@ -89,7 +89,10 @@ const AboutUsPage = () => {
             <h1 className="follow">Follow Us</h1>
           </div>
           <div className="logos">
-            <a href="" className="mx-0 p-2">
+            <a
+              href="https://www.linkedin.com/company/aquarian-immigration-services/"
+              className="mx-0 p-2"
+            >
               <img src={LinkedIn} className="cursor-pointer w-[2.2rem]" />
             </a>
             <a
