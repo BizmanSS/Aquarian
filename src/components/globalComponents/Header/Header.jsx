@@ -5,7 +5,7 @@ import logo2 from '../../../Assets/logo2.png';
 import { RiMenu2Fill } from 'react-icons/ri';
 import Instagram from '../../../Assets/Instagram_logo.svg';
 import Youtube from '../../../Assets/youtube.png';
-import Twitter from '../../../Assets/Twitter.png';
+import Twitter from '../../../Assets/Thread.jpg';
 import LinkedIn from '../../../Assets/LinkedIn.png';
 import facebook from '../../../Assets/Facebook.png';
 import { CiSearch } from 'react-icons/ci';
@@ -127,7 +127,10 @@ const Header = () => {
                 <a href='/contact-us'>Contact Us</a>
               </p>
               <div className='px-4 py-1 text-[#939393] flex items-center justify-center text-[0.6rem]'>
-                <a href='' className='mx-0 p-2'>
+                <a
+                  href='https://www.linkedin.com/company/aquarian-immigration-services/'
+                  className='mx-0 p-2'
+                >
                   <img
                     src={LinkedIn}
                     className='cursor-pointer w-[1.2rem]'
@@ -144,10 +147,13 @@ const Header = () => {
                     alt=''
                   />
                 </a>
-                <a href='' className='mx-0 p-2'>
+                <a
+                  href='https://www.threads.net/@aquarian_immigration'
+                  className='mx-0 p-2 '
+                >
                   <img
                     src={Twitter}
-                    className='cursor-pointer w-[1.2rem]'
+                    className='cursor-pointer w-[1.2rem] rounded-lg'
                     alt=''
                   />
                 </a>
@@ -480,7 +486,7 @@ const Header = () => {
                         <ul className='text-[15px] flex flex-col items-start justify-start gap-3 '>
                           <li
                             onMouseEnter={() => handleItemProgramClick('PNP')}
-                            className='flex items-center justify-between w-full  '
+                            className='flex items-center justify-between w-full '
                           >
                             <span className='flex flex-col items-center justify-center'>
                               <span className=''>PNP</span>
@@ -492,7 +498,7 @@ const Header = () => {
                             onMouseEnter={() =>
                               handleItemProgramClick('Express Entry')
                             }
-                            className='flex items-center justify-between w-full  '
+                            className='flex items-center justify-between w-full'
                           >
                             <span className='inset-0 border-b-[2px] border-b-transparent hover:border-[#009889]'>
                               Express Entry
@@ -505,18 +511,16 @@ const Header = () => {
                                 'After Permanent Residency'
                               )
                             }
-                            className='flex items-center justify-between w-full  '
+                            className='flex items-center justify-between w-full'
                           >
-                            <span className='inset-0 border-b-[2px] border-b-transparent hover:border-[#009889]'>
-                              After Permanent Residency
-                            </span>{' '}
+                            After Permanent Residency{' '}
                             <SvgComponent isOpen={isOpen} />
                           </li>
                           <li
                             onMouseEnter={() =>
                               handleItemProgramClick('AGRI FOOD PILOT')
                             }
-                            className='flex items-center justify-between w-full  '
+                            className='flex items-center justify-between w-full'
                           >
                             <span className='inset-0 border-b-[2px] border-b-transparent hover:border-[#009889]'>
                               AGRI FOOD PILOT
@@ -528,17 +532,15 @@ const Header = () => {
                                 'Atlantic Immigration Programme'
                               )
                             }
-                            className='flex items-center justify-between w-full  '
+                            className='flex items-center justify-between w-full'
                           >
-                            <span className='inset-0 border-b-[2px] border-b-transparent hover:border-[#009889]'>
-                              Atlantic Immigration Programme
-                            </span>{' '}
+                            Atlantic Immigration Programme{' '}
                           </li>
                           <li
                             onMouseEnter={() =>
                               handleItemProgramClick('Business Class')
                             }
-                            className='flex items-center justify-between w-full  '
+                            className='flex items-center justify-between w-full'
                           >
                             <span className='inset-0 border-b-[2px] border-b-transparent hover:border-[#009889]'>
                               Business Class
@@ -549,7 +551,7 @@ const Header = () => {
                             onMouseEnter={() =>
                               handleItemProgramClick('Caregiver Program')
                             }
-                            className='flex items-center justify-between w-full  '
+                            className='flex items-center justify-between w-full'
                           >
                             <span className='inset-0 border-b-[2px] border-b-transparent hover:border-[#009889]'>
                               Caregiver Program
@@ -562,11 +564,9 @@ const Header = () => {
                                 'Canadian Immigration FAQs'
                               )
                             }
-                            className='flex items-center justify-between w-full  '
+                            className='flex items-center justify-between w-full'
                           >
-                            <span className='inset-0 border-b-[2px] border-b-transparent hover:border-[#009889]'>
-                              Canadian Immigration FAQs
-                            </span>{' '}
+                            Canadian Immigration FAQs{' '}
                           </li>
                           <li
                             onMouseEnter={() =>
@@ -574,17 +574,15 @@ const Header = () => {
                                 'Rural And Northern Immigration Pilot'
                               )
                             }
-                            className='flex items-center justify-between w-full  '
+                            className='flex items-center justify-between w-full'
                           >
-                            <span className='inset-0 border-b-[2px] border-b-transparent hover:border-[#009889]'>
-                              Rural And Northern Immigration Pilot
-                            </span>{' '}
+                            Rural And Northern Immigration Pilot{' '}
                           </li>
                           <li
                             onMouseEnter={() =>
                               handleItemProgramClick('TR to PR Route')
                             }
-                            className='flex items-center justify-between w-full  '
+                            className='flex items-center justify-between w-full'
                           >
                             <span className='inset-0 border-b-[2px] border-b-transparent hover:border-[#009889]'>
                               TR to PR Route

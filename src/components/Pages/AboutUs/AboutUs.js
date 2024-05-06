@@ -1,8 +1,8 @@
-import React, { useRef, useEffect } from "react";
+import React, { useRef } from "react";
 import "../../../styles/AboutUs.css";
 import Instagram from "../../../Assets/Instagram_logo.svg";
 import Youtube from "../../../Assets/youtube.png";
-import Twitter from "../../../Assets/Twitter.png";
+import Twitter from "../../../Assets/Thread.jpg";
 import LinkedIn from "../../../Assets/LinkedIn.png";
 import facebook from "../../../Assets/Facebook.png";
 import WhoWeAre from "../../AboutUs/WhoWeAre.js";
@@ -12,6 +12,7 @@ import OurServices from "../../AboutUs/OurServices.js";
 import TheAquarian from "../../AboutUs/TheAquarian.js";
 //import AquarianFlower from "../../../Assets/AquarianFlower.jpg";
 import { useMobile } from "../../globalComponents/MobileContext/IsMobileContext.js";
+import { Bounce } from "react-reveal";
 const AboutUsPage = () => {
   const { isMobile } = useMobile();
   const whoWeAreRef = useRef(null);
@@ -40,78 +41,86 @@ const AboutUsPage = () => {
         </div>
       </div>
       {!isMobile && (
-        <div className="sub-heading-content">
-          <div
-            style={{
-              display: "flex",
-              marginLeft: "2%",
-              paddingTop: "20%",
-              width: "80%",
-              justifyContent: "center",
-              gap: "1rem",
-            }}
-          >
-            <div className="line-heading"></div>
-            <div style={{ display: "block" }}>
-              <p
-                onClick={() => scrollToRef(whoWeAreRef)}
-                className="sub-heading"
+        <Bounce>
+          <div className="sub-heading-content">
+            <div
+              style={{
+                display: "flex",
+                marginLeft: "2%",
+                paddingTop: "20%",
+                width: "80%",
+                justifyContent: "center",
+                gap: "1rem",
+              }}
+            >
+              <div className="line-heading"></div>
+              <div style={{ display: "block" }}>
+                <p
+                  onClick={() => scrollToRef(whoWeAreRef)}
+                  className="sub-heading"
+                >
+                  Our Story
+                </p>
+                <p
+                  onClick={() => scrollToRef(competitiveRef)}
+                  className="sub-heading"
+                >
+                  How We Stand Out?
+                </p>
+                <p
+                  onClick={() => scrollToRef(ourTeamRef)}
+                  className="sub-heading"
+                >
+                  Meet Our Visionaries
+                </p>
+                <p
+                  onClick={() => scrollToRef(ourServicesRef)}
+                  className="sub-heading"
+                >
+                  What We Can Do For You?
+                </p>
+                <p
+                  onClick={() => scrollToRef(theAquarianRef)}
+                  className="sub-heading"
+                >
+                  The Aquarian Community
+                </p>
+              </div>
+            </div>
+            <div>
+              <h1 className="follow">Follow Us</h1>
+            </div>
+            <div className="logos">
+              <a
+                href="https://www.linkedin.com/company/aquarian-immigration-services/"
+                className="mx-0 p-2"
               >
-                Our Story
-              </p>
-              <p
-                onClick={() => scrollToRef(competitiveRef)}
-                className="sub-heading"
+                <img src={LinkedIn} className="cursor-pointer w-[2.2rem]" />
+              </a>
+              <a
+                href="https://www.facebook.com/people/Aquarian-Immigration/61558242973262/"
+                className="mx-0 p-2"
               >
-                How We Stand Out?
-              </p>
-              <p
-                onClick={() => scrollToRef(ourTeamRef)}
-                className="sub-heading"
+                <img src={facebook} className="cursor-pointer w-[2.2rem]" />
+              </a>
+              <a
+                href="https://www.threads.net/@aquarian_immigration"
+                className="mx-0 p-2"
               >
-                Meet Our Visionaries
-              </p>
-              <p
-                onClick={() => scrollToRef(ourServicesRef)}
-                className="sub-heading"
+                <img src={Twitter} className="cursor-pointer w-[2.2rem]" />
+              </a>
+              <a
+                href="https://www.instagram.com/aquarian_immigration/"
+                className="mx-0 p-2"
               >
-                What We Can Do For You?
-              </p>
-              <p
-                onClick={() => scrollToRef(theAquarianRef)}
-                className="sub-heading"
-              >
-                The Aquarian Community
-              </p>
+                <img src={Instagram} className="cursor-pointer w-[2.2rem]" />
+              </a>
+              <a href="" className="mx-0 p-2">
+                <img src={Youtube} className="cursor-pointer w-[2.2rem]" />
+              </a>
             </div>
           </div>
-          <div>
-            <h1 className="follow">Follow Us</h1>
-          </div>
-          <div className="logos">
-            <a href="" className="mx-0 p-2">
-              <img src={LinkedIn} className="cursor-pointer w-[2.2rem]" />
-            </a>
-            <a
-              href="https://www.facebook.com/people/Aquarian-Immigration/61558242973262/"
-              className="mx-0 p-2"
-            >
-              <img src={facebook} className="cursor-pointer w-[2.2rem]" />
-            </a>
-            <a href="" className="mx-0 p-2">
-              <img src={Twitter} className="cursor-pointer w-[2.2rem]" />
-            </a>
-            <a
-              href="https://www.instagram.com/aquarian_immigration/"
-              className="mx-0 p-2"
-            >
-              <img src={Instagram} className="cursor-pointer w-[2.2rem]" />
-            </a>
-            <a href="" className="mx-0 p-2">
-              <img src={Youtube} className="cursor-pointer w-[2.2rem]" />
-            </a>
-          </div>
-        </div>
+        </Bounce>
       )}
 
       <div className="background-div" style={{ marginTop: "-80px" }}>
