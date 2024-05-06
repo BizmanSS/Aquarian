@@ -78,7 +78,7 @@ const Competitive = () => {
   return (
     <>
       <div className="Competitve">
-        <h5 className="heading">How We Stand Out?</h5>
+        <h5 className="heading">How We Stand Out</h5>
         <div style={{ marginBottom: "3rem" }} className="line"></div>
         <div className="text-div">
           <p1>
