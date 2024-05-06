@@ -168,8 +168,9 @@
   color: #000;
   font-family: "Goudy Old Style";
   font-size: 25px;
-  font-style: normal;
+  font-style: italic;
   font-weight: 600;
+  margin-bottom: 1.5rem;
   line-height: normal;
 }
 .WhoWe .line,
@@ -227,13 +228,16 @@
   background-size: cover;
   width: 30rem;
   height: 20rem;
-  padding: 3rem;
   border-radius: 80px;
   margin-left: -3%;
   z-index: 9;
 }
 .text-color-expanded p {
-  font-size: 16px;
+  width: 28rem;
+  height: 18rem;
+  padding: 4rem;
+  padding-left: 4.5rem;
+  font-size: 15.5px;
 }
 .Integrity .text-color {
   width: 64%;
@@ -457,7 +461,11 @@
     margin-top: -18rem;
   }
   .text-color-expanded p {
-    font-size: 14px;
+    width: 28rem;
+    height: 18rem;
+    padding: 4rem;
+    padding-right: 5rem;
+    font-size: 13.5px;
   }
   .downArrow {
     padding-left: 9.5rem;
@@ -500,6 +508,10 @@
   .heading-about {
     font-size: 55px;
   }
+  .WhoWe h3 {
+    font-size: 20px;
+    margin-bottom: 1rem;
+  }
 
   .Name {
     font-size: 30px;
@@ -520,6 +532,10 @@
   }
   .content {
     font-size: 48px;
+  }
+  .text-color-expanded p {
+    padding: 4.5rem;
+    font-size: 12.5px;
   }
 }
 

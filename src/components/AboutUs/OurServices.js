@@ -26,7 +26,7 @@ const OurServices = () => {
     "#B3E1F8",
     "#C6EED6",
   ];
-  const imageService = [consulation, preparation, regular, assistance, post];
+  //const imageService = [consulation, preparation, regular, assistance, post];
   const answers = [
     <p>
       We begin by doing an assessment to understand the eligibility of our
@@ -63,7 +63,7 @@ const OurServices = () => {
   return (
     <>
       <div className="OurServices">
-        <h5 className="heading">What We Can Do For You?</h5>
+        <h5 className="heading">What We Can Do For You</h5>
         <div className="line"></div>
         <div className="text-div">
           <p1>

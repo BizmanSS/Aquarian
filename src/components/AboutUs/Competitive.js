@@ -46,9 +46,10 @@ const Competitive = () => {
       <div
         className="button"
         style={{
-          width: "60%",
+          width: "80%",
           marginLeft: "auto",
           marginRight: "auto",
+          borderRadius: "20px",
         }}
       >
         Free Assessment
@@ -78,7 +79,7 @@ const Competitive = () => {
   return (
     <>
       <div className="Competitve">
-        <h5 className="heading">How We Stand Out?</h5>
+        <h5 className="heading">How We Stand Out</h5>
         <div style={{ marginBottom: "3rem" }} className="line"></div>
         <div className="text-div">
           <p1>
@@ -98,7 +99,7 @@ const Competitive = () => {
             expertise and knowledge about the ins and outs of the system.
             <br />
             <br />
-            We bring to the table certain indispensable qualities that sets
+            We bring to the table certain indispensable qualities that set
             Aquarian Immigration Services apart;
             <br />
             <br />
@@ -229,12 +230,7 @@ const Competitive = () => {
                         }}
                       >
                         {/* Content when the box is expanded */}
-                        <p>
-                          <br />
-                          {answers[index]}
-                          <br />
-                          <br />
-                        </p>
+                        <p>{answers[index]}</p>
                       </div>
                     )}
                     <div
@@ -283,12 +279,7 @@ const Competitive = () => {
                         }}
                       >
                         {/* Content when the box is expanded */}
-                        <p>
-                          <br />
-                          {answers2[index]}
-                          <br />
-                          <br />
-                        </p>
+                        <p>{answers2[index]}</p>
                       </div>
                     )}
                     <div
