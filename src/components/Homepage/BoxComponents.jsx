@@ -34,7 +34,11 @@ const BoxComponents = ({ color, style, imageUrl, data }) => {
             className='absolute bottom-4 right-4 w-[3rem] hover:scale-105'
             onClick={openModal}
           />
-          <Model showModal={showModal} setShowModal={setShowModal} />
+          <Model
+            showModal={showModal}
+            setShowModal={setShowModal}
+            data={data}
+          />
         </div>
       )}
       <div className='flex items-center justify-center'>

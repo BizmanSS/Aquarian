@@ -21,22 +21,19 @@ const Model = ({ showModal, setShowModal, data }) => {
                       className='rounded-full border-[4px] border-white w-[6rem] h-[6rem] object-cover'
                     />
                     <div className='w-8 h-[0.8px] bg-white mt-6 mb-2'></div>
-                    <div className='text-white font-semibold text-[15px]'>
-                      Sur Name
+                    <div className='text-white font-semibold text-[15px] text-center'>
+                      {data.name}
                     </div>
-                    <div className='text-white text-[14px]'>Designation</div>
+                    <div className='text-white text-[14px] text-center'>
+                      {data.designation}
+                    </div>
                     <div className='flex gap-2 justify-center mt-3'>
                       <FaTwitter className='text-sm text-white cursor-pointer  ' />
                       <FaLinkedinIn className='text-sm text-white cursor-pointer  ' />
                     </div>
                   </div>
-                  <div className='text-white flex flex-col items-start justify-center w-40 text-[14px]'>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Perspiciatis dolores, at sit incidunt, quis maiores tenetur
-                    <br />
-                    harum eos laudantium ut corrupti. Itaque dicta
-                    reprehenderit, earum ratione dolorem pariatur asperiores
-                    mollitia?
+                  <div className='text-white flex flex-col items-start justify-center w-full text-[14px]'>
+                    {data.describe}
                   </div>
                 </div>
               </div>
