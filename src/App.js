@@ -13,6 +13,7 @@ import {
   MobileProvider,
 } from './components/globalComponents/MobileContext/IsMobileContext';
 import ClbCalculator from './components/Pages/Clbcalculator/ClbCalculator';
+import CrsCalculator from './components/Pages/CrsCalculator/CrsCalculator';
 const App = () => {
   const { isMobile } = useMobile();
   return (
@@ -27,6 +28,7 @@ const App = () => {
             <Route path='/contact-us' element={<ContactUsPage />} />
             <Route path='/sitemap' element={<SitemapDesktop />} />
             <Route path='/clb-calculator' element={<ClbCalculator />} />
+            <Route path='/crs-calculator' element={<CrsCalculator />} />
           </Routes>
           <Footer />
         </MobileProvider>
