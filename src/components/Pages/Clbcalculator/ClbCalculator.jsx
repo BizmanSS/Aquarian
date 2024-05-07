@@ -15,6 +15,7 @@ import IltsTable from '../../ClbCalculator.jsx/IltsTable';
 import CelpipTable from '../../ClbCalculator.jsx/CelpipTable';
 import TcfTable from '../../ClbCalculator.jsx/TcfTable';
 import TefTable from '../../ClbCalculator.jsx/TefTable';
+
 const ClbCalculator = () => {
   const [isDisabled, setIsDisabled] = useState(true);
   const [confettiActive, setConfettiActive] = useState(false);
@@ -62,6 +63,7 @@ const ClbCalculator = () => {
     }
     return total;
   };
+
   useEffect(() => {
     if (
       inputData.reading &&
@@ -227,7 +229,9 @@ const ClbCalculator = () => {
                       ? 'bg-[rgba(1,153,137,0.4)] cursor-not-allowed'
                       : 'bg-[#019989] cursor-pointer'
                   }`}
-                >{`Calculate>`}</button>
+                >
+                  Calculate
+                </button>
               </div>
             </div>
           </div>

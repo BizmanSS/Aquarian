@@ -9,12 +9,12 @@ import img7 from '../../Assets/image 42.png';
 import BoxComponents from './BoxComponents';
 import hoveredimg from '../../Assets/Rectangle 62.png';
 import hoveredimg2 from '../../Assets/Rectangle 63.png';
-import { PaginationNav1Presentation } from '../Pagination/Pagination';
+import { Button2, PaginationNav1Presentation } from '../Pagination/Pagination';
+import { FaChevronLeft, FaChevronRight } from 'react-icons/fa6';
 
 const Component5 = () => {
   const [pageIndex, setPageIndex] = useState(0);
-  const itemsPerPage = 9;
-  const startIndex = pageIndex * itemsPerPage;
+  const [activeIndex, setActiveIndex] = useState(0);
   const data = [
     {
       name: 'Santosh Mahich',
@@ -79,10 +79,113 @@ const Component5 = () => {
       describe:
         "I am so incredibly happy with the service provided by Aquarian Immigration in helping me get my business visa for Canada. I had no idea about the application process and the documents required when I first went to their office. They were so patient with my questions and concerns and made me feel confident in the application. With their help, I was able to get my business visa approved without any problems. I couldn't have done it without their incredible support and expertise. I highly recommend them and am forever thankful to Aquarian Immigration!",
     },
+    {
+      name: 'Budi',
+      country: 'Indonesia',
+      designation: 'Tourist visa',
+      describe:
+        'My tourist visa was refused and I was disappointed and I did not know what to do next. Thanks to Aquarian Immigration Services, they helped me reapply and gave their expert guidance also. Their intelligence system analysed my documents and then correct certain mistakes before re-application. They supported me during the whole process and improved my chances of getting my tourist visa. I highly recommend their services to everyone who wants to immigrate. Thanks again, Aquarian Immigration!',
+    },
+    {
+      name: 'Gopal',
+      country: 'Nepal',
+      designation: 'Tourist visa',
+      describe:
+        'I had a great experience with Aquarian Immigration as they helped me get my tourist visa. They answered all of my questions patiently and the documentation that is needed for Nepalese families. They gave tips and tricks on what mistakes I have to avoid and how I can maximise my chances of getting my tourist visa. It all happened very smoothly with no challenges and time delay. You are truly EXCELLENT, Aquarian Immigration! Thank you very much.',
+    },
+    {
+      name: 'Prerna',
+      country: 'India',
+      designation: 'Family sponsorship',
+      describe:
+        'It was a pleasure working with Aquarian Immigration for my family sponsorship application to immigrate to Canada. Tanpreet ma’am guided me through the application process and gave excellent advice and was always available to answer my questions and concerns. Aquarian Immigration made sure that all my documentation was accurate and up to date which was very helpful for me and it all went very smooth. They kept me informed during the process and now my family and I are happily settled in Canada. I am deeply grateful for their services and for working so hard on our behalf. They are the best services to hire if you want to settle abroad and need immigration assistance.',
+    },
+    {
+      name: 'Harinder',
+      country: 'Canada',
+      designation: 'Super visa',
+      describe:
+        'Me and my wife wanted to move to Canada but we did not know the process. Puneet and Tanpreet from Aquarian Immigration Services helped us get our Super Visa. They professionally handled all the paperwork and have a lot of experience and expertise. They saved us time and efforts by helping us complete the documentation correctly. We received our Super Visa without any problems all thanks to Aquarian Immigration. I definitely recommend their services to everyone who may require them for their immigration process. Thank you Aquarian for all your support and guidance.',
+    },
+    {
+      name: 'Divita',
+      country: 'India',
+      designation: 'Student visa',
+      describe:
+        'I am deeply appreciative of Aquarian Immigration for their invaluable help in securing my student visa for Canada. These guys are simply experts. They are aware of the minutest of information and so were professional, reliable, and provided excellent support throughout the entire process. They counselled me and my parents through the application process, helped me compile the necessary documents, and suggested the best college that suited my profile. Thanks to their expertise, I was able to secure my student visa smoothly and efficiently. I highly recommend Aquarian Immigration to anyone seeking assistance with their visa application. Thank you so much for your outstanding service!',
+    },
+    {
+      name: 'Parvinder',
+      country: 'Kenya',
+      designation: 'Work permit',
+      describe:
+        'I was working with a firm in Kenya when my father approached Aquarian Immigration. He took the initial counselling of about an hour on my behalf, after that he was sure that AI is the company through which my work permit had to be applied. After spending one year working on my permit, Aquarian Immigration helped me in submitting my application for permanent residency in Canada, which I have now obtained. Their attention to detail and knowledge of the immigration process made a significant difference. I am grateful for their dedication and support in making the PR application process seamless. I would highly recommend Aquarian Immigration to anyone needing assistance with their immigration needs. Thank you, Aquarian Immigration!',
+    },
+    {
+      name: 'Tanya',
+      country: 'India',
+      designation: 'Sponsorship visa',
+      describe:
+        'I cannot express enough gratitude to Aquarian immigrations for their exceptional support in my sponsorship visa application. Tanpreet was always prompt in responding to my inquiries and carefully reviewed my documents to ensure accuracy.They helped me a lot during the whole process. I felt sure and calm because they knew what they were doing. Aquarian Immigration helped me get my sponsorship visa approved, so now I can live in Canada with my family. I am still in contact with AI and keep on taking their expert counselling on settling in Canada. I highly recommend their services to anyone seeking professional and reliable immigration advice. Thank you, Aquarian Immigration!',
+    },
+    {
+      name: 'Adnan',
+      country: 'Canada',
+      designation: 'Express entry immigration',
+      describe:
+        "Of all the immigration consultants in Canada, most seem either too proud or lacking in skill. But when I met AI, I felt comfortable right away. They won my trust, so I decided to apply through them. AI played a big role in helping me with the complicated Express Entry process. Their team was highly knowledgeable, patient, and provided personalised guidance throughout. They looked at my profile carefully, suggested ways to make it better, and helped me with everything from documents to language tests. They were experts and didn't miss any details. Thanks to them, I got my PR. I recommend Aquarian Immigration to anyone who wants to move to Canada.",
+    },
+    {
+      name: 'Rohan',
+      country: 'Canada',
+      designation: 'Provincial nominee immigration',
+      describe:
+        "My fiancé was in Canada and searching for consultants to help me get my Permanent Residency (PR) through the Alberta PNP. With Aquarian Immigration's help, we applied through the Rural Alberta Stream. Working with them was amazing. Three months after applying, I got nominated, and just 20 days later, my PR application was submitted. Their team was really helpful from the start to finish, they were always there to answer my questions. Because of Aquarian Immigration, I'm now happily living in Alberta with my family. I really recommend their services to anyone who needs immigration support. Thank you so much, Aquarian Immigration!",
+    },
   ];
 
-  const endIndex = Math.min(startIndex + itemsPerPage, data.length);
-  const visibleData = data.slice(startIndex, endIndex);
+  const Paginate = () => {
+    // State for current page index
+    const itemsPerPage = 9;
+    const totalItems = 18;
+    const maxPage = Math.ceil(totalItems / itemsPerPage);
+
+    const handlePrevClick = () => {
+      setPageIndex((prevIndex) => prevIndex - 1);
+      setActiveIndex((prevIndex) => prevIndex - 9);
+    };
+
+    const handleNextClick = () => {
+      setPageIndex((prevIndex) => prevIndex + 1);
+      setActiveIndex((prevIndex) => prevIndex + 9);
+    };
+
+    return (
+      <>
+        <Button2
+          content={
+            <div className='flex ml-1'>
+              <FaChevronLeft size='0.6rem' />
+              <FaChevronLeft size='0.6rem' className='-translate-x-1/2' />
+            </div>
+          }
+          onClick={handlePrevClick}
+          disabled={pageIndex === 0}
+        />
+        <span className='text-red-500'>{pageIndex + 1}</span>
+        <Button2
+          content={
+            <div className='flex ml-1'>
+              <FaChevronRight size='0.6rem' />
+              <FaChevronRight size='0.6rem' className='-translate-x-1/2' />
+            </div>
+          }
+          onClick={handleNextClick}
+          disabled={pageIndex === maxPage - 1}
+        />
+      </>
+    );
+  };
 
   return (
     <div className='w-[99%] h-auto px-[8rem]'>
@@ -119,13 +222,13 @@ const Component5 = () => {
           color={'#FEFFFE'}
           style={{ backgroundColor: '#FEFFFE' }}
           imageUrl={hoveredimg}
-          data={data[0]}
+          data={data[activeIndex]}
         />
         <BoxComponents
           color={'#01F8E0'}
           style={{ backgroundColor: '#01F8E0' }}
           imageUrl={hoveredimg2}
-          data={data[1]}
+          data={data[activeIndex + 1]}
         />
       </div>
       <div className='flex items-center justify-end gap-4 my-4 relative'>
@@ -146,19 +249,19 @@ const Component5 = () => {
           color={'#FEFFFE'}
           style={{ backgroundColor: '#01F8E0' }}
           imageUrl={hoveredimg}
-          data={data[2]}
+          data={data[activeIndex + 2]}
         />
         <BoxComponents
           color={'#01F8E0'}
           style={{ backgroundColor: '#01F8E0' }}
           imageUrl={hoveredimg2}
-          data={data[3]}
+          data={data[activeIndex + 3]}
         />
         <BoxComponents
           color={'#FEFFFE'}
           style={{ backgroundColor: '#01F8E0' }}
           imageUrl={hoveredimg}
-          data={data[4]}
+          data={data[activeIndex + 4]}
         />
       </div>
       <div className='flex items-center justify-end gap-4 my-4'>
@@ -166,30 +269,31 @@ const Component5 = () => {
           color={'#FEFFFE'}
           style={{ backgroundColor: '#01F8E0' }}
           imageUrl={hoveredimg}
-          data={data[5]}
+          data={data[activeIndex + 5]}
         />
         <BoxComponents
           color={'#01F8E0'}
           style={{ backgroundColor: '#01F8E0' }}
           imageUrl={hoveredimg2}
-          data={data[6]}
+          data={data[activeIndex + 6]}
         />
         <BoxComponents
           color={'#FEFFFE'}
           style={{ backgroundColor: '#01F8E0' }}
           imageUrl={hoveredimg}
-          data={data[7]}
+          data={data[activeIndex + 7]}
         />
         <BoxComponents
           color={'#01F8E0'}
           style={{ backgroundColor: '#01F8E0' }}
           imageUrl={hoveredimg2}
-          data={data[8]}
+          data={data[activeIndex + 8]}
         />
       </div>
 
-      <div className='w-full flex items-center justify-end  gap-2 cursor-pointer'>
-        <PaginationNav1Presentation />
+      <div className='w-full flex items-center justify-end gap-8 cursor-pointer p-4'>
+        {/* <PaginationNav1Presentation /> */}
+        <Paginate />
       </div>
     </div>
   );
