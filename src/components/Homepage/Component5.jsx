@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import img1 from '../../Assets/image 37.png';
 import img2 from '../../Assets/image 38.png';
 import img3 from '../../Assets/image 39.png';
@@ -12,6 +12,9 @@ import hoveredimg2 from '../../Assets/Rectangle 63.png';
 import { PaginationNav1Presentation } from '../Pagination/Pagination';
 
 const Component5 = () => {
+  const [pageIndex, setPageIndex] = useState(0);
+  const itemsPerPage = 9;
+  const startIndex = pageIndex * itemsPerPage;
   const data = [
     {
       name: 'Santosh Mahich',
@@ -77,6 +80,9 @@ const Component5 = () => {
         "I am so incredibly happy with the service provided by Aquarian Immigration in helping me get my business visa for Canada. I had no idea about the application process and the documents required when I first went to their office. They were so patient with my questions and concerns and made me feel confident in the application. With their help, I was able to get my business visa approved without any problems. I couldn't have done it without their incredible support and expertise. I highly recommend them and am forever thankful to Aquarian Immigration!",
     },
   ];
+
+  const endIndex = Math.min(startIndex + itemsPerPage, data.length);
+  const visibleData = data.slice(startIndex, endIndex);
 
   return (
     <div className='w-[99%] h-auto px-[8rem]'>

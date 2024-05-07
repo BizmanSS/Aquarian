@@ -1,5 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import freeicon from '../../../Assets/freeicon.png';
+import intlstd from '../../../Assets/intlstndicon.png';
+import precenticon from '../../../Assets/100icon.png';
+import easyicon from '../../../Assets/easyicon.png';
 import ielts from '../../../Assets/exam-logo/ielts.png';
 import toefl from '../../../Assets/exam-logo/toefl.png';
 import duolingo from '../../../Assets/exam-logo/duolingo.png';
@@ -8,6 +11,10 @@ import gre from '../../../Assets/exam-logo/gre.png';
 import celpip from '../../../Assets/exam-logo/celpip.png';
 import Confetti from 'react-confetti';
 import trophy from '../../../Assets/trophy.png';
+import IltsTable from '../../ClbCalculator.jsx/IltsTable';
+import CelpipTable from '../../ClbCalculator.jsx/CelpipTable';
+import TcfTable from '../../ClbCalculator.jsx/TcfTable';
+import TefTable from '../../ClbCalculator.jsx/TefTable';
 const ClbCalculator = () => {
   const [isDisabled, setIsDisabled] = useState(true);
   const [confettiActive, setConfettiActive] = useState(false);
@@ -246,19 +253,19 @@ const ClbCalculator = () => {
               </p>
             </div>
             <div className='bg-white flex flex-col items-center justify-center rounded-xl px-4 py-2 flex-wrap min-w-[15rem] mt-8'>
-              <img src={freeicon} alt='icon' className='w-[4rem]' />
+              <img src={easyicon} alt='icon' className='w-[4rem]' />
               <p className='text-black text-xl font-semibold mt-2 text-center tracking-wider'>
                 EASY TO USE
               </p>
             </div>
             <div className='bg-black flex flex-col items-center justify-center rounded-xl px-4 py-2 flex-wrap min-w-[15rem] mt-8'>
-              <img src={freeicon} alt='icon' className='w-[4rem]' />
+              <img src={precenticon} alt='icon' className='w-[4rem]' />
               <p className='text-white text-xl font-semibold mt-2 text-center tracking-wider'>
                 100% ACCURACY
               </p>
             </div>
             <div className='bg-white flex flex-col items-center justify-center rounded-xl px-4 py-2 flex-wrap min-w-[15rem] mt-8'>
-              <img src={freeicon} alt='icon' className='w-[4rem]' />
+              <img src={intlstd} alt='icon' className='w-[4rem]' />
               <p className='text-black text-xl font-semibold mt-2 text-center tracking-wider'>
                 INT’L STANDARDS
               </p>
@@ -323,13 +330,17 @@ const ClbCalculator = () => {
                 IELTS-General training exam.
               </span>
             </p>
-            <div className='bg-[#D9D9D9] w-full h-[350px] rounded-3xl mt-14'></div>
+            <div className=' w-full h-auto rounded-3xl mt-14'>
+              <IltsTable />
+            </div>
           </div>
           <div className='w-[90%] flex flex-col items-start justify-center mt-8'>
             <div className='font-semibold text-3xl border-b-[4px] border-[#019989] mt-8'>
               CELPIP to CLB Calculator
             </div>
-            <div className='bg-[#D9D9D9] w-full h-[350px] rounded-3xl mt-14'></div>
+            <div className=' w-full h-auto rounded-3xl mt-14'>
+              <CelpipTable />
+            </div>
           </div>
           <div className='w-[90%] flex flex-col items-start justify-center mt-8'>
             <div className='font-semibold text-3xl border-b-[4px] border-[#019989] mt-8'>
@@ -341,13 +352,17 @@ const ClbCalculator = () => {
             <div className='font-semibold text-3xl border-b-[4px] border-[#019989] mt-8'>
               TCF to CLB Calculator
             </div>
-            <div className='bg-[#D9D9D9] w-full h-[350px] rounded-3xl mt-14'></div>
+            <div className=' w-full h-auto rounded-3xl mt-14'>
+              <TcfTable />
+            </div>
           </div>
           <div className='w-[90%] flex flex-col items-start justify-center mt-8'>
             <div className='font-semibold text-3xl border-b-[4px] border-[#019989] mt-8'>
               TEF to CLB Calculator
             </div>
-            <div className='bg-[#D9D9D9] w-full h-[350px] rounded-3xl mt-14'></div>
+            <div className=' w-full h-auto rounded-3xl mt-14'>
+              <TefTable />
+            </div>
           </div>
           <div className='w-[90%] flex flex-col items-start justify-center mt-8'>
             <div className='font-semibold text-3xl border-b-[4px] border-[#019989] mt-8'>
