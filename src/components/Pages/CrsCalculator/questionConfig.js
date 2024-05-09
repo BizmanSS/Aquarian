@@ -1,21 +1,4 @@
 // Configuration for all questions
-const IELTSScore = [
-    { value: "Default", label: "Select a value"},
-    { value: "A", label: "Less than 3" },
-    { value: "B", label: "3.5" },
-    { value: "C", label: "4.0" },
-    { value: "D", label: "4.5" },
-    { value: "E", label: "5.0" },
-    { value: "F", label: "5.5" },
-    { value: "G", label: "6.0" },
-    { value: "H", label: "6.5" },
-    { value: "I", label: "7.0" },
-    { value: "J", label: "7.5" },
-    { value: "K", label: "8.0" },
-    { value: "L", label: "8.5" },
-    { value: "M", label: "9.0" }
-]
-
 const celpipValues = [
     { value: "Default", label: "Select a value"},
     { value: "10", label: "10" },
@@ -130,38 +113,89 @@ const questionConfig = [
         condition: answers => answers[4] && answers[4] === "no"
     },
     {
-        id: 6,
-        text: "Language Profiency: Have you taken any of the following Langauge Exams (in the last two years)",
+        id: 5.5,
+        text: "What is your primary language?",
         options: [
-            { value: "Default", label: "Select an exam type"},
-            { value: "PTE", label: "PTE" },
-            { value: "CEL", label: "CELPIP-G" },
-            { value: "NA", label: "Not Applicable" }
+            { value: "Default", label: "Select a value"},
+            { value: "ENG", label: "English"},
+            { value: "FR", label: "French"}
         ],
         condition: answers => answers[5] || (answers[4] && answers[4] === "yes") || (answers[3.1] && !(answers[1] === "M" || answers[1] ==="CL"))
     },
     {
+        id: 6,
+        text: "Language Profiency: Have you taken any of the following Langauge Exams (in the last two years) [ENGLISH]?",
+        options: [
+            { value: "Default", label: "Select an exam type"},
+            { value: "IELTS", label: "IELTS" },
+            { value: "PTE", label: "PTE" },
+            { value: "CEL", label: "CELPIP-G" },
+            { value: "NA", label: "Not Applicable" }
+        ],
+        condition: answers => answers[5.5]
+    },
+    {
         id: 6.11,
         text: "IELTS - Reading",
-        options: IELTSScore,
+        options: [
+            { value: "Default", label: "Select a value"},
+            { value: "10", label: "8 - 9" },
+            { value: "9", label: "7 - 7.5" },
+            { value: "8", label: "6.5" },
+            { value: "7", label: "6" },
+            { value: "6", label: "5 - 5.5" },
+            { value: "5", label: "4 - 4.5" },
+            { value: "4", label: "3.5" },
+            { value: "3", label: "3 - 0" },
+        ],
         condition: answers => answers[6] === "IELTS"
     },
     {
         id: 6.12,
         text: "IELTS - Writing",
-        options: IELTSScore,
+        options: [
+            { value: "Default", label: "Select a value"},
+            { value: "10", label: "7.5 - 9" },
+            { value: "9", label: "7" },
+            { value: "8", label: "6.5" },
+            { value: "7", label: "6" },
+            { value: "6", label: "5.5" },
+            { value: "5", label: "5" },
+            { value: "4", label: "4 - 4.5" },
+            { value: "3", label: "3.5 - 0" }
+        ],
         condition: answers => answers[6] === "IELTS"
     },
     {
         id: 6.13,
         text: "IELTS - Listening",
-        options: IELTSScore,
+        options: [
+            { value: "Default", label: "Select a value"},
+            { value: "10", label: "8.5 - 9" },
+            { value: "9", label: "8" },
+            { value: "8", label: "7.5" },
+            { value: "7", label: "6 - 7" },
+            { value: "6", label: "5.5" },
+            { value: "5", label: "5" },
+            { value: "4", label: "4.5" },
+            { value: "3", label: "4 - 0" }
+        ],
         condition: answers => answers[6] === "IELTS"
     },
     {
         id: 6.14,
         text: "IELTS - Speaking",
-        options: IELTSScore,
+        options: [
+            { value: "Default", label: "Select a value"},
+            { value: "10", label: "7.5 - 9" },
+            { value: "9", label: "7" },
+            { value: "8", label: "6.5" },
+            { value: "7", label: "6" },
+            { value: "6", label: "5.5" },
+            { value: "5", label: "5" },
+            { value: "4", label: "4 - 4.5" },
+            { value: "3", label: "3.5 - 0" }
+        ],
         condition: answers => answers[6] === "IELTS"
     },
     {
@@ -169,14 +203,14 @@ const questionConfig = [
         text: "PTE - Reading",
         options: [
             { value: "Default", label: "Select a value"},
-            { value: "A", label: "88-90" },
-            { value: "B", label: "78-87" },
-            { value: "C", label: "69-77" },
-            { value: "D", label: "60-68" },
-            { value: "E", label: "51-59" },
-            { value: "F", label: "42-50" },
-            { value: "G", label: "33-41" },
-            { value: "H", label: "0 - 32" }
+            { value: "10", label: "88-90" },
+            { value: "9", label: "78-87" },
+            { value: "8", label: "69-77" },
+            { value: "7", label: "60-68" },
+            { value: "6", label: "51-59" },
+            { value: "5", label: "42-50" },
+            { value: "4", label: "33-41" },
+            { value: "3", label: "0 - 32" }
         ],
         condition: answers => answers[6] === "PTE"
     },
@@ -185,14 +219,14 @@ const questionConfig = [
         text: "PTE - Writing",
         options: [
             { value: "Default", label: "Select a value"},
-            { value: "A", label: "90" },
-            { value: "B", label: "88-89" },
-            { value: "C", label: "79-87" },
-            { value: "D", label: "69-78" },
-            { value: "E", label: "60-68" },
-            { value: "F", label: "51-59" },
-            { value: "G", label: "41-50" },
-            { value: "H", label: "0 - 41" }
+            { value: "10", label: "90" },
+            { value: "9", label: "88-89" },
+            { value: "8", label: "79-87" },
+            { value: "7", label: "69-78" },
+            { value: "6", label: "60-68" },
+            { value: "5", label: "51-59" },
+            { value: "4", label: "41-50" },
+            { value: "3", label: "0 - 41" }
         ],
         condition: answers => answers[6] === "PTE"
     },
@@ -201,14 +235,14 @@ const questionConfig = [
         text: "PTE - Listening",
         options: [
             { value: "Default", label: "Select a value"},
-            { value: "A", label: "89-90" },
-            { value: "B", label: "82-88" },
-            { value: "C", label: "71-81" },
-            { value: "D", label: "60-70" },
-            { value: "E", label: "50-59" },
-            { value: "F", label: "39-49" },
-            { value: "G", label: "28-38" },
-            { value: "H", label: "0 - 27" }
+            { value: "10", label: "89-90" },
+            { value: "9", label: "82-88" },
+            { value: "8", label: "71-81" },
+            { value: "7", label: "60-70" },
+            { value: "6", label: "50-59" },
+            { value: "5", label: "39-49" },
+            { value: "4", label: "28-38" },
+            { value: "3", label: "0 - 27" }
         ],
         condition: answers => answers[6] === "PTE"
     },
@@ -217,14 +251,14 @@ const questionConfig = [
         text: "PTE - Speaking",
         options: [
             { value: "Default", label: "Select a value"},
-            { value: "A", label: "89-90" },
-            { value: "B", label: "84-88" },
-            { value: "C", label: "76-83" },
-            { value: "D", label: "68-75" },
-            { value: "E", label: "59-67" },
-            { value: "F", label: "51-58" },
-            { value: "G", label: "42-50" },
-            { value: "H", label: "0 - 41" }
+            { value: "10", label: "89-90" },
+            { value: "9", label: "84-88" },
+            { value: "8", label: "76-83" },
+            { value: "7", label: "68-75" },
+            { value: "6", label: "59-67" },
+            { value: "5", label: "51-58" },
+            { value: "4", label: "42-50" },
+            { value: "3", label: "0 - 41" }
         ],
         condition: answers => answers[6] === "PTE"
     },
@@ -254,7 +288,7 @@ const questionConfig = [
     },
     {
         id: 7,
-        text: "Language Profiency: Have you taken any of the following Langauge Exams (in the last two years)",
+        text: "Language Profiency: Have you taken any of the following Langauge Exams (in the last two years) [FRENCH]?",
         options: [
             { value: "Default", label: "Select an exam type"},
             { value: "TEF", label: "TEF Canada" },
@@ -268,14 +302,14 @@ const questionConfig = [
         text: "TEF - Reading",
         options: [
             { value: "Default", label: "Select a value"},
-            { value: "A", label: "263 - 300" },
-            { value: "B", label: "248 - 262" },
-            { value: "C", label: "233 - 247" },
-            { value: "D", label: "207 - 232" },
-            { value: "E", label: "181 - 206" },
-            { value: "F", label: "151 - 180" },
-            { value: "G", label: "121 - 150" },
-            { value: "H", label: "0 - 120" }
+            { value: "10", label: "263 - 300" },
+            { value: "9", label: "248 - 262" },
+            { value: "8", label: "233 - 247" },
+            { value: "7", label: "207 - 232" },
+            { value: "6", label: "181 - 206" },
+            { value: "5", label: "151 - 180" },
+            { value: "4", label: "121 - 150" },
+            { value: "3", label: "0 - 120" }
         ],
         condition: answers => answers[7] === "TEF"
     },
@@ -284,14 +318,14 @@ const questionConfig = [
         text: "TEF - Writing",
         options: [
             { value: "Default", label: "Select a value"},
-            { value: "A", label: "393 - 450" },
-            { value: "B", label: "371 - 392" },
-            { value: "C", label: "349 - 370" },
-            { value: "D", label: "310 - 348" },
-            { value: "E", label: "271 - 309" },
-            { value: "F", label: "226 - 270" },
-            { value: "G", label: "181 - 225" },
-            { value: "H", label: "0 - 180" }
+            { value: "10", label: "393 - 450" },
+            { value: "9", label: "371 - 392" },
+            { value: "8", label: "349 - 370" },
+            { value: "7", label: "310 - 348" },
+            { value: "6", label: "271 - 309" },
+            { value: "5", label: "226 - 270" },
+            { value: "4", label: "181 - 225" },
+            { value: "3", label: "0 - 180" }
         ],
         condition: answers => answers[7] === "TEF"
     },
@@ -300,14 +334,14 @@ const questionConfig = [
         text: "TEF - Listening",
         options: [
             { value: "Default", label: "Select a value"},
-            { value: "A", label: "316 - 360" },
-            { value: "B", label: "298 - 315" },
-            { value: "C", label: "280 - 297" },
-            { value: "D", label: "249 - 279" },
-            { value: "E", label: "217 - 248" },
-            { value: "F", label: "181 - 216" },
-            { value: "G", label: "145 - 180" },
-            { value: "H", label: "0 - 144" }
+            { value: "10", label: "316 - 360" },
+            { value: "9", label: "298 - 315" },
+            { value: "8", label: "280 - 297" },
+            { value: "7", label: "249 - 279" },
+            { value: "6", label: "217 - 248" },
+            { value: "5", label: "181 - 216" },
+            { value: "4", label: "145 - 180" },
+            { value: "3", label: "0 - 144" }
         ],
         condition: answers => answers[7] === "TEF"
     },
@@ -316,14 +350,14 @@ const questionConfig = [
         text: "TEF - Speaking",
         options: [
             { value: "Default", label: "Select a value"},
-            { value: "A", label: "393 - 450" },
-            { value: "B", label: "371 - 392" },
-            { value: "C", label: "349 - 370" },
-            { value: "D", label: "310 - 348" },
-            { value: "E", label: "271 - 309" },
-            { value: "F", label: "226 - 270" },
-            { value: "G", label: "181 - 225" },
-            { value: "H", label: "0 - 180" }
+            { value: "10", label: "393 - 450" },
+            { value: "9", label: "371 - 392" },
+            { value: "8", label: "349 - 370" },
+            { value: "7", label: "310 - 348" },
+            { value: "6", label: "271 - 309" },
+            { value: "5", label: "226 - 270" },
+            { value: "4", label: "181 - 225" },
+            { value: "3", label: "0 - 180" }
         ],
         condition: answers => answers[7] === "TEF"
     },
@@ -332,14 +366,14 @@ const questionConfig = [
         text: "TCF - Reading",
         options: [
             { value: "Default", label: "Select a value"},
-            { value: "A", label: "549 - 699" },
-            { value: "B", label: "524 - 548" },
-            { value: "C", label: "499 - 523" },
-            { value: "D", label: "453 - 498" },
-            { value: "E", label: "406 - 452" },
-            { value: "F", label: "375 - 405" },
-            { value: "G", label: "342 - 374" },
-            { value: "H", label: "0 - 341" }
+            { value: "10", label: "549 - 699" },
+            { value: "9", label: "524 - 548" },
+            { value: "8", label: "499 - 523" },
+            { value: "7", label: "453 - 498" },
+            { value: "6", label: "406 - 452" },
+            { value: "5", label: "375 - 405" },
+            { value: "4", label: "342 - 374" },
+            { value: "3", label: "0 - 341" }
         ],
         condition: answers => answers[7] === "TCF"
     },
@@ -348,14 +382,14 @@ const questionConfig = [
         text: "TCF - Writing",
         options: [
             { value: "Default", label: "Select a value"},
-            { value: "A", label: "16 - 20" },
-            { value: "B", label: "14 - 15" },
-            { value: "C", label: "12 - 13" },
-            { value: "D", label: "10 - 11" },
-            { value: "E", label: "7 - 9" },
-            { value: "F", label: "6 - 6" },
-            { value: "G", label: "4 - 5" },
-            { value: "H", label: "0 - 3" }
+            { value: "10", label: "16 - 20" },
+            { value: "9", label: "14 - 15" },
+            { value: "8", label: "12 - 13" },
+            { value: "7", label: "10 - 11" },
+            { value: "6", label: "7 - 9" },
+            { value: "5", label: "6 - 6" },
+            { value: "4", label: "4 - 5" },
+            { value: "3", label: "0 - 3" }
         ],
         condition: answers => answers[7] === "TCF"
     },
@@ -364,14 +398,14 @@ const questionConfig = [
         text: "TCF - Listening",
         options: [
             { value: "Default", label: "Select a value"},
-            { value: "A", label: "549 - 699" },
-            { value: "B", label: "523 - 548" },
-            { value: "C", label: "503 - 522" },
-            { value: "D", label: "458 - 502" },
-            { value: "E", label: "398 - 457" },
-            { value: "F", label: "369 - 397" },
-            { value: "G", label: "331 - 368" },
-            { value: "H", label: "0 - 330" }
+            { value: "10", label: "549 - 699" },
+            { value: "9", label: "523 - 548" },
+            { value: "8", label: "503 - 522" },
+            { value: "7", label: "458 - 502" },
+            { value: "6", label: "398 - 457" },
+            { value: "5", label: "369 - 397" },
+            { value: "4", label: "331 - 368" },
+            { value: "3", label: "0 - 330" }
         ],
         condition: answers => answers[7] === "TCF"
     },
@@ -380,17 +414,18 @@ const questionConfig = [
         text: "TCF - Speaking",
         options: [
             { value: "Default", label: "Select a value"},
-            { value: "A", label: "16 - 20" },
-            { value: "B", label: "14 - 15" },
-            { value: "C", label: "12 - 13" },
-            { value: "D", label: "10 - 11" },
-            { value: "E", label: "7 - 9" },
-            { value: "F", label: "6 - 6" },
-            { value: "G", label: "4 - 5" },
-            { value: "H", label: "0 - 3" }
+            { value: "10", label: "16 - 20" },
+            { value: "9", label: "14 - 15" },
+            { value: "8", label: "12 - 13" },
+            { value: "7", label: "10 - 11" },
+            { value: "6", label: "7 - 9" },
+            { value: "5", label: "6 - 6" },
+            { value: "4", label: "4 - 5" },
+            { value: "3", label: "0 - 3" }
         ],
         condition: answers => answers[7] === "TCF"
-    },
+    }
+,
     {
         id: 8,
         text: "How many years of skilled work expereince do you have in Canada in the last 10 years?",
@@ -426,6 +461,7 @@ const questionConfig = [
         text: "Has your spouse taken any of the following Language Profiency Exam in the last two years",
         options: [
             { value: "Default", label: "Select an exam type"},
+            { value: "IELTS", label: "IELTS" },
             { value: "PTE", label: "PTE" },
             { value: "CEL", label: "CELPIP-G" },
             { value: "TEF", label: "TEF Canada" },
@@ -437,25 +473,65 @@ const questionConfig = [
     {
         id: 10.11,
         text: "IELTS - Reading",
-        options: IELTSScore,
+        options: [
+            { value: "Default", label: "Select a value"},
+            { value: "10", label: "8 - 9" },
+            { value: "9", label: "7 - 7.5" },
+            { value: "8", label: "6.5" },
+            { value: "7", label: "6" },
+            { value: "6", label: "5 - 5.5" },
+            { value: "5", label: "4 - 4.5" },
+            { value: "4", label: "3.5" },
+            { value: "3", label: "3 - 0" },
+        ],
         condition: answers => answers[10] === "IELTS"
     },
     {
         id: 10.12,
         text: "IELTS - Writing",
-        options: IELTSScore,
+        options: [
+            { value: "Default", label: "Select a value"},
+            { value: "10", label: "7.5 - 9" },
+            { value: "9", label: "7" },
+            { value: "8", label: "6.5" },
+            { value: "7", label: "6" },
+            { value: "6", label: "5.5" },
+            { value: "5", label: "5" },
+            { value: "4", label: "4 - 4.5" },
+            { value: "3", label: "3.5 - 0" }
+        ],
         condition: answers => answers[10] === "IELTS"
     },
     {
         id: 10.13,
         text: "IELTS - Listening",
-        options: IELTSScore,
+        options: [
+            { value: "Default", label: "Select a value"},
+            { value: "10", label: "8.5 - 9" },
+            { value: "9", label: "8" },
+            { value: "8", label: "7.5" },
+            { value: "7", label: "6 - 7" },
+            { value: "6", label: "5.5" },
+            { value: "5", label: "5" },
+            { value: "4", label: "4.5" },
+            { value: "3", label: "4 - 0" }
+        ],
         condition: answers => answers[10] === "IELTS"
     },
     {
         id: 10.14,
         text: "IELTS - Speaking",
-        options: IELTSScore,
+        options: [
+            { value: "Default", label: "Select a value"},
+            { value: "10", label: "7.5 - 9" },
+            { value: "9", label: "7" },
+            { value: "8", label: "6.5" },
+            { value: "7", label: "6" },
+            { value: "6", label: "5.5" },
+            { value: "5", label: "5" },
+            { value: "4", label: "4 - 4.5" },
+            { value: "3", label: "3.5 - 0" }
+        ],
         condition: answers => answers[10] === "IELTS"
     },
     {
@@ -463,14 +539,14 @@ const questionConfig = [
         text: "PTE - Reading",
         options: [
             { value: "Default", label: "Select a value"},
-            { value: "A", label: "88-90" },
-            { value: "B", label: "78-87" },
-            { value: "C", label: "69-77" },
-            { value: "D", label: "60-68" },
-            { value: "E", label: "51-59" },
-            { value: "F", label: "42-50" },
-            { value: "G", label: "33-41" },
-            { value: "H", label: "0 - 32" }
+            { value: "10", label: "88-90" },
+            { value: "9", label: "78-87" },
+            { value: "8", label: "69-77" },
+            { value: "7", label: "60-68" },
+            { value: "6", label: "51-59" },
+            { value: "5", label: "42-50" },
+            { value: "4", label: "33-41" },
+            { value: "3", label: "0 - 32" }
         ],
         condition: answers => answers[10] === "PTE"
     },
@@ -479,14 +555,14 @@ const questionConfig = [
         text: "PTE - Writing",
         options: [
             { value: "Default", label: "Select a value"},
-            { value: "A", label: "90" },
-            { value: "B", label: "88-89" },
-            { value: "C", label: "79-87" },
-            { value: "D", label: "69-78" },
-            { value: "E", label: "60-68" },
-            { value: "F", label: "51-59" },
-            { value: "G", label: "41-50" },
-            { value: "H", label: "0 - 41" }
+            { value: "10", label: "90" },
+            { value: "9", label: "88-89" },
+            { value: "8", label: "79-87" },
+            { value: "7", label: "69-78" },
+            { value: "6", label: "60-68" },
+            { value: "5", label: "51-59" },
+            { value: "4", label: "41-50" },
+            { value: "3", label: "0 - 41" }
         ],
         condition: answers => answers[10] === "PTE"
     },
@@ -495,14 +571,14 @@ const questionConfig = [
         text: "PTE - Listening",
         options: [
             { value: "Default", label: "Select a value"},
-            { value: "A", label: "89-90" },
-            { value: "B", label: "82-88" },
-            { value: "C", label: "71-81" },
-            { value: "D", label: "60-70" },
-            { value: "E", label: "50-59" },
-            { value: "F", label: "39-49" },
-            { value: "G", label: "28-38" },
-            { value: "H", label: "0 - 27" }
+            { value: "10", label: "89-90" },
+            { value: "9", label: "82-88" },
+            { value: "8", label: "71-81" },
+            { value: "7", label: "60-70" },
+            { value: "6", label: "50-59" },
+            { value: "5", label: "39-49" },
+            { value: "4", label: "28-38" },
+            { value: "3", label: "0 - 27" }
         ],
         condition: answers => answers[10] === "PTE"
     },
@@ -511,14 +587,14 @@ const questionConfig = [
         text: "PTE - Speaking",
         options: [
             { value: "Default", label: "Select a value"},
-            { value: "A", label: "89-90" },
-            { value: "B", label: "84-88" },
-            { value: "C", label: "76-83" },
-            { value: "D", label: "68-75" },
-            { value: "E", label: "59-67" },
-            { value: "F", label: "51-58" },
-            { value: "G", label: "42-50" },
-            { value: "H", label: "0 - 41" }
+            { value: "10", label: "89-90" },
+            { value: "9", label: "84-88" },
+            { value: "8", label: "76-83" },
+            { value: "7", label: "68-75" },
+            { value: "6", label: "59-67" },
+            { value: "5", label: "51-58" },
+            { value: "4", label: "42-50" },
+            { value: "3", label: "0 - 41" }
         ],
         condition: answers => answers[10] === "PTE"
     },
@@ -551,14 +627,14 @@ const questionConfig = [
         text: "TEF - Reading",
         options: [
             { value: "Default", label: "Select a value"},
-            { value: "A", label: "263 - 300" },
-            { value: "B", label: "248 - 262" },
-            { value: "C", label: "233 - 247" },
-            { value: "D", label: "207 - 232" },
-            { value: "E", label: "181 - 206" },
-            { value: "F", label: "151 - 180" },
-            { value: "G", label: "121 - 150" },
-            { value: "H", label: "0 - 120" }
+            { value: "10", label: "263 - 300" },
+            { value: "9", label: "248 - 262" },
+            { value: "8", label: "233 - 247" },
+            { value: "7", label: "207 - 232" },
+            { value: "6", label: "181 - 206" },
+            { value: "5", label: "151 - 180" },
+            { value: "4", label: "121 - 150" },
+            { value: "3", label: "0 - 120" }
         ],
         condition: answers => answers[10] === "TEF"
     },
@@ -567,14 +643,14 @@ const questionConfig = [
         text: "TEF - Writing",
         options: [
             { value: "Default", label: "Select a value"},
-            { value: "A", label: "393 - 450" },
-            { value: "B", label: "371 - 392" },
-            { value: "C", label: "349 - 370" },
-            { value: "D", label: "310 - 348" },
-            { value: "E", label: "271 - 309" },
-            { value: "F", label: "226 - 270" },
-            { value: "G", label: "181 - 225" },
-            { value: "H", label: "0 - 180" }
+            { value: "10", label: "393 - 450" },
+            { value: "9", label: "371 - 392" },
+            { value: "8", label: "349 - 370" },
+            { value: "7", label: "310 - 348" },
+            { value: "6", label: "271 - 309" },
+            { value: "5", label: "226 - 270" },
+            { value: "4", label: "181 - 225" },
+            { value: "3", label: "0 - 180" }
         ],
         condition: answers => answers[10] === "TEF"
     },
@@ -583,14 +659,14 @@ const questionConfig = [
         text: "TEF - Listening",
         options: [
             { value: "Default", label: "Select a value"},
-            { value: "A", label: "316 - 360" },
-            { value: "B", label: "298 - 315" },
-            { value: "C", label: "280 - 297" },
-            { value: "D", label: "249 - 279" },
-            { value: "E", label: "217 - 248" },
-            { value: "F", label: "181 - 216" },
-            { value: "G", label: "145 - 180" },
-            { value: "H", label: "0 - 144" }
+            { value: "10", label: "316 - 360" },
+            { value: "9", label: "298 - 315" },
+            { value: "8", label: "280 - 297" },
+            { value: "7", label: "249 - 279" },
+            { value: "6", label: "217 - 248" },
+            { value: "5", label: "181 - 216" },
+            { value: "4", label: "145 - 180" },
+            { value: "3", label: "0 - 144" }
         ],
         condition: answers => answers[10] === "TEF"
     },
@@ -599,14 +675,14 @@ const questionConfig = [
         text: "TEF - Speaking",
         options: [
             { value: "Default", label: "Select a value"},
-            { value: "A", label: "393 - 450" },
-            { value: "B", label: "371 - 392" },
-            { value: "C", label: "349 - 370" },
-            { value: "D", label: "310 - 348" },
-            { value: "E", label: "271 - 309" },
-            { value: "F", label: "226 - 270" },
-            { value: "G", label: "181 - 225" },
-            { value: "H", label: "0 - 180" }
+            { value: "10", label: "393 - 450" },
+            { value: "9", label: "371 - 392" },
+            { value: "8", label: "349 - 370" },
+            { value: "7", label: "310 - 348" },
+            { value: "6", label: "271 - 309" },
+            { value: "5", label: "226 - 270" },
+            { value: "4", label: "181 - 225" },
+            { value: "3", label: "0 - 180" }
         ],
         condition: answers => answers[10] === "TEF"
     },
@@ -615,14 +691,14 @@ const questionConfig = [
         text: "TCF - Reading",
         options: [
             { value: "Default", label: "Select a value"},
-            { value: "A", label: "549 - 699" },
-            { value: "B", label: "524 - 548" },
-            { value: "C", label: "499 - 523" },
-            { value: "D", label: "453 - 498" },
-            { value: "E", label: "406 - 452" },
-            { value: "F", label: "375 - 405" },
-            { value: "G", label: "342 - 374" },
-            { value: "H", label: "0 - 341" }
+            { value: "10", label: "549 - 699" },
+            { value: "9", label: "524 - 548" },
+            { value: "8", label: "499 - 523" },
+            { value: "7", label: "453 - 498" },
+            { value: "6", label: "406 - 452" },
+            { value: "5", label: "375 - 405" },
+            { value: "4", label: "342 - 374" },
+            { value: "3", label: "0 - 341" }
         ],
         condition: answers => answers[10] === "TCF"
     },
@@ -631,14 +707,14 @@ const questionConfig = [
         text: "TCF - Writing",
         options: [
             { value: "Default", label: "Select a value"},
-            { value: "A", label: "16 - 20" },
-            { value: "B", label: "14 - 15" },
-            { value: "C", label: "12 - 13" },
-            { value: "D", label: "10 - 11" },
-            { value: "E", label: "7 - 9" },
-            { value: "F", label: "6 - 6" },
-            { value: "G", label: "4 - 5" },
-            { value: "H", label: "0 - 3" }
+            { value: "10", label: "16 - 20" },
+            { value: "9", label: "14 - 15" },
+            { value: "8", label: "12 - 13" },
+            { value: "7", label: "10 - 11" },
+            { value: "6", label: "7 - 9" },
+            { value: "5", label: "6 - 6" },
+            { value: "4", label: "4 - 5" },
+            { value: "3", label: "0 - 3" }
         ],
         condition: answers => answers[10] === "TCF"
     },
@@ -647,14 +723,14 @@ const questionConfig = [
         text: "TCF - Listening",
         options: [
             { value: "Default", label: "Select a value"},
-            { value: "A", label: "549 - 699" },
-            { value: "B", label: "523 - 548" },
-            { value: "C", label: "503 - 522" },
-            { value: "D", label: "458 - 502" },
-            { value: "E", label: "398 - 457" },
-            { value: "F", label: "369 - 397" },
-            { value: "G", label: "331 - 368" },
-            { value: "H", label: "0 - 330" }
+            { value: "10", label: "549 - 699" },
+            { value: "9", label: "523 - 548" },
+            { value: "8", label: "503 - 522" },
+            { value: "7", label: "458 - 502" },
+            { value: "6", label: "398 - 457" },
+            { value: "5", label: "369 - 397" },
+            { value: "4", label: "331 - 368" },
+            { value: "3", label: "0 - 330" }
         ],
         condition: answers => answers[10] === "TCF"
     },
@@ -663,14 +739,14 @@ const questionConfig = [
         text: "TCF - Speaking",
         options: [
             { value: "Default", label: "Select a value"},
-            { value: "A", label: "16 - 20" },
-            { value: "B", label: "14 - 15" },
-            { value: "C", label: "12 - 13" },
-            { value: "D", label: "10 - 11" },
-            { value: "E", label: "7 - 9" },
-            { value: "F", label: "6 - 6" },
-            { value: "G", label: "4 - 5" },
-            { value: "H", label: "0 - 3" }
+            { value: "10", label: "16 - 20" },
+            { value: "9", label: "14 - 15" },
+            { value: "8", label: "12 - 13" },
+            { value: "7", label: "10 - 11" },
+            { value: "6", label: "7 - 9" },
+            { value: "5", label: "6 - 6" },
+            { value: "4", label: "4 - 5" },
+            { value: "3", label: "0 - 3" }
         ],
         condition: answers => answers[10] === "TCF"
     },

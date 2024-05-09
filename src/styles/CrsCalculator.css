@@ -16,8 +16,19 @@ label {
     color: #555;
 }
 
+.final-score-display{
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #000000;
+}
+
 .question{
     margin-bottom: 1rem;
+}
+
+select.errorValidation {
+    border: 2px solid red; /* Error indication */
 }
 
 @media (min-width: 1000px){
