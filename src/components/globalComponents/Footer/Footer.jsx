@@ -31,7 +31,7 @@ const Footer = () => {
                 href="https://www.google.com/maps/place/Aquarian+Immigration+Services/@28.4082328,77.070377,15z/data=!4m6!3m5!1s0x390d23f44c7f8021:0x589c7dd32b5c2779!8m2!3d28.4082328!4d77.070377!16s%2Fg%2F11vqm85pq7?entry=ttu"
                 className="address"
               >
-                122a, Suncity Success Tower,
+                122A, Suncity Success Tower,
                 <br /> Sector 65, Gurugram,
                 <br /> Haryana 122102
               </a>
