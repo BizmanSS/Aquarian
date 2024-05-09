@@ -1,37 +1,21 @@
 .form-container {
-    max-width: 600px;
-    margin: 0.5rem 4rem 4rem 4rem;
-    padding: 20px;
+  max-width: 600px;
+  margin: 0.5rem 4rem 4rem 4rem;
+  padding: 20px;
 }
 
 label {
-    font-size: 16px;
-    color: #333;
+  font-size: 16px;
+  color: #333;
 }
 
 .score-display {
-    margin-top: 20px;
-    font-size: 18px;
-    font-weight: bold;
-    color: #555;
+  margin-top: 20px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #555;
 }
 
-.question{
-    margin-bottom: 1rem;
+.question {
+  margin-bottom: 1rem;
 }
-
-@media (min-width: 1000px){
-    /* Specific selector to override the width for select */
-    select {
-        width: 35rem;
-    }
-}
-
-@media (max-width: 1000px) {
-    /* Specific selector to override the width for select */
-    select {
-        width: 100%;
-    }
-}
-
-
