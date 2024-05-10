@@ -22,7 +22,7 @@ const Component2 = () => {
       img: cardimg2,
       title: 'Family Sponsorship',
       description:
-        'Canadians and permanent residents can sponsor spouses, children, parents and grandparents to bring their family together!',
+        'Canadian citizen and permanent residents can sponsor spouses, children, parents and grandparents to bring their family together!',
     },
     {
       img: cardimg3,
@@ -34,7 +34,7 @@ const Component2 = () => {
       img: cardimg4,
       title: 'Work Visa',
       description:
-        'Canadians and permanent residents can sponsor spouses, children, parents and grandparents to bring their family together!',
+        'Tap into the rich and diverse employment market in Canada by successfully obtaining your work visa through our top notch services.',
     },
     {
       img: cardimg5,
@@ -51,8 +51,7 @@ const Component2 = () => {
     {
       img: cardimg7,
       title: 'Business Visa',
-      description:
-        'Establish your name in Canadas dynamic business environment! A Business Visa opens doors for investors, entrepreneurs, and self-employed individuals to establish and grow their ventures in Canada.',
+      description: `Establish your name in Canada's dynamic business environment! A Business Visa opens doors for investors, entrepreneurs, and self-employed individuals to establish and grow their ventures in Canada.`,
     },
     {
       img: cardimg8,
@@ -64,7 +63,7 @@ const Component2 = () => {
       img: cardimg9,
       title: 'Refusals',
       description:
-        'Explore Canadas beauty with a Visitor Visa! Temporary entry allows you to experience stunning landscapes, rich culture, and lasting memories.',
+        'Need not be disheartened if your visa is refused. Our expertise and experience will leave no stone unturned in preparing you for your reviews and re-application.',
     },
   ];
 

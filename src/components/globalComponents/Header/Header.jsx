@@ -20,7 +20,7 @@ const Header = () => {
   const [ismobile, setIsMobile] = useState(false);
   const [isHovering, setIsHovering] = useState(false);
   const [activeItem, setActiveItem] = useState(0);
-  const [selectedProgram, setSelectedProgram] = useState('');
+  const [selectedProgram, setSelectedProgram] = useState(null);
   const [isOpen, setIsOpen] = useState(false);
 
   const menuRef = useRef(null);
@@ -114,11 +114,11 @@ const Header = () => {
     );
   };
   return (
-    <div className='bg-[#000000] rounded-2xl h-[8rem] fixed z-10 top-0 flex flex-col items-center justify-start w-[94%] max-w-[120rem]'>
+    <div className='bg-[#000000] rounded-2xl h-[7rem] fixed z-10 top-0 flex flex-col items-center justify-start w-[94%] max-w-[120rem]'>
       {!ismobile ? (
         <>
           {' '}
-          <div className='bg-[#000000] fixed w-[94%] h-[35px] text-[13px] z-40 flex items-center justify-end max-w-[120rem]'>
+          <div className='bg-[#000000] fixed w-[94%] h-[30px] text-[13px] z-40 flex items-center justify-end max-w-[120rem]'>
             <div className='flex items-center justify-end mr-[0rem]'>
               <p className='px-4 py-1 text-[#939393] cursor-pointer'>
                 <a href='/about-us'>About Us</a>
@@ -177,7 +177,7 @@ const Header = () => {
               </div>
             </div>
           </div>
-          <div className='w-[100%] flex items-center justify-between mt-8 relative'>
+          <div className='w-[100%] flex items-center justify-between mt-4 relative'>
             <a href='/'>
               <img
                 src={logo}
@@ -188,7 +188,7 @@ const Header = () => {
 
             {isHovering ? (
               <ul
-                className={`flex items-center justify-center text-[16px] text-white gap-1 2xl:gap-2 py-3 px-4 absolute left-[16rem] xl:left-[18rem] 2xl:left-[20rem] 3xl:left-[25rem] 4xl:left-[30rem] rounded-t-xl overflow-hidden `}
+                className={`flex items-center justify-center text-[16px] text-white gap-0 2xl:gap-2 py-3 px-4 absolute left-[16rem] xl:left-[18rem] 2xl:left-[20rem] 3xl:left-[25rem] 4xl:left-[30rem] rounded-t-xl overflow-hidden `}
                 onMouseEnter={handleMouseEnter}
                 onMouseLeave={handleMouseLeave}
               >
@@ -264,7 +264,7 @@ const Header = () => {
                 </li>
                 <li
                   onMouseEnter={() => handleItemHover(7)}
-                  className={`cursor-pointer  px-4 py-2.5 w-[6.5rem] flex items-center justify-center ${
+                  className={`cursor-pointer  px-4 py-2.5 w-[7rem] flex items-center justify-center ${
                     activeItem === 7
                       ? 'border-b-[3px] border-b-[#009889] bg-white text-black'
                       : 'border-b-[3px] border-b-transparent'
@@ -275,7 +275,7 @@ const Header = () => {
               </ul>
             ) : (
               <ul
-                className={`flex items-center justify-center text-white text-[16px] gap-1 2xl:gap-2 py-3 px-4 absolute left-[16rem] xl:left-[18rem] 2xl:left-[20rem] 3xl:left-[25rem] 4xl:left-[30rem] rounded-t-xl hover:text-black overflow-hidden `}
+                className={`flex items-center justify-center text-white text-[16px] gap-0 2xl:gap-2 py-3 px-4 absolute left-[16rem] xl:left-[18rem] 2xl:left-[20rem] 3xl:left-[25rem] 4xl:left-[30rem] rounded-t-xl hover:text-black overflow-hidden `}
                 onMouseEnter={handleMouseEnter}
                 onMouseLeave={handleMouseLeave}
               >
@@ -351,7 +351,7 @@ const Header = () => {
                 </li>
                 <li
                   onMouseEnter={() => handleItemHover(7)}
-                  className={`cursor-pointer transition ease-in delay-100 duration-300 px-4 py-2.5 w-[6.5rem] flex items-center justify-center ${
+                  className={`cursor-pointer transition ease-in delay-100 duration-300 px-4 py-2.5 w-[7rem] flex items-center justify-center ${
                     activeItem === 7
                       ? ''
                       : 'border-b-[3px] border-b-transparent'
@@ -363,7 +363,7 @@ const Header = () => {
             )}
             {isHovering && activeItem > 0 && (
               <div
-                className={`h-auto bg-[#FFFEFE] z-40 absolute shadow-2xl top-[4.5rem] left-[17rem] xl:left-[19rem] 2xl:left-[21rem] 3xl:left-[26rem] 4xl:left-[31rem] w-[46.815rem] rounded-b-xl `}
+                className={`h-auto bg-[#FFFEFE] z-40 absolute shadow-2xl top-[4.5rem] left-[17rem] xl:left-[19rem] 2xl:left-[21rem] 3xl:left-[26rem] 4xl:left-[31rem] w-[46.0rem] 2xl:w-[49.0rem] rounded-b-xl `}
                 onMouseEnter={handleMouseEnter}
                 onMouseLeave={handleMouseLeave}
               >
@@ -383,7 +383,7 @@ const Header = () => {
                       <div className='flex items-start justify-center'>
                         <div className='flex flex-col items-start justify-center'>
                           <div className='font-semibold ml-6 text-xl border-b-[2px] border-[#009889] pb-[2px] '>
-                            Immigration
+                            Immigrate
                           </div>
                           <div className='px-6 mt-4 w-[11rem]'>
                             <img src={clipart1} alt='clipart' />
@@ -523,7 +523,7 @@ const Header = () => {
                             className='flex items-center justify-between w-full'
                           >
                             <span className='inset-0 border-b-[2px] border-b-transparent hover:border-[#009889]'>
-                              AGRI FOOD PILOT
+                              Agri Food Pilot
                             </span>
                           </li>
                           <li
