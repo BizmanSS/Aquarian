@@ -46,6 +46,15 @@
   background: #fff;
   box-shadow: 0px 4px 23.6px 0px rgba(0, 0, 0, 0.5);
 }
+
+.sub-heading-content .active {
+  font-weight: 900;
+}
+
+.sub-heading {
+  cursor: pointer;
+}
+
 .line-heading {
   width: 1%;
   border-radius: 3.5px;
@@ -223,20 +232,17 @@
 }
 .text-color-expanded {
   position: absolute;
-  margin-top: -20rem;
+  margin-top: -16rem;
   background-repeat: no-repeat;
-  background-size: cover;
-  width: 30rem;
-  height: 20rem;
-  border-radius: 80px;
+  background-size: 100% 100%;
+  width: 25rem;
+  height: 16rem;
+  border-radius: 60px;
   margin-left: -3%;
   z-index: 9;
 }
 .text-color-expanded p {
-  width: 28rem;
-  height: 18rem;
-  padding: 4rem;
-  padding-left: 4.5rem;
+  padding: 2rem;
   font-size: 15.5px;
 }
 .Integrity .text-color {
@@ -452,17 +458,14 @@
     height: 14rem;
   }
   .text-color-expanded {
-    width: 25rem;
-    height: 18rem;
-    margin-left: -7%;
+    width: 22rem;
+    height: 16rem;
+    margin-left: -5%;
     z-index: 9;
-    margin-top: -18rem;
+    margin-top: -16rem;
   }
   .text-color-expanded p {
-    width: 28rem;
-    height: 18rem;
-    padding: 4rem;
-    padding-right: 5rem;
+    padding: 2rem;
     font-size: 13.5px;
   }
   .downArrow {
@@ -530,10 +533,6 @@
   }
   .content {
     font-size: 48px;
-  }
-  .text-color-expanded p {
-    padding: 4.5rem;
-    font-size: 12.5px;
   }
 }
 

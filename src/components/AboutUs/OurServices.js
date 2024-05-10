@@ -38,7 +38,8 @@ const OurServices = () => {
       Next, we prepare the application forms and gather all the supporting
       documents efficiently. We assist in streamlining this process ensuring
       accuracy and completeness.
-      <br /> <br />
+      <br />
+      <br />
       Trust in our experts to guide you through the smooth submission
       procedures, saving time and eliminating stress along the way.
     </p>,
@@ -64,7 +65,7 @@ const OurServices = () => {
         <div className="text-div">
           <p1>
             Join our community and set off on a unique immigration experience.
-            With more than 30 years of combined experience, we've developed the
+            With 30+ years of combined experience, we have developed the
             knowledge to help you at every stage, making the move to a new
             chapter in your life smooth and successful.
             <br />
