@@ -6,7 +6,7 @@ const Banner = () => {
   const [isPlaying, setIsPlaying] = useState(true);
   const [showPauseButton, setShowPauseButton] = useState(false);
   const [showThumbnail, setShowThumbnail] = useState(false);
-  const [fullScreen, setIsFullScreen] = useState(false);
+
   const videoRef = useRef(null);
 
   useEffect(() => {
@@ -48,9 +48,7 @@ const Banner = () => {
           autoPlay
           // poster={thumbnail}
           muted
-          className={`relative -top-40 -left-[2px] ${
-            isPlaying ? 'w-[100%]' : 'w-[80%]'
-          } h-auto rounded-3xl`}
+          className={`relative -top-40 -left-[2px]  h-auto rounded-3xl`}
           onClick={togglePlay}
           onEnded={onVideoEnd}
         >
