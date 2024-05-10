@@ -17,7 +17,7 @@ import CrsCalculator from './components/Pages/CrsCalculator/CrsCalculator';
 const App = () => {
   const { isMobile } = useMobile();
   return (
-    <div>
+    <div className='max-w-[120rem] mx-auto'>
       <BrowserRouter>
         <MobileProvider>
           {!isMobile && <Sidebar />}
