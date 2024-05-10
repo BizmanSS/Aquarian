@@ -30,7 +30,7 @@
 .address-content {
   position: absolute;
   z-index: 1;
-  margin-top: -10%;
+  top: 180px;
   width: 20%;
   display: block;
   margin-left: 4%;
@@ -56,7 +56,7 @@
 .form-row {
   display: flex;
   justify-content: gap-between;
-  gap: 20%;
+  gap: 12rem;
 }
 .form-group {
   margin-bottom: 20px;
@@ -107,9 +107,6 @@ textarea {
 }
 
 @media (max-width: 1700px) {
-  .address-content {
-    margin-top: -10%;
-  }
   input,
   select,
   .lastname,
@@ -119,11 +116,11 @@ textarea {
   textarea {
     width: 52.4rem;
   }
+  .form-row {
+    gap: 10.8rem;
+  }
 }
 @media (max-width: 1590px) {
-  .address-content {
-    margin-top: -8%;
-  }
   input,
   select,
   .error,
@@ -133,11 +130,11 @@ textarea {
   textarea {
     width: 50rem;
   }
+  .form-row {
+    gap: 10.4rem;
+  }
 }
 @media (max-width: 1400px) {
-  .address-content {
-    margin-top: -6%;
-  }
   input,
   select,
   .error,
@@ -150,12 +147,12 @@ textarea {
   .ContactUsHeader .header-content {
     margin-left: 50%;
   }
+  .form-row {
+    gap: 8.8rem;
+  }
 }
 
 @media (max-width: 1300px) {
-  .address-content {
-    margin-top: -5%;
-  }
   input,
   select,
   .error,
@@ -168,11 +165,11 @@ textarea {
   .ContactUsHeader .header-content {
     margin-left: 50%;
   }
+  .form-row {
+    gap: 7.8rem;
+  }
 }
 @media (max-width: 1000px) {
-  .address-content {
-    margin-top: -3%;
-  }
   input,
   select,
   .error,
@@ -184,6 +181,9 @@ textarea {
   }
   .ContactUsHeader .header-content {
     margin-left: 50%;
+  }
+  .form-row {
+    gap: 5.1rem;
   }
 }
 @media (max-width: 768px) {
@@ -216,15 +216,14 @@ textarea {
   input,
   select,
   .error,
-  .lastname {
-    width: 100%;
-  }
+  .lastname,
   textarea {
     width: 100%;
   }
+
   .address-content {
     position: relative;
-    margin-top: 0%;
+    top: 0px;
     width: 95%;
     display: block;
     margin-left: auto;
