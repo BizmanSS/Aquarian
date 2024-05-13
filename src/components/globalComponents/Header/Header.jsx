@@ -23,6 +23,7 @@ const Header = () => {
   const [selectedProgram, setSelectedProgram] = useState(null);
   const [isOpen, setIsOpen] = useState(false);
   const [textContent, setTextContent] = useState('');
+  const [selectedtext, setSelectedtext] = useState('');
 
   const menuRef = useRef(null);
   useEffect(() => {
@@ -62,6 +63,7 @@ const Header = () => {
     setTextContent('');
     setSelectedProgram('');
     setIsHovering(false);
+    setSelectedtext('');
   };
 
   const handleItemProgramClick = (program) => {
@@ -106,14 +108,19 @@ const Header = () => {
       </article>
     );
   };
-
+  // console.log(selectedtext);
   const HeaderComponent = ({ text }) => {
     return (
-      <ul class=' flex flex-col gap-0 -mt-2 font-normal'>
+      <ul className=' flex flex-col gap-0 -mt-2 font-normal'>
         <li>
-          <details class='group'>
-            <summary class='flex items-center justify-between p-2 font-normal border-b-[2px] border-transparent hover:border-[#009889]  hover:cursor-pointer '>
-              <span class='flex '>
+          <details className='group'>
+            <summary
+              className={`flex items-center justify-between p-2 font-normal transition ease-in delay-0 duration-200 hover:text-[#01997E] hover:font-semibold hover:scale-105 ${
+                selectedtext === text &&
+                'text-[#01997E] font-semibold scale-105'
+              } hover:cursor-pointer hover:scale-105`}
+            >
+              <span className='flex '>
                 <span>{text}</span>
               </span>
             </summary>
@@ -176,7 +183,7 @@ const Header = () => {
                     alt=''
                   />
                 </a>
-                <a href='' className='mx-0 p-2'>
+                <a href='/' className='mx-0 p-2'>
                   <img
                     src={Youtube}
                     className='cursor-pointer w-[1.2rem]'
@@ -903,7 +910,7 @@ const Header = () => {
                       <div className='flex flex-col items-center justify-center'>
                         <ul className='text-[14px]'>
                           <li
-                            onMouseEnter={() =>
+                            onMouseEnter={() => {
                               setTextContent([
                                 'Alberta Opportunity Stream',
                                 'Alberta Express Entry',
@@ -911,40 +918,48 @@ const Header = () => {
                                 'Farm Stream',
                                 'Graduate Entrepreneur Stream',
                                 'Foreign Graduate Entrepreneur Stream',
-                              ])
-                            }
+                              ]);
+                              setSelectedtext(
+                                'Alberta Immigrant Nominee Program'
+                              );
+                            }}
+                            onMouseLeave={() => setTextContent('')}
                           >
                             <HeaderComponent
                               text={'Alberta Immigrant Nominee Program'}
                             />
                           </li>
                           <li
-                            onMouseEnter={() =>
+                            onMouseEnter={() => {
                               setTextContent([
                                 'Skills Immigration Stream',
                                 'BC PNP Tech',
                                 'Entrepreneur Immigration Stream',
-                              ])
-                            }
+                              ]);
+                              setSelectedtext('British Columbia');
+                            }}
+                            onMouseLeave={() => setTextContent('')}
                           >
                             {' '}
                             <HeaderComponent text={'British Columbia'} />
                           </li>
                           <li
-                            onMouseEnter={() =>
+                            onMouseEnter={() => {
                               setTextContent([
                                 'Skilled Workers in Manitoba',
                                 'Skilled Workers Overseas',
                                 'International Education Stream ',
                                 'Business Investor Stream',
-                              ])
-                            }
+                              ]);
+                              setSelectedtext('Manitoba');
+                            }}
+                            onMouseLeave={() => setTextContent('')}
                           >
                             {' '}
                             <HeaderComponent text={'Manitoba'} />
                           </li>
                           <li
-                            onMouseEnter={() =>
+                            onMouseEnter={() => {
                               setTextContent([
                                 'New Brunswick Express Entry Labor Market Stream',
                                 'New Brunswick Strategic Initiative',
@@ -953,14 +968,16 @@ const Header = () => {
                                 'Skilled Worker Applicants with Employer Support	',
                                 'New Brunswick Business Immigration Stream',
                                 'Atlantic Immigration Pilot Program',
-                              ])
-                            }
+                              ]);
+                              setSelectedtext('New Brunswick');
+                            }}
+                            onMouseLeave={() => setTextContent('')}
                           >
                             {' '}
                             <HeaderComponent text={'New Brunswick'} />
                           </li>
                           <li
-                            onMouseEnter={() =>
+                            onMouseEnter={() => {
                               setTextContent([
                                 'Nova Scotia Experience: Express Entry',
                                 ' Entrepreneur Category',
@@ -972,22 +989,26 @@ const Header = () => {
                                 ' Nova Scotia Labor Market Priorities for Physicians	',
                                 ' Occupations In Demand		',
                                 ' Critical Construction Worker Pilot 	',
-                              ])
-                            }
+                              ]);
+                              setSelectedtext('Nova Scotia');
+                            }}
+                            onMouseLeave={() => setTextContent('')}
                           >
                             {' '}
                             <HeaderComponent text={'Nova Scotia'} />
                           </li>
                           <li
-                            onMouseEnter={() =>
+                            onMouseEnter={() => {
                               setTextContent([
                                 'Express Entry Skilled Worker Category',
                                 ' Skilled Worker Category',
                                 'International Graduate Category ',
                                 'International Entrepreneur Category',
                                 'International Graduate Entrepreneur Category	',
-                              ])
-                            }
+                              ]);
+                              setSelectedtext('Newfoundland and Labrador');
+                            }}
+                            onMouseLeave={() => setTextContent('')}
                           >
                             {' '}
                             <HeaderComponent
@@ -995,7 +1016,7 @@ const Header = () => {
                             />{' '}
                           </li>
                           <li
-                            onMouseEnter={() =>
+                            onMouseEnter={() => {
                               setTextContent([
                                 'Northwest Territories Express Entry',
                                 ' Northwest Territories Employer Driven',
@@ -1003,28 +1024,32 @@ const Header = () => {
                                 'Northwest Territories Skilled Worker ',
                                 ' Northwest Territories Business Driven',
                                 ' Northwest Territories Entrepreneur',
-                              ])
-                            }
+                              ]);
+                              setSelectedtext('Northwest Territories');
+                            }}
+                            onMouseLeave={() => setTextContent('')}
                           >
                             {' '}
                             <HeaderComponent text={'Northwest Territories'} />
                           </li>
 
                           <li
-                            onMouseEnter={() =>
+                            onMouseEnter={() => {
                               setTextContent([
                                 'Ontario Human Capital ',
                                 ' Ontario Employer Job Offer',
                                 'Ontario Entrepreneur ',
                                 'Regional Immigration Pilot	 ',
-                              ])
-                            }
+                              ]);
+                              setSelectedtext('Ontario');
+                            }}
+                            onMouseLeave={() => setTextContent('')}
                           >
                             {' '}
                             <HeaderComponent text={'Ontario'} />
                           </li>
                           <li
-                            onMouseEnter={() =>
+                            onMouseEnter={() => {
                               setTextContent([
                                 'PEI PNP Express Entry ',
                                 'Business Impact',
@@ -1034,8 +1059,12 @@ const Header = () => {
                                 'Skilled Worker Outside Canada',
                                 'Critical Worker ',
                                 'International Graduate ',
-                              ])
-                            }
+                              ]);
+                              setSelectedtext(
+                                'Alberta Immigrant Nominee Program'
+                              );
+                            }}
+                            onMouseLeave={() => setTextContent('')}
                           >
                             {' '}
                             <HeaderComponent text={'Prince Edward Island'} />
