@@ -16,6 +16,7 @@ import clipart4 from '../../../Assets/clipart/invest visa.png';
 import clipart5 from '../../../Assets/clipart/visit visa.png';
 import clipart6 from '../../../Assets/clipart/employer visa.png';
 import clipart7 from '../../../Assets/clipart/sponsirship.png';
+
 const Header = () => {
   const [ismobile, setIsMobile] = useState(false);
   const [isHovering, setIsHovering] = useState(false);
@@ -1060,20 +1061,26 @@ const Header = () => {
                                 'Critical Worker ',
                                 'International Graduate ',
                               ]);
-                              setSelectedtext(
-                                'Alberta Immigrant Nominee Program'
-                              );
+                              setSelectedtext('Prince Edward Island');
                             }}
                             onMouseLeave={() => setTextContent('')}
                           >
                             {' '}
                             <HeaderComponent text={'Prince Edward Island'} />
                           </li>
-                          <li>
+                          <li
+                            onMouseEnter={() => {
+                              setSelectedtext('Saskatchewan');
+                            }}
+                          >
                             {' '}
                             <HeaderComponent text={'Saskatchewan'} />
                           </li>
-                          <li>
+                          <li
+                            onMouseEnter={() => {
+                              setSelectedtext('Yukon');
+                            }}
+                          >
                             {' '}
                             <HeaderComponent text={'Yukon'} />
                           </li>
