@@ -41,20 +41,24 @@ const BoxComponents = ({ color, style, imageUrl, data }) => {
           />
         </div>
       )}
-      <div className='flex items-center justify-center'>
-        <div className='text-2xl font-medium'>I WANT TO IMMIGRATE</div>
+      <div className='flex items-start justify-start'>
+        <div>
+          <div className='text-2xl font-medium'>{data.name}</div>
+          <div className='font-semibold tracking-wide text-sm pt-2'>
+            {' '}
+            {data.designation}
+          </div>
+        </div>
         {!hovered && (
-          <div className='text-2xl relative right-2 -top-2'>
+          <div className='text-2xl relative right-2 -top-2 ml-auto'>
             <MdArrowOutward />
           </div>
         )}
       </div>
-      <div className='text-[11px] mt-10 font-light font-mono pr-2 mb-2'>
-        The Express Entry system involves submitting an online profile that is
-        scored by Canada’s Comprehensive Ranking System (CRS). To submit
-        an Express Entry profile, you must first be eligible under one of
-        Canada’s above three federal streams.
+      <div className='text-[11px] mt-8 font-light font-mono pr-2 mb-2'>
+        {data.describe.slice(0, 250)}...
       </div>
+      <div className='text-sm font-mono'>Read more...</div>
     </div>
   );
 };

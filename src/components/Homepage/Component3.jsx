@@ -23,10 +23,10 @@ const Component3 = () => {
               immigration Firm.
             </div>
             <div className='text-[#EEEEEE] mt-10 mb-20 font-thin text-lg pr-14'>
-              “With an ABSOLUTE commitment to EFFICIENCY and TRANSPARENCY,
+              With an ABSOLUTE commitment to EFFICIENCY and TRANSPARENCY,
               Aquarian Immigration offers an ALL-ENCOMPASSING and REVOLUTIONARY
               immigration service through our CERTIFIED team of industry
-              experts, while forging life-long relationships with our clients.”
+              experts, while forging life-long relationships with our clients.
             </div>
             <div className='w-full flex items-center justify-between pr-10 mb-10'>
               <button className='bg-[#01F9E1] text-black px-8 py-3 rounded-sm text-[15px]'>
