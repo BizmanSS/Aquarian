@@ -21,7 +21,7 @@ const TheAquarian = () => {
       <div className="line"></div>
       <div className="text-div">
         <p1>
-          Join our online community and become a part of our 7000+ Aquarianite
+          Join our online community and become a part of our 5000+ Aquarianite
           family. Read testimonials from our happy customers who benefited from
           the quality services we successfully provide for them and their
           families.

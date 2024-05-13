@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import "../../../styles/AboutUs.css";
 import Instagram from "../../../Assets/Instagram_logo.svg";
 import Youtube from "../../../Assets/youtube.png";
@@ -10,9 +10,9 @@ import Competitive from "../../AboutUs/Competitive.js";
 import OurTeam from "../../AboutUs/OurTeam.js";
 import OurServices from "../../AboutUs/OurServices.js";
 import TheAquarian from "../../AboutUs/TheAquarian.js";
-//import AquarianFlower from "../../../Assets/AquarianFlower.jpg";
 import { useMobile } from "../../globalComponents/MobileContext/IsMobileContext.js";
 import { Bounce } from "react-reveal";
+
 const AboutUsPage = () => {
   const { isMobile } = useMobile();
   const whoWeAreRef = useRef(null);
@@ -20,11 +20,42 @@ const AboutUsPage = () => {
   const ourTeamRef = useRef(null);
   const ourServicesRef = useRef(null);
   const theAquarianRef = useRef(null);
+  const subHeadingContentRef = useRef(null);
+  const [activeSection, setActiveSection] = useState(null);
 
   const scrollToRef = (ref) => {
     const scrollTop = ref.current.offsetTop - window.innerHeight * 0.25; // 10% of the window height
     window.scrollTo({ top: scrollTop, behavior: "smooth" });
   };
+
+  useEffect(() => {
+    const sectionRefs = [
+      { section: "whoWeAre", ref: whoWeAreRef },
+      { section: "competitive", ref: competitiveRef },
+      { section: "ourTeam", ref: ourTeamRef },
+      { section: "ourServices", ref: ourServicesRef },
+      { section: "theAquarian", ref: theAquarianRef },
+    ];
+
+    const handleScroll = () => {
+      const scrollPosition = window.scrollY + window.innerHeight * 0.5; // 50% of the window height
+      const currentSection = sectionRefs.find(({ ref }) =>
+        ref.current.offsetTop <= scrollPosition &&
+        ref.current.offsetTop + ref.current.offsetHeight > scrollPosition
+          ? true
+          : false
+      );
+
+      if (currentSection) {
+        setActiveSection(currentSection.section);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   return (
     <div
@@ -42,7 +73,7 @@ const AboutUsPage = () => {
       </div>
       {!isMobile && (
         <Bounce>
-          <div className="sub-heading-content">
+          <div className="sub-heading-content" ref={subHeadingContentRef}>
             <div
               style={{
                 display: "flex",
@@ -57,31 +88,41 @@ const AboutUsPage = () => {
               <div style={{ display: "block" }}>
                 <p
                   onClick={() => scrollToRef(whoWeAreRef)}
-                  className="sub-heading"
+                  className={`sub-heading ${
+                    activeSection === "whoWeAre" ? "active" : ""
+                  }`}
                 >
                   Our Story
                 </p>
                 <p
                   onClick={() => scrollToRef(competitiveRef)}
-                  className="sub-heading"
+                  className={`sub-heading ${
+                    activeSection === "competitive" ? "active" : ""
+                  }`}
                 >
                   How We Stand Out?
                 </p>
                 <p
                   onClick={() => scrollToRef(ourTeamRef)}
-                  className="sub-heading"
+                  className={`sub-heading ${
+                    activeSection === "ourTeam" ? "active" : ""
+                  }`}
                 >
                   Meet Our Visionaries
                 </p>
                 <p
                   onClick={() => scrollToRef(ourServicesRef)}
-                  className="sub-heading"
+                  className={`sub-heading ${
+                    activeSection === "ourServices" ? "active" : ""
+                  }`}
                 >
                   What We Can Do For You?
                 </p>
                 <p
                   onClick={() => scrollToRef(theAquarianRef)}
-                  className="sub-heading"
+                  className={`sub-heading ${
+                    activeSection === "theAquarian" ? "active" : ""
+                  }`}
                 >
                   The Aquarian Community
                 </p>
@@ -145,67 +186,6 @@ const AboutUsPage = () => {
           <TheAquarian />
         </div>
       </div>
-      {/*<div
-        className='below-section'
-        style={{ marginTop: '8rem', paddingBottom: '8rem' }}
-      >
-        <div
-          className='image'
-          style={{
-            backgroundImage: url(${AquarianFlower}),
-            width: '30%',
-            marginLeft: '28%',
-            marginRight: 'auto',
-            display: 'block',
-            backgroundRepeat: 'no-repeat',
-            backgroundSize: 'cover',
-          }}
-        >
-          <h1
-            className='content'
-            style={{ paddingTop: '10%', paddingLeft: '10%', color: '#fff' }}
-          >
-            Ready to
-            <br />
-            start?
-          </h1>
-        </div>
-        <div
-          className='below-image'
-          style={{
-            width: '30%',
-            marginLeft: '48%',
-            marginTop: '-8%',
-          }}
-        >
-          <div
-            className='text-div-below-image'
-            style={{
-              color: '#f2f2f2',
-              marginLeft: '3rem',
-              marginRight: '3rem',
-            }}
-          >
-            <p1>
-              <br />
-              If you are interested in learning more about the immigration
-              process, or if you are ready to embark on the journey that will
-              lead you to Canada, fill out a free online assessment form using
-              the link below or give us a call at 1-514-989-9700. We look
-              forward to serving your needs in a professional manner!
-              <br />
-              <br />
-            </p1>
-            <div className='buttonBelow' ref={buttonBelowRef}>
-              <br />
-              Free Online Assessment Form
-              <br />
-              <br />
-            </div>
-            <br />
-          </div>
-        </div>
-      </div> */}
     </div>
   );
 };

@@ -7,7 +7,8 @@ import One from "../../Assets/one to one solution.png";
 import Efficiency from "../../Assets/Efficiency and Accuracy.png";
 import { useMobile } from "../globalComponents/MobileContext/IsMobileContext";
 import Free from "../../Assets/free assessment.png";
-import dialogBox from "../../Assets/dialog-Box.svg.svg";
+import dialogBox from "../../Assets/dialog-Box.svg.jpg";
+import dialogBox2 from "../../Assets/dialog-Box2.jpg";
 const Competitive = () => {
   const { isMobile } = useMobile();
   const [expandedIndex, setExpandedIndex] = useState({});
@@ -17,11 +18,13 @@ const Competitive = () => {
     "Integrity and Trust",
     "One-on-One Solutions",
   ];
+  const dialog = [dialogBox, dialogBox, dialogBox2];
   const questions2 = ["Efficiency and Accuracy", "Free Online Assessment"];
   const imageAdvantage = [Expertise, Integrity, One];
   const bgColor = ["#FFBBD9", "#FFF9C5", "#C6EED6"];
   const bgColor2 = ["#B3E1F8", "#E6CBF7"];
   const imageAdvantage2 = [Efficiency, Free];
+  const dialogBoxBelow = [dialogBox, dialogBox2];
   const answers = [
     <>
       Being in this field for over 30 years, we have the expertise and
@@ -41,11 +44,11 @@ const Competitive = () => {
         We offer free online assessment tools and consultations making
         immigration to Canada more accessible to you.
         <br />
-        <br />
       </p1>
       <div
         className="button"
         style={{
+          marginTop: "0.7rem",
           width: "80%",
           marginLeft: "auto",
           marginRight: "auto",
@@ -93,10 +96,10 @@ const Competitive = () => {
             immigration process.
             <br />
             <br />
-            In our decades of experience we have helped countless individuals
+            In our decades of experience, we have helped countless individuals
             immigrate to Canada for varying reasons. Even candidates whose visas
-            were earlier refused, managed to get through because of our
-            expertise and knowledge about the ins and outs of the system.
+            were earlier refused managed to get through because of our expertise
+            and knowledge about the ins and outs of the system.
             <br />
             <br />
             We bring to the table certain indispensable qualities that set
@@ -226,7 +229,7 @@ const Competitive = () => {
                         onMouseLeave={() => setExpandedIndex(null)}
                         className="text-color-expanded"
                         style={{
-                          backgroundImage: `url(${dialogBox})`,
+                          backgroundImage: `url(${dialog[index]})`,
                         }}
                       >
                         {/* Content when the box is expanded */}
@@ -275,7 +278,7 @@ const Competitive = () => {
                         onMouseLeave={() => setExpanded(null)}
                         className="text-color-expanded"
                         style={{
-                          backgroundImage: `url(${dialogBox})`,
+                          backgroundImage: `url(${dialogBoxBelow[index]})`,
                         }}
                       >
                         {/* Content when the box is expanded */}
