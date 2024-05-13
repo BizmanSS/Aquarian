@@ -18,14 +18,14 @@
 .infographics .regular {
   position: relative;
   left: 320px;
-  bottom: 315px;
+  bottom: 360px;
   width: 140px;
   cursor: pointer;
 }
 .infographics .preparation {
   position: relative;
   left: 510px;
-  bottom: 735px;
+  bottom: 830px;
   width: 160px;
   cursor: pointer;
 }
@@ -33,19 +33,19 @@
   position: relative;
   left: 715px;
   width: 140px;
-  bottom: 1030px;
+  bottom: 1155px;
   cursor: pointer;
 }
 .infographics .assistance {
   position: relative;
   left: 865px;
-  bottom: 1250px;
+  bottom: 1425px;
   width: 140px;
   cursor: pointer;
 }
 .content {
   position: relative;
-  bottom: 1330px;
+  bottom: 1550px;
 }
 .service-title {
   color: #000;
@@ -88,26 +88,26 @@
   .infographics .regular {
     width: 120px;
     left: 270px;
-    bottom: 285px;
+    bottom: 315px;
   }
   .infographics .preparation {
     width: 140px;
-    left: 420px;
-    bottom: 640px;
+    left: 425px;
+    bottom: 720px;
   }
   .infographics .post {
     width: 120px;
     left: 600px;
-    bottom: 895px;
+    bottom: 1005px;
   }
   .infographics .assistance {
     width: 120px;
     left: 725px;
-    bottom: 1085px;
+    bottom: 1240px;
   }
   .content {
     position: relative;
-    bottom: 1160px;
+    bottom: 1350px;
   }
   .service-title {
     font-size: 55px;
@@ -135,26 +135,26 @@
   .infographics .regular {
     width: 110px;
     left: 240px;
-    bottom: 265px;
+    bottom: 295px;
   }
   .infographics .preparation {
     width: 130px;
     left: 380px;
-    bottom: 600px;
+    bottom: 670px;
   }
   .infographics .post {
     width: 110px;
     left: 540px;
-    bottom: 830px;
+    bottom: 935px;
   }
   .infographics .assistance {
     width: 110px;
     left: 655px;
-    bottom: 1005px;
+    bottom: 1145px;
   }
   .content {
     position: relative;
-    bottom: 1080px;
+    bottom: 1245px;
   }
   .service-title {
     font-size: 55px;
@@ -182,26 +182,26 @@
   .infographics .regular {
     width: 100px;
     left: 210px;
-    bottom: 290px;
+    bottom: 325px;
   }
   .infographics .preparation {
     width: 120px;
     left: 335px;
-    bottom: 600px;
+    bottom: 670px;
   }
   .infographics .post {
     width: 100px;
     left: 480px;
-    bottom: 815px;
+    bottom: 915px;
   }
   .infographics .assistance {
     width: 100px;
     left: 580px;
-    bottom: 975px;
+    bottom: 1105px;
   }
   .content {
     position: relative;
-    bottom: 1045px;
+    bottom: 1215px;
   }
   .service-title {
     font-size: 55px;
