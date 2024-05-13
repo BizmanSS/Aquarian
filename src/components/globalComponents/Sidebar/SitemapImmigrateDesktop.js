@@ -49,7 +49,7 @@ function SitemapImmigrateDesktop() {
         <li key={index}>
           <div className="flex-div">
             <span className={isExpanded ? "extended-title" : ""}>
-              {link.title}
+              &#x2022; {link.title}
             </span>
             {link.nestedLinks && (
               <button onClick={() => toggleExpand(parentIndex + "-" + index)}>
