@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import sitemap from "../../../sitemap";
+import sitemapBusiness from "../../../sitemapBusiness";
 import "../../../styles/SitemapDesktop.css";
-function SitemapDesktop() {
+function SitemapBusinessDesktop() {
   const [expanded, setExpanded] = useState([]);
   const arrowIcon = (
     <svg
@@ -19,7 +19,8 @@ function SitemapDesktop() {
   );
   const arrowIconRotate = (
     <svg
-      stroke="currentColor"
+      stroke="#009889"
+      fill="#009889"
       stroke-width="0"
       viewBox="0 0 448 512"
       class="arrow-icon"
@@ -31,11 +32,12 @@ function SitemapDesktop() {
       <path d="M313.941 216H12c-6.627 0-12 5.373-12 12v56c0 6.627 5.373 12 12 12h301.941v46.059c0 21.382 25.851 32.09 40.971 16.971l86.059-86.059c9.373-9.373 9.373-24.569 0-33.941l-86.059-86.059c-15.119-15.119-40.971-4.411-40.971 16.971V216z"></path>
     </svg>
   );
+
   const toggleExpand = (index) => {
     if (expanded.includes(index)) {
-      setExpanded(expanded.filter((i) => !i.startsWith(index)));
+      setExpanded([]);
     } else {
-      setExpanded([...expanded, index]);
+      setExpanded([index]);
     }
   };
 
@@ -47,7 +49,7 @@ function SitemapDesktop() {
         <li key={index}>
           <div className="flex-div">
             <span className={isExpanded ? "extended-title" : ""}>
-              {link.title}
+              &#x2022; {link.title}
             </span>
             {link.nestedLinks && (
               <button onClick={() => toggleExpand(parentIndex + "-" + index)}>
@@ -56,12 +58,10 @@ function SitemapDesktop() {
             )}
           </div>
 
-          {link.nestedLinks && (
-            <>
-              <ul style={{ display: isExpanded ? "block" : "none" }}>
-                {renderNestedLinks(link.nestedLinks, parentIndex + "-" + index)}
-              </ul>
-            </>
+          {link.nestedLinks && isExpanded && (
+            <ul>
+              {renderNestedLinks(link.nestedLinks, parentIndex + "-" + index)}
+            </ul>
           )}
         </li>
       );
@@ -70,23 +70,43 @@ function SitemapDesktop() {
 
   return (
     <div className="sidebar-main-div-global">
-      <>
-        <ul>
-          {sitemap.map((section, index) => {
-            return (
-              <li key={index}>
+      <ul>
+        {sitemapBusiness.map((section, index) => {
+          const isExpanded = expanded.includes(index);
+
+          return (
+            <li key={index}>
+              <div className="flex-div">
+                <span className={isExpanded ? "extended-title" : ""}>
+                  <div className="side"></div>
+                  {section.title}
+                </span>
                 {section.nestedLinks && (
-                  <>
-                    <ul>{renderNestedLinks(section.nestedLinks, index)}</ul>
-                  </>
+                  <button onClick={() => toggleExpand(index)}>
+                    {isExpanded ? arrowIconRotate : arrowIcon}
+                  </button>
                 )}
-              </li>
-            );
-          })}
-        </ul>
-      </>
+              </div>
+              {section.nestedLinks && isExpanded && (
+                <ul>{renderNestedLinks(section.nestedLinks, index)}</ul>
+              )}
+              <div className="line">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="214"
+                  height="2"
+                  viewBox="0 0 214 2"
+                  fill="none"
+                >
+                  <path d="M0 1H213.5" stroke="#009889" stroke-width="0.6" />
+                </svg>
+              </div>
+            </li>
+          );
+        })}
+      </ul>
     </div>
   );
 }
 
-export default SitemapDesktop;
+export default SitemapBusinessDesktop;

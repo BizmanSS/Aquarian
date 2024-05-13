@@ -66,7 +66,9 @@ const AboutUsPage = () => {
       }}
     >
       <div className="AboutUsHeader">
-        <p className="link">Home {" > "}About Us</p>
+        <p className="link">
+          <a href="/">Home</a> {" > "}About Us
+        </p>
         <div className="header-content">
           <h1 className="heading-about">About Us.</h1>
         </div>
