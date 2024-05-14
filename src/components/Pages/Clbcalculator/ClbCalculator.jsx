@@ -15,11 +15,13 @@ import IltsTable from '../../ClbCalculator.jsx/IltsTable';
 import CelpipTable from '../../ClbCalculator.jsx/CelpipTable';
 import TcfTable from '../../ClbCalculator.jsx/TcfTable';
 import TefTable from '../../ClbCalculator.jsx/TefTable';
+import PteTable from '../../ClbCalculator.jsx/PteTable';
 
 const ClbCalculator = () => {
   const [isDisabled, setIsDisabled] = useState(true);
   const [confettiActive, setConfettiActive] = useState(false);
   const [total, setTotal] = useState(null);
+  const [selectedExam, setSelectedExam] = useState('IELTS');
   const [inputData, setInputData] = useState({
     reading: null,
     writing: null,
@@ -44,7 +46,9 @@ const ClbCalculator = () => {
       [e.target.name]: e.target.value,
     });
   };
-
+  const handleExamChange = (e) => {
+    setSelectedExam(e.target.value);
+  };
   const handleClick = (e) => {
     e.preventDefault();
     if (!inputData) return;
@@ -126,7 +130,7 @@ const ClbCalculator = () => {
       </div>
     );
   };
-
+  // console.log(selectedExam);
   return (
     <div className='flex flex-col items-start justify-center w-[95%]'>
       <div className='mt-[6.9rem]'>
@@ -153,6 +157,8 @@ const ClbCalculator = () => {
                 /> */}
                 <select
                   id='countries'
+                  defaultValue={'IELTS'}
+                  onChange={handleExamChange}
                   className='border-[2px] border-[rgba(1,153,137,0.7)] text-gray-500 focus:border-[#019989] placeholder-gray-500 text-md rounded-lg block w-full p-2.5 outline-none'
                 >
                   {/* <option selected>Choose a country</option> */}
@@ -162,62 +168,744 @@ const ClbCalculator = () => {
                   <option className='text-black' value='CELPIP'>
                     CELPIP (English)
                   </option>
-                  <option className='text-black' value='TPE'>
-                    TPE (English)
+                  <option className='text-black' value='PTE'>
+                    PTE (English)
                   </option>
                   <option className='text-black' value='TCF'>
                     TCF (French)
                   </option>
-                  <option className='text-black' value='TEF '>
+                  <option className='text-black' value='TEF'>
                     TEF (French)
                   </option>
                 </select>
               </div>
               <div className='px-4 pt-4 flex items-center justify-between -mt-3 gap-4 min-w-full'>
-                <input
-                  type='number'
-                  className='border-[2px] border-[rgba(1,153,137,0.7)] text-black focus:border-[#019989] placeholder-gray-500 text-md rounded-lg block w-[10rem] p-2.5 outline-none'
-                  placeholder='Reading'
-                  name='reading'
-                  onChange={handleInputChange}
-                  min={0}
-                  max={10}
-                  step={0.5}
-                />
-
-                <input
-                  type='number'
-                  className='border-[2px] border-[rgba(1,153,137,0.7)] text-black focus:border-[#019989] placeholder-gray-500 text-md rounded-lg block w-[10rem] p-2.5 outline-none'
-                  placeholder='Listening'
-                  name='listening'
-                  onChange={handleInputChange}
-                  min={0}
-                  max={10}
-                  step={0.5}
-                />
+                {/* <input
+                    type='number'
+                    className='border-[2px] border-[rgba(1,153,137,0.7)] text-black focus:border-[#019989] placeholder-gray-500 text-md rounded-lg block w-[10rem] p-2.5 outline-none'
+                    placeholder='Reading'
+                    name='reading'
+                    onChange={handleInputChange}
+                    min={0}
+                    max={10}
+                    step={0.5}
+                  /> */}
+                {selectedExam === 'IELTS' && (
+                  <>
+                    {' '}
+                    <select
+                      id='reading'
+                      className='border-[2px] border-[rgba(1,153,137,0.7)] text-black focus:border-[#019989] placeholder-gray-500 text-md rounded-lg block w-[10rem] p-2.5 outline-none'
+                      placeholder='Reading'
+                      onChange={handleInputChange}
+                      name='reading'
+                    >
+                      <option disabled selected value=''>
+                        Reading
+                      </option>
+                      <option className='text-black' value='10'>
+                        8-9
+                      </option>
+                      <option className='text-black' value='9'>
+                        7-7.5
+                      </option>
+                      <option className='text-black' value='8'>
+                        6.5
+                      </option>
+                      <option className='text-black' value='7'>
+                        6
+                      </option>
+                      <option className='text-black' value='6'>
+                        5-5.5
+                      </option>
+                      <option className='text-black' value='5'>
+                        4-4.5
+                      </option>
+                      <option className='text-black' value='4'>
+                        3.5
+                      </option>
+                    </select>
+                    <select
+                      id='listening'
+                      className='border-[2px] border-[rgba(1,153,137,0.7)] text-black focus:border-[#019989] placeholder-gray-500 text-md rounded-lg block w-[10rem] p-2.5 outline-none'
+                      placeholder='Listening'
+                      onChange={handleInputChange}
+                      name='listening'
+                    >
+                      <option disabled selected value=''>
+                        Listening
+                      </option>
+                      <option className='text-black' value='10'>
+                        8.5-9
+                      </option>
+                      <option className='text-black' value='9'>
+                        8
+                      </option>
+                      <option className='text-black' value='8'>
+                        7.5
+                      </option>
+                      <option className='text-black' value='7'>
+                        6-7
+                      </option>
+                      <option className='text-black' value='6'>
+                        5.5
+                      </option>
+                      <option className='text-black' value='5'>
+                        5
+                      </option>
+                      <option className='text-black' value='4'>
+                        4.5
+                      </option>
+                    </select>
+                  </>
+                )}
+                {selectedExam === 'CELPIP' && (
+                  <>
+                    {' '}
+                    <select
+                      id='reading'
+                      className='border-[2px] border-[rgba(1,153,137,0.7)] text-black focus:border-[#019989] placeholder-gray-500 text-md rounded-lg block w-[10rem] p-2.5 outline-none'
+                      placeholder='Reading'
+                      onChange={handleInputChange}
+                      name='reading'
+                    >
+                      <option disabled selected value=''>
+                        Reading
+                      </option>
+                      <option className='text-black' value='10'>
+                        10
+                      </option>
+                      <option className='text-black' value='9'>
+                        9
+                      </option>
+                      <option className='text-black' value='8'>
+                        8
+                      </option>
+                      <option className='text-black' value='7'>
+                        7
+                      </option>
+                      <option className='text-black' value='6'>
+                        6
+                      </option>
+                      <option className='text-black' value='5'>
+                        5
+                      </option>
+                      <option className='text-black' value='4'>
+                        4
+                      </option>
+                      <option className='text-black' value='3'>
+                        3
+                      </option>
+                    </select>
+                    <select
+                      id='listening'
+                      className='border-[2px] border-[rgba(1,153,137,0.7)] text-black focus:border-[#019989] placeholder-gray-500 text-md rounded-lg block w-[10rem] p-2.5 outline-none'
+                      placeholder='Listening'
+                      onChange={handleInputChange}
+                      name='listening'
+                    >
+                      <option disabled selected value=''>
+                        Listening
+                      </option>
+                      <option className='text-black' value='10'>
+                        10
+                      </option>
+                      <option className='text-black' value='9'>
+                        9
+                      </option>
+                      <option className='text-black' value='8'>
+                        8
+                      </option>
+                      <option className='text-black' value='7'>
+                        7
+                      </option>
+                      <option className='text-black' value='6'>
+                        6
+                      </option>
+                      <option className='text-black' value='5'>
+                        5
+                      </option>
+                      <option className='text-black' value='4'>
+                        4
+                      </option>
+                      <option className='text-black' value='3'>
+                        3
+                      </option>
+                    </select>
+                  </>
+                )}
+                {selectedExam === 'PTE' && (
+                  <>
+                    {' '}
+                    <select
+                      id='reading'
+                      className='border-[2px] border-[rgba(1,153,137,0.7)] text-black focus:border-[#019989] placeholder-gray-500 text-md rounded-lg block w-[10rem] p-2.5 outline-none'
+                      placeholder='Reading'
+                      onChange={handleInputChange}
+                      name='reading'
+                    >
+                      <option disabled selected value=''>
+                        Reading
+                      </option>
+                      <option className='text-black' value='10'>
+                        88-90
+                      </option>
+                      <option className='text-black' value='9'>
+                        78-87
+                      </option>
+                      <option className='text-black' value='8'>
+                        69-77
+                      </option>
+                      <option className='text-black' value='7'>
+                        60-68
+                      </option>
+                      <option className='text-black' value='6'>
+                        51-59
+                      </option>
+                      <option className='text-black' value='5'>
+                        42-50
+                      </option>
+                      <option className='text-black' value='4'>
+                        33-41
+                      </option>
+                      <option className='text-black' value='3'>
+                        24-32
+                      </option>
+                    </select>
+                    <select
+                      id='listening'
+                      className='border-[2px] border-[rgba(1,153,137,0.7)] text-black focus:border-[#019989] placeholder-gray-500 text-md rounded-lg block w-[10rem] p-2.5 outline-none'
+                      placeholder='Listening'
+                      onChange={handleInputChange}
+                      name='listening'
+                    >
+                      <option disabled selected value=''>
+                        Listening
+                      </option>
+                      <option className='text-black' value='10'>
+                        88-90
+                      </option>
+                      <option className='text-black' value='9'>
+                        82-88
+                      </option>
+                      <option className='text-black' value='8'>
+                        71-81
+                      </option>
+                      <option className='text-black' value='7'>
+                        60-70
+                      </option>
+                      <option className='text-black' value='6'>
+                        50-59
+                      </option>
+                      <option className='text-black' value='5'>
+                        39-49
+                      </option>
+                      <option className='text-black' value='4'>
+                        28-38
+                      </option>
+                      <option className='text-black' value='3'>
+                        18-27
+                      </option>
+                    </select>
+                  </>
+                )}
+                {selectedExam === 'TCF' && (
+                  <>
+                    {' '}
+                    <select
+                      id='reading'
+                      className='border-[2px] border-[rgba(1,153,137,0.7)] text-black focus:border-[#019989] placeholder-gray-500 text-md rounded-lg block w-[10rem] p-2.5 outline-none'
+                      placeholder='Reading'
+                      onChange={handleInputChange}
+                      name='reading'
+                    >
+                      <option disabled selected value=''>
+                        Reading
+                      </option>
+                      <option className='text-black' value='10'>
+                        549-699
+                      </option>
+                      <option className='text-black' value='9'>
+                        524-548
+                      </option>
+                      <option className='text-black' value='8'>
+                        499-523
+                      </option>
+                      <option className='text-black' value='7'>
+                        453-498
+                      </option>
+                      <option className='text-black' value='6'>
+                        406-452
+                      </option>
+                      <option className='text-black' value='5'>
+                        375-405
+                      </option>
+                      <option className='text-black' value='4'>
+                        342-374
+                      </option>
+                    </select>
+                    <select
+                      id='listening'
+                      className='border-[2px] border-[rgba(1,153,137,0.7)] text-black focus:border-[#019989] placeholder-gray-500 text-md rounded-lg block w-[10rem] p-2.5 outline-none'
+                      placeholder='Listening'
+                      onChange={handleInputChange}
+                      name='listening'
+                    >
+                      <option disabled selected value=''>
+                        Listening
+                      </option>
+                      <option className='text-black' value='10'>
+                        549-699
+                      </option>
+                      <option className='text-black' value='9'>
+                        523-548
+                      </option>
+                      <option className='text-black' value='8'>
+                        503-522
+                      </option>
+                      <option className='text-black' value='7'>
+                        458-502
+                      </option>
+                      <option className='text-black' value='6'>
+                        406-452
+                      </option>
+                      <option className='text-black' value='5'>
+                        375-405
+                      </option>
+                      <option className='text-black' value='4'>
+                        342-374
+                      </option>
+                    </select>
+                  </>
+                )}
+                {selectedExam === 'TEF' && (
+                  <>
+                    {' '}
+                    <select
+                      id='reading'
+                      className='border-[2px] border-[rgba(1,153,137,0.7)] text-black focus:border-[#019989] placeholder-gray-500 text-md rounded-lg block w-[10rem] p-2.5 outline-none'
+                      placeholder='Reading'
+                      onChange={handleInputChange}
+                      name='reading'
+                    >
+                      <option disabled selected value=''>
+                        Reading
+                      </option>
+                      <option className='text-black' value='10'>
+                        263-300
+                      </option>
+                      <option className='text-black' value='9'>
+                        248-262
+                      </option>
+                      <option className='text-black' value='8'>
+                        233-247
+                      </option>
+                      <option className='text-black' value='7'>
+                        207-232
+                      </option>
+                      <option className='text-black' value='6'>
+                        181-206
+                      </option>
+                      <option className='text-black' value='5'>
+                        151-180
+                      </option>
+                      <option className='text-black' value='4'>
+                        121-150
+                      </option>
+                    </select>
+                    <select
+                      id='listening'
+                      className='border-[2px] border-[rgba(1,153,137,0.7)] text-black focus:border-[#019989] placeholder-gray-500 text-md rounded-lg block w-[10rem] p-2.5 outline-none'
+                      placeholder='Listening'
+                      onChange={handleInputChange}
+                      name='listening'
+                    >
+                      <option disabled selected value=''>
+                        Listening
+                      </option>
+                      <option className='text-black' value='10'>
+                        316-360
+                      </option>
+                      <option className='text-black' value='9'>
+                        298-315
+                      </option>
+                      <option className='text-black' value='8'>
+                        280-297
+                      </option>
+                      <option className='text-black' value='7'>
+                        249-279
+                      </option>
+                      <option className='text-black' value='6'>
+                        217-248
+                      </option>
+                      <option className='text-black' value='5'>
+                        181-216
+                      </option>
+                      <option className='text-black' value='4'>
+                        145-180
+                      </option>
+                    </select>
+                  </>
+                )}
               </div>
               <div className='px-4 pt-4 flex items-center justify-between -mt-3 gap-4'>
-                <input
-                  type='number'
-                  className='border-[2px] border-[rgba(1,153,137,0.7)] text-black focus:border-[#019989] placeholder-gray-500 text-md rounded-lg block w-full p-2.5 outline-none'
-                  placeholder='Writing'
-                  name='writing'
-                  onChange={handleInputChange}
-                  min={0}
-                  max={10}
-                  step={0.5}
-                />
+                {selectedExam === 'IELTS' && (
+                  <>
+                    <select
+                      id='writing'
+                      className='border-[2px] border-[rgba(1,153,137,0.7)] text-black focus:border-[#019989] placeholder-gray-500 text-md rounded-lg block w-[10rem] p-2.5 outline-none'
+                      placeholder='Writing'
+                      onChange={handleInputChange}
+                      name='writing'
+                    >
+                      <option disabled selected value=''>
+                        Writing
+                      </option>
+                      <option className='text-black' value='10'>
+                        7.5-9
+                      </option>
+                      <option className='text-black' value='9'>
+                        7
+                      </option>
+                      <option className='text-black' value='8'>
+                        6.5
+                      </option>
+                      <option className='text-black' value='7'>
+                        6
+                      </option>
+                      <option className='text-black' value='6'>
+                        5.5
+                      </option>
+                      <option className='text-black' value='5'>
+                        5
+                      </option>
+                      <option className='text-black' value='4'>
+                        4-4.5
+                      </option>
+                    </select>
 
-                <input
-                  type='number'
-                  className='border-[2px] border-[rgba(1,153,137,0.7)] text-black focus:border-[#019989] placeholder-gray-500 text-md rounded-lg block w-full p-2.5 outline-none'
-                  placeholder='Speaking'
-                  name='speaking'
-                  onChange={handleInputChange}
-                  min={0}
-                  max={10}
-                  step={0.5}
-                />
+                    <select
+                      id='speaking'
+                      className='border-[2px] border-[rgba(1,153,137,0.7)] text-black focus:border-[#019989] placeholder-gray-500 text-md rounded-lg block w-[10rem] p-2.5 outline-none'
+                      placeholder='Speaking'
+                      onChange={handleInputChange}
+                      name='speaking'
+                    >
+                      <option disabled selected value=''>
+                        Speaking
+                      </option>
+                      <option className='text-black' value='10'>
+                        7.5-9
+                      </option>
+                      <option className='text-black' value='9'>
+                        7
+                      </option>
+                      <option className='text-black' value='8'>
+                        6.5
+                      </option>
+                      <option className='text-black' value='7'>
+                        6
+                      </option>
+                      <option className='text-black' value='6'>
+                        5.5
+                      </option>
+                      <option className='text-black' value='5'>
+                        5
+                      </option>
+                      <option className='text-black' value='4'>
+                        4-4.5
+                      </option>
+                    </select>
+                  </>
+                )}
+                {selectedExam === 'CELPIP' && (
+                  <>
+                    <select
+                      id='writing'
+                      className='border-[2px] border-[rgba(1,153,137,0.7)] text-black focus:border-[#019989] placeholder-gray-500 text-md rounded-lg block w-[10rem] p-2.5 outline-none'
+                      placeholder='Writing'
+                      onChange={handleInputChange}
+                      name='writing'
+                    >
+                      <option disabled selected value=''>
+                        Writing
+                      </option>
+                      <option className='text-black' value='10'>
+                        10
+                      </option>
+                      <option className='text-black' value='9'>
+                        9
+                      </option>
+                      <option className='text-black' value='8'>
+                        8
+                      </option>
+                      <option className='text-black' value='7'>
+                        7
+                      </option>
+                      <option className='text-black' value='6'>
+                        6
+                      </option>
+                      <option className='text-black' value='5'>
+                        5
+                      </option>
+                      <option className='text-black' value='4'>
+                        4
+                      </option>
+                      <option className='text-black' value='3'>
+                        3
+                      </option>
+                    </select>
+
+                    <select
+                      id='speaking'
+                      className='border-[2px] border-[rgba(1,153,137,0.7)] text-black focus:border-[#019989] placeholder-gray-500 text-md rounded-lg block w-[10rem] p-2.5 outline-none'
+                      placeholder='Speaking'
+                      onChange={handleInputChange}
+                      name='speaking'
+                    >
+                      <option disabled selected value=''>
+                        Speaking
+                      </option>
+                      <option className='text-black' value='10'>
+                        10
+                      </option>
+                      <option className='text-black' value='9'>
+                        9
+                      </option>
+                      <option className='text-black' value='8'>
+                        8
+                      </option>
+                      <option className='text-black' value='7'>
+                        7
+                      </option>
+                      <option className='text-black' value='6'>
+                        6
+                      </option>
+                      <option className='text-black' value='5'>
+                        5
+                      </option>
+                      <option className='text-black' value='4'>
+                        4
+                      </option>
+                      <option className='text-black' value='3'>
+                        3
+                      </option>
+                    </select>
+                  </>
+                )}
+                {selectedExam === 'PTE' && (
+                  <>
+                    <select
+                      id='writing'
+                      className='border-[2px] border-[rgba(1,153,137,0.7)] text-black focus:border-[#019989] placeholder-gray-500 text-md rounded-lg block w-[10rem] p-2.5 outline-none'
+                      placeholder='Writing'
+                      onChange={handleInputChange}
+                      name='writing'
+                    >
+                      <option disabled selected value=''>
+                        Writing
+                      </option>
+                      <option className='text-black' value='10'>
+                        90
+                      </option>
+                      <option className='text-black' value='9'>
+                        88-89
+                      </option>
+                      <option className='text-black' value='8'>
+                        79-87
+                      </option>
+                      <option className='text-black' value='7'>
+                        69-78
+                      </option>
+                      <option className='text-black' value='6'>
+                        60-68
+                      </option>
+                      <option className='text-black' value='5'>
+                        51-59
+                      </option>
+                      <option className='text-black' value='4'>
+                        41-50
+                      </option>
+                      <option className='text-black' value='3'>
+                        32-40
+                      </option>
+                    </select>
+
+                    <select
+                      id='speaking'
+                      className='border-[2px] border-[rgba(1,153,137,0.7)] text-black focus:border-[#019989] placeholder-gray-500 text-md rounded-lg block w-[10rem] p-2.5 outline-none'
+                      placeholder='Speaking'
+                      onChange={handleInputChange}
+                      name='speaking'
+                    >
+                      <option disabled selected value=''>
+                        Speaking
+                      </option>
+                      <option className='text-black' value='10'>
+                        89-90
+                      </option>
+                      <option className='text-black' value='9'>
+                        84-88
+                      </option>
+                      <option className='text-black' value='8'>
+                        76-83
+                      </option>
+                      <option className='text-black' value='7'>
+                        68-75
+                      </option>
+                      <option className='text-black' value='6'>
+                        59-67
+                      </option>
+                      <option className='text-black' value='5'>
+                        51-58
+                      </option>
+                      <option className='text-black' value='4'>
+                        42-50
+                      </option>
+                      <option className='text-black' value='3'>
+                        34-41
+                      </option>
+                    </select>
+                  </>
+                )}
+                {selectedExam === 'TCF' && (
+                  <>
+                    <select
+                      id='writing'
+                      className='border-[2px] border-[rgba(1,153,137,0.7)] text-black focus:border-[#019989] placeholder-gray-500 text-md rounded-lg block w-[10rem] p-2.5 outline-none'
+                      placeholder='Writing'
+                      onChange={handleInputChange}
+                      name='writing'
+                    >
+                      <option disabled selected value=''>
+                        Writing
+                      </option>
+                      <option className='text-black' value='10'>
+                        16-20
+                      </option>
+                      <option className='text-black' value='9'>
+                        14-15
+                      </option>
+                      <option className='text-black' value='8'>
+                        12-13
+                      </option>
+                      <option className='text-black' value='7'>
+                        10-11
+                      </option>
+                      <option className='text-black' value='6'>
+                        7-9
+                      </option>
+                      <option className='text-black' value='5'>
+                        6-6
+                      </option>
+                      <option className='text-black' value='4'>
+                        4-5
+                      </option>
+                    </select>
+
+                    <select
+                      id='speaking'
+                      className='border-[2px] border-[rgba(1,153,137,0.7)] text-black focus:border-[#019989] placeholder-gray-500 text-md rounded-lg block w-[10rem] p-2.5 outline-none'
+                      placeholder='Speaking'
+                      onChange={handleInputChange}
+                      name='speaking'
+                    >
+                      <option disabled selected value=''>
+                        Speaking
+                      </option>
+                      <option className='text-black' value='10'>
+                        16-20
+                      </option>
+                      <option className='text-black' value='9'>
+                        14-15
+                      </option>
+                      <option className='text-black' value='8'>
+                        12-13
+                      </option>
+                      <option className='text-black' value='7'>
+                        10-11
+                      </option>
+                      <option className='text-black' value='6'>
+                        7-9
+                      </option>
+                      <option className='text-black' value='5'>
+                        6-6
+                      </option>
+                      <option className='text-black' value='4'>
+                        4-5
+                      </option>
+                    </select>
+                  </>
+                )}
+                {selectedExam === 'TEF' && (
+                  <>
+                    <select
+                      id='writing'
+                      className='border-[2px] border-[rgba(1,153,137,0.7)] text-black focus:border-[#019989] placeholder-gray-500 text-md rounded-lg block w-[10rem] p-2.5 outline-none'
+                      placeholder='Writing'
+                      onChange={handleInputChange}
+                      name='writing'
+                    >
+                      <option disabled selected value=''>
+                        Writing
+                      </option>
+                      <option className='text-black' value='10'>
+                        393-450
+                      </option>
+                      <option className='text-black' value='9'>
+                        371-392
+                      </option>
+                      <option className='text-black' value='8'>
+                        349-370
+                      </option>
+                      <option className='text-black' value='7'>
+                        310-348
+                      </option>
+                      <option className='text-black' value='6'>
+                        271-309
+                      </option>
+                      <option className='text-black' value='5'>
+                        226-270
+                      </option>
+                      <option className='text-black' value='4'>
+                        181-225
+                      </option>
+                    </select>
+
+                    <select
+                      id='speaking'
+                      className='border-[2px] border-[rgba(1,153,137,0.7)] text-black focus:border-[#019989] placeholder-gray-500 text-md rounded-lg block w-[10rem] p-2.5 outline-none'
+                      placeholder='Speaking'
+                      onChange={handleInputChange}
+                      name='speaking'
+                    >
+                      <option disabled selected value=''>
+                        Speaking
+                      </option>
+                      <option className='text-black' value='10'>
+                        393-450
+                      </option>
+                      <option className='text-black' value='9'>
+                        371-392
+                      </option>
+                      <option className='text-black' value='8'>
+                        349-370
+                      </option>
+                      <option className='text-black' value='7'>
+                        310-348
+                      </option>
+                      <option className='text-black' value='6'>
+                        271-309
+                      </option>
+                      <option className='text-black' value='5'>
+                        226-270
+                      </option>
+                      <option className='text-black' value='4'>
+                        181-225
+                      </option>
+                    </select>
+                  </>
+                )}
               </div>
               <div className='flex flex-col items-center justify-center px-4'>
                 {' '}
@@ -348,9 +1036,11 @@ const ClbCalculator = () => {
           </div>
           <div className='w-[90%] flex flex-col items-start justify-center mt-8'>
             <div className='font-semibold text-3xl border-b-[4px] border-[#019989] mt-8'>
-              TPE to CLB Calculator
+              PTE to CLB Calculator
             </div>
-            <div className='bg-[#D9D9D9] w-full h-[350px] rounded-3xl mt-14'></div>
+            <div className=' w-full h-auto rounded-3xl mt-14'>
+              <PteTable />
+            </div>
           </div>
           <div className='w-[90%] flex flex-col items-start justify-center mt-8'>
             <div className='font-semibold text-3xl border-b-[4px] border-[#019989] mt-8'>
