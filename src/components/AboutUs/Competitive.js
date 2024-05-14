@@ -18,13 +18,13 @@ const Competitive = () => {
     "Integrity and Trust",
     "One-on-One Solutions",
   ];
-  const dialog = [dialogBox, dialogBox, dialogBox2];
+  const dialog = [dialogBox2, dialogBox2, dialogBox2];
   const questions2 = ["Efficiency and Accuracy", "Free Online Assessment"];
   const imageAdvantage = [Expertise, Integrity, One];
   const bgColor = ["#FFBBD9", "#FFF9C5", "#C6EED6"];
   const bgColor2 = ["#B3E1F8", "#E6CBF7"];
   const imageAdvantage2 = [Efficiency, Free];
-  const dialogBoxBelow = [dialogBox, dialogBox2];
+  const dialogBoxBelow = [dialogBox2, dialogBox2];
   const answers = [
     <>
       Being in this field for over 30 years, we have the expertise and
@@ -248,8 +248,9 @@ const Competitive = () => {
                     >
                       <div
                         style={{
-                          marginLeft: "2rem",
                           width: "80%",
+                          marginLeft: "auto",
+                          marginRight: "auto",
                         }}
                       >
                         <br />
@@ -297,8 +298,9 @@ const Competitive = () => {
                     >
                       <div
                         style={{
-                          marginLeft: "2rem",
                           width: "80%",
+                          marginLeft: "auto",
+                          marginRight: "auto",
                         }}
                       >
                         <br />

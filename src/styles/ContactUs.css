@@ -58,32 +58,32 @@
   justify-content: gap-between;
   gap: 12rem;
 }
-.form-group {
+.form-row .form-group {
   margin-bottom: 20px;
 }
 
-label {
+.form-row label {
   display: block;
   margin-bottom: 10px;
 }
 
-input,
-select,
-.lastname {
+.form-row input,
+.form-row select,
+.form-row .lastname {
   width: 23.8rem;
   padding: 10px;
   border: 1px solid #009889;
   border-radius: 5px;
   margin-bottom: 10px;
 }
-textarea {
+.form-group textarea {
   width: 59.6rem;
   padding: 10px;
   border: 1px solid #009889;
   border-radius: 5px;
   margin-bottom: 10px;
 }
-.error {
+.form-row .error {
   border-color: #b90124;
   background-color: "#ffe6e6";
   width: 23.8rem;
@@ -107,13 +107,13 @@ textarea {
 }
 
 @media (max-width: 1700px) {
-  input,
-  select,
-  .lastname,
-  .error {
+  .form-row input,
+  .form-row select,
+  .form-row .lastname,
+  .form-row .error {
     width: 20.8rem;
   }
-  textarea {
+  .form-group textarea {
     width: 52.4rem;
   }
   .form-row {
@@ -121,13 +121,13 @@ textarea {
   }
 }
 @media (max-width: 1590px) {
-  input,
-  select,
-  .error,
-  .lastname {
+  .form-row input,
+  .form-row select,
+  .form-row .error,
+  .form-row .lastname {
     width: 19.8rem;
   }
-  textarea {
+  .form-group textarea {
     width: 50rem;
   }
   .form-row {
@@ -135,13 +135,13 @@ textarea {
   }
 }
 @media (max-width: 1400px) {
-  input,
-  select,
-  .error,
-  .lastname {
+  .form-row input,
+  .form-row select,
+  .form-row .error,
+  .form-row .lastname {
     width: 17.8rem;
   }
-  textarea {
+  .form-group textarea {
     width: 44.4rem;
   }
   .ContactUsHeader .header-content {
@@ -153,13 +153,13 @@ textarea {
 }
 
 @media (max-width: 1300px) {
-  input,
-  select,
-  .error,
-  .lastname {
+  .form-row input,
+  .form-row select,
+  .form-row .error,
+  .form-row .lastname {
     width: 14.8rem;
   }
-  textarea {
+  .form-group textarea {
     width: 37.4rem;
   }
   .ContactUsHeader .header-content {
@@ -170,13 +170,13 @@ textarea {
   }
 }
 @media (max-width: 1000px) {
-  input,
-  select,
-  .error,
-  .lastname {
+  .form-row input,
+  .form-row select,
+  .form-row .error,
+  .form-row .lastname {
     width: 12.8rem;
   }
-  textarea {
+  .form-group textarea {
     width: 30.7rem;
   }
   .ContactUsHeader .header-content {
@@ -213,11 +213,11 @@ textarea {
     margin-right: auto;
   }
 
-  input,
-  select,
-  .error,
-  .lastname,
-  textarea {
+  .form-row input,
+  .form-row select,
+  .form-row .error,
+  .form-row .lastname,
+  .form-group textarea {
     width: 100%;
   }
 
