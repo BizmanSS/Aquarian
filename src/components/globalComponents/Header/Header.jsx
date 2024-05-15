@@ -80,21 +80,17 @@ const Header = () => {
   // console.log(selectedProgram);
   const SvgComponent = () => {
     return (
-      <svg
-        className={`w-3 h-3 text-gray-500 transition group-open:rotate-90 ${
-          isOpen ? 'rotate-90' : ''
-        }`}
-        xmlns='http://www.w3.org/2000/svg'
-        width='16'
-        height='16'
-        fill='currentColor'
-        viewBox='0 0 16 16'
-      >
-        <path
-          fill-rule='evenodd'
-          d='M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z'
-        ></path>
-      </svg>
+      <div className=''>
+        <svg
+          xmlns='http://www.w3.org/2000/svg'
+          viewBox='0 0 50 50'
+          width='20px'
+          height='20px'
+        >
+          {' '}
+          <path d='M25,2C12.317,2,2,12.317,2,25s10.317,23,23,23s23-10.317,23-23S37.683,2,25,2z M37,26H26v11h-2V26H13v-2h11V13h2v11h11V26z' />
+        </svg>
+      </div>
     );
   };
 

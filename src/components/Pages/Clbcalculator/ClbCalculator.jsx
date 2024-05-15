@@ -132,7 +132,7 @@ const ClbCalculator = () => {
   };
   // console.log(selectedExam);
   return (
-    <div className='flex flex-col items-start justify-center w-[95%]'>
+    <div className='flex flex-col justify-center w-[95%]'>
       <div className='mt-[6.9rem]'>
         <div className='w-full bg-banner text-white bg-cover bg-no-repeat h-[500px]'>
           <div className='flex items-center justify-between w-full'>
@@ -148,7 +148,7 @@ const ClbCalculator = () => {
               </p>
             </div>
 
-            <div className='bg-white w-auto h-auto mt-[7rem] mr-[6rem] py-3 rounded-2xl'>
+            <div className='bg-white w-auto h-auto mt-[7rem] mr-[6rem] px-1 py-3 rounded-2xl flex flex-col gap-2'>
               <div className='px-4 pt-4'>
                 {/* <input
                   type='text'

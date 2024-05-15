@@ -16,7 +16,7 @@ const BoxComponents = ({ color, style, imageUrl, data }) => {
 
   return (
     <div
-      className={`border-[1px] border-black max-w-[18rem] p-4 relative cursor-pointer bg-[${color}] `}
+      className={`border-[1px] border-black max-w-[18rem] p-4 relative cursor-pointer bg-[${color}]`}
       style={{ ...style, backgroundColor: color }}
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
@@ -44,7 +44,7 @@ const BoxComponents = ({ color, style, imageUrl, data }) => {
       <div className='flex items-start justify-start'>
         <div>
           <div className='text-2xl font-medium'>{data.name}</div>
-          <div className='font-semibold tracking-wide text-sm pt-2'>
+          <div className='font-semibold tracking-wide text-[13px] pt-2'>
             {' '}
             {data.designation}
           </div>
