@@ -16,25 +16,25 @@ const Component2 = () => {
       img: cardimg1,
       title: 'Permanent Residency (PR)',
       description:
-        'Make Canada your permanent home! PR allows you to live, work and study in Canada indefinitely, with access to healthcare and social benefits.',
+        'Make Canada your Permanent home! PR allows you to live, work and study in Canada indefinitely, with access to healthcare and social benefits.',
     },
     {
       img: cardimg2,
       title: 'Family Sponsorship',
       description:
-        'Canadian citizen and permanent residents can sponsor spouses, children, parents and grandparents to bring their family together!',
+        'Canadian Citizen and Permanent Residents can sponsor spouses, children, parents and grandparents to bring their family together!',
     },
     {
       img: cardimg3,
       title: 'Super Visa',
       description:
-        'Enjoy hassle-free family visits! The Super Visa allows parents and grandparents of Canadian citizens and permanent residents to stay for up to two years per visit, with multiple entries.',
+        'Enjoy hassle-free family visits! The Super Visa allows parents and grandparents of Canadian Citizens and Permanent Residents to stay for up to two years per visit, with multiple entries.',
     },
     {
       img: cardimg4,
       title: 'Work Visa',
       description:
-        'Tap into the rich and diverse employment market in Canada by successfully obtaining your work visa through our top notch services.',
+        'Tap into the rich and diverse Employment market in Canada by successfully obtaining your work visa through our top notch services.',
     },
     {
       img: cardimg5,
