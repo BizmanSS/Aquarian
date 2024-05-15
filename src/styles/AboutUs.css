@@ -238,7 +238,6 @@
   width: 25rem;
   height: 16rem;
   border-radius: 60px;
-  margin-left: -3%;
   z-index: 9;
 }
 .text-color-expanded p {
@@ -341,6 +340,7 @@
   font-family: "TT Chocolates";
   font-size: 19px;
   font-style: normal;
+
   font-weight: 400;
 }
 .footer {
@@ -449,7 +449,10 @@
   .designation {
     font-size: 24px;
   }
-
+  .about {
+    padding-right: 1rem;
+    font-size: 18px;
+  }
   .image {
     height: 20rem;
   }
@@ -460,8 +463,8 @@
   .text-color-expanded {
     width: 22rem;
     height: 16rem;
-    margin-left: -5%;
     z-index: 9;
+    margin-left: -1.5rem;
     margin-top: -16rem;
   }
   .text-color-expanded p {
@@ -580,6 +583,9 @@
   }
   .content {
     font-size: 45px;
+  }
+  .about {
+    font-size: 16px;
   }
 }
 @media (max-width: 1350px) {
