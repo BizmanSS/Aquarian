@@ -6,8 +6,12 @@
 .modal {
   width: 60rem;
   height: 35rem;
-  border-radius: 17.057px;
-  background: linear-gradient(143deg, #c1fff9 -10.1%, #41716c 109.81%);
+  border-radius: 15.805px;
+  background: #a6bbf1;
+  border-radius: 14.825px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background: url(../Assets/formBackground.jpg) lightgray 50% / cover no-repeat;
 }
 .form-row-popup label {
   display: block;
@@ -22,6 +26,20 @@
 }
 .form-field {
   padding-left: 3.7rem;
+}
+.form-field img {
+  position: absolute;
+}
+.form-field h1 {
+  color: #1e1e1e;
+  text-align: center;
+  font-family: Poppins;
+  font-size: 32.43px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  margin-left: auto;
+  margin-right: auto;
 }
 .form-row-popup input,
 .form-row-popup select,
@@ -44,11 +62,18 @@ textarea {
   background-color: "#ffe6e6";
   width: 23.8rem;
 }
+.error-label {
+  color: #b90124;
+}
+.form-field .error-message {
+  text-align: center;
+}
 .Submitbutton {
   background-color: rgba(30, 30, 30, 1);
-  padding: 0.5rem 5rem 0.5rem 5rem;
+  padding: 0.5rem 8rem 0.5rem 8rem;
   color: #fff;
   display: block;
+
   margin-left: auto;
   margin-right: auto;
   border-radius: 5px;
@@ -69,7 +94,8 @@ textarea {
   }
   .form-row-popup input,
   .form-row-popup select,
-  .form-row-popup .lastname {
+  .form-row-popup .lastname,
+  .form-row-popup .error {
     padding: 8px;
     width: 20.8rem;
   }

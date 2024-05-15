@@ -68,8 +68,7 @@
 }
 
 .form-row input,
-.form-row select,
-.form-row .lastname {
+.form-row select {
   width: 23.8rem;
   padding: 10px;
   border: 1px solid #009889;
@@ -109,7 +108,6 @@
 @media (max-width: 1700px) {
   .form-row input,
   .form-row select,
-  .form-row .lastname,
   .form-row .error {
     width: 20.8rem;
   }
@@ -123,8 +121,7 @@
 @media (max-width: 1590px) {
   .form-row input,
   .form-row select,
-  .form-row .error,
-  .form-row .lastname {
+  .form-row .error {
     width: 19.8rem;
   }
   .form-group textarea {
@@ -137,8 +134,7 @@
 @media (max-width: 1400px) {
   .form-row input,
   .form-row select,
-  .form-row .error,
-  .form-row .lastname {
+  .form-row .error {
     width: 17.8rem;
   }
   .form-group textarea {
@@ -155,8 +151,7 @@
 @media (max-width: 1300px) {
   .form-row input,
   .form-row select,
-  .form-row .error,
-  .form-row .lastname {
+  .form-row .error {
     width: 14.8rem;
   }
   .form-group textarea {
@@ -172,8 +167,7 @@
 @media (max-width: 1000px) {
   .form-row input,
   .form-row select,
-  .form-row .error,
-  .form-row .lastname {
+  .form-row .error {
     width: 12.8rem;
   }
   .form-group textarea {
@@ -216,7 +210,6 @@
   .form-row input,
   .form-row select,
   .form-row .error,
-  .form-row .lastname,
   .form-group textarea {
     width: 100%;
   }

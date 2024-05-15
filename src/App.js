@@ -20,7 +20,7 @@ import {
 } from "./components/globalComponents/MobileContext/IsMobileContext";
 import ClbCalculator from "./components/Pages/Clbcalculator/ClbCalculator";
 import CrsCalculator from "./components/Pages/CrsCalculator/CrsCalculator";
-
+import Blogs from "./components/Pages/Blogs/Blogs";
 const App = () => {
   const { isMobile } = useMobile();
   return (
@@ -54,6 +54,7 @@ const App = () => {
             />
             <Route path="/clb-calculator" element={<ClbCalculator />} />
             <Route path="/crs-calculator" element={<CrsCalculator />} />
+            <Route path="/blogs" element={<Blogs />} />
           </Routes>
           <Footer />
         </MobileProvider>
