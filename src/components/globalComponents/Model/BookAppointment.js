@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import FormBackground from "../../../Assets/formBackground.png";
 import "../../../styles/BookAppointmentModal.css";
 import "react-toastify/dist/ReactToastify.css";
 import { toast } from "react-toastify";
@@ -77,7 +76,6 @@ const BookAppointmentModel = ({ showForm, setShowForm, dataForm }) => {
           <div
             onClick={(event) => event.stopPropagation()}
             style={{
-              backgroundImage: `url(${FormBackground})`,
               borderRadius: "15px",
               backgroundSize: "cover",
               backgroundRepeat: "no-repeat",

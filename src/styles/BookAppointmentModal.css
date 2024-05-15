@@ -6,6 +6,8 @@
 .modal {
   width: 60rem;
   height: 35rem;
+  border-radius: 17.057px;
+  background: linear-gradient(143deg, #c1fff9 -10.1%, #41716c 109.81%);
 }
 .form-row-popup label {
   display: block;
