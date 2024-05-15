@@ -89,8 +89,6 @@ const BookAppointmentModel = ({ showForm, setShowForm, dataForm }) => {
               zIndex: "99",
               outline: "2px solid transparent",
               outlineOffset: "2px",
-              width: "60rem",
-              height: "35rem",
               marginLeft: "auto",
               marginRight: "auto",
               marginTop: "auto",
@@ -98,14 +96,11 @@ const BookAppointmentModel = ({ showForm, setShowForm, dataForm }) => {
             }}
             className="modal"
           >
-            <div
-              style={{
-                paddingLeft: "3.7rem",
-              }}
-            >
+            <div className="form-field">
               <form onSubmit={handleSubmit}>
                 <div className="fullName">
                   <label>Full Name*</label>
+                  <br />
                   <input
                     type="text"
                     value={fullName}

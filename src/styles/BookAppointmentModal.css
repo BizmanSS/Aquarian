@@ -3,7 +3,10 @@
   justify-content: gap-between;
   gap: 5rem;
 }
-
+.modal {
+  width: 60rem;
+  height: 35rem;
+}
 .form-row-popup label {
   display: block;
   margin-bottom: 5px;
@@ -14,6 +17,9 @@
   border: 1px solid #009889;
   border-radius: 5px;
   margin-bottom: 10px;
+}
+.form-field {
+  padding-left: 3.7rem;
 }
 .form-row-popup input,
 .form-row-popup select,
@@ -46,4 +52,27 @@ textarea {
   border-radius: 5px;
   cursor: pointer;
   font-size: 20px;
+}
+@media (max-width: 1700px) {
+  .modal {
+    width: 50rem;
+    height: 32rem;
+  }
+  .fullName input {
+    width: 46.6rem;
+    padding: 8px;
+  }
+  .form-field {
+    padding-left: 1.7rem;
+  }
+  .form-row-popup input,
+  .form-row-popup select,
+  .form-row-popup .lastname {
+    padding: 8px;
+    width: 20.8rem;
+  }
+  textarea {
+    width: 46.6rem;
+    padding: 8px;
+  }
 }
