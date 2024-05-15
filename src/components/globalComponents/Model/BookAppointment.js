@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import FormBackground from "../../../Assets/formBackground.png";
 import "../../../styles/BookAppointmentModal.css";
 import "react-toastify/dist/ReactToastify.css";
 import { toast } from "react-toastify";
@@ -77,7 +76,6 @@ const BookAppointmentModel = ({ showForm, setShowForm, dataForm }) => {
           <div
             onClick={(event) => event.stopPropagation()}
             style={{
-              backgroundImage: `url(${FormBackground})`,
               borderRadius: "15px",
               backgroundSize: "cover",
               backgroundRepeat: "no-repeat",
@@ -89,8 +87,6 @@ const BookAppointmentModel = ({ showForm, setShowForm, dataForm }) => {
               zIndex: "99",
               outline: "2px solid transparent",
               outlineOffset: "2px",
-              width: "60rem",
-              height: "35rem",
               marginLeft: "auto",
               marginRight: "auto",
               marginTop: "auto",
@@ -98,14 +94,11 @@ const BookAppointmentModel = ({ showForm, setShowForm, dataForm }) => {
             }}
             className="modal"
           >
-            <div
-              style={{
-                paddingLeft: "3.7rem",
-              }}
-            >
+            <div className="form-field">
               <form onSubmit={handleSubmit}>
                 <div className="fullName">
                   <label>Full Name*</label>
+                  <br />
                   <input
                     type="text"
                     value={fullName}
