@@ -13,7 +13,7 @@
 }
 .AboutUsHeader .link {
   color: #e2e2e2;
-  font-family: "TT Chocolates";
+  font-family: 'TT Chocolates';
   font-size: 16px;
   font-style: normal;
   font-weight: 500;
@@ -62,7 +62,7 @@
 }
 .sub-heading {
   color: #009889;
-  font-family: "TT Chocolates";
+  font-family: 'TT Chocolates';
   font-size: 20px;
   font-style: normal;
   font-weight: 500;
@@ -72,7 +72,7 @@
 }
 .follow {
   color: #555;
-  font-family: "TT Chocolates";
+  font-family: 'TT Chocolates';
   font-size: 22px;
   font-style: normal;
   font-weight: 500;
@@ -167,7 +167,7 @@
 .Competitve h1,
 .Integrity h1 {
   color: #000;
-  font-family: "Goudy Old Style";
+  font-family: 'Goudy Old Style';
   font-size: 35px;
   font-style: normal;
   font-weight: 600;
@@ -175,7 +175,7 @@
 }
 .WhoWe h3 {
   color: #000;
-  font-family: "Goudy Old Style";
+  font-family: 'Goudy Old Style';
   font-size: 25px;
   font-style: italic;
   font-weight: 600;
@@ -261,7 +261,7 @@
 .TheAquarian .text-div p1,
 .text-div-color p1 {
   color: #000;
-  font-family: "TT Chocolates";
+  font-family: 'TT Chocolates';
   font-size: 22px;
   font-style: normal;
   font-weight: 400;
@@ -274,7 +274,7 @@
   padding: 25px;
   text-align: center;
   color: #000;
-  font-family: "Goudy Old Style";
+  font-family: 'Goudy Old Style';
   font-size: 22px;
   font-style: normal;
   font-weight: 600;
@@ -321,7 +321,7 @@
 }
 .Name {
   color: #fff;
-  font-family: "Goudy Old Style";
+  font-family: 'Goudy Old Style';
   font-size: 35px;
   font-style: normal;
   font-weight: 600;
@@ -329,7 +329,7 @@
 }
 .designation {
   color: #d2d2d2;
-  font-family: "Goudy Old Style";
+  font-family: 'Goudy Old Style';
   font-size: 25px;
   font-style: normal;
   font-weight: 600;
@@ -337,7 +337,7 @@
 }
 .about {
   color: #fff;
-  font-family: "TT Chocolates";
+  font-family: 'TT Chocolates';
   font-size: 19px;
   font-style: normal;
 
@@ -349,14 +349,14 @@
   height: auto;
   --tw-bg-opacity: 1;
   background-color: rgb(0 0 0 / var(--tw-bg-opacity));
-  z-index: 999;
+  z-index: 40;
 }
 .image {
   height: 22rem;
 }
 .content {
   font-size: 55px;
-  font-family: "freight-big-pro";
+  font-family: 'freight-big-pro';
 }
 .below-image {
   background-color: #343436;
@@ -370,7 +370,7 @@
   width: 70%;
   text-align: center;
   color: #fff;
-  font-family: "Goudy Old Style";
+  font-family: 'Goudy Old Style';
   font-size: 22px;
   font-style: normal;
   font-weight: 600;
@@ -386,7 +386,7 @@
 .OurTeam h5,
 .TheAquarian h5 {
   color: #000;
-  font-family: "Goudy Old Style";
+  font-family: 'Goudy Old Style';
   font-size: 45px;
   font-style: normal;
   font-weight: 600;

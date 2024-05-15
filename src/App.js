@@ -20,6 +20,7 @@ import {
 } from './components/globalComponents/MobileContext/IsMobileContext';
 import ClbCalculator from './components/Pages/Clbcalculator/ClbCalculator';
 import CrsCalculator from './components/Pages/CrsCalculator/CrsCalculator';
+
 const App = () => {
   const { isMobile } = useMobile();
   return (
@@ -27,7 +28,7 @@ const App = () => {
       <BrowserRouter>
         <MobileProvider>
           {!isMobile && <Sidebar />}
-          <Header />
+          <Header />{' '}
           <Routes>
             <Route path='/' element={<HomePage />} />
             <Route path='/about-us' element={<AboutUs />} />
