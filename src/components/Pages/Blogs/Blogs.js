@@ -1,10 +1,8 @@
 import React from "react";
 import "../../../styles/Blogs.css";
-import { useMobile } from "../../globalComponents/MobileContext/IsMobileContext";
 import BlogDummy from "../../../Assets/blogDummyImage.png";
 import sideBlog from "../../../Assets/sideBlogDummy.png";
 const BlogPosts = () => {
-  const { isMobile } = useMobile();
   const posts = [
     {
       title: "New Year Edition: Top UI/UX Design trends rushing to us in 2021",
@@ -76,7 +74,7 @@ const BlogPosts = () => {
     return (
       <div className="post-card-recent">
         <a href={path}>
-          <img src={image} />
+          <img alt="" src={image} />
         </a>
         <div>
           <h1>{title}</h1>
@@ -108,7 +106,7 @@ const BlogPosts = () => {
     return (
       <div className="post-card-recent">
         <a href={path}>
-          <img src={image} />
+          <img alt="" src={image} />
         </a>
         <div>
           <h1>{title}</h1>
@@ -140,7 +138,7 @@ const BlogPosts = () => {
     return (
       <div className="post-card-recent">
         <a href={path}>
-          <img src={image} />
+          <img alt="" src={image} />
         </a>
         <div>
           <h1>{title}</h1>
@@ -155,7 +153,7 @@ const BlogPosts = () => {
     return (
       <div className="post-card">
         <a href={path}>
-          <img src={image} />
+          <img alt="" src={image} />
         </a>
         <p1>{date}</p1>
         <h1>{title}</h1>
