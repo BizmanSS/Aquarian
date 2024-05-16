@@ -135,7 +135,7 @@ const Header = () => {
   };
   return (
     <>
-      <div className='bg-[#000000] rounded-2xl h-[7rem] fixed z-10 top-0 flex flex-col items-center justify-start w-[94%] max-w-[120rem]'>
+      <div className='bg-[#000000] rounded-2xl h-[7rem] fixed z-10 top-0 flex flex-col items-center justify-start w-[94%] 7xl:w-[95%] 7xl:-ml-[1.2rem] max-w-[140rem] 8xl:-ml-[3rem] '>
         {!ismobile ? (
           <>
             {' '}
@@ -477,29 +477,31 @@ const Header = () => {
                       )}
                     </div> */}
                     {activeItem === 1 && (
-                      <div className=' w-[30%] h-auto flex items-start justify-start mt-4'>
+                      <div className=' w-[45%] h-auto flex items-start justify-start mt-4'>
                         <div className='flex flex-col items-start justify-start'>
                           <ul className='text-[15px] flex flex-col items-start justify-start gap-3 '>
                             <li
                               onMouseEnter={() =>
                                 handleItemProgramClick('Express Entry')
                               }
-                              className={`flex items-center justify-between w-full hover:text-[#01997E] hover:font-semibold  hover:scale-105 transition ease-in delay-0 duration-200 cursor-pointer ${
+                              className={`flex items-center justify-between w-full  hover:font-semibold  transition ease-in delay-0 duration-200 cursor-pointer ${
                                 selectedProgram === 'Express Entry' &&
                                 'text-[#01997E] font-semibold scale-105'
                               }`}
                             >
-                              <span className=''>Express Entry</span>{' '}
+                              <span className='w-full hover:bg-[#01997E] hover:text-white p-1 transition ease-in delay-30'>
+                                Express Entry
+                              </span>{' '}
                               <SvgComponent isOpen={isOpen} />
                             </li>
                             <li
                               onMouseEnter={() => handleItemProgramClick('PNP')}
-                              className={`flex items-center justify-between w-full hover:text-[#01997E] hover:font-semibold  hover:scale-105 transition ease-in delay-0 duration-200 cursor-pointer ${
+                              className={`flex items-center justify-between w-full hover:font-semibold transition ease-in delay-0 duration-200 cursor-pointer ${
                                 selectedProgram === 'PNP' &&
                                 'text-[#01997E] font-semibold scale-105'
                               }`}
                             >
-                              <span className=''>
+                              <span className='w-full hover:bg-[#01997E] hover:text-white p-1 transition ease-in delay-30'>
                                 Provincial Nominee Program (PNP)
                               </span>{' '}
                               <SvgComponent isOpen={isOpen} />
@@ -510,25 +512,29 @@ const Header = () => {
                                   'After Permanent Residency'
                                 )
                               }
-                              className={`flex items-center justify-between w-full hover:text-[#01997E] hover:font-semibold  hover:scale-105 transition ease-in delay-0 duration-200 cursor-pointer ${
+                              className={`flex items-center justify-between w-full hover:font-semibold transition ease-in delay-0 duration-200 cursor-pointer ${
                                 selectedProgram ===
                                   'After Permanent Residency' &&
                                 'text-[#01997E] font-semibold scale-105'
                               }`}
                             >
-                              After Permanent Residency{' '}
+                              <span className='w-full hover:bg-[#01997E] hover:text-white p-1 transition ease-in delay-30'>
+                                After Permanent Residency
+                              </span>
                               <SvgComponent isOpen={isOpen} />
                             </li>
                             <li
                               onMouseEnter={() =>
                                 handleItemProgramClick('AGRI FOOD PILOT')
                               }
-                              className={`flex items-center justify-between w-full hover:text-[#01997E] hover:font-semibold  hover:scale-105 transition ease-in delay-0 duration-200 cursor-pointer ${
+                              className={`flex items-center justify-between w-full hover:font-semibold transition ease-in delay-0 duration-200 cursor-pointer ${
                                 selectedProgram === 'AGRI FOOD PILOT' &&
                                 'text-[#01997E] font-semibold scale-105'
                               }`}
                             >
-                              <span className=''>Agri Food Pilot</span>
+                              <span className='w-full hover:bg-[#01997E] hover:text-white p-1 transition ease-in delay-30'>
+                                Agri Food Pilot
+                              </span>
                             </li>
                             <li
                               onMouseEnter={() =>
@@ -536,36 +542,42 @@ const Header = () => {
                                   'Atlantic Immigration Programme'
                                 )
                               }
-                              className={`flex items-center justify-between w-full hover:text-[#01997E] hover:font-semibold  hover:scale-105 transition ease-in delay-0 duration-200 cursor-pointer ${
+                              className={`flex items-center justify-between w-full hover:font-semibold transition ease-in delay-0 duration-200 cursor-pointer ${
                                 selectedProgram ===
                                   'Atlantic Immigration Programme' &&
                                 'text-[#01997E] font-semibold scale-105'
                               }`}
                             >
-                              Atlantic Immigration Programme{' '}
+                              <span className='w-full hover:bg-[#01997E] hover:text-white p-1 transition ease-in delay-30'>
+                                Atlantic Immigration Programme
+                              </span>
                             </li>
                             <li
                               onMouseEnter={() =>
                                 handleItemProgramClick('Business Class')
                               }
-                              className={`flex items-center justify-between w-full hover:text-[#01997E] hover:font-semibold  hover:scale-105 transition ease-in delay-0 duration-200 cursor-pointer ${
+                              className={`flex items-center justify-between w-full hover:font-semibold transition ease-in delay-0 duration-200 cursor-pointer ${
                                 selectedProgram === 'Business Class' &&
                                 'text-[#01997E] font-semibold scale-105'
                               }`}
                             >
-                              <span className=''>Business Class</span>{' '}
+                              <span className='w-full hover:bg-[#01997E] hover:text-white p-1 transition ease-in delay-30'>
+                                Business Class
+                              </span>{' '}
                               <SvgComponent isOpen={isOpen} />
                             </li>
                             <li
                               onMouseEnter={() =>
                                 handleItemProgramClick('Caregiver Program')
                               }
-                              className={`flex items-center justify-between w-full hover:text-[#01997E] hover:font-semibold  hover:scale-105 transition ease-in delay-0 duration-200 cursor-pointer ${
+                              className={`flex items-center justify-between w-full hover:font-semibold transition ease-in delay-0 duration-200 cursor-pointer ${
                                 selectedProgram === 'Caregiver Program' &&
                                 'text-[#01997E] font-semibold scale-105'
                               }`}
                             >
-                              <span className=''>Caregiver Program</span>{' '}
+                              <span className='w-full hover:bg-[#01997E] hover:text-white p-1 transition ease-in delay-30'>
+                                Caregiver Program
+                              </span>{' '}
                               <SvgComponent isOpen={isOpen} />
                             </li>
                             <li
@@ -574,13 +586,15 @@ const Header = () => {
                                   'Canadian Immigration FAQs'
                                 )
                               }
-                              className={`flex items-center justify-between w-full hover:text-[#01997E] hover:font-semibold  hover:scale-105 transition ease-in delay-0 duration-200 cursor-pointer ${
+                              className={`flex items-center justify-between w-full hover:font-semibold transition ease-in delay-0 duration-200 cursor-pointer ${
                                 selectedProgram ===
                                   'Canadian Immigration FAQs' &&
                                 'text-[#01997E] font-semibold scale-105'
                               }`}
                             >
-                              Canadian Immigration FAQs{' '}
+                              <span className='w-full hover:bg-[#01997E] hover:text-white p-1 transition ease-in delay-30'>
+                                Canadian Immigration FAQs
+                              </span>
                             </li>
                             <li
                               onMouseEnter={() =>
@@ -588,24 +602,28 @@ const Header = () => {
                                   'Rural And Northern Immigration Pilot'
                                 )
                               }
-                              className={`flex items-center justify-between w-full hover:text-[#01997E] hover:font-semibold  hover:scale-105 transition ease-in delay-0 duration-200 cursor-pointer ${
+                              className={`flex items-center justify-between w-full hover:font-semibold transition ease-in delay-0 duration-200 cursor-pointer ${
                                 selectedProgram ===
                                   'Rural And Northern Immigration Pilot' &&
                                 'text-[#01997E] font-semibold scale-105'
                               }`}
                             >
-                              Rural And Northern Immigration Pilot{' '}
+                              <span className='w-full hover:bg-[#01997E] hover:text-white p-1 transition ease-in delay-30'>
+                                Rural And Northern Immigration Pilot
+                              </span>
                             </li>
                             <li
                               onMouseEnter={() =>
                                 handleItemProgramClick('TR to PR Route')
                               }
-                              className={`flex items-center justify-between w-full hover:text-[#01997E] hover:font-semibold  hover:scale-105 transition ease-in delay-0 duration-200 cursor-pointer ${
+                              className={`flex items-center justify-between w-full hover:font-semibold transition ease-in delay-0 duration-200 cursor-pointer ${
                                 selectedProgram === 'TR to PR Route' &&
                                 'text-[#01997E] font-semibold scale-105'
                               }`}
                             >
-                              <span className=''>TR to PR Route</span>
+                              <span className='w-full hover:bg-[#01997E] hover:text-white p-1 transition ease-in delay-30'>
+                                TR to PR Route
+                              </span>
                             </li>
                           </ul>
                         </div>

@@ -161,7 +161,9 @@ const ClbCalculator = () => {
                   onChange={handleExamChange}
                   className='border-[2px] border-[rgba(1,153,137,0.7)] text-gray-500 focus:border-[#019989] placeholder-gray-500 text-md rounded-lg block w-full p-2.5 outline-none'
                 >
-                  {/* <option selected>Choose a country</option> */}
+                  <option disabled selected value=''>
+                    Choose your exam
+                  </option>
                   <option className='text-black' value='IELTS'>
                     IELTS (English)
                   </option>
