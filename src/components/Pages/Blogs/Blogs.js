@@ -158,7 +158,10 @@ const BlogPosts = () => {
         <p1>{date}</p1>
         <h1>{title}</h1>
         <p2>
-          {description} <a href={path}>Read more...</a>
+          {description}{" "}
+          <a style={{ color: "#b90124", fontStyle: "italic" }} href={path}>
+            Read more...
+          </a>
         </p2>
       </div>
     );
