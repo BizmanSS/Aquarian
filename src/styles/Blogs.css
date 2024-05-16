@@ -73,17 +73,17 @@
 }
 .post-card-recent h1 {
   color: #313030;
-  font-size: 18.426px;
+  font-size: 16px;
   font-style: normal;
-  font-weight: 700;
+  font-weight: 600;
   line-height: normal;
   padding: 0.2rem 0.7rem 0rem 0.7rem;
 }
 .post-card h1 {
   color: #313030;
-  font-size: 23px;
+  font-size: 22px;
   font-style: normal;
-  font-weight: 700;
+  font-weight: 600;
   line-height: normal;
   margin-bottom: 10px;
 }
@@ -149,10 +149,10 @@
     font-size: 16.7px;
   }
   .post-card-recent h1 {
-    font-size: 16px;
+    font-size: 15px;
   }
   .post-card-recent p2 {
-    font-size: 14px;
+    font-size: 13.5px;
   }
 }
 @media (max-width: 1460px) {
@@ -174,13 +174,13 @@
     font-size: 14.7px;
   }
   .post-card h1 {
-    font-size: 20px;
+    font-size: 18px;
   }
   .post-card p2 {
-    font-size: 16.5px;
+    font-size: 14.5px;
   }
   .post-card-recent h1 {
-    font-size: 14.3px;
+    font-size: 13px;
   }
   .post-card-recent p2 {
     font-size: 12px;
