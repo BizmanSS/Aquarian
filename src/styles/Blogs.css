@@ -13,7 +13,6 @@
 }
 .BlogHeader .link {
   color: #e2e2e2;
-  font-family: "TT Chocolates";
   font-size: 16px;
   font-style: normal;
   font-weight: 500;
@@ -30,4 +29,165 @@
 }
 .header-content h1 {
   text-align: center;
+}
+.left-blog {
+  display: flex;
+  margin-left: 10%;
+}
+.post-card {
+  width: 420px;
+  flex-shrink: 0;
+  border-radius: 15px;
+  background: #ececec;
+  padding: 1rem;
+  margin-left: 5rem;
+  margin-bottom: 5rem;
+}
+.post-card-recent {
+  border-radius: 5px;
+  background: #ececec;
+  width: 420px;
+  display: flex;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+}
+.post-card img {
+  margin-bottom: 1rem;
+}
+.title-heading {
+  color: #000;
+  font-family: "Goudy Old Style";
+  font-size: 35px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+.post-card p1 {
+  color: #717171;
+  text-align: center;
+  font-family: "Poppins";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+.post-card-recent h1 {
+  color: #313030;
+  font-size: 18.426px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  padding: 0.2rem 0.7rem 0rem 0.7rem;
+}
+.post-card h1 {
+  color: #313030;
+  font-size: 23px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  margin-bottom: 10px;
+}
+.post-card p2 {
+  color: #626262;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.post-card-recent p2 {
+  color: #313030;
+  font-size: 15px;
+  font-style: normal;
+  padding-left: 0.7rem;
+  font-weight: 400;
+}
+.blog-cards {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 2fr));
+}
+@media (max-width: 1780px) {
+  .left-blog {
+    margin-left: 6%;
+  }
+}
+@media (max-width: 1700px) {
+  .post-card {
+    margin-left: 3.5rem;
+    margin-bottom: 3.5rem;
+  }
+}
+@media (max-width: 1600px) {
+  .left-blog {
+    margin-left: 4%;
+  }
+}
+@media (max-width: 1580px) {
+  .post-card-recent {
+    width: 400px;
+  }
+  .post-card {
+    width: 400px;
+  }
+}
+@media (max-width: 1520px) {
+  .post-card {
+    width: 370px;
+  }
+  .left-blog {
+    margin-left: 6.7%;
+  }
+  .post-card-recent {
+    width: 370px;
+  }
+  .post-card p1 {
+    font-size: 14.7px;
+  }
+  .post-card h1 {
+    font-size: 21px;
+  }
+  .post-card p2 {
+    font-size: 16.7px;
+  }
+  .post-card-recent h1 {
+    font-size: 16px;
+  }
+  .post-card-recent p2 {
+    font-size: 14px;
+  }
+}
+@media (max-width: 1460px) {
+  .left-blog {
+    margin-left: 4%;
+  }
+}
+@media (max-width: 1400px) {
+  .post-card {
+    width: 320px;
+  }
+  .left-blog {
+    margin-left: 8%;
+  }
+  .post-card-recent {
+    width: 320px;
+  }
+  .post-card p1 {
+    font-size: 14.7px;
+  }
+  .post-card h1 {
+    font-size: 20px;
+  }
+  .post-card p2 {
+    font-size: 16.5px;
+  }
+  .post-card-recent h1 {
+    font-size: 14.3px;
+  }
+  .post-card-recent p2 {
+    font-size: 12px;
+  }
+}
+@media (max-width: 1310px) {
+  .left-blog {
+    margin-left: 4%;
+  }
 }
