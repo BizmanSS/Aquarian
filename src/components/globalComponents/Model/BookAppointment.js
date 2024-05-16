@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from "react";
 import "../../../styles/BookAppointmentModal.css";
 import "react-toastify/dist/ReactToastify.css";
+import formLogo from "../../../Assets/formLogo.png";
 import { toast } from "react-toastify";
 const BookAppointmentModel = ({ showForm, setShowForm, dataForm }) => {
-  const [fullName, setFullName] = useState("");
+  const [firstName, setFirstName] = useState("");
+  const [lastName, setLastName] = useState("");
   const [email, setEmail] = useState("");
   const [contactNumber, setContactNumber] = useState("");
   const [timeSlot, setTimeSlot] = useState("");
@@ -16,8 +18,22 @@ const BookAppointmentModel = ({ showForm, setShowForm, dataForm }) => {
     e.preventDefault();
     const errorObject = {};
 
-    if (!fullName) {
-      errorObject.fullName = "Full Name is required";
+    if (
+      !firstName ||
+      !lastName ||
+      !email ||
+      !contactNumber ||
+      !timeSlot ||
+      !service ||
+      (service === "Other" && !serviceOther)
+    ) {
+      toast.error("Please fill out all required fields.", {});
+    }
+    if (!firstName) {
+      errorObject.firstName = "First Name is required";
+    }
+    if (!lastName) {
+      errorObject.lastName = "Last Name is required";
     }
     if (!email) {
       errorObject.email = "Email Address is required";
@@ -38,7 +54,8 @@ const BookAppointmentModel = ({ showForm, setShowForm, dataForm }) => {
     if (Object.keys(errorObject).length > 0) {
       setErrors(errorObject);
     } else {
-      setFullName("");
+      setFirstName("");
+      setLastName("");
       setEmail("");
       setContactNumber("");
       setTimeSlot("");
@@ -46,9 +63,7 @@ const BookAppointmentModel = ({ showForm, setShowForm, dataForm }) => {
       setServiceOther("");
       setComments("");
       setErrors("");
-      toast.success("You have Successfully booked your Appointment!", {
-        position: "top-center",
-      });
+      toast.success("You have Successfully booked your Appointment!");
       setShowForm(false);
     }
   };
@@ -95,52 +110,68 @@ const BookAppointmentModel = ({ showForm, setShowForm, dataForm }) => {
             className="modal"
           >
             <div className="form-field">
+              <div style={{ display: "flex", marginBottom: "1rem" }}>
+                <img src={formLogo} alt="" />
+                <h1>Book Your Appointment</h1>
+              </div>
               <form onSubmit={handleSubmit}>
-                <div className="fullName">
-                  <label>Full Name*</label>
-                  <br />
-                  <input
-                    type="text"
-                    value={fullName}
-                    onChange={(e) => setFullName(e.target.value)}
-                    className={errors.fullName ? "error" : ""}
-                  />
-                  {errors.fullName && (
-                    <div className="error-message">{errors.fullName}</div>
-                  )}
+                <div className="form-row-popup">
+                  <div className="form-group">
+                    <label className={errors.firstName ? "error-label" : ""}>
+                      First Name *
+                    </label>
+                    <input
+                      type="text"
+                      value={firstName}
+                      onChange={(e) => setFirstName(e.target.value)}
+                      className={errors.firstName ? "error" : ""}
+                    />
+                  </div>
+
+                  <div className="form-group">
+                    <label className={errors.lastName ? "error-label" : ""}>
+                      Last Name *{" "}
+                    </label>
+                    <input
+                      type="text"
+                      value={lastName}
+                      className={errors.lastName ? "error" : ""}
+                      onChange={(e) => setLastName(e.target.value)}
+                    />
+                  </div>
                 </div>
                 <div className="form-row-popup">
                   <div className="form-group">
-                    <label>Email Address *</label>
+                    <label className={errors.email ? "error-label" : ""}>
+                      Email Address *
+                    </label>
                     <input
                       type="email"
                       value={email}
                       onChange={(e) => setEmail(e.target.value)}
                       className={errors.email ? "error" : ""}
                     />
-                    {errors.email && (
-                      <div className="error-message">{errors.email}</div>
-                    )}
                   </div>
 
                   <div className="form-group">
-                    <label>Contact Number *</label>
+                    <label
+                      className={errors.contactNumber ? "error-label" : ""}
+                    >
+                      Contact Number *
+                    </label>
                     <input
                       type="tel"
                       value={contactNumber}
                       onChange={(e) => setContactNumber(e.target.value)}
                       className={errors.contactNumber ? "error" : ""}
                     />
-                    {errors.contactNumber && (
-                      <div className="error-message">
-                        {errors.contactNumber}
-                      </div>
-                    )}
                   </div>
                 </div>
                 <div className="form-row-popup">
                   <div className="form-group">
-                    <label>Preferred Time Slot *</label>
+                    <label className={errors.timeSlot ? "error-label" : ""}>
+                      Preferred Time Slot *
+                    </label>
                     <select
                       value={timeSlot}
                       className={errors.timeSlot ? "error" : ""}
@@ -152,13 +183,12 @@ const BookAppointmentModel = ({ showForm, setShowForm, dataForm }) => {
                       <option value="3 P.M. - 6 P.M.">3 P.M. - 6 P.M.</option>
                       <option value="Anytime">Anytime</option>
                     </select>
-                    {errors.timeSlot && (
-                      <div className="error-message">{errors.timeSlot}</div>
-                    )}
                   </div>
 
                   <div className="form-group">
-                    <label>Which Service you are interested in? *</label>
+                    <label className={errors.service ? "error-label" : ""}>
+                      Which Service you are interested in? *
+                    </label>
                     <select
                       value={service}
                       className={errors.service ? "error" : ""}
@@ -174,33 +204,30 @@ const BookAppointmentModel = ({ showForm, setShowForm, dataForm }) => {
                       <option value="Visit">Visit</option>
                       <option value="Other">Other</option>
                     </select>
-                    {errors.service && (
-                      <div className="error-message">{errors.service}</div>
-                    )}
-                    {service === "Other" && (
-                      <div>
-                        <label>Please Specify Your Service *</label>
-                        <input
-                          type="text"
-                          value={serviceOther}
-                          onChange={(e) => setServiceOther(e.target.value)}
-                          className={errors.serviceOther ? "error" : ""}
-                        />
-                        {errors.serviceOther && (
-                          <div className="error-message">
-                            {errors.serviceOther}
-                          </div>
-                        )}
-                      </div>
-                    )}
                   </div>
                 </div>
-
-                <label>Comments (Optional)</label>
-                <textarea
-                  value={comments}
-                  onChange={(e) => setComments(e.target.value)}
-                />
+                {service === "Other" && (
+                  <div>
+                    <label className={errors.serviceOther ? "error-label" : ""}>
+                      Please Specify Your Service *
+                    </label>
+                    <textarea
+                      type="text"
+                      value={serviceOther}
+                      onChange={(e) => setServiceOther(e.target.value)}
+                      className={errors.serviceOther ? "error" : ""}
+                    />
+                  </div>
+                )}
+                {service !== "Other" && (
+                  <>
+                    <label>Comments (Optional)</label>
+                    <textarea
+                      value={comments}
+                      onChange={(e) => setComments(e.target.value)}
+                    />
+                  </>
+                )}
 
                 <button className="Submitbutton" type="submit">
                   Submit
