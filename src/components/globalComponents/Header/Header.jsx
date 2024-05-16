@@ -384,22 +384,18 @@ const Header = () => {
               )}
               {isHovering && activeItem > 0 && (
                 <div
-                  className={`h-auto bg-[#FFFEFE] z-40 absolute shadow-2xl top-[4.5rem] left-[17rem] xl:left-[19rem] 2xl:left-[21rem] 3xl:left-[26rem] 4xl:left-[31rem] w-[56.0rem] 2xl:w-[59.0rem] rounded-b-xl `}
+                  className={`h-auto bg-[#FFFEFE] px-4 z-40 absolute shadow-2xl top-[4.5rem] left-[17rem] xl:left-[19rem] 2xl:left-[21rem] 3xl:left-[26rem] 4xl:left-[31rem] w-[56.0rem] 2xl:w-[59.0rem] rounded-b-xl `}
                   onMouseEnter={handleMouseEnter}
                   onMouseLeave={handleMouseLeave}
                 >
                   <div className='flex flex-col items-center justify-center'></div>
                   <div
-                    className={`flex items-start justify-start p-4 ${
+                    className={`flex items-start justify-start p-4 gap-8 ${
                       activeItem === 0 ? 'none' : 'block'
                     }`}
                   >
-                    <div className=' w-[25%] h-auto flex flex-col items-start justify-start '>
-                      {/* {activeItem === 0 && (
-                      <div className='font-semibold ml-6 text-xl border-b-[2px] border-[#009889] pb-[2px] -mt-4'>
-                        Home
-                      </div>
-                    )} */}
+                    {/* <div className=' w-[25%] h-auto flex flex-col items-start justify-start '>
+                      
                       {activeItem === 1 && (
                         <div className='flex items-start justify-center'>
                           <div className='flex flex-col items-start justify-center'>
@@ -409,10 +405,7 @@ const Header = () => {
                             <div className='px-6 mt-4 w-[11rem]'>
                               <img src={clipart1} alt='clipart' />
                             </div>
-                            {/* <div className='text-[11px] text-[#009889] pl-6 flex items-center justify-center mt-4'>
-                            Explore Immigration{' '}
-                            <IoIosArrowForward className='relative top-[1px]' />
-                          </div> */}
+                           
                           </div>
                         </div>
                       )}
@@ -424,10 +417,7 @@ const Header = () => {
                           <div className='px-6 mt-4 w-[11rem]'>
                             <img src={clipart2} alt='clipart' />
                           </div>
-                          {/* <div className='text-[11px] text-[#009889] pl-6 flex items-center justify-center mt-4'>
-                          Explore Work{' '}
-                          <IoIosArrowForward className='relative top-[1px]' />
-                        </div> */}
+                          
                         </>
                       )}
                       {activeItem === 3 && (
@@ -438,10 +428,7 @@ const Header = () => {
                           <div className='px-6 mt-4 w-[11rem]'>
                             <img src={clipart3} alt='clipart' />
                           </div>
-                          {/* <div className='text-[11px] text-[#009889] pl-6 flex items-center justify-center mt-4'>
-                          Explore Study{' '}
-                          <IoIosArrowForward className='relative top-[1px]' />
-                        </div> */}
+                         
                         </>
                       )}
                       {activeItem === 4 && (
@@ -452,10 +439,7 @@ const Header = () => {
                           <div className='px-6 mt-4 w-[11rem]'>
                             <img src={clipart4} alt='clipart' />
                           </div>
-                          {/* <div className='text-[11px] text-[#009889] pl-6 flex items-center justify-center mt-4'>
-                          Explore Invest{' '}
-                          <IoIosArrowForward className='relative top-[1px]' />
-                        </div> */}
+                         
                         </>
                       )}
                       {activeItem === 5 && (
@@ -466,10 +450,7 @@ const Header = () => {
                           <div className='px-6 mt-4 w-[11rem]'>
                             <img src={clipart5} alt='clipart' />
                           </div>
-                          {/* <div className='text-[11px] text-[#009889] pl-6 flex items-center justify-center mt-4'>
-                          Explore Visit{' '}
-                          <IoIosArrowForward className='relative top-[1px]' />
-                        </div> */}
+                         
                         </>
                       )}
                       {activeItem === 6 && (
@@ -480,10 +461,7 @@ const Header = () => {
                           <div className='px-6 mt-4 w-[11rem]'>
                             <img src={clipart6} alt='clipart' />
                           </div>
-                          {/* <div className='text-[11px] text-[#009889] pl-6 flex items-center justify-center mt-4'>
-                          Explore Employers{' '}
-                          <IoIosArrowForward className='relative top-[1px]' />
-                        </div> */}
+                         
                         </>
                       )}
                       {activeItem === 7 && (
@@ -494,13 +472,10 @@ const Header = () => {
                           <div className='px-6 mt-4 w-[11rem]'>
                             <img src={clipart7} alt='clipart' />
                           </div>
-                          {/* <div className='text-[11px] text-[#009889] pl-6 flex items-center justify-center mt-4'>
-                          Explore Sponsorship{' '}
-                          <IoIosArrowForward className='relative top-[1px]' />
-                        </div> */}
+                         
                         </>
                       )}
-                    </div>
+                    </div> */}
                     {activeItem === 1 && (
                       <div className=' w-[30%] h-auto flex items-start justify-start mt-4'>
                         <div className='flex flex-col items-start justify-start'>
@@ -1471,11 +1446,11 @@ const Header = () => {
                           </div>
                         </div>
                       )}
-                    {activeItem === 1 && selectedProgram === 'PNP' && (
-                      <div className='w-[20%]'>
+                    {/* {activeItem === 1 && selectedProgram === 'PNP' && (
+                      <div className='w-[30%]'>
                         <HeaderComponentTextContent textContent={textContent} />
                       </div>
-                    )}
+                    )} */}
                   </div>
                 </div>
               )}
