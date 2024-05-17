@@ -1,8 +1,37 @@
-import React from "react";
-import "../../../styles/Blogs.css";
-import BlogDummy from "../../../Assets/blogDummyImage.png";
-import sideBlog from "../../../Assets/sideBlogDummy.png";
+import React,{ useState, useEffect} from "react";
+import "../../styles/Blogs.css";
+import BlogDummy from "../../Assets/blogDummyImage.png";
+import sideBlog from "../../Assets/sideBlogDummy.png";
+import innerBlog from "../../Assets/innerBlog.png";
 const BlogPosts = () => {
+    const [showBackToTop, setShowBackToTop] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      // Check if the Home > Blogs > Inner Blogs link is visible
+      const innerBlogsLink = document.querySelector(".link");
+      if (innerBlogsLink) {
+        const bounding = innerBlogsLink.getBoundingClientRect();
+        if (bounding.top >= 0 && bounding.bottom <= window.innerHeight) {
+          setShowBackToTop(false);
+        } else {
+          setShowBackToTop(true);
+        }
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth", // Smooth scrolling behavior
+    });
+  };
   const posts = [
     {
       title: "New Year Edition: Top UI/UX Design trends rushing to us in 2021",
@@ -10,7 +39,7 @@ const BlogPosts = () => {
         "The Federal Skilled Worker (FSW) program is one of the three programs contained within Canada's Express",
       date: "24 December",
       image: BlogDummy,
-      path: "/blogs/innerBlog",
+      path: "",
     },
     {
       title: "New Year Edition: Top UI/UX Design trends rushing to us in 2021",
@@ -18,7 +47,7 @@ const BlogPosts = () => {
         "The Federal Skilled Worker (FSW) program is one of the three programs contained within Canada's Express",
       date: "24 December",
       image: BlogDummy,
-      path: "/blogs/innerBlog",
+      path: "",
     },
     {
       title: "New Year Edition: Top UI/UX Design trends rushing to us in 2021",
@@ -26,36 +55,12 @@ const BlogPosts = () => {
         "The Federal Skilled Worker (FSW) program is one of the three programs contained within Canada's Express",
       date: "24 December",
       image: BlogDummy,
-      path: "/blogs/innerBlog",
-    },
-    {
-      title: "New Year Edition: Top UI/UX Design trends rushing to us in 2021",
-      description:
-        "The Federal Skilled Worker (FSW) program is one of the three programs contained within Canada's Express",
-      date: "24 December",
-      image: BlogDummy,
-      path: "/blogs/innerBlog",
-    },
-    {
-      title: "New Year Edition: Top UI/UX Design trends rushing to us in 2021",
-      description:
-        "The Federal Skilled Worker (FSW) program is one of the three programs contained within Canada's Express",
-      date: "24 December",
-      image: BlogDummy,
-      path: "/blogs/innerBlog",
-    },
-    {
-      title: "New Year Edition: Top UI/UX Design trends rushing to us in 2021",
-      description:
-        "The Federal Skilled Worker (FSW) program is one of the three programs contained within Canada's Express",
-      date: "24 December",
-      image: BlogDummy,
-      path: "/blogs/innerBlog",
+      path: "",
     },
   ];
   const BlogPost = ({ title, description, date, image, path }) => {
     return (
-      <div className="post-card">
+      <div className="post-card-similar">
         <a href={path}>
           <img alt="" src={image} />
         </a>
@@ -74,17 +79,17 @@ const BlogPosts = () => {
     {
       title: "New Year Edition: Top UI/UX Design trends rushing to us in 2021",
       image: sideBlog,
-      path: "/blogs/innerBlog",
+      path: "",
     },
     {
       title: "New Year Edition: Top UI/UX Design trends rushing to us in 2021",
       image: sideBlog,
-      path: "/blogs/innerBlog",
+      path: "",
     },
     {
       title: "New Year Edition: Top UI/UX Design trends rushing to us in 2021",
       image: sideBlog,
-      path: "/blogs/innerBlog",
+      path: "",
     },
   ];
   const RecentBlogs = ({ title, image, path }) => {
@@ -106,17 +111,17 @@ const BlogPosts = () => {
     {
       title: "New Year Edition: Top UI/UX Design trends rushing to us in 2021",
       image: sideBlog,
-      path: "/blogs/innerBlog",
+      path: "",
     },
     {
       title: "New Year Edition: Top UI/UX Design trends rushing to us in 2021",
       image: sideBlog,
-      path: "/blogs/innerBlog",
+      path: "",
     },
     {
       title: "New Year Edition: Top UI/UX Design trends rushing to us in 2021",
       image: sideBlog,
-      path: "/blogs/innerBlog",
+      path: "",
     },
   ];
   const TrendingBlogs = ({ title, image, path }) => {
@@ -138,17 +143,17 @@ const BlogPosts = () => {
     {
       title: "New Year Edition: Top UI/UX Design trends rushing to us in 2021",
       image: sideBlog,
-      path: "/blogs/innerBlog",
+      path: "",
     },
     {
       title: "New Year Edition: Top UI/UX Design trends rushing to us in 2021",
       image: sideBlog,
-      path: "/blogs/innerBlog",
+      path: "",
     },
     {
       title: "New Year Edition: Top UI/UX Design trends rushing to us in 2021",
       image: sideBlog,
-      path: "/blogs/innerBlog",
+      path: "",
     },
   ];
   const LatestBlogs = ({ title, image, path }) => {
@@ -167,17 +172,66 @@ const BlogPosts = () => {
     );
   };
   
+  const innerPosts = [
+    {
+      title: "New Year Edition: Top UI/UX Design trends rushing to us in 2021",
+      description:
+        <p>In the heart of a bustling city, where the skyline is painted with towering skyscrapers and the streets hum with the rhythm of life, there exists a quaint little café tucked away in a quiet corner. Its name, whispered among the locals with a fondness reserved for cherished secrets, is "Serenity Brews."
+        <br/><br/>
+        As you step through the door, a wave of warmth envelops you, both from
+        the aromatic embrace of freshly brewed coffee and the genuine smiles of
+        the baristas behind the counter. The air is alive with the symphony of
+        clinking cups, murmured conversations, and the occasional burst of
+        laughter.
+        <br/><br/>
+        Finding a cozy nook by the window, you sink into a plush armchair, letting the
+        soft melodies of a jazz ensemble drifting from hidden speakers lull you into
+        a state of peaceful contemplation. The world outside seems to fade away,
+        leaving only the comforting presence of this sanctuary of caffeine and
+        camaraderie.
+        <br/><br/>
+        The menu offers an array of delights, from velvety lattes adorned with
+        intricate latte art to flaky pastries that promise a symphony of flavors with
+        each delicate bite. You indulge in a steaming cup of their signature blend,
+        savoring every sip as it dances across your palate, awakening your senses
+        with its rich, complex notes.
+        <br/><br/>
+        As you gaze out the window, watching the ebb and flow of city life, you can't
+        help but feel grateful for this moment of respite amidst the chaos. In a
+        world where time never seems to stand still, places like Serenity Brews serve
+        as gentle reminders to slow down, breathe, and appreciate the simple
+        pleasures that make life truly meaningful.</p>,
+      date: "24 December",
+      image: innerBlog,
+     
+    },
+];
+const InnerBlog = ({ title, description, date, image}) => {
+    return (
+      <div className="post-card-inner">
+        
+          <img alt="" src={image} />
+       
+        <p1>{date}</p1>
+        <h1>{title}</h1>
+        <p2>
+          {description}
+        </p2>
+      </div>
+    );
+  };
 
   return (
+    <>
     <div style={{ marginTop: "10rem", background: "#FFF" }}>
-    
+     
       <div className="BlogHeader">
         <p className="link">
           <a href="/">Home</a>
-          {" > "}Blogs
+          {" > "}<a href="/blogs">Blogs</a>{" > "}Inner Blog Title
         </p>
         <div className="header-content">
-          <h1 className="heading-about">Welcome to Our Blogs</h1>
+          <h1 className="heading-about">Blog Title</h1>
         </div>
       </div>
       <div className="left-blog">
@@ -202,14 +256,33 @@ const BlogPosts = () => {
           </div>
         </div>
         <div className="blog-cards-container">
+        
           <div className="blog-cards">
+            {innerPosts.map((post, index) => (
+              <InnerBlog key={index} {...post} />
+            ))}
+          </div>
+        </div>
+      </div>
+      <div className="similar-blog">
+       <div className="similar-div-heading">
+       <h1 className="title-heading">Similar Blogs</h1>
+       <a href="/blogs">All Articles</a>
+       </div><br/>
+          <div className="blog-cards-similar">
             {posts.map((post, index) => (
               <BlogPost key={index} {...post} />
             ))}
           </div>
         </div>
-      </div>
+        
     </div>
+    {showBackToTop && (
+        <div className="backToTop" onClick={scrollToTop}>
+          BACK TO TOP
+        </div>
+      )}
+    </>
   );
 };
 

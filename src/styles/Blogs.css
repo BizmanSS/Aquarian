@@ -34,7 +34,11 @@
   display: flex;
   margin-left: 10%;
 }
-.post-card {
+.similar-blog{
+  display: block;
+  margin-left: 10%;
+}
+.post-card, .post-card-similar, .post-card-inner {
   width: 420px;
   flex-shrink: 0;
   border-radius: 15px;
@@ -42,6 +46,12 @@
   padding: 1rem;
   margin-left: 5rem;
   margin-bottom: 5rem;
+}
+.post-card-inner{
+  width:980px;
+}
+.post-card-similar{
+  margin-left: 0rem;
 }
 .post-card-recent {
   border-radius: 5px;
@@ -51,7 +61,7 @@
   margin-top: 1rem;
   margin-bottom: 2rem;
 }
-.post-card img {
+.post-card img, .post-card-similar img, .post-card-inner img {
   margin-bottom: 1rem;
 }
 .title-heading {
@@ -61,8 +71,23 @@
   font-style: normal;
   font-weight: 600;
   line-height: normal;
+  
 }
-.post-card p1 {
+.similar-div-heading{
+  display: flex;
+}
+.similar-div-heading a{
+  align-items: center;
+  align-self: center;
+  color: #000;
+font-family: "TT Chocolates";
+font-size: 27px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+margin-left: 67%;
+}
+.post-card p1, .post-card-similar p1, .post-card-inner p1 {
   color: #717171;
   text-align: center;
   font-family: "Poppins";
@@ -79,7 +104,7 @@
   line-height: normal;
   padding: 0.2rem 0.7rem 0rem 0.7rem;
 }
-.post-card h1 {
+.post-card h1,  .post-card-similar h1, .post-card-inner h1{
   color: #313030;
   font-size: 22px;
   font-style: normal;
@@ -87,7 +112,7 @@
   line-height: normal;
   margin-bottom: 10px;
 }
-.post-card p2 {
+.post-card p2,  .post-card-similar p2, .post-card-inner p2 {
   color: #626262;
   font-size: 18px;
   font-style: normal;
@@ -105,47 +130,102 @@
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 2fr));
 }
+.blog-cards-similar{
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 3fr));
+  margin-right: 6%;
+}
+.backToTop {
+  position: fixed;
+  transform: rotate(-90deg);
+  bottom: 14%;
+  right: 1.2%;
+  color: #009889;
+font-family: "TT Chocolates";
+font-size: 25px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+letter-spacing: 6.65px;
+ 
+  cursor: pointer;
+ /* Ensure it's above other elements */
+}
+
+.backToTop:hover {
+  color: #555;
+}
+
 @media (max-width: 1780px) {
   .left-blog {
     margin-left: 6%;
   }
+  .similar-blog{
+    margin-left: 6%;
+  }
+  .post-card-inner{
+    width:900px;
+  }
+  .backToTop{
+    right:0%;
+    bottom: 16%;
+  }
 }
 @media (max-width: 1700px) {
-  .post-card {
+  .post-card  {
     margin-left: 3.5rem;
     margin-bottom: 3.5rem;
   }
+  .post-card-inner{
+    width:850px;
+  }
+
+
 }
+
 @media (max-width: 1600px) {
   .left-blog {
     margin-left: 4%;
+  }
+  .similar-blog{
+    margin-left: 4%;
+  }
+  .backToTop{
+    right:-0.5%;
+    bottom: 18%;
   }
 }
 @media (max-width: 1580px) {
   .post-card-recent {
     width: 400px;
   }
-  .post-card {
+  .post-card, .post-card-similar {
     width: 400px;
+  }
+  .post-card-inner{
+    width:800px;
   }
 }
 @media (max-width: 1520px) {
-  .post-card {
+  .post-card,  .post-card-similar {
     width: 370px;
   }
   .left-blog {
     margin-left: 6.7%;
   }
+  .similar-blog{
+    margin-left: 6.7%;
+  }
   .post-card-recent {
     width: 370px;
   }
-  .post-card p1 {
+  .post-card p1 ,  .post-card-similar p1, .post-card-inner p1{
     font-size: 14.7px;
   }
-  .post-card h1 {
+  .post-card h1,  .post-card-similar h1, .post-card-inner h1 {
     font-size: 21px;
   }
-  .post-card p2 {
+  .post-card p2, .post-card-similar p2, .post-card-inner p2 {
     font-size: 16.7px;
   }
   .post-card-recent h1 {
@@ -154,29 +234,46 @@
   .post-card-recent p2 {
     font-size: 13.5px;
   }
+  .post-card-inner{
+    width:760px;
+  }
+  .backToTop{
+    right:-1%;
+    font-size: 20px;
+    bottom: 18%;
+  }
 }
 @media (max-width: 1460px) {
   .left-blog {
     margin-left: 4%;
   }
+  .similar-blog{
+    margin-left: 4%;
+  }
+  .similar-div-heading a{
+  margin-left: 65%;
+  }
 }
 @media (max-width: 1400px) {
-  .post-card {
+  .post-card, .post-card-similar {
     width: 320px;
   }
   .left-blog {
     margin-left: 8%;
   }
+  .similar-blog{
+    margin-left: 8%;
+  }
   .post-card-recent {
     width: 320px;
   }
-  .post-card p1 {
+  .post-card p1, .post-card-similar p1, .post-card-inner p1 {
     font-size: 14.7px;
   }
-  .post-card h1 {
+  .post-card h1, .post-card-similar h1, .post-card-inner h1 {
     font-size: 18px;
   }
-  .post-card p2 {
+  .post-card p2, .post-card-similar p2, .post-card-inner p2 {
     font-size: 14.5px;
   }
   .post-card-recent h1 {
@@ -185,9 +282,26 @@
   .post-card-recent p2 {
     font-size: 12px;
   }
+  .post-card-inner{
+    width:700px;
+  }
+  .similar-div-heading a{
+    margin-left: 62%;
+    }
+    .backToTop{
+      right: -1%;
+    }
 }
 @media (max-width: 1310px) {
   .left-blog {
     margin-left: 4%;
+  }
+  .similar-blog{
+    margin-left: 4%;
+  }
+}
+@media(max-width:1250px){
+  .post-card-inner{
+    width:650px;
   }
 }

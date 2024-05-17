@@ -70,7 +70,7 @@ const AboutUsPage = () => {
           <a href="/">Home</a> {" > "}About Us
         </p>
         <div className="header-content">
-          <h1 className="heading-about">About Us.</h1>
+          <h1 className="heading-about">About Us</h1>
         </div>
       </div>
       {!isMobile && (
