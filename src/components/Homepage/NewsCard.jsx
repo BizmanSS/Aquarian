@@ -3,7 +3,7 @@ import img1 from '../../Assets/cardimg1.png';
 
 const NewsCard = () => {
   return (
-    <div className='min-w-[20rem] max-w-[21rem] overflow-hidden bg-slate-50 rounded-lg shadow-lg py-4 px-2'>
+    <div className='min-w-[21rem] max-w-[23rem] overflow-hidden bg-slate-100 rounded-lg shadow-lg py-4 px-2'>
       <img
         className='object-cover object-center w-full h-[11rem]'
         src={img1}

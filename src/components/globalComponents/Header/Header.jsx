@@ -138,7 +138,7 @@ const Header = () => {
   };
   return (
     <>
-      <div className='bg-[#000000] rounded-2xl h-[7rem] fixed z-10 top-0 flex flex-col items-center justify-start w-[94%] 7xl:w-[95%] 7xl:-ml-[1.2rem] max-w-[140rem] 8xl:-ml-[3rem]'>
+      <div className='bg-[#000000] rounded-2xl h-[7rem] fixed z-10 top-0 flex flex-col items-center justify-start w-[94%] 7xl:w-[96%] 7xl:-ml-[1.2rem] max-w-[140rem] 8xl:-ml-[3rem]'>
         {!ismobile ? (
           <>
             {' '}
