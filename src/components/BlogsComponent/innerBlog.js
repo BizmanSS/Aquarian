@@ -1,10 +1,11 @@
-import React,{ useState, useEffect} from "react";
+import React,{ useState, useEffect, useMemo, useRef} from "react";
 import "../../styles/Blogs.css";
 import BlogDummy from "../../Assets/blogDummyImage.png";
 import sideBlog from "../../Assets/sideBlogDummy.png";
 import innerBlog from "../../Assets/innerBlog.png";
 const BlogPosts = () => {
     const [showBackToTop, setShowBackToTop] = useState(false);
+    const bubbleRef = useRef();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -32,6 +33,30 @@ const BlogPosts = () => {
       behavior: "smooth", // Smooth scrolling behavior
     });
   };
+  function useIsInViewport(ref) {
+    const [isIntersecting, setIsIntersecting] = useState(false);
+  
+    const observer = useMemo(
+      () =>
+        new IntersectionObserver(([entry]) =>
+          setIsIntersecting(entry.isIntersecting)
+        ),
+      []
+    );
+  
+    useEffect(() => {
+      observer.observe(ref.current);
+  
+      return () => {
+        observer.disconnect();
+      };
+    }, [ref, observer]);
+  
+    return isIntersecting;
+  }
+  
+  const makeDivRelative = useIsInViewport(bubbleRef);
+
   const posts = [
     {
       title: "New Year Edition: Top UI/UX Design trends rushing to us in 2021",
@@ -278,10 +303,11 @@ const InnerBlog = ({ title, description, date, image}) => {
         
     </div>
     {showBackToTop && (
-        <div className="backToTop" onClick={scrollToTop}>
+        <div className={ makeDivRelative ? "relativeDiv" : "backToTop"} onClick={scrollToTop}>
           BACK TO TOP
         </div>
       )}
+      <div ref={bubbleRef}></div>
     </>
   );
 };

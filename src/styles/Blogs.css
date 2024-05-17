@@ -151,7 +151,21 @@ letter-spacing: 6.65px;
   cursor: pointer;
  /* Ensure it's above other elements */
 }
-
+.relativeDiv{
+  position: absolute;
+  transform: rotate(-90deg);
+margin-top: -8%;
+margin-left: 86.5%;
+  color: #009889;
+font-family: "TT Chocolates";
+font-size: 25px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+letter-spacing: 6.65px;
+ 
+  cursor: pointer;
+}
 .backToTop:hover {
   color: #555;
 }
@@ -170,6 +184,9 @@ letter-spacing: 6.65px;
     right:0%;
     bottom: 16%;
   }
+  .relativeDiv{
+  margin-left: 85.5%;
+  }
 }
 @media (max-width: 1700px) {
   .post-card  {
@@ -179,7 +196,10 @@ letter-spacing: 6.65px;
   .post-card-inner{
     width:850px;
   }
-
+  .relativeDiv{
+    margin-left: 85%;
+    margin-top: -10%;
+    }
 
 }
 
@@ -205,6 +225,10 @@ letter-spacing: 6.65px;
   .post-card-inner{
     width:800px;
   }
+  .relativeDiv{
+    margin-left: 84%;
+    margin-top: -10%;
+    }
 }
 @media (max-width: 1520px) {
   .post-card,  .post-card-similar {
@@ -238,7 +262,7 @@ letter-spacing: 6.65px;
     width:760px;
   }
   .backToTop{
-    right:-1%;
+    right:01%;
     font-size: 20px;
     bottom: 18%;
   }
@@ -253,6 +277,10 @@ letter-spacing: 6.65px;
   .similar-div-heading a{
   margin-left: 65%;
   }
+  .relativeDiv{
+    margin-left: 83%;
+    margin-top: -12%;
+    }
 }
 @media (max-width: 1400px) {
   .post-card, .post-card-similar {
@@ -289,7 +317,7 @@ letter-spacing: 6.65px;
     margin-left: 62%;
     }
     .backToTop{
-      right: -1%;
+      right: 1%;
     }
 }
 @media (max-width: 1310px) {
