@@ -23,9 +23,10 @@
 }
 .AboutUsHeader .header-content {
   padding-top: 6%;
-  margin-left: 52%;
+  margin-left: auto;
+  margin-right: auto;
   padding-bottom: 2rem;
-  width: 50%;
+  
 }
 .heading-about {
   color: #e2e2e2;
@@ -555,9 +556,7 @@
   .AboutUsHeader .link {
     font-size: 16px;
   }
-  .AboutUsHeader .header-content {
-    margin-left: 50%;
-  }
+  
   .imageTeam {
     width: 45%;
   }
@@ -651,7 +650,7 @@
     margin-left: auto;
     margin-right: auto;
     padding-bottom: 1rem;
-    width: 50%;
+   
   }
   .background-div {
     background: none;
