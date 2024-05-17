@@ -108,7 +108,7 @@ const Header = () => {
       </article>
     );
   };
-  // console.log(selectedtext);
+  // console.log(selectedProgram);
   const HeaderComponent = ({ text }) => {
     return (
       <ul className=' flex flex-col gap-0 -mt-2 font-normal'>
@@ -473,7 +473,7 @@ const Header = () => {
                       )}
                     </div> */}
                     {activeItem === 1 && (
-                      <div className=' w-[35%] h-auto mt-4'>
+                      <div className=' w-[37%] h-auto mt-4'>
                         <div className='flex flex-col '>
                           <ul className='text-[15px] flex flex-col items-start justify-start gap-4 '>
                             <li
@@ -628,24 +628,36 @@ const Header = () => {
                       </div>
                     )}
                     {activeItem === 2 && (
-                      <div className=' w-[35%] h-auto flex items-start justify-start mt-4 mb-4'>
-                        <div className='flex flex-col items-start justify-start'>
-                          <ul className='text-[15px] flex flex-col items-start justify-start gap-3 '>
+                      <div className=' w-[37%] h-auto mt-4 mb-4'>
+                        <div className='flex flex-col'>
+                          <ul className='text-[15px] flex flex-col items-start justify-start gap-4 '>
                             <li
                               // onMouseEnter={() =>
                               //   handleItemProgramClick('Work In Canada')
                               // }
-                              className='flex items-center justify-between w-full '
+                              className={`flex items-center justify-between w-full transition ease-in delay-40 duration-200 cursor-pointer ${
+                                selectedProgram === 'Work In Canada' &&
+                                'text-[#01997E] font-semibold'
+                              }`}
                             >
-                              Work In Canada
+                              <span className='hover:text-[#01997E] hover:font-semibold hover:scale-105 transition ease-in delay-40 duration-200'>
+                                Work In Canada
+                              </span>
                             </li>
+
                             <li
                               // onMouseEnter={() =>
                               //   handleItemProgramClick('Work Without a Permit ')
                               // }
-                              className='flex items-center justify-between w-full'
+                              className={`flex items-center justify-between w-full transition ease-in delay-40 duration-200 cursor-pointer ${
+                                selectedProgram === 'Work Without a Permit ' &&
+                                'text-[#01997E] font-semibold'
+                              }`}
                             >
-                              Work Without a Permit{' '}
+                              <span className='hover:text-[#01997E] hover:font-semibold hover:scale-105 transition ease-in delay-40 duration-200'>
+                                Work Without a Permit
+                              </span>
+
                               <SvgComponent
                                 program={'Work Without a Permit '}
                               />
@@ -656,9 +668,15 @@ const Header = () => {
                               //     ' Temporary Foreign Worker Program'
                               //   )
                               // }
-                              className='flex items-center justify-between w-full'
+                              className={`flex items-center justify-between w-full transition ease-in delay-40 duration-200 cursor-pointer ${
+                                selectedProgram ===
+                                  ' Temporary Foreign Worker Program' &&
+                                'text-[#01997E] font-semibold'
+                              }`}
                             >
-                              Temporary Foreign Worker Program{' '}
+                              <span className='hover:text-[#01997E] hover:font-semibold hover:scale-105 transition ease-in delay-40 duration-200'>
+                                Temporary Foreign Worker Program
+                              </span>
                               <SvgComponent
                                 program={' Temporary Foreign Worker Program'}
                               />
@@ -669,9 +687,15 @@ const Header = () => {
                               //     'International Mobility Program (IMP)'
                               //   )
                               // }
-                              className='flex items-center justify-between w-full'
+                              className={`flex items-center justify-between w-full transition ease-in delay-40 duration-200 cursor-pointer ${
+                                selectedProgram ===
+                                  'International Mobility Program (IMP)' &&
+                                'text-[#01997E] font-semibold'
+                              }`}
                             >
-                              International Mobility Program (IMP){' '}
+                              <span className='hover:text-[#01997E] hover:font-semibold hover:scale-105 transition ease-in delay-40 duration-200'>
+                                International Mobility Program (IMP){' '}
+                              </span>
                               <SvgComponent
                                 program={'International Mobility Program (IMP)'}
                               />
@@ -680,9 +704,15 @@ const Header = () => {
                               // onMouseEnter={() =>
                               //   handleItemProgramClick('Open Work Permits')
                               // }
-                              className='flex items-center justify-between w-full'
+                              className={`flex items-center justify-between w-full transition ease-in delay-40 duration-200 cursor-pointer ${
+                                selectedProgram === 'Open Work Permits' &&
+                                'text-[#01997E] font-semibold'
+                              }`}
                             >
-                              Open Work Permits{' '}
+                              <span className='hover:text-[#01997E] hover:font-semibold hover:scale-105 transition ease-in delay-40 duration-200'>
+                                Open Work Permits{' '}
+                              </span>
+
                               <SvgComponent program={'Open Work Permits'} />
                             </li>
                           </ul>
@@ -690,40 +720,61 @@ const Header = () => {
                       </div>
                     )}
                     {activeItem === 3 && (
-                      <div className=' w-[35%] h-auto flex items-start justify-start mt-4 mb-4'>
-                        <div className='flex flex-col items-start justify-start'>
-                          <ul className='text-[15px] flex flex-col items-start justify-start gap-3 '>
+                      <div className=' w-[37%] h-auto mt-4 mb-4'>
+                        <div className='flex flex-col'>
+                          <ul className='text-[15px] flex flex-col items-start justify-start gap-4'>
                             <li
                               // onMouseEnter={() =>
                               //   handleItemProgramClick('Study In Canada')
                               // }
-                              className='flex items-center justify-between w-full '
+                              className={`flex items-center justify-between w-full transition ease-in delay-40 duration-200 cursor-pointer ${
+                                selectedProgram === 'Study In Canada' &&
+                                'text-[#01997E] font-semibold'
+                              }`}
                             >
-                              Study In Canada
+                              <span className='hover:text-[#01997E] hover:font-semibold hover:scale-105 transition ease-in delay-40 duration-200'>
+                                Study In Canada
+                              </span>
                             </li>
                             <li
                               // onMouseEnter={() =>
                               //   handleItemProgramClick('DLI ')
                               // }
-                              className='flex items-center justify-between w-full'
+                              className={`flex items-center justify-between w-full transition ease-in delay-40 duration-200 cursor-pointer ${
+                                selectedProgram === 'DLI ' &&
+                                'text-[#01997E] font-semibold'
+                              }`}
                             >
-                              DLI
+                              <span className='hover:text-[#01997E] hover:font-semibold hover:scale-105 transition ease-in delay-40 duration-200'>
+                                DLI
+                              </span>
                             </li>
                             <li
                               // onMouseEnter={() =>
                               //   handleItemProgramClick(' Levels of Study')
                               // }
-                              className='flex items-center justify-between w-full'
+                              className={`flex items-center justify-between w-full transition ease-in delay-40 duration-200 cursor-pointer ${
+                                selectedProgram === ' Levels of Study' &&
+                                'text-[#01997E] font-semibold'
+                              }`}
                             >
-                              Levels of Study
+                              <span className='hover:text-[#01997E] hover:font-semibold hover:scale-105 transition ease-in delay-40 duration-200'>
+                                Levels of Study
+                              </span>
                             </li>
                             <li
                               // onMouseEnter={() =>
                               //   handleItemProgramClick('Study Permit In Canada')
                               // }
-                              className='flex items-center justify-between w-full'
+                              className={`flex items-center justify-between w-full transition ease-in delay-40 duration-200 cursor-pointer ${
+                                selectedProgram === 'Study Permit In Canada' &&
+                                'text-[#01997E] font-semibold'
+                              }`}
                             >
-                              Study Permit In Canada{' '}
+                              <span className='hover:text-[#01997E] hover:font-semibold hover:scale-105 transition ease-in delay-40 duration-200'>
+                                Study Permit In Canada
+                              </span>
+
                               <SvgComponent
                                 program={'Study Permit In Canada'}
                               />
@@ -734,25 +785,41 @@ const Header = () => {
                               //     'Refusals and Appeals of Study Permits'
                               //   )
                               // }
-                              className='flex items-center justify-between w-full'
+                              className={`flex items-center justify-between w-full transition ease-in delay-40 duration-200 cursor-pointer ${
+                                selectedProgram ===
+                                  'Refusals and Appeals of Study Permits' &&
+                                'text-[#01997E] font-semibold'
+                              }`}
                             >
-                              Refusals and Appeals of Study Permits{' '}
+                              <span className='hover:text-[#01997E] hover:font-semibold hover:scale-105 transition ease-in delay-40 duration-200'>
+                                Refusals and Appeals of Study Permits
+                              </span>
                             </li>
                             <li
                               // onMouseEnter={() =>
                               //   handleItemProgramClick('Extend a Study Control')
                               // }
-                              className='flex items-center justify-between w-full'
+                              className={`flex items-center justify-between w-full transition ease-in delay-40 duration-200 cursor-pointer ${
+                                selectedProgram === 'Extend a Study Control' &&
+                                'text-[#01997E] font-semibold'
+                              }`}
                             >
-                              Extend a Study Control
+                              <span className='hover:text-[#01997E] hover:font-semibold hover:scale-105 transition ease-in delay-40 duration-200'>
+                                Extend a Study Control
+                              </span>
                             </li>
                             <li
                               // onMouseEnter={() =>
                               //   handleItemProgramClick('PGWP')
                               // }
-                              className='flex items-center justify-between w-full'
+                              className={`flex items-center justify-between w-full transition ease-in delay-40 duration-200 cursor-pointer ${
+                                selectedProgram === 'PGWP' &&
+                                'text-[#01997E] font-semibold'
+                              }`}
                             >
-                              Post Graduate Work Permit (PGWP)
+                              <span className='hover:text-[#01997E] hover:font-semibold hover:scale-105 transition ease-in delay-40 duration-200'>
+                                Post Graduate Work Permit (PGWP)
+                              </span>
                             </li>
                             <li
                               // onMouseEnter={() =>
@@ -760,25 +827,37 @@ const Header = () => {
                               //     'Study Pathways to Permanent REsidence'
                               //   )
                               // }
-                              className='flex items-center justify-between w-full'
+                              className={`flex items-center justify-between w-full transition ease-in delay-40 duration-200 cursor-pointer ${
+                                selectedProgram ===
+                                  'Study Pathways to Permanent REsidence' &&
+                                'text-[#01997E] font-semibold'
+                              }`}
                             >
-                              Study Pathways to Permanent Residence{' '}
+                              <span className='hover:text-[#01997E] hover:font-semibold hover:scale-105 transition ease-in delay-40 duration-200'>
+                                Study Pathways to Permanent Residence
+                              </span>
                             </li>
                           </ul>
                         </div>
                       </div>
                     )}
                     {activeItem === 4 && (
-                      <div className=' w-[35%] h-auto flex items-start justify-start mt-4 mb-4'>
-                        <div className='flex flex-col items-start justify-start'>
-                          <ul className='text-[15px] flex flex-col items-start justify-start gap-3 '>
+                      <div className=' w-[37%] h-auto mt-4 mb-4'>
+                        <div className='flex flex-col'>
+                          <ul className='text-[15px] flex flex-col items-start justify-start gap-4 '>
                             <li
                               // onMouseEnter={() =>
                               //   handleItemProgramClick(' Business/Invest')
                               // }
-                              className='flex items-center justify-between w-full '
+                              className={`flex items-center justify-between w-full transition ease-in delay-40 duration-200 cursor-pointer ${
+                                selectedProgram === ' Business/Invest' &&
+                                'text-[#01997E] font-semibold'
+                              }`}
                             >
-                              Business/Invest{' '}
+                              <span className='hover:text-[#01997E] hover:font-semibold hover:scale-105 transition ease-in delay-40 duration-200'>
+                                Business/Invest{' '}
+                              </span>
+
                               <SvgComponent program={' Business/Invest'} />
                             </li>
                             <li
@@ -787,9 +866,16 @@ const Header = () => {
                               //     'PNP Entrepreneur Streams'
                               //   )
                               // }
-                              className='flex items-center justify-between w-full'
+                              className={`flex items-center justify-between w-full transition ease-in delay-40 duration-200 cursor-pointer ${
+                                selectedProgram ===
+                                  'PNP Entrepreneur Streams' &&
+                                'text-[#01997E] font-semibold'
+                              }`}
                             >
-                              PNP Entrepreneur Streams{' '}
+                              <span className='hover:text-[#01997E] hover:font-semibold hover:scale-105 transition ease-in delay-40 duration-200'>
+                                PNP Entrepreneur Streams{' '}
+                              </span>
+
                               <SvgComponent
                                 program={'PNP Entrepreneur Streams'}
                               />
@@ -800,9 +886,16 @@ const Header = () => {
                               //     ' Work Permit to PR Pathways'
                               //   )
                               // }
-                              className='flex items-center justify-between w-full'
+                              className={`flex items-center justify-between w-full transition ease-in delay-40 duration-200 cursor-pointer ${
+                                selectedProgram ===
+                                  ' Work Permit to PR Pathways' &&
+                                'text-[#01997E] font-semibold'
+                              }`}
                             >
-                              Work Permit to PR Pathways{' '}
+                              <span className='hover:text-[#01997E] hover:font-semibold hover:scale-105 transition ease-in delay-40 duration-200'>
+                                Work Permit to PR Pathways{' '}
+                              </span>
+
                               <SvgComponent
                                 program={' Work Permit to PR Pathways'}
                               />
@@ -812,50 +905,72 @@ const Header = () => {
                       </div>
                     )}
                     {activeItem === 5 && (
-                      <div className=' w-[35%] h-auto flex items-start justify-start mt-4 mb-4'>
-                        <div className='flex flex-col items-start justify-start'>
-                          <ul className='text-[15px] flex flex-col items-start justify-start gap-3 '>
+                      <div className=' w-[37%] h-auto mt-4 mb-4'>
+                        <div className='flex flex-col '>
+                          <ul className='text-[15px] flex flex-col items-start justify-start gap-4 '>
                             <li
                               // onMouseEnter={() =>
                               //   handleItemProgramClick('TRV-Visitor Visa')
                               // }
-                              className='flex items-center justify-between w-full '
+                              className={`flex items-center justify-between w-full transition ease-in delay-40 duration-200 cursor-pointer ${
+                                selectedProgram === 'TRV-Visitor Visa' &&
+                                'text-[#01997E] font-semibold'
+                              }`}
                             >
-                              TRV-Visitor Visa
+                              <span className='hover:text-[#01997E] hover:font-semibold hover:scale-105 transition ease-in delay-40 duration-200'>
+                                TRV-Visitor Visa
+                              </span>
                             </li>
                             <li
                               // onMouseEnter={() =>
                               //   handleItemProgramClick('Visa Extension')
                               // }
-                              className='flex items-center justify-between w-full'
+                              className={`flex items-center justify-between w-full transition ease-in delay-40 duration-200 cursor-pointer ${
+                                selectedProgram === 'Visa Extension' &&
+                                'text-[#01997E] font-semibold'
+                              }`}
                             >
-                              Visa Extension
+                              <span className='hover:text-[#01997E] hover:font-semibold hover:scale-105 transition ease-in delay-40 duration-200'>
+                                Visa Extension
+                              </span>
                             </li>
                             <li
                               // onMouseEnter={() =>
                               //   handleItemProgramClick(' Super visa (linked)')
                               // }
-                              className='flex items-center justify-between'
+                              className={`flex items-center justify-between w-full transition ease-in delay-40 duration-200 cursor-pointer ${
+                                selectedProgram === ' Super visa (linked)' &&
+                                'text-[#01997E] font-semibold'
+                              }`}
                             >
-                              Super visa (linked)
+                              <span className='hover:text-[#01997E] hover:font-semibold hover:scale-105 transition ease-in delay-40 duration-200'>
+                                Super visa (linked)
+                              </span>
                             </li>
                           </ul>
                         </div>
                       </div>
                     )}
                     {activeItem === 6 && (
-                      <div className=' w-[35%] h-auto flex items-start justify-start mt-4 mb-4'>
-                        <div className='flex flex-col items-start justify-start'>
-                          <ul className='text-[15px] flex flex-col items-start justify-start gap-3 '>
+                      <div className=' w-[37%] h-auto mt-4 mb-4'>
+                        <div className='flex flex-col'>
+                          <ul className='text-[15px] flex flex-col items-start justify-start gap-4'>
                             <li
                               // onMouseEnter={() =>
                               //   handleItemProgramClick(
                               //     ' Employers Outside Canada'
                               //   )
                               // }
-                              className='flex items-center justify-between w-full '
+                              className={`flex items-center justify-between w-full transition ease-in delay-40 duration-200 cursor-pointer ${
+                                selectedProgram ===
+                                  ' Employers Outside Canada' &&
+                                'text-[#01997E] font-semibold'
+                              }`}
                             >
-                              Employers Outside Canada{' '}
+                              <span className='hover:text-[#01997E] hover:font-semibold hover:scale-105 transition ease-in delay-40 duration-200'>
+                                Employers Outside Canada{' '}
+                              </span>
+
                               <SvgComponent
                                 program={' Employers Outside Canada'}
                               />
@@ -864,9 +979,15 @@ const Header = () => {
                               // onMouseEnter={() =>
                               //   handleItemProgramClick('Canadian Employers')
                               // }
-                              className='flex items-center justify-between w-full'
+                              className={`flex items-center justify-between w-full transition ease-in delay-40 duration-200 cursor-pointer ${
+                                selectedProgram === 'Canadian Employers' &&
+                                'text-[#01997E] font-semibold'
+                              }`}
                             >
-                              Canadian Employers
+                              <span className='hover:text-[#01997E] hover:font-semibold hover:scale-105 transition ease-in delay-40 duration-200'>
+                                Canadian Employers
+                              </span>
+
                               <SvgComponent program={'Canadian Employers'} />
                             </li>
                           </ul>
@@ -874,52 +995,80 @@ const Header = () => {
                       </div>
                     )}
                     {activeItem === 7 && (
-                      <div className=' w-[35%] h-auto flex items-start justify-start mt-4 mb-4'>
-                        <div className='flex flex-col items-start justify-start'>
-                          <ul className='text-[15px] flex flex-col items-start justify-start gap-3 '>
+                      <div className=' w-[37%] h-auto mt-4 mb-4'>
+                        <div className='flex flex-col'>
+                          <ul className='text-[15px] flex flex-col items-start justify-start gap-4 '>
                             <li
-                              onMouseEnter={() =>
-                                handleItemProgramClick(
-                                  'Canadian spousal sponsorship '
-                                )
-                              }
-                              className='flex items-center justify-between  '
+                              // onMouseEnter={() =>
+                              //   handleItemProgramClick(
+                              //     'Canadian spousal sponsorship '
+                              //   )
+                              // }
+                              className={`flex items-center justify-between w-full transition ease-in delay-40 duration-200 cursor-pointer ${
+                                selectedProgram ===
+                                  'Canadian spousal sponsorship ' &&
+                                'text-[#01997E] font-semibold'
+                              }`}
                             >
-                              Canadian spousal sponsorship{' '}
+                              <span className='hover:text-[#01997E] hover:font-semibold hover:scale-105 transition ease-in delay-40 duration-200'>
+                                Canadian spousal sponsorship{' '}
+                              </span>
                             </li>
                             <li
-                              onMouseEnter={() =>
-                                handleItemProgramClick(
-                                  'Child or Other Dependent Sponsorship'
-                                )
-                              }
-                              className='flex items-center justify-between '
+                              // onMouseEnter={() =>
+                              //   handleItemProgramClick(
+                              //     'Child or Other Dependent Sponsorship'
+                              //   )
+                              // }
+                              className={`flex items-center justify-between w-full transition ease-in delay-40 duration-200 cursor-pointer ${
+                                selectedProgram ===
+                                  'Child or Other Dependent Sponsorship' &&
+                                'text-[#01997E] font-semibold'
+                              }`}
                             >
-                              Child or Other Dependent Sponsorship
+                              <span className='hover:text-[#01997E] hover:font-semibold hover:scale-105 transition ease-in delay-40 duration-200'>
+                                Child or Other Dependent Sponsorship
+                              </span>
                             </li>
                             <li
-                              onMouseEnter={() =>
-                                handleItemProgramClick(
-                                  'Parents and Grandparents Program (PGP)'
-                                )
-                              }
-                              className='flex items-center justify-between '
+                              // onMouseEnter={() =>
+                              //   handleItemProgramClick(
+                              //     'Parents and Grandparents Program (PGP)'
+                              //   )
+                              // }
+                              className={`flex items-center justify-between w-full transition ease-in delay-40 duration-200 cursor-pointer ${
+                                selectedProgram ===
+                                  'Parents and Grandparents Program (PGP)' &&
+                                'text-[#01997E] font-semibold'
+                              }`}
                             >
-                              Parents and Grandparents Program (PGP)
+                              <span className='hover:text-[#01997E] hover:font-semibold hover:scale-105 transition ease-in delay-40 duration-200'>
+                                Parents and Grandparents Program (PGP)
+                              </span>
                             </li>
                             <li
-                              onMouseEnter={() =>
-                                handleItemProgramClick('Super Visa')
-                              }
-                              className='flex items-center justify-between'
+                              // onMouseEnter={() =>
+                              //   handleItemProgramClick('Super Visa')
+                              // }
+                              className={`flex items-center justify-between w-full transition ease-in delay-40 duration-200 cursor-pointer ${
+                                selectedProgram === 'Super Visa' &&
+                                'text-[#01997E] font-semibold'
+                              }`}
                             >
-                              Super Visa
+                              <span className='hover:text-[#01997E] hover:font-semibold hover:scale-105 transition ease-in delay-40 duration-200'>
+                                Super Visa
+                              </span>
                             </li>
                             <li
-                              onMouseEnter={() => handleItemProgramClick('MNI')}
-                              className='flex items-center justify-between'
+                              // onMouseEnter={() => handleItemProgramClick('MNI')}
+                              className={`flex items-center justify-between w-full transition ease-in delay-40 duration-200 cursor-pointer ${
+                                selectedProgram === 'MNI' &&
+                                'text-[#01997E] font-semibold'
+                              }`}
                             >
-                              MNI
+                              <span className='hover:text-[#01997E] hover:font-semibold hover:scale-105 transition ease-in delay-40 duration-200'>
+                                MNI
+                              </span>
                             </li>
                           </ul>
                         </div>
