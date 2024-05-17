@@ -18,7 +18,7 @@ import clipart6 from '../../../Assets/clipart/employer visa.png';
 import clipart7 from '../../../Assets/clipart/sponsirship.png';
 import BookAppointmentModel from '../../globalComponents/Model/BookAppointment';
 import { ToastContainer } from 'react-toastify';
-import { FiPlus } from 'react-icons/fi';
+import { FiMinus, FiPlus } from 'react-icons/fi';
 
 const Header = () => {
   const [ismobile, setIsMobile] = useState(false);
@@ -81,11 +81,18 @@ const Header = () => {
   // console.log(selectedProgram);
   const SvgComponent = ({ program }) => {
     return (
-      <div
-        onClick={() => handleItemProgramClick(program)}
-        className='hover:scale-115 hover:text-[#01997E] '
-      >
-        <FiPlus className='text-lg hover:text-xl' />
+      <div className='hover:scale-115 hover:text-[#01997E] '>
+        {selectedProgram === program ? (
+          <FiMinus
+            className='text-lg hover:text-xl'
+            onClick={() => handleItemProgramClick('')}
+          />
+        ) : (
+          <FiPlus
+            className='text-lg hover:text-xl'
+            onClick={() => handleItemProgramClick(program)}
+          />
+        )}
       </div>
     );
   };
