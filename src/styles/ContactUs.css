@@ -23,7 +23,8 @@
 }
 .ContactUsHeader .header-content {
   padding-top: 6%;
-  margin-left: 52%;
+  margin-left: auto;
+  margin-right: auto;
   padding-bottom: 2rem;
   width: 50%;
 }
@@ -140,9 +141,7 @@
   .form-group textarea {
     width: 44.4rem;
   }
-  .ContactUsHeader .header-content {
-    margin-left: 50%;
-  }
+
   .form-row {
     gap: 8.8rem;
   }
@@ -157,9 +156,7 @@
   .form-group textarea {
     width: 37.4rem;
   }
-  .ContactUsHeader .header-content {
-    margin-left: 50%;
-  }
+ 
   .form-row {
     gap: 7.8rem;
   }
@@ -173,9 +170,7 @@
   .form-group textarea {
     width: 30.7rem;
   }
-  .ContactUsHeader .header-content {
-    margin-left: 50%;
-  }
+ 
   .form-row {
     gap: 5.1rem;
   }
