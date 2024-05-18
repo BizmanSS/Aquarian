@@ -5,6 +5,7 @@ import Youtube from "../../Assets/youtube.png";
 import Twitter from "../../Assets/Twitter.png";
 import LinkedIn from "../../Assets/LinkedIn.png";
 import facebook from "../../Assets/Facebook.png";
+import Thread from "../../Assets/Thread.jpg";
 import { useMobile } from "../globalComponents/MobileContext/IsMobileContext";
 const TheAquarian = () => {
   const { isMobile } = useMobile();
@@ -64,26 +65,29 @@ const TheAquarian = () => {
                 onClick={handleClick}
               >
                 <div className="logos2">
-                  <a href="" className="mx-0 p-2">
-                    <img src={LinkedIn} className="cursor-pointer" />
+                  <a href="https://www.linkedin.com/company/aquarian-immigration-services/" className="mx-0 p-2">
+                    <img alt="" src={LinkedIn} className="cursor-pointer" />
                   </a>
                   <a
                     href="https://www.facebook.com/people/Aquarian-Immigration/61558242973262/"
                     className="mx-0 p-2"
                   >
-                    <img src={facebook} className="cursor-pointer" />
+                    <img alt="" src={facebook} className="cursor-pointer" />
                   </a>
-                  <a href="" className="mx-0 p-2">
-                    <img src={Twitter} className="cursor-pointer" />
+                  <a href="https://www.twitter.com" className="mx-0 p-2">
+                    <img alt="" src={Twitter} className="cursor-pointer" />
+                  </a>
+                  <a href="https://www.threads.net/@aquarian_immigration" className="mx-0 p-2" >
+                    <img alt="" src={Thread} className="cursor-pointer w-[2.2rem]" />
                   </a>
                   <a
                     href="https://www.instagram.com/aquarian_immigration/"
                     className="mx-0 p-2"
                   >
-                    <img src={Instagram} className="cursor-pointer" />
+                    <img alt="" src={Instagram} className="cursor-pointer" />
                   </a>
-                  <a href="" className="mx-0 p-2">
-                    <img src={Youtube} className="cursor-pointer" />
+                  <a href="https://youtube.com" className="mx-0 p-2">
+                    <img alt="" src={Youtube} className="cursor-pointer" />
                   </a>
                 </div>
               </div>

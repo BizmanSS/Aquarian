@@ -7,7 +7,6 @@ import One from "../../Assets/one to one solution.png";
 import Efficiency from "../../Assets/Efficiency and Accuracy.png";
 import { useMobile } from "../globalComponents/MobileContext/IsMobileContext";
 import Free from "../../Assets/free assessment.png";
-import dialogBox from "../../Assets/dialog-Box.svg.jpg";
 import dialogBox2 from "../../Assets/dialog-Box2.jpg";
 const Competitive = () => {
   const { isMobile } = useMobile();
