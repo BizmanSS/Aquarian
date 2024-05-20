@@ -26,6 +26,7 @@ const NewsCard = () => {
           Discover insights into the results of the Provincial Nominee Program
           (PNP) draws held accross Canada during the third week of March 2024.
         </p>
+        <p>Read More..</p>
       </div>
       {/* <div className="flex flex-col gap-4">
         <div className="border-[1px] border-gray-400 px-4 py-2 cursor-pointer font-normal text-sm max-w-[15rem] mx-6">

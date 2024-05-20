@@ -11,10 +11,13 @@ import hoveredimg from '../../Assets/Rectangle 62.png';
 import hoveredimg2 from '../../Assets/Rectangle 63.png';
 import { Button2, PaginationNav1Presentation } from '../Pagination/Pagination';
 import { FaChevronLeft, FaChevronRight } from 'react-icons/fa6';
+import { useMobile } from '../globalComponents/MobileContext/IsMobileContext';
 
 const Component5 = () => {
   const [pageIndex, setPageIndex] = useState(0);
   const [activeIndex, setActiveIndex] = useState(0);
+  const { isMobile } = useMobile();
+
   const data = [
     {
       name: 'Santosh Mahich',
@@ -195,29 +198,31 @@ const Component5 = () => {
         </div>
       </div>
       <div className='flex items-center justify-end gap-4 my-4 relative'>
-        <div className='absolute top-0 flex items-center justify-center -left-20'>
-          <img src={img2} alt='logo' className='w-[7rem] relative -top-20' />
-          <img
-            src={img1}
-            alt='logo'
-            className='w-[7.5rem] relative -top-[4rem] left-20'
-          />
-          <img
-            src={img6}
-            alt='logo'
-            className='w-[9rem] relative top-0 left-[8rem]'
-          />
-          <img
-            src={img3}
-            alt='logo'
-            className='w-[8rem] relative top-[7rem] right-[10rem]'
-          />
-          <img
-            src={img4}
-            alt='logo'
-            className='w-[7rem] relative top-[5rem] left-[1rem]'
-          />
-        </div>
+        {!isMobile && (
+          <div className='absolute top-0 flex items-center justify-center -left-20'>
+            <img src={img2} alt='logo' className='w-[7rem] relative -top-20' />
+            <img
+              src={img1}
+              alt='logo'
+              className='w-[7.5rem] relative -top-[4rem] left-20'
+            />
+            <img
+              src={img6}
+              alt='logo'
+              className='w-[9rem] relative top-0 left-[8rem]'
+            />
+            <img
+              src={img3}
+              alt='logo'
+              className='w-[8rem] relative top-[7rem] right-[10rem]'
+            />
+            <img
+              src={img4}
+              alt='logo'
+              className='w-[7rem] relative top-[5rem] left-[1rem]'
+            />
+          </div>
+        )}
         <BoxComponents
           color={'#FEFFFE'}
           style={{ backgroundColor: '#FEFFFE' }}
@@ -232,19 +237,21 @@ const Component5 = () => {
         />
       </div>
       <div className='flex items-center justify-end gap-4 my-4 relative'>
-        <div className='absolute top-0 flex items-center justify-center -left-20'>
-          {' '}
-          <img
-            src={img5}
-            alt='logo'
-            className='w-[8rem] relative top-[0rem] left-[3rem]'
-          />
-          <img
-            src={img7}
-            alt='logo'
-            className='w-[6rem] relative top-[5rem] left-[6rem]'
-          />
-        </div>
+        {!isMobile && (
+          <div className='absolute top-0 flex items-center justify-center -left-20'>
+            {' '}
+            <img
+              src={img5}
+              alt='logo'
+              className='w-[8rem] relative top-[0rem] left-[3rem]'
+            />
+            <img
+              src={img7}
+              alt='logo'
+              className='w-[6rem] relative top-[5rem] left-[6rem]'
+            />
+          </div>
+        )}
         <BoxComponents
           color={'#FEFFFE'}
           style={{ backgroundColor: '#01F8E0' }}
