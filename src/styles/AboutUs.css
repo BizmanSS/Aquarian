@@ -277,6 +277,7 @@
   font-family: 'Goudy Old Style';
   font-size: 22px;
   font-style: normal;
+  border-radius: 10px;
   font-weight: 600;
   line-height: normal;
   cursor: pointer;
@@ -285,6 +286,7 @@
   background: #01f9e1;
   height: auto;
   padding: 18px;
+  border-radius: 10px;
   width: 35%;
 }
 .team-background {
