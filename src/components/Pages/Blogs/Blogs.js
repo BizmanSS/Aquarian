@@ -134,38 +134,7 @@ const BlogPosts = () => {
       </div>
     );
   };
-  const latestBlogs = [
-    {
-      title: "New Year Edition: Top UI/UX Design trends rushing to us in 2021",
-      image: sideBlog,
-      path: "/blogs/innerBlog",
-    },
-    {
-      title: "New Year Edition: Top UI/UX Design trends rushing to us in 2021",
-      image: sideBlog,
-      path: "/blogs/innerBlog",
-    },
-    {
-      title: "New Year Edition: Top UI/UX Design trends rushing to us in 2021",
-      image: sideBlog,
-      path: "/blogs/innerBlog",
-    },
-  ];
-  const LatestBlogs = ({ title, image, path }) => {
-    return (
-      <div className="post-card-recent">
-        <a href={path}>
-          <img alt="" src={image} />
-        </a>
-        <div>
-          <h1>{title}</h1>
-          <p2>
-            <a href={path}>Know more{" >"}</a>
-          </p2>
-        </div>
-      </div>
-    );
-  };
+  
   
 
   return (
@@ -194,12 +163,7 @@ const BlogPosts = () => {
               <TrendingBlogs key={index} {...post} />
             ))}
           </div>
-          <h1 className="title-heading">Latest Blogs</h1>
-          <div className="blog-card-recent">
-            {latestBlogs.map((post, index) => (
-              <LatestBlogs key={index} {...post} />
-            ))}
-          </div>
+          
         </div>
         <div className="blog-cards-container">
           <div className="blog-cards">
