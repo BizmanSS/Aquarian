@@ -33,15 +33,15 @@ const TheAquarian = () => {
           <br />
           <span style={{ fontWeight: "700" }}>
             Call us at{" "}
-            <a style={{ color: "blue" }} href="tel:+919810892192">
+            <a  href="tel:+919810892192">
               +91 9810892192
             </a>{" "}
             /{" "}
-            <a style={{ color: "blue" }} href="tel:+911244671300">
+            <a  href="tel:+911244671300">
               +91 124 4671300
             </a>
             <br /> Write to us at{" "}
-            <a style={{ color: "blue" }} href="mailto:enq@iaquarian.com">
+            <a  href="mailto:enq@iaquarian.com">
               enq@iaquarian.com
             </a>
           </span>
