@@ -1,43 +1,14 @@
 import React, { useState } from "react";
 import sitemapSponsorship from "../../../sitemapSponsorship";
 import "../../../styles/SitemapDesktop.css";
+import { FiMinus, FiPlus } from 'react-icons/fi';
 function SitemapSponsorshipDesktop() {
   const [expanded, setExpanded] = useState([]);
-  const arrowIcon = (
-    <svg
-      stroke="currentColor"
-      fill="currentColor"
-      stroke-width="0"
-      viewBox="0 0 448 512"
-      class="arrow-icon"
-      height="1em"
-      width="1em"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <path d="M313.941 216H12c-6.627 0-12 5.373-12 12v56c0 6.627 5.373 12 12 12h301.941v46.059c0 21.382 25.851 32.09 40.971 16.971l86.059-86.059c9.373-9.373 9.373-24.569 0-33.941l-86.059-86.059c-15.119-15.119-40.971-4.411-40.971 16.971V216z"></path>
-    </svg>
-  );
-  const arrowIconRotate = (
-    <svg
-      stroke="#009889"
-      fill="#009889"
-      stroke-width="0"
-      viewBox="0 0 448 512"
-      class="arrow-icon"
-      height="1em"
-      width="1em"
-      style={{ transform: "rotate(90deg)" }}
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <path d="M313.941 216H12c-6.627 0-12 5.373-12 12v56c0 6.627 5.373 12 12 12h301.941v46.059c0 21.382 25.851 32.09 40.971 16.971l86.059-86.059c9.373-9.373 9.373-24.569 0-33.941l-86.059-86.059c-15.119-15.119-40.971-4.411-40.971 16.971V216z"></path>
-    </svg>
-  );
-
   const toggleExpand = (index) => {
     if (expanded.includes(index)) {
-      setExpanded([]);
+      setExpanded(expanded.filter((item) => item !== index));
     } else {
-      setExpanded([index]);
+      setExpanded([...expanded, index]);
     }
   };
 
@@ -49,18 +20,22 @@ function SitemapSponsorshipDesktop() {
         <li key={index}>
           <div className="flex-div">
             <span className={isExpanded ? "extended-title" : ""}>
-              &#x2022; {link.title}
+             {link.title}
             </span>
             {link.nestedLinks && (
               <button onClick={() => toggleExpand(parentIndex + "-" + index)}>
-                {isExpanded ? arrowIconRotate : arrowIcon}
+              {isExpanded ? 
+                <FiMinus className='text-lg text-[#01997E] hover:scale-115 hover:text-[#01997E]' /> 
+                :
+                <FiPlus className='text-lg hover:scale-115 hover:text-[#01997E]' />
+              }
               </button>
             )}
           </div>
 
           {link.nestedLinks && isExpanded && (
             <ul>
-              {renderNestedLinks(link.nestedLinks, parentIndex + "-" + index)}
+             {renderNestedLinks(link.nestedLinks, parentIndex + "-" + index)}
             </ul>
           )}
         </li>
@@ -83,12 +58,16 @@ function SitemapSponsorshipDesktop() {
                 </span>
                 {section.nestedLinks && (
                   <button onClick={() => toggleExpand(index)}>
-                    {isExpanded ? arrowIconRotate : arrowIcon}
+                  {isExpanded ? 
+                    <FiMinus className='text-lg text-[#01997E] hover:scale-115 hover:text-[#01997E]' /> 
+                    :
+                    <FiPlus className='text-lg hover:scale-115 hover:text-[#01997E]' />
+                  }
                   </button>
                 )}
               </div>
               {section.nestedLinks && isExpanded && (
-                <ul>{renderNestedLinks(section.nestedLinks, index)}</ul>
+                <ul> {renderNestedLinks(section.nestedLinks, index)}</ul>
               )}
               <div className="line">
                 <svg

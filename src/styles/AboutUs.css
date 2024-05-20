@@ -242,8 +242,8 @@
   z-index: 9;
 }
 .text-color-expanded p {
-  padding: 2rem;
-  font-size: 15.5px;
+  padding: 1.9rem;
+  font-size: 14px;
 }
 .Integrity .text-color {
   width: 64%;
@@ -470,7 +470,7 @@
   }
   .text-color-expanded p {
     padding: 2rem;
-    font-size: 13.5px;
+    font-size: 12.5px;
   }
   .downArrow {
     padding-left: 9.5rem;
