@@ -1,8 +1,14 @@
-import React from 'react';
+import React, {useState} from 'react';
 import banner from '../../Assets/Rectangle 133.png';
-import { Link } from 'react-router-dom';
+import { ToastContainer } from 'react-toastify';
+import BookAppointmentModel from '../globalComponents/Model/BookAppointment';
 
 const Component3 = () => {
+  const [showAppointmentModel, setShowAppointmentModel] = useState(false);
+
+  const handleAppointmentClick = () => {
+    setShowAppointmentModel(true); // Show the BookAppointmentModel component when the button is clicked
+  };
   return (
     <div className='flex flex-col items-center justify-center'>
       <div className='w-[70%]'>
@@ -29,7 +35,7 @@ const Component3 = () => {
               experts, while forging lifelong relationships with our clients.
             </div>
             <div className='w-full flex items-center justify-between pr-10 mb-10'>
-              <button className='bg-[#01F9E1] text-black px-8 py-3 rounded-sm text-[15px]'>
+              <button onClick={handleAppointmentClick} className='bg-[#01F9E1] text-black px-8 py-3 rounded-sm text-[15px]'>
                 Book Now
               </button>
 
@@ -40,6 +46,11 @@ const Component3 = () => {
           </div>
         </div>
       </div>
+      <ToastContainer />
+      <BookAppointmentModel
+        showForm={showAppointmentModel}
+        setShowForm={setShowAppointmentModel}
+      />
     </div>
   );
 };
