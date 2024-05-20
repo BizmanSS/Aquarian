@@ -6,18 +6,18 @@ const Component3 = () => {
   return (
     <div className='flex flex-col items-center justify-center'>
       <div className='w-[70%]'>
-        <div className='text-[3rem] font-semibold'>
+        <div className='text-[1.5rem] md:text-[3rem] font-semibold'>
           Why Choose <span className='text-[#019989]'>Us</span>
         </div>
-        <div className='flex items-center justify-center'>
+        <div className='flex items-center justify-center flex-wrap md:flex-nowrap'>
           <div className='w-[600px]'>
             <img
               src={banner}
               alt='banner'
-              className='w-[95%] mt-[3rem] rounded-3xl'
+              className='w-[95%] mt-[3rem] rounded-3xl z-10'
             />
           </div>
-          <div className='bg-[#343436] w-[60%] rounded-3xl px-14 py-12 relative top-[9rem] right-[6rem]'>
+          <div className='bg-[#343436] w-full md:w-[60%] rounded-3xl pl-6 md:px-14 py-12 relative -top-[4rem] md:top-[9rem] md:right-[6rem]'>
             <div className='text-[#FEFFFE] my-[4rem] text-xl'>
               <span className='text-[#019989]'>Aquarian</span> is a Canadian
               immigration Firm.

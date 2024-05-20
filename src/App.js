@@ -21,7 +21,7 @@ import {
 import ClbCalculator from './components/Pages/Clbcalculator/ClbCalculator';
 import CrsCalculator from './components/Pages/CrsCalculator/CrsCalculator';
 import Blogs from './components/Pages/Blogs/Blogs';
-import InnerBlog from "./components/BlogsComponent/innerBlog";
+import InnerBlog from './components/BlogsComponent/innerBlog';
 const App = () => {
   const { isMobile } = useMobile();
   return (

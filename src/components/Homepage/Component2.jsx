@@ -69,11 +69,11 @@ const Component2 = () => {
 
   return (
     <div>
-      <div className='w-[100%] text-[3rem] font-semibold flex items-center justify-center -mb-10'>
+      <div className='w-[100%] text-[1.5rem] md:text-[3rem] font-semibold flex items-center justify-center -mb-10'>
         Choose Your <span className='text-[#2FAB9E] mx-2 '>Program</span>
       </div>
       <div className='w-full flex flex-col items-center justify-center'>
-        <div className='w-[80%] gap-10 mt-16 grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3'>
+        <div className='ml-8 md:ml-0 w-[80%] gap-10 mt-16 grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3'>
           {array.map((item, index) => (
             <Card key={index} data={item} />
           ))}

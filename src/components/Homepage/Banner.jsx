@@ -41,7 +41,7 @@ const Banner = () => {
   };
 
   return (
-    <div className='w-full flex flex-col items-center justify-center mt-[15rem] -mb-[4rem] -ml-[2.8rem]'>
+    <div className='w-full flex flex-col items-center justify-center mt-[15rem] -mb-[4rem] ml-[0rem] xl:-ml-[2.8rem]'>
       {!showThumbnail ? (
         <video
           ref={videoRef}
@@ -58,7 +58,7 @@ const Banner = () => {
       ) : (
         <img src={thumbnail} alt='Thumbnail' className='w-[90%]' />
       )}
-      <button className='relative -top-[24rem] bg-black text-white px-16 py-3 rounded-xl text-lg border-[2px] border-[#01F9E1] font-bold transition ease-in-out delay-70 hover:scale-y-[1.1] hover:scale-x-[1.2]  duration-300'>
+      <button className='relative -top-[18rem] md:-top-[24rem] bg-black text-white px-4 md:px-16 py-3 rounded-xl text-sm md:text-lg border-[2px] border-[#01F9E1] font-bold transition ease-in-out delay-70 hover:scale-y-[1.1] hover:scale-x-[1.2]  duration-300'>
         Start Your Journey NOW!!!
       </button>
       {/* {!isPlaying ? (

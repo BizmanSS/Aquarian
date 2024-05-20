@@ -13,6 +13,14 @@
   font-size: 16px;
   z-index: 99;
 }
+.sidebar-img {
+  filter: invert(100%) brightness(200%);
+  transition: filter 0.3s ease-in-out;
+}
+
+.parent:hover .sidebar-img {
+  filter: none;
+}
 @media (max-width: 1700px) {
   .sidebar {
     font-size: 16px;

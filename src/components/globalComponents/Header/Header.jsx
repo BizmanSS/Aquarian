@@ -9,13 +9,13 @@ import Twitter from '../../../Assets/Thread.jpg';
 import LinkedIn from '../../../Assets/LinkedIn.png';
 import facebook from '../../../Assets/Facebook.png';
 import { CiSearch } from 'react-icons/ci';
-import clipart1 from '../../../Assets/clipart/Immigrate.png';
-import clipart2 from '../../../Assets/clipart/work visa.png';
-import clipart3 from '../../../Assets/clipart/study visa.png';
-import clipart4 from '../../../Assets/clipart/invest visa.png';
-import clipart5 from '../../../Assets/clipart/visit visa.png';
-import clipart6 from '../../../Assets/clipart/employer visa.png';
-import clipart7 from '../../../Assets/clipart/sponsirship.png';
+import clipart1 from '../../../Assets/clipart/immigrate 1.png';
+import clipart2 from '../../../Assets/clipart/work 1.png';
+import clipart3 from '../../../Assets/clipart/study 1.png';
+import clipart4 from '../../../Assets/clipart/invest 1.png';
+import clipart5 from '../../../Assets/clipart/visit 1.png';
+import clipart6 from '../../../Assets/clipart/employer 1.png';
+import clipart7 from '../../../Assets/clipart/sponsorship 1.png';
 import BookAppointmentModel from '../../globalComponents/Model/BookAppointment';
 import { ToastContainer } from 'react-toastify';
 import { FiMinus, FiPlus } from 'react-icons/fi';
@@ -122,7 +122,7 @@ const Header = () => {
         <li>
           <details className='group'>
             <summary
-              className={`flex items-center justify-between p-2 font-normal transition ease-in delay-0 duration-200 hover:text-[#01997E] hover:font-semibold hover:scale-105 ${
+              className={`flex items-center justify-between p-2 font-normal transition ease-in delay-20 duration-200 hover:text-[#01997E] hover:font-semibold hover:scale-105 ${
                 selectedtext === text &&
                 'text-[#01997E] font-semibold scale-105'
               } hover:cursor-pointer hover:scale-105`}
@@ -137,8 +137,8 @@ const Header = () => {
     );
   };
   return (
-    <>
-      <div className='bg-[#000000] rounded-2xl h-[7rem] fixed z-10 top-0 flex flex-col items-center justify-start w-[94%] 7xl:w-[96%] 7xl:-ml-[1.2rem] max-w-[140rem] 8xl:-ml-[3rem]'>
+    <div className=''>
+      <div className='bg-[#000000] lg:rounded-2xl h-[6rem] xl:h-[7rem] fixed z-10 top-0 flex flex-col items-center justify-start w-full md:w-[94%] 7xl:w-[96%] 7xl:-ml-[1.2rem] max-w-[140rem] 8xl:-ml-[3rem]'>
         {!ismobile ? (
           <>
             {' '}
@@ -206,13 +206,13 @@ const Header = () => {
                 <img
                   src={logo}
                   alt='logo'
-                  className='cursor-pointer w-[13rem] ml-10'
+                  className='cursor-pointer w-[9rem] ml-2 lg:w-[10rem] xl:w-[11rem] 2xl:w-[13rem] lg:ml-4 xl:ml-8 2xl:ml-10 '
                 />
               </a>
 
               {isHovering ? (
                 <ul
-                  className={`flex items-center justify-center text-[16px] text-white gap-0 2xl:gap-2 py-3 px-4 absolute left-[16rem] xl:left-[18rem] 2xl:left-[20rem] 3xl:left-[25rem] 4xl:left-[30rem] rounded-t-xl overflow-hidden `}
+                  className={`flex items-center justify-center xl:text-[15px] 2xl:text-[16px] text-white gap-0  2xl:gap-2 py-3 px-4 absolute left-[12rem] xl:left-[calc(30vw-10rem)] 2xl:left-[18rem] 3xl:left-[25rem] 4xl:left-[30rem] rounded-t-xl overflow-hidden `}
                   onMouseEnter={handleMouseEnter}
                   onMouseLeave={handleMouseLeave}
                 >
@@ -228,7 +228,7 @@ const Header = () => {
                 </li> */}
                   <li
                     onMouseEnter={() => handleItemHover(1)}
-                    className={`cursor-pointer  px-4 py-2.5 w-[6.5rem] flex items-center justify-center ${
+                    className={`cursor-pointer  px-4 py-2.5 lg:w-auto xl:w-[6rem] 2xl:w-[6.5rem] flex items-center justify-center ${
                       activeItem === 1
                         ? 'border-b-[3px] border-b-[#009889] bg-white text-black'
                         : 'border-b-[3px] border-b-transparent'
@@ -238,7 +238,7 @@ const Header = () => {
                   </li>
                   <li
                     onMouseEnter={() => handleItemHover(2)}
-                    className={`cursor-pointer  px-4 py-2.5 w-[6.5rem] flex items-center justify-center ${
+                    className={`cursor-pointer  px-4 py-2.5 lg:w-auto xl:w-[6rem] 2xl:w-[6.5rem] flex items-center justify-center ${
                       activeItem === 2
                         ? 'border-b-[3px] border-b-[#009889] bg-white text-black'
                         : 'border-b-[3px] border-b-transparent'
@@ -248,7 +248,7 @@ const Header = () => {
                   </li>
                   <li
                     onMouseEnter={() => handleItemHover(3)}
-                    className={`cursor-pointer  px-4 py-2.5 w-[6.5rem] flex items-center justify-center ${
+                    className={`cursor-pointer  px-4 py-2.5 lg:w-auto xl:w-[6rem] 2xl:w-[6.5rem] flex items-center justify-center ${
                       activeItem === 3
                         ? 'border-b-[3px] border-b-[#009889] bg-white text-black'
                         : 'border-b-[3px] border-b-transparent'
@@ -258,7 +258,7 @@ const Header = () => {
                   </li>
                   <li
                     onMouseEnter={() => handleItemHover(4)}
-                    className={`cursor-pointer  px-4 py-2.5 w-[6.5rem] flex items-center justify-center ${
+                    className={`cursor-pointer  px-4 py-2.5 lg:w-auto xl:w-[6rem] 2xl:w-[6.5rem] flex items-center justify-center ${
                       activeItem === 4
                         ? 'border-b-[3px] border-b-[#009889] bg-white text-black'
                         : 'border-b-[3px] border-b-transparent'
@@ -268,7 +268,7 @@ const Header = () => {
                   </li>
                   <li
                     onMouseEnter={() => handleItemHover(5)}
-                    className={`cursor-pointer  px-4 py-2.5 w-[6.5rem] flex items-center justify-center ${
+                    className={`cursor-pointer  px-4 py-2.5 lg:w-auto xl:w-[6rem] 2xl:w-[6.5rem] flex items-center justify-center ${
                       activeItem === 5
                         ? 'border-b-[3px] border-b-[#009889] bg-white text-black'
                         : 'border-b-[3px] border-b-transparent'
@@ -278,7 +278,7 @@ const Header = () => {
                   </li>
                   <li
                     onMouseEnter={() => handleItemHover(6)}
-                    className={`cursor-pointer  px-4 py-2.5 w-[6.5rem] flex items-center justify-center ${
+                    className={`cursor-pointer  px-4 py-2.5 lg:w-auto xl:w-[6.5rem] 2xl:w-[7rem] flex items-center justify-center ${
                       activeItem === 6
                         ? 'border-b-[3px] border-b-[#009889] bg-white text-black'
                         : 'border-b-[3px] border-b-transparent'
@@ -288,7 +288,7 @@ const Header = () => {
                   </li>
                   <li
                     onMouseEnter={() => handleItemHover(7)}
-                    className={`cursor-pointer  px-4 py-2.5 w-[7rem] flex items-center justify-center ${
+                    className={`cursor-pointer  px-4 py-2.5 lg:w-auto xl:w-[6.5rem] 2xl:w-[7rem] flex items-center justify-center ${
                       activeItem === 7
                         ? 'border-b-[3px] border-b-[#009889] bg-white text-black'
                         : 'border-b-[3px] border-b-transparent'
@@ -299,7 +299,7 @@ const Header = () => {
                 </ul>
               ) : (
                 <ul
-                  className={`flex items-center justify-center text-white text-[16px] gap-0 2xl:gap-2 py-3 px-4 absolute left-[16rem] xl:left-[18rem] 2xl:left-[20rem] 3xl:left-[25rem] 4xl:left-[30rem] rounded-t-xl hover:text-black overflow-hidden `}
+                  className={`flex items-center justify-center text-white xl:text-[15px] 2xl:text-[16px] gap-0 2xl:gap-2 py-3 px-4 absolute left-[12rem] xl:left-[calc(30vw-10rem)] 2xl:left-[18rem] 3xl:left-[25rem] 4xl:left-[30rem] rounded-t-xl hover:text-black overflow-hidden `}
                   onMouseEnter={handleMouseEnter}
                   onMouseLeave={handleMouseLeave}
                 >
@@ -315,7 +315,7 @@ const Header = () => {
                 </li> */}
                   <li
                     onMouseEnter={() => handleItemHover(1)}
-                    className={`cursor-pointer transition ease-in delay-100 duration-300 px-4 py-2.5 w-[6.5rem] flex items-center justify-center ${
+                    className={`cursor-pointer transition ease-in delay-100 duration-300 px-4 py-2.5 lg:w-auto xl:w-[6rem] 2xl:w-[6.5rem] flex items-center justify-center ${
                       activeItem === 1
                         ? ''
                         : 'border-b-[3px] border-b-transparent'
@@ -325,7 +325,7 @@ const Header = () => {
                   </li>
                   <li
                     onMouseEnter={() => handleItemHover(2)}
-                    className={`cursor-pointer transition ease-in delay-100 duration-300 px-4 py-2.5 w-[6.5rem] flex items-center justify-center ${
+                    className={`cursor-pointer transition ease-in delay-100 duration-300 px-4 py-2.5 lg:w-auto xl:w-[6rem] 2xl:w-[6.5rem] flex items-center justify-center ${
                       activeItem === 2
                         ? ''
                         : 'border-b-[3px] border-b-transparent'
@@ -335,7 +335,7 @@ const Header = () => {
                   </li>
                   <li
                     onMouseEnter={() => handleItemHover(3)}
-                    className={`cursor-pointer transition ease-in delay-100 duration-300 px-4 py-2.5 w-[6.5rem] flex items-center justify-center ${
+                    className={`cursor-pointer transition ease-in delay-100 duration-300 px-4 py-2.5 lg:w-auto xl:w-[6rem] 2xl:w-[6.5rem] flex items-center justify-center ${
                       activeItem === 3
                         ? ''
                         : 'border-b-[3px] border-b-transparent'
@@ -345,7 +345,7 @@ const Header = () => {
                   </li>
                   <li
                     onMouseEnter={() => handleItemHover(4)}
-                    className={`cursor-pointer transition ease-in delay-100 duration-300 px-4 py-2.5 w-[6.5rem] flex items-center justify-center ${
+                    className={`cursor-pointer transition ease-in delay-100 duration-300 px-4 py-2.5 lg:w-auto xl:w-[6rem] 2xl:w-[6.5rem] flex items-center justify-center ${
                       activeItem === 4
                         ? ''
                         : 'border-b-[3px] border-b-transparent'
@@ -355,7 +355,7 @@ const Header = () => {
                   </li>
                   <li
                     onMouseEnter={() => handleItemHover(5)}
-                    className={`cursor-pointer transition ease-in delay-100 duration-300 px-4 py-2.5 w-[6.5rem] flex items-center justify-center ${
+                    className={`cursor-pointer transition ease-in delay-100 duration-300 px-4 py-2.5 lg:w-auto xl:w-[6rem] 2xl:w-[6.5rem] flex items-center justify-center ${
                       activeItem === 5
                         ? ''
                         : 'border-b-[3px] border-b-transparent'
@@ -365,7 +365,7 @@ const Header = () => {
                   </li>
                   <li
                     onMouseEnter={() => handleItemHover(6)}
-                    className={`cursor-pointer transition ease-in delay-100 duration-300 px-4 py-2.5 w-[6.5rem] flex items-center justify-center ${
+                    className={`cursor-pointer transition ease-in delay-100 duration-300 px-4 py-2.5 lg:w-auto xl:w-[6.5rem] 2xl:w-[7rem] flex items-center justify-center ${
                       activeItem === 6
                         ? ''
                         : 'border-b-[3px] border-b-transparent'
@@ -375,7 +375,7 @@ const Header = () => {
                   </li>
                   <li
                     onMouseEnter={() => handleItemHover(7)}
-                    className={`cursor-pointer transition ease-in delay-100 duration-300 px-4 py-2.5 w-[7rem] flex items-center justify-center ${
+                    className={`cursor-pointer transition ease-in delay-100 duration-300 px-4 py-2.5 lg:w-auto xl:w-[6.5rem] 2xl:w-[7rem] flex items-center justify-center ${
                       activeItem === 7
                         ? ''
                         : 'border-b-[3px] border-b-transparent'
@@ -387,7 +387,7 @@ const Header = () => {
               )}
               {isHovering && activeItem > 0 && (
                 <div
-                  className={`h-auto bg-[#FFFEFE] px-4 z-40 absolute shadow-2xl top-[4.5rem] left-[17rem] xl:left-[19rem] 2xl:left-[21rem] 3xl:left-[26rem] 4xl:left-[31rem] w-[56.0rem] 2xl:w-[59.0rem] rounded-b-xl `}
+                  className={`h-auto bg-[#FFFEFE] px-4 z-40 absolute shadow-2xl 2xl:top-[4.5rem] xl:top-[4rem] top-[3.8rem] left-[13rem] xl:left-[calc(30vw-9rem)] 2xl:left-[19rem] 3xl:left-[26rem] 4xl:left-[31rem] w-[41.0rem] xl:w-[43.0rem] 2xl:w-[49.5rem] rounded-b-xl `}
                   onMouseEnter={handleMouseEnter}
                   onMouseLeave={handleMouseLeave}
                 >
@@ -397,90 +397,8 @@ const Header = () => {
                       activeItem === 0 ? 'none' : 'block'
                     }`}
                   >
-                    {/* <div className=' w-[25%] h-auto flex flex-col items-start justify-start '>
-                      
-                      {activeItem === 1 && (
-                        <div className='flex items-start justify-center'>
-                          <div className='flex flex-col items-start justify-center'>
-                            <div className='font-semibold ml-6 text-xl border-b-[2px] border-[#009889] pb-[2px] '>
-                              Immigrate
-                            </div>
-                            <div className='px-6 mt-4 w-[11rem]'>
-                              <img src={clipart1} alt='clipart' />
-                            </div>
-                           
-                          </div>
-                        </div>
-                      )}
-                      {activeItem === 2 && (
-                        <>
-                          <div className='font-semibold ml-6 text-xl border-b-[2px] border-[#009889] pb-[2px]'>
-                            Work
-                          </div>
-                          <div className='px-6 mt-4 w-[11rem]'>
-                            <img src={clipart2} alt='clipart' />
-                          </div>
-                          
-                        </>
-                      )}
-                      {activeItem === 3 && (
-                        <>
-                          <div className='font-semibold ml-6 text-xl border-b-[2px] border-[#009889] pb-[2px]'>
-                            Study
-                          </div>
-                          <div className='px-6 mt-4 w-[11rem]'>
-                            <img src={clipart3} alt='clipart' />
-                          </div>
-                         
-                        </>
-                      )}
-                      {activeItem === 4 && (
-                        <>
-                          <div className='font-semibold ml-6 text-xl border-b-[2px] border-[#009889] pb-[2px]'>
-                            Invest
-                          </div>
-                          <div className='px-6 mt-4 w-[11rem]'>
-                            <img src={clipart4} alt='clipart' />
-                          </div>
-                         
-                        </>
-                      )}
-                      {activeItem === 5 && (
-                        <>
-                          <div className='font-semibold ml-6 text-xl border-b-[2px] border-[#009889] pb-[2px]'>
-                            Visit
-                          </div>
-                          <div className='px-6 mt-4 w-[11rem]'>
-                            <img src={clipart5} alt='clipart' />
-                          </div>
-                         
-                        </>
-                      )}
-                      {activeItem === 6 && (
-                        <>
-                          <div className='font-semibold ml-6 text-xl border-b-[2px] border-[#009889] pb-[2px]'>
-                            Employers
-                          </div>
-                          <div className='px-6 mt-4 w-[11rem]'>
-                            <img src={clipart6} alt='clipart' />
-                          </div>
-                         
-                        </>
-                      )}
-                      {activeItem === 7 && (
-                        <>
-                          <div className='font-semibold ml-6 text-xl border-b-[2px] border-[#009889] pb-[2px]'>
-                            Sponsorship
-                          </div>
-                          <div className='px-6 mt-4 w-[11rem]'>
-                            <img src={clipart7} alt='clipart' />
-                          </div>
-                         
-                        </>
-                      )}
-                    </div> */}
                     {activeItem === 1 && (
-                      <div className=' w-[37%] h-auto mt-4'>
+                      <div className=' w-[40%] h-auto mt-4'>
                         <div className='flex flex-col '>
                           <ul className='text-[15px] flex flex-col items-start justify-start gap-4 '>
                             <li
@@ -635,7 +553,7 @@ const Header = () => {
                       </div>
                     )}
                     {activeItem === 2 && (
-                      <div className=' w-[37%] h-auto mt-4 mb-4'>
+                      <div className=' w-[40%] h-auto mt-4 mb-4'>
                         <div className='flex flex-col'>
                           <ul className='text-[15px] flex flex-col items-start justify-start gap-4 '>
                             <li
@@ -727,7 +645,7 @@ const Header = () => {
                       </div>
                     )}
                     {activeItem === 3 && (
-                      <div className=' w-[37%] h-auto mt-4 mb-4'>
+                      <div className=' w-[40%] h-auto mt-4 mb-4'>
                         <div className='flex flex-col'>
                           <ul className='text-[15px] flex flex-col items-start justify-start gap-4'>
                             <li
@@ -849,7 +767,7 @@ const Header = () => {
                       </div>
                     )}
                     {activeItem === 4 && (
-                      <div className=' w-[37%] h-auto mt-4 mb-4'>
+                      <div className=' w-[40%] h-auto mt-4 mb-4'>
                         <div className='flex flex-col'>
                           <ul className='text-[15px] flex flex-col items-start justify-start gap-4 '>
                             <li
@@ -912,7 +830,7 @@ const Header = () => {
                       </div>
                     )}
                     {activeItem === 5 && (
-                      <div className=' w-[37%] h-auto mt-4 mb-4'>
+                      <div className=' w-[40%] h-auto mt-4 mb-4'>
                         <div className='flex flex-col '>
                           <ul className='text-[15px] flex flex-col items-start justify-start gap-4 '>
                             <li
@@ -959,7 +877,7 @@ const Header = () => {
                       </div>
                     )}
                     {activeItem === 6 && (
-                      <div className=' w-[37%] h-auto mt-4 mb-4'>
+                      <div className=' w-[40%] h-auto mt-4 mb-4'>
                         <div className='flex flex-col'>
                           <ul className='text-[15px] flex flex-col items-start justify-start gap-4'>
                             <li
@@ -1002,7 +920,7 @@ const Header = () => {
                       </div>
                     )}
                     {activeItem === 7 && (
-                      <div className=' w-[37%] h-auto mt-4 mb-4'>
+                      <div className=' w-[40%] h-auto mt-4 mb-4'>
                         <div className='flex flex-col'>
                           <ul className='text-[15px] flex flex-col items-start justify-start gap-4 '>
                             <li
@@ -1082,7 +1000,7 @@ const Header = () => {
                       </div>
                     )}
                     {selectedProgram === 'PNP' && activeItem === 1 && (
-                      <div className=' w-[25%] auto flex items-start justify-start mt-4 mb-4'>
+                      <div className=' w-[35%] auto flex items-start justify-start mt-4 mb-4'>
                         <div className='flex flex-col items-start justify-center'>
                           <ul className='text-[14px]'>
                             <li
@@ -1265,7 +1183,7 @@ const Header = () => {
                     )}
                     {selectedProgram === 'Express Entry' &&
                       activeItem === 1 && (
-                        <div className=' w-[25%] auto flex items-start justify-start mt-4 mb-4'>
+                        <div className=' w-[35%] auto flex items-start justify-start mt-4 mb-4'>
                           <div className='flex flex-col items-start justify-center'>
                             <ul className='text-[14px]'>
                               <li>
@@ -1314,7 +1232,7 @@ const Header = () => {
                       )}
                     {selectedProgram === 'After Permanent Residency' &&
                       activeItem === 1 && (
-                        <div className=' w-[25%] auto flex items-start justify-start mt-4 mb-4'>
+                        <div className=' w-[35%] auto flex items-start justify-start mt-4 mb-4'>
                           <div className='flex flex-col items-start justify-center'>
                             <ul className='text-[14px]'>
                               <li>
@@ -1353,7 +1271,7 @@ const Header = () => {
 
                     {selectedProgram === 'Business Class' &&
                       activeItem === 1 && (
-                        <div className=' w-[25%] auto flex items-start justify-start mt-4 mb-4'>
+                        <div className=' w-[35%] auto flex items-start justify-start mt-4 mb-4'>
                           <div className='flex flex-col items-start justify-center'>
                             <ul className='text-[14px]'>
                               <li>
@@ -1373,7 +1291,7 @@ const Header = () => {
                       )}
                     {selectedProgram === 'Caregiver Program' &&
                       activeItem === 1 && (
-                        <div className=' w-[25%] auto flex items-start justify-start mt-4 mb-4'>
+                        <div className=' w-[35%] auto flex items-start justify-start mt-4 mb-4'>
                           <div className='flex flex-col items-start justify-center'>
                             <ul className='text-[14px]'>
                               <li>
@@ -1394,7 +1312,7 @@ const Header = () => {
 
                     {selectedProgram === 'Work Without a Permit ' &&
                       activeItem === 2 && (
-                        <div className=' w-[25%] auto flex items-center justify-start mt-4 mb-4'>
+                        <div className=' w-[35%] auto flex items-center justify-start mt-4 mb-4'>
                           <div className='flex flex-col items-start justify-start'>
                             <ul className='text-[14px]'>
                               <li>
@@ -1406,7 +1324,7 @@ const Header = () => {
                       )}
                     {selectedProgram === ' Temporary Foreign Worker Program' &&
                       activeItem === 2 && (
-                        <div className=' w-[25%] auto flex items-start justify-start mt-4 mb-4'>
+                        <div className=' w-[35%] auto flex items-start justify-start mt-4 mb-4'>
                           <div className='flex flex-col items-start justify-center'>
                             <ul className='text-[14px]'>
                               <li>
@@ -1426,7 +1344,7 @@ const Header = () => {
                     {selectedProgram ===
                       'International Mobility Program (IMP)' &&
                       activeItem === 2 && (
-                        <div className=' w-[25%] auto flex items-start justify-start mt-4 mb-4'>
+                        <div className=' w-[35%] auto flex items-start justify-start mt-4 mb-4'>
                           <div className='flex flex-col items-start justify-center'>
                             <ul className='text-[14px]'>
                               <li>
@@ -1446,7 +1364,7 @@ const Header = () => {
                       )}
                     {selectedProgram === 'Open Work Permits' &&
                       activeItem === 2 && (
-                        <div className=' w-[25%] auto flex items-start justify-start mt-4 mb-4'>
+                        <div className=' w-[35%] auto flex items-start justify-start mt-4 mb-4'>
                           <div className='flex flex-col items-start justify-center'>
                             <ul className='text-[14px]'>
                               <li>
@@ -1475,7 +1393,7 @@ const Header = () => {
                       )}
                     {selectedProgram === 'Study Permit In Canada' &&
                       activeItem === 3 && (
-                        <div className=' w-[25%] auto flex items-start justify-start mt-4 mb-4'>
+                        <div className=' w-[35%] auto flex items-start justify-start mt-4 mb-4'>
                           <div className='flex flex-col items-start justify-center'>
                             <ul className='text-[14px]'>
                               <li>
@@ -1495,7 +1413,7 @@ const Header = () => {
                       )}
                     {selectedProgram === ' Business/Invest' &&
                       activeItem === 4 && (
-                        <div className=' w-[25%] auto flex items-start justify-start mt-4 mb-4'>
+                        <div className=' w-[35%] auto flex items-start justify-start mt-4 mb-4'>
                           <div className='flex flex-col items-start justify-center'>
                             <ul className='text-[14px]'>
                               <li>
@@ -1527,7 +1445,7 @@ const Header = () => {
                       )}
                     {selectedProgram === 'PNP Entrepreneur Streams' &&
                       activeItem === 4 && (
-                        <div className=' w-[25%] auto flex items-start justify-start mt-4 mb-4'>
+                        <div className=' w-[35%] auto flex items-start justify-start mt-4 mb-4'>
                           <div className='flex flex-col items-start justify-center'>
                             <ul className='text-[14px]'>
                               <li>
@@ -1575,7 +1493,7 @@ const Header = () => {
                       )}
                     {selectedProgram === ' Work Permit to PR Pathways' &&
                       activeItem === 4 && (
-                        <div className=' w-[25%] auto flex items-start justify-start mt-4 mb-4'>
+                        <div className=' w-[35%] auto flex items-start justify-start mt-4 mb-4'>
                           <div className='flex flex-col items-start justify-center'>
                             <ul className='text-[14px]'>
                               <li>
@@ -1598,7 +1516,7 @@ const Header = () => {
                       )}
                     {selectedProgram === ' Employers Outside Canada' &&
                       activeItem === 6 && (
-                        <div className=' w-[25%] auto flex items-start justify-start mt-4 mb-4'>
+                        <div className=' w-[35%] auto flex items-start justify-start mt-4 mb-4'>
                           <div className='flex flex-col items-start justify-center'>
                             <ul className='text-[14px]'>
                               <li>
@@ -1622,7 +1540,7 @@ const Header = () => {
                       )}
                     {selectedProgram === 'Canadian Employers' &&
                       activeItem === 6 && (
-                        <div className=' w-[25%] auto flex items-start justify-start mt-4 mb-4'>
+                        <div className=' w-[35%] auto flex items-start justify-start mt-4 mb-4'>
                           <div className='flex flex-col items-start justify-center'>
                             <ul className='text-[14px]'>
                               <li>
@@ -1634,6 +1552,94 @@ const Header = () => {
                           </div>
                         </div>
                       )}
+                    <div className='h-auto flex flex-col items-start justify-start '>
+                      {activeItem === 1 && (
+                        <div className='flex items-start justify-center'>
+                          <div className='flex flex-col items-start justify-center'>
+                            {/* <div className='font-semibold ml-6 text-xl border-b-[2px] border-[#009889] pb-[2px] '>
+                              Immigrate
+                            </div> */}
+                            {!selectedProgram && (
+                              <div className='px-6 mt-4 w-[25rem]'>
+                                <img src={clipart1} alt='clipart' />
+                              </div>
+                            )}
+                          </div>
+                        </div>
+                      )}
+                      {activeItem === 2 && (
+                        <>
+                          {/* <div className='font-semibold ml-6 text-xl border-b-[2px] border-[#009889] pb-[2px]'>
+                            Work
+                          </div> */}
+                          {!selectedProgram && (
+                            <div className='px-6 mt-4 w-[25rem]'>
+                              <img src={clipart2} alt='clipart' />
+                            </div>
+                          )}
+                        </>
+                      )}
+                      {activeItem === 3 && (
+                        <>
+                          {/* <div className='font-semibold ml-6 text-xl border-b-[2px] border-[#009889] pb-[2px]'>
+                            Study
+                          </div> */}
+                          {!selectedProgram && (
+                            <div className='px-6 mt-4 w-[25rem]'>
+                              <img src={clipart3} alt='clipart' />
+                            </div>
+                          )}
+                        </>
+                      )}
+                      {activeItem === 4 && (
+                        <>
+                          {/* <div className='font-semibold ml-6 text-xl border-b-[2px] border-[#009889] pb-[2px]'>
+                            Invest
+                          </div> */}
+                          {!selectedProgram && (
+                            <div className='px-6 mt-4 w-[25rem]'>
+                              <img src={clipart4} alt='clipart' />
+                            </div>
+                          )}
+                        </>
+                      )}
+                      {activeItem === 5 && (
+                        <>
+                          {/* <div className='font-semibold ml-6 text-xl border-b-[2px] border-[#009889] pb-[2px]'>
+                            Visit
+                          </div> */}
+                          {!selectedProgram && (
+                            <div className='px-6 mt-4 w-[25rem]'>
+                              <img src={clipart5} alt='clipart' />
+                            </div>
+                          )}
+                        </>
+                      )}
+                      {activeItem === 6 && (
+                        <>
+                          {/* <div className='font-semibold ml-6 text-xl border-b-[2px] border-[#009889] pb-[2px]'>
+                            Employers
+                          </div> */}
+                          {!selectedProgram && (
+                            <div className='px-6 mt-4 w-[25rem]'>
+                              <img src={clipart6} alt='clipart' />
+                            </div>
+                          )}
+                        </>
+                      )}
+                      {activeItem === 7 && (
+                        <>
+                          {/* <div className='font-semibold ml-6 text-xl border-b-[2px] border-[#009889] pb-[2px]'>
+                            Sponsorship
+                          </div> */}
+                          {!selectedProgram && (
+                            <div className='px-6 mt-4 w-[25rem]'>
+                              <img src={clipart7} alt='clipart' />
+                            </div>
+                          )}
+                        </>
+                      )}
+                    </div>
                     {/* {activeItem === 1 && selectedProgram === 'PNP' && (
                       <div className='w-[30%]'>
                         <HeaderComponentTextContent textContent={textContent} />
@@ -1649,7 +1655,7 @@ const Header = () => {
                 <div className='cursor-pointer text-white text-[14px]'>
                   <button
                     onClick={handleAppointmentClick}
-                    className='bg-[#01F9E1] font-normal text-black px-4 py-2 rounded-[10px] text-[16px] hover:scale-105 transition ease-in delay-60 duration-150 mr-10'
+                    className='bg-[#01F9E1] font-normal text-black px-4 py-2 rounded-[10px] xl:text-[15px] 2xl:text-[16px] hover:scale-105 transition ease-in delay-60 duration-150 lg:mr-2 xl:mr-4 2xl:mr-10'
                   >
                     Book Appointment
                   </button>
@@ -1658,7 +1664,7 @@ const Header = () => {
             </div>
           </>
         ) : (
-          <div className='w-full flex items-center justify-center sm:justify-around mt-6 mr-14'>
+          <div className='w-full flex items-center justify-around sm:justify-around md:mt-6 md:mr-14'>
             <div className='flex items-center justify-start'>
               <img
                 src={logo2}
@@ -1684,7 +1690,7 @@ const Header = () => {
         showForm={showAppointmentModel}
         setShowForm={setShowAppointmentModel}
       />
-    </>
+    </div>
   );
 };
 
