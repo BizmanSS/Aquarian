@@ -33,7 +33,7 @@ const Footer = () => {
               >
                 122A, Suncity Success Tower,
                 <br /> Sector 65, Gurugram,
-                <br /> Haryana 122102
+                <br /> Haryana 122011
               </a>
             </div>
           </div>
