@@ -144,10 +144,10 @@ const Header = () => {
             {' '}
             <div className='bg-[#000000] fixed w-[94%] h-[30px] text-[13px] z-40 flex items-center justify-end max-w-[120rem]'>
               <div className='flex items-center justify-end mr-[0rem]'>
-                <p className='px-4 py-1 text-[#939393] cursor-pointer'>
+                <p className='px-4 py-1 text-[#939393] cursor-pointer hover:text-[#01F9E1]'>
                   <a href='/about-us'>About Us</a>
                 </p>
-                <p className='px-4 py-1 text-[#939393] cursor-pointer'>
+                <p className='px-4 py-1 text-[#939393] cursor-pointer hover:text-[#01F9E1]'>
                   <a href='/contact-us'>Contact Us</a>
                 </p>
                 <div className='px-4 py-1 text-[#939393] flex items-center justify-center text-[0.6rem]'>
