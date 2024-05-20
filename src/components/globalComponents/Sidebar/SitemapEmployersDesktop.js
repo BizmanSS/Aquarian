@@ -24,11 +24,11 @@ function SitemapEmployersDesktop() {
             </span>
             {link.nestedLinks && (
               <button onClick={() => toggleExpand(parentIndex + "-" + index)}>
-                {isExpanded ? <FiMinus
-            className='text-lg text-[#01997E] hover:scale-115 hover:text-[#01997E]'
-          /> :<FiPlus
-            className='text-lg hover:scale-115 hover:text-[#01997E]'
-          />}
+              {isExpanded ? 
+                <FiMinus className='text-lg text-[#01997E] hover:scale-115 hover:text-[#01997E]' /> 
+                :
+                <FiPlus className='text-lg hover:scale-115 hover:text-[#01997E]' />
+              }
               </button>
             )}
           </div>
@@ -58,11 +58,11 @@ function SitemapEmployersDesktop() {
                 </span>
                 {section.nestedLinks && (
                   <button onClick={() => toggleExpand(index)}>
-                    {isExpanded ?  <FiMinus
-            className='text-lg text-[#01997E] hover:scale-115 hover:text-[#01997E]'
-          /> : <FiPlus
-            className='text-lg hover:scale-115 hover:text-[#01997E]'
-          />}
+                  {isExpanded ? 
+                    <FiMinus className='text-lg text-[#01997E] hover:scale-115 hover:text-[#01997E]' /> 
+                    :
+                    <FiPlus className='text-lg hover:scale-115 hover:text-[#01997E]' />
+                  }
                   </button>
                 )}
               </div>
