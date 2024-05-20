@@ -51,6 +51,7 @@ const TheAquarian = () => {
             {!isActive && (
               <div
                 className="button"
+                style={{backgroundColor:"#3E3E41", color:"#EEEEEE"}}
                 onMouseEnter={() => !isMobile && setIsActive(true)}
                 onMouseLeave={() => !isMobile && setIsActive(false)}
                 onClick={handleClick}
@@ -61,6 +62,7 @@ const TheAquarian = () => {
             {isActive && (
               <div
                 className="button2"
+                style={{backgroundColor:"#3E3E41", color:"#EEEEEE"}}
                 onMouseLeave={() => !isMobile && setIsActive(false)}
                 onClick={handleClick}
               >
