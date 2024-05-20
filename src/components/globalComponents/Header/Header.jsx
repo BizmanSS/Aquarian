@@ -1560,9 +1560,15 @@ const Header = () => {
                               Immigrate
                             </div> */}
                             {!selectedProgram && (
-                              <div className='px-6 mt-4 w-[25rem]'>
-                                <img src={clipart1} alt='clipart' />
-                              </div>
+                              <>
+                                {' '}
+                                <div className='px-6 mt-4 w-[25rem]'>
+                                  <img src={clipart1} alt='clipart' />
+                                </div>
+                                <p className='ml-6 font-semibold mt-4'>
+                                  Start the new chapter of your life in Canada
+                                </p>
+                              </>
                             )}
                           </div>
                         </div>
