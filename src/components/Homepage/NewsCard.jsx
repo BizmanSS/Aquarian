@@ -10,8 +10,8 @@ const NewsCard = ({ data }) => {
         alt='cardImage'
       />
       <div className='w-full flex items-center justify-end relative -top-[1.3rem]'>
-        <div className='w-auto max-w-[11rem] flex items-center px-6 py-3 bg-white'>
-          <h1 className='mx-3 text-sm font-thin text-black'>22 MAR. 2024</h1>
+        <div className='w-auto max-w-[11rem] flex items-center px-6 py-3 bg-slate-100'>
+          <h1 className='mx-3 text-sm font-normal text-black'>22 MAR. 2024</h1>
         </div>
       </div>
 
@@ -20,7 +20,9 @@ const NewsCard = ({ data }) => {
         <h1 className='text-lg font-semibold text-gray-800'>{data.title}</h1>
 
         <p className='py-2 text-gray-700'>{data.description.slice(0, 110)}..</p>
-        <p className='cursor-pointer font-semibold'>Read More...</p>
+        <p className='cursor-pointer font-semibold text-red-500 ml-40'>
+          Read More...
+        </p>
       </div>
       {/* <div className="flex flex-col gap-4">
         <div className="border-[1px] border-gray-400 px-4 py-2 cursor-pointer font-normal text-sm max-w-[15rem] mx-6">
