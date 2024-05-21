@@ -17,7 +17,9 @@ const NewsCard = ({ data }) => {
 
       <div className='px-6 pb-4'>
         {/* <p className='py-2 text-gray-500 text-sm'>PROVINCIAL NOMINEE PROGRAM</p> */}
-        <h1 className='text-lg font-semibold text-gray-800'>{data.title}</h1>
+        <h1 className='text-lg font-semibold text-gray-800'>
+          {data.title.slice(0, 40)}
+        </h1>
 
         <p className='py-2 text-gray-700'>{data.description.slice(0, 110)}..</p>
         <p className='cursor-pointer font-semibold text-red-500 ml-40'>
