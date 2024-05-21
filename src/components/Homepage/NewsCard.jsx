@@ -20,7 +20,7 @@ const NewsCard = ({ data }) => {
         <h1 className='text-lg font-semibold text-gray-800'>{data.title}</h1>
 
         <p className='py-2 text-gray-700'>{data.description.slice(0, 110)}..</p>
-        <p className='cursor-pointer'>Read More..</p>
+        <p className='cursor-pointer font-semibold'>Read More...</p>
       </div>
       {/* <div className="flex flex-col gap-4">
         <div className="border-[1px] border-gray-400 px-4 py-2 cursor-pointer font-normal text-sm max-w-[15rem] mx-6">
