@@ -177,7 +177,7 @@ const BlogPosts = () => {
   ];
   const Keywords = ({ title }) => {
     return (
-      <div className="post-card-recent">
+      <div className="post-card-keywords">
         <div>
         <h1>{title}</h1>
         </div>
@@ -250,6 +250,12 @@ const InnerBlog = ({ title, description, date, image}) => {
       </div>
       <div className="left-blog">
         <div>
+        <h1 className="title-heading">Keywords</h1>
+          <div className="blog-card-recent">
+            {keywords.map((post, index) => (
+              <Keywords key={index} {...post} />
+            ))}
+          </div>
           <h1 className="title-heading">Recent Blogs</h1>
           <div className="blog-card-recent">
             {recentBlogs.map((post, index) => (
@@ -260,12 +266,6 @@ const InnerBlog = ({ title, description, date, image}) => {
           <div className="blog-card-recent">
             {trendingBlogs.map((post, index) => (
               <TrendingBlogs key={index} {...post} />
-            ))}
-          </div>
-          <h1 className="title-heading">Keywords</h1>
-          <div className="blog-card-recent">
-            {keywords.map((post, index) => (
-              <Keywords key={index} {...post} />
             ))}
           </div>
         </div>

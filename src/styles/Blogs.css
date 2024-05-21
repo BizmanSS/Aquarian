@@ -61,6 +61,14 @@
   margin-top: 1rem;
   margin-bottom: 2rem;
 }
+.post-card-keywords {
+  border-radius: 5px;
+  background: #ececec;
+  width: 420px;
+  display: flex;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+}
 .post-card img, .post-card-similar img, .post-card-inner img {
   margin-bottom: 1rem;
 }
@@ -97,6 +105,21 @@ margin-left: 67%;
   line-height: normal;
 }
 .post-card-recent h1 {
+  color: #313030;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  padding: 0.2rem 0.7rem 0rem 0.7rem;
+}
+.post-card-keywords h1 {
+  color: #313030;
+  font-size: 26px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  padding: 1rem;
+} h1 {
   color: #313030;
   font-size: 16px;
   font-style: normal;
@@ -216,7 +239,7 @@ letter-spacing: 6.65px;
   }
 }
 @media (max-width: 1580px) {
-  .post-card-recent {
+  .post-card-recent, .post-card-keywords {
     width: 400px;
   }
   .post-card, .post-card-similar {
@@ -231,7 +254,7 @@ letter-spacing: 6.65px;
     }
 }
 @media (max-width: 1520px) {
-  .post-card,  .post-card-similar {
+  .post-card,  .post-card-similar, .post-card-keywords {
     width: 370px;
   }
   .left-blog {
@@ -283,7 +306,7 @@ letter-spacing: 6.65px;
     }
 }
 @media (max-width: 1400px) {
-  .post-card, .post-card-similar {
+  .post-card, .post-card-similar, .post-card-keywords {
     width: 320px;
   }
   .left-blog {
