@@ -136,6 +136,7 @@ const Header = () => {
       </ul>
     );
   };
+
   return (
     <div className=''>
       <div className='bg-[#000000] lg:rounded-2xl h-[6rem] xl:h-[7rem] fixed z-10 top-0 flex flex-col items-center justify-start w-full md:w-[94%] 7xl:w-[96%] 7xl:-ml-[1.2rem] max-w-[140rem] 8xl:-ml-[3rem]'>
@@ -580,7 +581,7 @@ const Header = () => {
                       </div>
                     )}
                     {activeItem === 2 && (
-                      <div className=' w-[40%] h-auto mt-4 mb-4'>
+                      <div className=' w-[40%] h-auto mt-4'>
                         <div className='flex flex-col'>
                           <ul className='text-[15px] flex flex-col items-start justify-start gap-4 '>
                             <li
@@ -812,6 +813,21 @@ const Header = () => {
                       <div className=' w-[40%] h-auto mt-4 mb-4'>
                         <div className='flex flex-col'>
                           <ul className='text-[15px] flex flex-col items-start justify-start gap-4 '>
+                            <li
+                              // onMouseEnter={() =>
+                              //   handleItemProgramClick(
+                              //     'Canadian spousal sponsorship '
+                              //   )
+                              // }
+                              className={`flex items-center justify-between w-full transition ease-in delay-40 duration-200 cursor-pointer ${
+                                selectedProgram === 'Sponsorship' &&
+                                'text-[#01997E] font-semibold'
+                              }`}
+                            >
+                              <span className='hover:text-[#01997E] hover:font-semibold hover:scale-105 transition ease-in delay-40 duration-200'>
+                                Sponsorship{' '}
+                              </span>
+                            </li>
                             <li
                               // onMouseEnter={() =>
                               //   handleItemProgramClick(
@@ -1113,27 +1129,7 @@ const Header = () => {
                               {' '}
                               <HeaderComponent text={'New Brunswick'} />
                             </li>
-                            <li
-                              onMouseEnter={() => {
-                                setTextContent([
-                                  'Nova Scotia Experience: Express Entry',
-                                  ' Entrepreneur Category',
-                                  'International Graduate Entrepreneur Category ',
-                                  'International Graduates In Demand	 ',
-                                  ' Skilled Worker Category',
-                                  ' Physician Stream	',
-                                  ' Nova Scotia Labor Market Priorities		',
-                                  ' Nova Scotia Labor Market Priorities for Physicians	',
-                                  ' Occupations In Demand		',
-                                  ' Critical Construction Worker Pilot 	',
-                                ]);
-                                setSelectedtext('Nova Scotia');
-                              }}
-                              onMouseLeave={() => setTextContent('')}
-                            >
-                              {' '}
-                              <HeaderComponent text={'Nova Scotia'} />
-                            </li>
+
                             <li
                               onMouseEnter={() => {
                                 setTextContent([
@@ -1169,7 +1165,27 @@ const Header = () => {
                               {' '}
                               <HeaderComponent text={'Northwest Territories'} />
                             </li>
-
+                            <li
+                              onMouseEnter={() => {
+                                setTextContent([
+                                  'Nova Scotia Experience: Express Entry',
+                                  ' Entrepreneur Category',
+                                  'International Graduate Entrepreneur Category ',
+                                  'International Graduates In Demand	 ',
+                                  ' Skilled Worker Category',
+                                  ' Physician Stream	',
+                                  ' Nova Scotia Labor Market Priorities		',
+                                  ' Nova Scotia Labor Market Priorities for Physicians	',
+                                  ' Occupations In Demand		',
+                                  ' Critical Construction Worker Pilot 	',
+                                ]);
+                                setSelectedtext('Nova Scotia');
+                              }}
+                              onMouseLeave={() => setTextContent('')}
+                            >
+                              {' '}
+                              <HeaderComponent text={'Nova Scotia'} />
+                            </li>
                             <li
                               onMouseEnter={() => {
                                 setTextContent([
@@ -1373,7 +1389,7 @@ const Header = () => {
                             <ul className='text-[14px]'>
                               <li>
                                 <HeaderComponent
-                                  text={'Labour market impact assesment (LMIA)'}
+                                  text={'Labour market impact assesment'}
                                 />
                               </li>
                               <li>
@@ -1418,7 +1434,7 @@ const Header = () => {
                               </li>
                               <li>
                                 <HeaderComponent
-                                  text={'IEC-International Experience Class'}
+                                  text={'International Experience Class (IEC)'}
                                 />
                               </li>
                               <li>
@@ -1428,7 +1444,7 @@ const Header = () => {
                               </li>
                               <li>
                                 <HeaderComponent
-                                  text={'Spousal Open Work Permit (SOWP)'}
+                                  text={'Bridging Open Work Permit (BOWP)'}
                                 />
                               </li>
                             </ul>
@@ -1456,7 +1472,7 @@ const Header = () => {
                         </div>
                       )}
                     {selectedProgram === ' Business/Invest' &&
-                      activeItem === 4 && (
+                      activeItem === 5 && (
                         <div className=' w-[35%] auto flex items-start justify-start mt-4 mb-4'>
                           <div className='flex flex-col items-start justify-center'>
                             <ul className='text-[14px]'>
@@ -1488,7 +1504,7 @@ const Header = () => {
                         </div>
                       )}
                     {selectedProgram === 'PNP Entrepreneur Streams' &&
-                      activeItem === 4 && (
+                      activeItem === 5 && (
                         <div className=' w-[35%] auto flex items-start justify-start mt-4 mb-4'>
                           <div className='flex flex-col items-start justify-center'>
                             <ul className='text-[14px]'>
@@ -1536,7 +1552,7 @@ const Header = () => {
                         </div>
                       )}
                     {selectedProgram === ' Work Permit to PR Pathways' &&
-                      activeItem === 4 && (
+                      activeItem === 5 && (
                         <div className=' w-[35%] auto flex items-start justify-start mt-4 mb-4'>
                           <div className='flex flex-col items-start justify-center'>
                             <ul className='text-[14px]'>
@@ -1559,7 +1575,7 @@ const Header = () => {
                         </div>
                       )}
                     {selectedProgram === ' Employers Outside Canada' &&
-                      activeItem === 6 && (
+                      activeItem === 7 && (
                         <div className=' w-[35%] auto flex items-start justify-start mt-4 mb-4'>
                           <div className='flex flex-col items-start justify-center'>
                             <ul className='text-[14px]'>
@@ -1583,7 +1599,7 @@ const Header = () => {
                         </div>
                       )}
                     {selectedProgram === 'Canadian Employers' &&
-                      activeItem === 6 && (
+                      activeItem === 7 && (
                         <div className=' w-[35%] auto flex items-start justify-start mt-4 mb-4'>
                           <div className='flex flex-col items-start justify-center'>
                             <ul className='text-[14px]'>

@@ -35,7 +35,7 @@ const Component4 = () => {
         <div
           ref={sliderRef}
           id='slider'
-          className='overflow-x-scroll scroll scroll-smooth flex items-center justify-around w-full gap-10'
+          className='overflow-x-scroll scroll scroll-smooth flex items-center justify-around w-full gap-10 scrollbar-hide'
         >
           <NewsCard />
           <NewsCard />
