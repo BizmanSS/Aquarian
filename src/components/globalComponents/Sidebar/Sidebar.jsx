@@ -19,7 +19,10 @@ const Sidebar = () => {
         className='parent w-full h-[25%] border-b border-gray-500 text-white text-center flex flex-col items-center justify-center hover:bg-[#01F9E1] hover:text-black cursor-pointer transition ease-in delay-100 duration-300'
       >
         <img src={clip3} alt='logo' className='w-6 h-6 sidebar-img' />
-        <span>Resources & Tools</span>
+        <span>
+          Resources
+          <br />& Tools
+        </span>
       </Link>
 
       <div className='parent w-full h-[25%] border-b border-gray-500 text-white text-center flex flex-col items-center justify-center hover:bg-[#01F9E1] hover:text-black cursor-pointer transition ease-in delay-100 duration-300'>
