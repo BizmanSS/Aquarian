@@ -175,7 +175,7 @@ const Component5 = () => {
           onClick={handlePrevClick}
           disabled={pageIndex === 0}
         />
-        <span className='text-[#009889]'>{pageIndex + 1}</span>
+        <span className='text-[#009889] w-1'>{pageIndex + 1}</span>
         <Button2
           content={
             <div className='ml-1 bg-[#00F8E1] rounded-md flex items-center justify-center'>

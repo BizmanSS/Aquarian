@@ -1,9 +1,9 @@
 import React from 'react';
 import img1 from '../../Assets/cardimg1.png';
 
-const NewsCard = () => {
+const NewsCard = ({ data }) => {
   return (
-    <div className='min-w-[21rem] max-w-[23rem] overflow-hidden bg-slate-100 rounded-lg shadow-lg py-4 px-2'>
+    <div className='min-w-[21rem] max-w-[23rem] h-[35rem] overflow-hidden bg-slate-100 rounded-lg shadow-lg py-4 px-2'>
       <img
         className='object-cover object-center w-full h-[11rem]'
         src={img1}
@@ -17,16 +17,10 @@ const NewsCard = () => {
 
       <div className='px-6 pb-4'>
         <p className='py-2 text-gray-500 text-sm'>PROVINCIAL NOMINEE PROGRAM</p>
-        <h1 className='text-lg font-semibold text-gray-800'>
-          Alberta, British Columbia, Ontario and Prince Edward Island Issued PNP
-          Invitations!
-        </h1>
+        <h1 className='text-lg font-semibold text-gray-800'>{data.title}</h1>
 
-        <p className='py-2 text-gray-700'>
-          Discover insights into the results of the Provincial Nominee Program
-          (PNP) draws held accross Canada during the third week of March 2024.
-        </p>
-        <p>Read More..</p>
+        <p className='py-2 text-gray-700'>{data.description.slice(0, 110)}..</p>
+        <p className='cursor-pointer'>Read More..</p>
       </div>
       {/* <div className="flex flex-col gap-4">
         <div className="border-[1px] border-gray-400 px-4 py-2 cursor-pointer font-normal text-sm max-w-[15rem] mx-6">
