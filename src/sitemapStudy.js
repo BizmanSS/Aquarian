@@ -1,6 +1,6 @@
 const sitemapStudy = [
   { title: "Study In Canada", linkTo: "" },
-  { title: "Designated Learning Institution (DLI)", linkTo: "" },
+  { title: "Study Pathways to Permanent Residence", linkTo: "" },
   { title: "Levels of Study", linkTo: "" },
   {
     title: "Study Permit In Canada",
@@ -13,7 +13,7 @@ const sitemapStudy = [
   { title: "Refusals and Appeals of Study Permits", linkTo: "" },
   { title: "Extend a Study Permit", linkTo: "" },
   { title: "Post Graduate Work Permit (PGWP)", linkTo: "" },
-  { title: "Study Pathways to Permanent Residence", linkTo: "" },
+  { title: "Designated Learning Institution (DLI)", linkTo: "" },
 ];
 
 export default sitemapStudy;

@@ -5,16 +5,16 @@ import "../../../styles/SitemapDesktop.css";
 function SitemapBusinessDesktop() {
   const [expanded, setExpanded] = useState([]);
   const toggleExpand = (index) => {
-    if (expanded.includes(index)) {
-      setExpanded(expanded.filter((item) => item !== index));
+    if (expanded === index) {
+      setExpanded(null);
     } else {
-      setExpanded([...expanded, index]);
+      setExpanded(index);
     }
   };
 
   const renderNestedLinks = (links, parentIndex) => {
     return links.map((link, index) => {
-      const isExpanded = expanded.includes(parentIndex + "-" + index);
+      const isExpanded = expanded === parentIndex + "-" + index;
 
       return (
         <li key={index}>
@@ -47,7 +47,7 @@ function SitemapBusinessDesktop() {
     <div className="sidebar-main-div-global">
       <ul>
         {sitemapBusiness.map((section, index) => {
-          const isExpanded = expanded.includes(index);
+          const isExpanded = expanded === index;
 
           return (
             <li key={index}>
