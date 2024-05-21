@@ -62,7 +62,7 @@ const Banner = () => {
         <div className=' text-white px-4 text-lg md:text-[3.5rem] font-bold mb-3'>
           Our goal is to help <br /> <br /> you achieve yours
         </div>
-        <button className=' bg-black text-white px-4 md:px-16 py-3 rounded-xl text-sm md:text-lg border-[2px] border-[#01F9E1] font-bold transition ease-in-out delay-70 hover:scale-y-[1.1] hover:scale-x-[1.1] duration-300'>
+        <button className='mr-10 bg-black text-white px-4 md:px-10 py-3 rounded-xl text-sm md:text-lg border-[2px] border-[#01F9E1] font-bold transition ease-in-out delay-70 hover:scale-y-[1.1] hover:scale-x-[1.1] duration-300'>
           I want to immigrate permanently to Canada
         </button>
         <div className='flex items-center justify-center gap-4'>
