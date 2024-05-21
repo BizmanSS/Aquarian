@@ -264,7 +264,7 @@ const Header = () => {
                         : 'border-b-[3px] border-b-transparent'
                     }`}
                   >
-                    Invest
+                    Sponsorship
                   </li>
                   <li
                     onMouseEnter={() => handleItemHover(5)}
@@ -274,7 +274,7 @@ const Header = () => {
                         : 'border-b-[3px] border-b-transparent'
                     }`}
                   >
-                    Visit
+                    Business
                   </li>
                   <li
                     onMouseEnter={() => handleItemHover(6)}
@@ -284,7 +284,7 @@ const Header = () => {
                         : 'border-b-[3px] border-b-transparent'
                     }`}
                   >
-                    Employers
+                    Visit
                   </li>
                   <li
                     onMouseEnter={() => handleItemHover(7)}
@@ -294,7 +294,7 @@ const Header = () => {
                         : 'border-b-[3px] border-b-transparent'
                     }`}
                   >
-                    Sponsorship
+                    Employers
                   </li>
                 </ul>
               ) : (
@@ -351,7 +351,7 @@ const Header = () => {
                         : 'border-b-[3px] border-b-transparent'
                     }`}
                   >
-                    Invest
+                    Sponsorship
                   </li>
                   <li
                     onMouseEnter={() => handleItemHover(5)}
@@ -361,7 +361,7 @@ const Header = () => {
                         : 'border-b-[3px] border-b-transparent'
                     }`}
                   >
-                    Visit
+                    Business
                   </li>
                   <li
                     onMouseEnter={() => handleItemHover(6)}
@@ -371,7 +371,7 @@ const Header = () => {
                         : 'border-b-[3px] border-b-transparent'
                     }`}
                   >
-                    Employers
+                    Visit
                   </li>
                   <li
                     onMouseEnter={() => handleItemHover(7)}
@@ -381,7 +381,7 @@ const Header = () => {
                         : 'border-b-[3px] border-b-transparent'
                     }`}
                   >
-                    Sponsorship
+                    Employers
                   </li>
                 </ul>
               )}
@@ -401,6 +401,16 @@ const Header = () => {
                       <div className=' w-[40%] h-auto mt-4'>
                         <div className='flex flex-col '>
                           <ul className='text-[15px] flex flex-col items-start justify-start gap-4 '>
+                            <li
+                              className={`flex items-center justify-between w-full transition ease-in delay-40 duration-200 cursor-pointer ${
+                                selectedProgram === 'Permanent Residency' &&
+                                'text-[#01997E] font-semibold'
+                              }`}
+                            >
+                              <span className='hover:text-[#01997E] hover:font-semibold hover:scale-105 transition ease-in delay-40 duration-200'>
+                                Permanent Residency
+                              </span>
+                            </li>
                             <li
                               // onMouseEnter={() =>
                               //   handleItemProgramClick('Express Entry')
@@ -451,72 +461,13 @@ const Header = () => {
                               //   handleItemProgramClick('AGRI FOOD PILOT')
                               // }
                               className={`flex items-center justify-between w-full transition ease-in delay-40 duration-200 cursor-pointer ${
-                                selectedProgram === 'AGRI FOOD PILOT' &&
-                                'text-[#01997E] font-semibold'
-                              }`}
-                            >
-                              <span className='hover:text-[#01997E] hover:font-semibold hover:scale-105 transition ease-in delay-40 duration-200'>
-                                Agri Food Pilot
-                              </span>
-                            </li>
-                            <li
-                              // onMouseEnter={() =>
-                              //   handleItemProgramClick(
-                              //     'Atlantic Immigration Programme'
-                              //   )
-                              // }
-                              className={`flex items-center justify-between w-full transition ease-in delay-40 duration-200 cursor-pointer ${
                                 selectedProgram ===
-                                  'Atlantic Immigration Programme' &&
+                                  'Permanent Residency FAQs' &&
                                 'text-[#01997E] font-semibold'
                               }`}
                             >
                               <span className='hover:text-[#01997E] hover:font-semibold hover:scale-105 transition ease-in delay-40 duration-200'>
-                                Atlantic Immigration Programme
-                              </span>{' '}
-                            </li>
-                            <li
-                              // onMouseEnter={() =>
-                              //   handleItemProgramClick('Business Class')
-                              // }
-                              className={`flex items-center justify-between w-full transition ease-in delay-40 duration-200 cursor-pointer ${
-                                selectedProgram === 'Business Class' &&
-                                'text-[#01997E] font-semibold'
-                              }`}
-                            >
-                              <span className='hover:text-[#01997E] hover:font-semibold hover:scale-105 transition ease-in delay-40 duration-200'>
-                                Business Class
-                              </span>{' '}
-                              <SvgComponent program={'Business Class'} />
-                            </li>
-                            <li
-                              // onMouseEnter={() =>
-                              //   handleItemProgramClick('Caregiver Program')
-                              // }
-                              className={`flex items-center justify-between w-full transition ease-in delay-40 duration-200 cursor-pointer ${
-                                selectedProgram === 'Caregiver Program' &&
-                                'text-[#01997E] font-semibold'
-                              }`}
-                            >
-                              <span className='hover:text-[#01997E] hover:font-semibold hover:scale-105 transition ease-in delay-40 duration-200'>
-                                Caregiver Program
-                              </span>{' '}
-                              <SvgComponent program={'Caregiver Program'} />
-                            </li>
-                            <li
-                              // onMouseEnter={() =>
-                              //   handleItemProgramClick(
-                              //     'Canadian Immigration FAQs'
-                              //   )
-                              // }
-                              className={`flex items-center justify-between w-full transition ease-in delay-40 duration-200 cursor-pointer ${
-                                selectedProgram ===
-                                  'Canadian Immigration FAQs' &&
-                                'text-[#01997E] font-semibold'
-                              }`}
-                            >
-                              <span className='hover:text-[#01997E] hover:font-semibold hover:scale-105 transition ease-in delay-40 duration-200'>
-                                Canadian Immigration FAQs
+                                Permanent Residency FAQs
                               </span>
                             </li>
                             <li
@@ -537,6 +488,82 @@ const Header = () => {
                             </li>
                             <li
                               // onMouseEnter={() =>
+                              //   handleItemProgramClick('Caregiver Program')
+                              // }
+                              className={`flex items-center justify-between w-full transition ease-in delay-40 duration-200 cursor-pointer ${
+                                selectedProgram === 'Caregiver Program' &&
+                                'text-[#01997E] font-semibold'
+                              }`}
+                            >
+                              <span className='hover:text-[#01997E] hover:font-semibold hover:scale-105 transition ease-in delay-40 duration-200'>
+                                Caregiver Program
+                              </span>{' '}
+                              <SvgComponent program={'Caregiver Program'} />
+                            </li>
+                            <li
+                              // onMouseEnter={() =>
+                              //   handleItemProgramClick(
+                              //     'Atlantic Immigration Programme'
+                              //   )
+                              // }
+                              className={`flex items-center justify-between w-full transition ease-in delay-40 duration-200 cursor-pointer ${
+                                selectedProgram ===
+                                  'Atlantic Immigration Programme' &&
+                                'text-[#01997E] font-semibold'
+                              }`}
+                            >
+                              <span className='hover:text-[#01997E] hover:font-semibold hover:scale-105 transition ease-in delay-40 duration-200'>
+                                AIP Atlantic Immigration Programme
+                              </span>{' '}
+                            </li>
+                            <li
+                              // onMouseEnter={() =>
+                              //   handleItemProgramClick('AGRI FOOD PILOT')
+                              // }
+                              className={`flex items-center justify-between w-full transition ease-in delay-40 duration-200 cursor-pointer ${
+                                selectedProgram === 'AGRI FOOD PILOT' &&
+                                'text-[#01997E] font-semibold'
+                              }`}
+                            >
+                              <span className='hover:text-[#01997E] hover:font-semibold hover:scale-105 transition ease-in delay-40 duration-200'>
+                                Agri Food Pilot
+                              </span>
+                            </li>
+
+                            {/* <li
+                              // onMouseEnter={() =>
+                              //   handleItemProgramClick('Business Class')
+                              // }
+                              className={`flex items-center justify-between w-full transition ease-in delay-40 duration-200 cursor-pointer ${
+                                selectedProgram === 'Business Class' &&
+                                'text-[#01997E] font-semibold'
+                              }`}
+                            >
+                              <span className='hover:text-[#01997E] hover:font-semibold hover:scale-105 transition ease-in delay-40 duration-200'>
+                                Business Class
+                              </span>{' '}
+                              <SvgComponent program={'Business Class'} />
+                            </li> */}
+
+                            {/* <li
+                              // onMouseEnter={() =>
+                              //   handleItemProgramClick(
+                              //     'Canadian Immigration FAQs'
+                              //   )
+                              // }
+                              className={`flex items-center justify-between w-full transition ease-in delay-40 duration-200 cursor-pointer ${
+                                selectedProgram ===
+                                  'Canadian Immigration FAQs' &&
+                                'text-[#01997E] font-semibold'
+                              }`}
+                            >
+                              <span className='hover:text-[#01997E] hover:font-semibold hover:scale-105 transition ease-in delay-40 duration-200'>
+                                Canadian Immigration FAQs
+                              </span>
+                            </li>
+
+                            <li
+                              // onMouseEnter={() =>
                               //   handleItemProgramClick('TR to PR Route')
                               // }
                               className={`flex items-center justify-between w-full transition ease-in delay-40 duration-200 cursor-pointer ${
@@ -547,7 +574,7 @@ const Header = () => {
                               <span className='hover:text-[#01997E] hover:font-semibold hover:scale-105 transition ease-in delay-40 duration-200'>
                                 TR to PR Route
                               </span>
-                            </li>
+                            </li> */}
                           </ul>
                         </div>
                       </div>
@@ -666,14 +693,16 @@ const Header = () => {
                               //   handleItemProgramClick('DLI ')
                               // }
                               className={`flex items-center justify-between w-full transition ease-in delay-40 duration-200 cursor-pointer ${
-                                selectedProgram === 'DLI ' &&
+                                selectedProgram ===
+                                  'Study Pathways to Permanent Residence' &&
                                 'text-[#01997E] font-semibold'
                               }`}
                             >
                               <span className='hover:text-[#01997E] hover:font-semibold hover:scale-105 transition ease-in delay-40 duration-200'>
-                                DLI
+                                Study Pathways to Permanent Residence
                               </span>
                             </li>
+
                             <li
                               // onMouseEnter={() =>
                               //   handleItemProgramClick(' Levels of Study')
@@ -725,12 +754,12 @@ const Header = () => {
                               //   handleItemProgramClick('Extend a Study Control')
                               // }
                               className={`flex items-center justify-between w-full transition ease-in delay-40 duration-200 cursor-pointer ${
-                                selectedProgram === 'Extend a Study Control' &&
+                                selectedProgram === 'Extend a Study Permits' &&
                                 'text-[#01997E] font-semibold'
                               }`}
                             >
                               <span className='hover:text-[#01997E] hover:font-semibold hover:scale-105 transition ease-in delay-40 duration-200'>
-                                Extend a Study Control
+                                Extend a Study Permits
                               </span>
                             </li>
                             <li
@@ -748,6 +777,19 @@ const Header = () => {
                             </li>
                             <li
                               // onMouseEnter={() =>
+                              //   handleItemProgramClick('DLI ')
+                              // }
+                              className={`flex items-center justify-between w-full transition ease-in delay-40 duration-200 cursor-pointer ${
+                                selectedProgram === 'DLI ' &&
+                                'text-[#01997E] font-semibold'
+                              }`}
+                            >
+                              <span className='hover:text-[#01997E] hover:font-semibold hover:scale-105 transition ease-in delay-40 duration-200'>
+                                Designated Learning Institution (DLI)
+                              </span>
+                            </li>
+                            {/* <li
+                              // onMouseEnter={() =>
                               //   handleItemProgramClick(
                               //     'Study Pathways to Permanent REsidence'
                               //   )
@@ -761,165 +803,12 @@ const Header = () => {
                               <span className='hover:text-[#01997E] hover:font-semibold hover:scale-105 transition ease-in delay-40 duration-200'>
                                 Study Pathways to Permanent Residence
                               </span>
-                            </li>
+                            </li> */}
                           </ul>
                         </div>
                       </div>
                     )}
                     {activeItem === 4 && (
-                      <div className=' w-[40%] h-auto mt-4 mb-4'>
-                        <div className='flex flex-col'>
-                          <ul className='text-[15px] flex flex-col items-start justify-start gap-4 '>
-                            <li
-                              // onMouseEnter={() =>
-                              //   handleItemProgramClick(' Business/Invest')
-                              // }
-                              className={`flex items-center justify-between w-full transition ease-in delay-40 duration-200 cursor-pointer ${
-                                selectedProgram === ' Business/Invest' &&
-                                'text-[#01997E] font-semibold'
-                              }`}
-                            >
-                              <span className='hover:text-[#01997E] hover:font-semibold hover:scale-105 transition ease-in delay-40 duration-200'>
-                                Business/Invest{' '}
-                              </span>
-
-                              <SvgComponent program={' Business/Invest'} />
-                            </li>
-                            <li
-                              // onMouseEnter={() =>
-                              //   handleItemProgramClick(
-                              //     'PNP Entrepreneur Streams'
-                              //   )
-                              // }
-                              className={`flex items-center justify-between w-full transition ease-in delay-40 duration-200 cursor-pointer ${
-                                selectedProgram ===
-                                  'PNP Entrepreneur Streams' &&
-                                'text-[#01997E] font-semibold'
-                              }`}
-                            >
-                              <span className='hover:text-[#01997E] hover:font-semibold hover:scale-105 transition ease-in delay-40 duration-200'>
-                                PNP Entrepreneur Streams{' '}
-                              </span>
-
-                              <SvgComponent
-                                program={'PNP Entrepreneur Streams'}
-                              />
-                            </li>
-                            <li
-                              // onMouseEnter={() =>
-                              //   handleItemProgramClick(
-                              //     ' Work Permit to PR Pathways'
-                              //   )
-                              // }
-                              className={`flex items-center justify-between w-full transition ease-in delay-40 duration-200 cursor-pointer ${
-                                selectedProgram ===
-                                  ' Work Permit to PR Pathways' &&
-                                'text-[#01997E] font-semibold'
-                              }`}
-                            >
-                              <span className='hover:text-[#01997E] hover:font-semibold hover:scale-105 transition ease-in delay-40 duration-200'>
-                                Work Permit to PR Pathways{' '}
-                              </span>
-
-                              <SvgComponent
-                                program={' Work Permit to PR Pathways'}
-                              />
-                            </li>
-                          </ul>
-                        </div>
-                      </div>
-                    )}
-                    {activeItem === 5 && (
-                      <div className=' w-[40%] h-auto mt-4 mb-4'>
-                        <div className='flex flex-col '>
-                          <ul className='text-[15px] flex flex-col items-start justify-start gap-4 '>
-                            <li
-                              // onMouseEnter={() =>
-                              //   handleItemProgramClick('TRV-Visitor Visa')
-                              // }
-                              className={`flex items-center justify-between w-full transition ease-in delay-40 duration-200 cursor-pointer ${
-                                selectedProgram === 'TRV-Visitor Visa' &&
-                                'text-[#01997E] font-semibold'
-                              }`}
-                            >
-                              <span className='hover:text-[#01997E] hover:font-semibold hover:scale-105 transition ease-in delay-40 duration-200'>
-                                TRV-Visitor Visa
-                              </span>
-                            </li>
-                            <li
-                              // onMouseEnter={() =>
-                              //   handleItemProgramClick('Visa Extension')
-                              // }
-                              className={`flex items-center justify-between w-full transition ease-in delay-40 duration-200 cursor-pointer ${
-                                selectedProgram === 'Visa Extension' &&
-                                'text-[#01997E] font-semibold'
-                              }`}
-                            >
-                              <span className='hover:text-[#01997E] hover:font-semibold hover:scale-105 transition ease-in delay-40 duration-200'>
-                                Visa Extension
-                              </span>
-                            </li>
-                            <li
-                              // onMouseEnter={() =>
-                              //   handleItemProgramClick(' Super visa (linked)')
-                              // }
-                              className={`flex items-center justify-between w-full transition ease-in delay-40 duration-200 cursor-pointer ${
-                                selectedProgram === ' Super visa (linked)' &&
-                                'text-[#01997E] font-semibold'
-                              }`}
-                            >
-                              <span className='hover:text-[#01997E] hover:font-semibold hover:scale-105 transition ease-in delay-40 duration-200'>
-                                Super visa (linked)
-                              </span>
-                            </li>
-                          </ul>
-                        </div>
-                      </div>
-                    )}
-                    {activeItem === 6 && (
-                      <div className=' w-[40%] h-auto mt-4 mb-4'>
-                        <div className='flex flex-col'>
-                          <ul className='text-[15px] flex flex-col items-start justify-start gap-4'>
-                            <li
-                              // onMouseEnter={() =>
-                              //   handleItemProgramClick(
-                              //     ' Employers Outside Canada'
-                              //   )
-                              // }
-                              className={`flex items-center justify-between w-full transition ease-in delay-40 duration-200 cursor-pointer ${
-                                selectedProgram ===
-                                  ' Employers Outside Canada' &&
-                                'text-[#01997E] font-semibold'
-                              }`}
-                            >
-                              <span className='hover:text-[#01997E] hover:font-semibold hover:scale-105 transition ease-in delay-40 duration-200'>
-                                Employers Outside Canada{' '}
-                              </span>
-
-                              <SvgComponent
-                                program={' Employers Outside Canada'}
-                              />
-                            </li>
-                            <li
-                              // onMouseEnter={() =>
-                              //   handleItemProgramClick('Canadian Employers')
-                              // }
-                              className={`flex items-center justify-between w-full transition ease-in delay-40 duration-200 cursor-pointer ${
-                                selectedProgram === 'Canadian Employers' &&
-                                'text-[#01997E] font-semibold'
-                              }`}
-                            >
-                              <span className='hover:text-[#01997E] hover:font-semibold hover:scale-105 transition ease-in delay-40 duration-200'>
-                                Canadian Employers
-                              </span>
-
-                              <SvgComponent program={'Canadian Employers'} />
-                            </li>
-                          </ul>
-                        </div>
-                      </div>
-                    )}
-                    {activeItem === 7 && (
                       <div className=' w-[40%] h-auto mt-4 mb-4'>
                         <div className='flex flex-col'>
                           <ul className='text-[15px] flex flex-col items-start justify-start gap-4 '>
@@ -992,13 +881,167 @@ const Header = () => {
                               }`}
                             >
                               <span className='hover:text-[#01997E] hover:font-semibold hover:scale-105 transition ease-in delay-40 duration-200'>
-                                MNI
+                                Minimum Necessary Income (MNI)
                               </span>
                             </li>
                           </ul>
                         </div>
                       </div>
                     )}
+                    {activeItem === 5 && (
+                      <div className=' w-[40%] h-auto mt-4 mb-4'>
+                        <div className='flex flex-col'>
+                          <ul className='text-[15px] flex flex-col items-start justify-start gap-4 '>
+                            <li
+                              // onMouseEnter={() =>
+                              //   handleItemProgramClick(' Business/Invest')
+                              // }
+                              className={`flex items-center justify-between w-full transition ease-in delay-40 duration-200 cursor-pointer ${
+                                selectedProgram === ' Business/Invest' &&
+                                'text-[#01997E] font-semibold'
+                              }`}
+                            >
+                              <span className='hover:text-[#01997E] hover:font-semibold hover:scale-105 transition ease-in delay-40 duration-200'>
+                                Business{' '}
+                              </span>
+
+                              <SvgComponent program={' Business/Invest'} />
+                            </li>
+                            <li
+                              // onMouseEnter={() =>
+                              //   handleItemProgramClick(
+                              //     'PNP Entrepreneur Streams'
+                              //   )
+                              // }
+                              className={`flex items-center justify-between w-full transition ease-in delay-40 duration-200 cursor-pointer ${
+                                selectedProgram ===
+                                  'PNP Entrepreneur Streams' &&
+                                'text-[#01997E] font-semibold'
+                              }`}
+                            >
+                              <span className='hover:text-[#01997E] hover:font-semibold hover:scale-105 transition ease-in delay-40 duration-200'>
+                                PNP Entrepreneur Streams{' '}
+                              </span>
+
+                              <SvgComponent
+                                program={'PNP Entrepreneur Streams'}
+                              />
+                            </li>
+                            <li
+                              // onMouseEnter={() =>
+                              //   handleItemProgramClick(
+                              //     ' Work Permit to PR Pathways'
+                              //   )
+                              // }
+                              className={`flex items-center justify-between w-full transition ease-in delay-40 duration-200 cursor-pointer ${
+                                selectedProgram ===
+                                  ' Work Permit to PR Pathways' &&
+                                'text-[#01997E] font-semibold'
+                              }`}
+                            >
+                              <span className='hover:text-[#01997E] hover:font-semibold hover:scale-105 transition ease-in delay-40 duration-200'>
+                                Work Permit to PR Pathways{' '}
+                              </span>
+
+                              <SvgComponent
+                                program={' Work Permit to PR Pathways'}
+                              />
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    )}
+                    {activeItem === 6 && (
+                      <div className=' w-[40%] h-auto mt-4 mb-4'>
+                        <div className='flex flex-col '>
+                          <ul className='text-[15px] flex flex-col items-start justify-start gap-4 '>
+                            <li
+                              // onMouseEnter={() =>
+                              //   handleItemProgramClick('TRV-Visitor Visa')
+                              // }
+                              className={`flex items-center justify-between w-full transition ease-in delay-40 duration-200 cursor-pointer ${
+                                selectedProgram === 'TRV-Visitor Visa' &&
+                                'text-[#01997E] font-semibold'
+                              }`}
+                            >
+                              <span className='hover:text-[#01997E] hover:font-semibold hover:scale-105 transition ease-in delay-40 duration-200'>
+                                TRV-Visitor Visa
+                              </span>
+                            </li>
+                            <li
+                              // onMouseEnter={() =>
+                              //   handleItemProgramClick('Visa Extension')
+                              // }
+                              className={`flex items-center justify-between w-full transition ease-in delay-40 duration-200 cursor-pointer ${
+                                selectedProgram === 'Visa Extension' &&
+                                'text-[#01997E] font-semibold'
+                              }`}
+                            >
+                              <span className='hover:text-[#01997E] hover:font-semibold hover:scale-105 transition ease-in delay-40 duration-200'>
+                                Visa Extension
+                              </span>
+                            </li>
+                            <li
+                              // onMouseEnter={() =>
+                              //   handleItemProgramClick(' Super visa (linked)')
+                              // }
+                              className={`flex items-center justify-between w-full transition ease-in delay-40 duration-200 cursor-pointer ${
+                                selectedProgram === ' Super visa (linked)' &&
+                                'text-[#01997E] font-semibold'
+                              }`}
+                            >
+                              <span className='hover:text-[#01997E] hover:font-semibold hover:scale-105 transition ease-in delay-40 duration-200'>
+                                Super visa
+                              </span>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    )}
+                    {activeItem === 7 && (
+                      <div className=' w-[40%] h-auto mt-4 mb-4'>
+                        <div className='flex flex-col'>
+                          <ul className='text-[15px] flex flex-col items-start justify-start gap-4'>
+                            <li
+                              // onMouseEnter={() =>
+                              //   handleItemProgramClick(
+                              //     ' Employers Outside Canada'
+                              //   )
+                              // }
+                              className={`flex items-center justify-between w-full transition ease-in delay-40 duration-200 cursor-pointer ${
+                                selectedProgram ===
+                                  ' Employers Outside Canada' &&
+                                'text-[#01997E] font-semibold'
+                              }`}
+                            >
+                              <span className='hover:text-[#01997E] hover:font-semibold hover:scale-105 transition ease-in delay-40 duration-200'>
+                                Employers Outside Canada{' '}
+                              </span>
+
+                              <SvgComponent
+                                program={' Employers Outside Canada'}
+                              />
+                            </li>
+                            <li
+                              // onMouseEnter={() =>
+                              //   handleItemProgramClick('Canadian Employers')
+                              // }
+                              className={`flex items-center justify-between w-full transition ease-in delay-40 duration-200 cursor-pointer ${
+                                selectedProgram === 'Canadian Employers' &&
+                                'text-[#01997E] font-semibold'
+                              }`}
+                            >
+                              <span className='hover:text-[#01997E] hover:font-semibold hover:scale-105 transition ease-in delay-40 duration-200'>
+                                Canadian Employers
+                              </span>
+
+                              <SvgComponent program={'Canadian Employers'} />
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    )}
+
                     {selectedProgram === 'PNP' && activeItem === 1 && (
                       <div className=' w-[35%] auto flex items-start justify-start mt-4 mb-4'>
                         <div className='flex flex-col items-start justify-center'>
@@ -1191,16 +1234,17 @@ const Header = () => {
                                   text={'Federal Skilled Worker Class'}
                                 />
                               </li>
+
                               <li>
                                 {' '}
                                 <HeaderComponent
-                                  text={'Canadian Experience Class (CEC) '}
+                                  text={'Federal Skilled Trades Class '}
                                 />
                               </li>
                               <li>
                                 {' '}
                                 <HeaderComponent
-                                  text={'Federal Skilled Trades Class '}
+                                  text={'Canadian Experience Class (CEC) '}
                                 />
                               </li>
                               <li>
@@ -1212,20 +1256,20 @@ const Header = () => {
                                   textContent={['CRS Score Calculator']}
                                 />
                               </li>
-                              <li>
+                              {/* <li>
                                 {' '}
                                 <HeaderComponent
                                   text={'Express Entry Draws'}
                                 />{' '}
-                              </li>
-                              <li>
+                              </li> */}
+                              {/* <li>
                                 {' '}
                                 <HeaderComponent
                                   text={
                                     'Invitation to Apply (ITA) & the electronic Application for Permanent Residence (eAPR)'
                                   }
                                 />
-                              </li>
+                              </li> */}
                             </ul>
                           </div>
                         </div>
