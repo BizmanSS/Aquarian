@@ -21,7 +21,7 @@ const BoxComponents = ({ color, style, imageUrl, data }) => {
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
     >
-      {hovered && imageUrl && (
+      {/* {hovered && imageUrl && (
         <div className='absolute top-0 left-0 w-full h-full'>
           <img
             src={imageUrl}
@@ -40,7 +40,7 @@ const BoxComponents = ({ color, style, imageUrl, data }) => {
             data={data}
           />
         </div>
-      )}
+      )} */}
       <div className='flex items-start justify-start'>
         <div>
           <div className='text-2xl font-medium'>{data.name}</div>

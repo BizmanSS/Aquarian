@@ -222,6 +222,7 @@ const Component5 = () => {
             />
           </div>
         )}
+
         <BoxComponents
           color={'#FEFFFE'}
           style={{ backgroundColor: '#FEFFFE' }}
