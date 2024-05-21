@@ -6,6 +6,7 @@ import { RiMenu2Fill } from 'react-icons/ri';
 import Instagram from '../../../Assets/Instagram_logo.svg';
 import Youtube from '../../../Assets/youtube.png';
 import Twitter from '../../../Assets/Thread.jpg';
+import Twitter1 from '../../../Assets/Twitter.png';
 import LinkedIn from '../../../Assets/LinkedIn.png';
 import facebook from '../../../Assets/Facebook.png';
 import { CiSearch } from 'react-icons/ci';
@@ -178,6 +179,16 @@ const Header = () => {
                   >
                     <img
                       src={Twitter}
+                      className='cursor-pointer w-[1.2rem] rounded-lg'
+                      alt=''
+                    />
+                  </a>
+                  <a
+                    href='https://www.threads.net/@aquarian_immigration'
+                    className='mx-0 p-2 '
+                  >
+                    <img
+                      src={Twitter1}
                       className='cursor-pointer w-[1.2rem] rounded-lg'
                       alt=''
                     />

@@ -1,16 +1,13 @@
 import { useCallback, useState } from 'react';
 import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
+import { MdChevronLeft, MdChevronRight } from 'react-icons/md';
 
 export function Button2({ content, onClick, active, disabled }) {
   return (
     <button
-      className={`flex flex-col cursor-pointer items-center justify-center w-9 h-9 shadow-[0_4px_10px_rgba(0,0,0,0.03)] text-sm font-normal transition-colors rounded-lg
-      ${active ? 'bg-red-500 text-red-500' : 'text-red-500'}
-      ${
-        !disabled
-          ? 'bg-white hover:bg-red-500 hover:text-white '
-          : 'text-red-300 bg-white cursor-not-allowed'
-      }
+      className={`flex flex-col items-center justify-center w-9 h-9 shadow-[0_4px_10px_rgba(0,0,0,0.03)] text-sm font-normal transition-colors rounded-lg
+      ${active ? ' ' : ''}
+      ${!disabled ? ' ' : ' cursor-not-allowed'}
       `}
       onClick={onClick}
       disabled={disabled}
@@ -62,8 +59,8 @@ function PaginationNav1({
         <Button2
           content={
             <div className='flex ml-1'>
-              <FaChevronLeft size='0.6rem' />
-              <FaChevronLeft size='0.6rem' className='-translate-x-1/2' />
+              <MdChevronLeft size='0.6rem' />
+              <MdChevronLeft size='0.6rem' className='-translate-x-1/2' />
             </div>
           }
           onClick={() => gotoPage(0)}
@@ -75,8 +72,8 @@ function PaginationNav1({
         <Button2
           content={
             <div className='flex ml-1'>
-              <FaChevronRight size='0.6rem' />
-              <FaChevronRight size='0.6rem' className='-translate-x-1/2' />
+              <MdChevronRight size='0.6rem' />
+              <MdChevronRight size='0.6rem' className='-translate-x-1/2' />
             </div>
           }
           onClick={() => gotoPage(pageCount - 1)}

@@ -41,7 +41,7 @@ const Banner = () => {
   };
 
   return (
-    <div className='w-full flex flex-col items-center justify-center mt-[15rem] -mb-[4rem] ml-[0rem] xl:-ml-[2.8rem]'>
+    <div className='w-full flex flex-col items-center justify-center mt-[15rem] -mb-[4rem] ml-[0rem] xl:-ml-[2.8rem] '>
       {!showThumbnail ? (
         <video
           ref={videoRef}
@@ -58,9 +58,23 @@ const Banner = () => {
       ) : (
         <img src={thumbnail} alt='Thumbnail' className='w-[90%]' />
       )}
-      <button className='relative -top-[18rem] md:-top-[24rem] bg-black text-white px-4 md:px-16 py-3 rounded-xl text-sm md:text-lg border-[2px] border-[#01F9E1] font-bold transition ease-in-out delay-70 hover:scale-y-[1.1] hover:scale-x-[1.2]  duration-300'>
-        Start Your Journey NOW!!!
-      </button>
+      <div className='flex flex-col items-center justify-center gap-4 absolute left-[10rem] top-[24rem]'>
+        <div className=' text-white px-4 text-lg md:text-[3.5rem] font-bold mb-3'>
+          Our goal is to help <br /> <br /> you achieve yours
+        </div>
+        <button className=' bg-black text-white px-4 md:px-16 py-3 rounded-xl text-sm md:text-lg border-[2px] border-[#01F9E1] font-bold transition ease-in-out delay-70 hover:scale-y-[1.1] hover:scale-x-[1.1] duration-300'>
+          I want to immigrate permanently to Canada
+        </button>
+        <div className='flex items-center justify-center gap-4'>
+          {' '}
+          <button className=' bg-transparent text-white px-4 md:px-16 py-3 rounded-xl text-sm md:text-lg border-[2px] border-[#01F9E1] font-bold transition ease-in-out delay-70 hover:scale-y-[1.1] hover:scale-x-[1.1] duration-300'>
+            ⁠I want to study
+          </button>
+          <button className=' bg-transparent text-white px-4 md:px-16 py-3 rounded-xl text-sm md:text-lg border-[2px] border-[#01F9E1] font-bold transition ease-in-out delay-70 hover:scale-y-[1.1] hover:scale-x-[1.1] duration-300'>
+            I want to work
+          </button>
+        </div>
+      </div>
       {/* {!isPlaying ? (
         <button
           className='absolute transform  bg-transparent text-white px-3 py-3 rounded-full font-bold transition ease-in-out delay-70  hover:scale-[1.2] hover:bg-black duration-300'

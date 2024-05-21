@@ -12,6 +12,7 @@ import hoveredimg2 from '../../Assets/Rectangle 63.png';
 import { Button2, PaginationNav1Presentation } from '../Pagination/Pagination';
 import { FaChevronLeft, FaChevronRight } from 'react-icons/fa6';
 import { useMobile } from '../globalComponents/MobileContext/IsMobileContext';
+import { MdChevronLeft, MdChevronRight } from 'react-icons/md';
 
 const Component5 = () => {
   const [pageIndex, setPageIndex] = useState(0);
@@ -167,20 +168,18 @@ const Component5 = () => {
       <>
         <Button2
           content={
-            <div className='flex ml-1'>
-              <FaChevronLeft size='0.6rem' />
-              <FaChevronLeft size='0.6rem' className='-translate-x-1/2' />
+            <div className='flex ml-1 bg-[#00F8E1] rounded-md items-center justify-center'>
+              <MdChevronLeft size={30} />
             </div>
           }
           onClick={handlePrevClick}
           disabled={pageIndex === 0}
         />
-        <span className='text-red-500'>{pageIndex + 1}</span>
+        <span className='text-[#009889]'>{pageIndex + 1}</span>
         <Button2
           content={
-            <div className='flex ml-1'>
-              <FaChevronRight size='0.6rem' />
-              <FaChevronRight size='0.6rem' className='-translate-x-1/2' />
+            <div className='ml-1 bg-[#00F8E1] rounded-md flex items-center justify-center'>
+              <MdChevronRight size={30} />
             </div>
           }
           onClick={handleNextClick}
