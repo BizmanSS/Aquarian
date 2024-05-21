@@ -43,7 +43,6 @@ const Component4 = () => {
           <NewsCard />
           <NewsCard />
           <NewsCard />
-          <NewsCard />
         </div>
         <div className='flex items-center justify-end w-full -ml-10 mt-4'>
           <MdChevronLeft

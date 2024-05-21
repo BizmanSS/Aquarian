@@ -388,7 +388,7 @@ const Header = () => {
               )}
               {isHovering && activeItem > 0 && (
                 <div
-                  className={`h-auto bg-[#FFFEFE] px-4 z-40 absolute shadow-2xl 2xl:top-[4.5rem] xl:top-[4rem] top-[3.8rem] left-[13rem] xl:left-[calc(30vw-9rem)] 2xl:left-[19rem] 3xl:left-[26rem] 4xl:left-[31rem] w-[46.0rem] xl:w-[43.0rem] 2xl:w-[55.5rem] rounded-b-xl `}
+                  className={`h-auto bg-[#FFFEFE] px-4 z-40 absolute shadow-2xl 2xl:top-[4.5rem] xl:top-[4rem] top-[3.8rem] left-[13rem] xl:left-[calc(30vw-9rem)] 2xl:left-[19rem] 3xl:left-[26rem] 4xl:left-[31rem] w-[46.0rem] xl:w-[48.0rem] 2xl:w-[54.5rem] rounded-b-xl `}
                   onMouseEnter={handleMouseEnter}
                   onMouseLeave={handleMouseLeave}
                 >
@@ -582,7 +582,7 @@ const Header = () => {
                     )}
                     {activeItem === 2 && (
                       <div className=' w-[40%] h-auto mt-4'>
-                        <div className='flex flex-col'>
+                        <div className=''>
                           <ul className='text-[15px] flex flex-col items-start justify-start gap-4 '>
                             <li
                               // onMouseEnter={() =>
@@ -1612,7 +1612,7 @@ const Header = () => {
                           </div>
                         </div>
                       )}
-                    <div className='h-auto flex flex-col items-start justify-start '>
+                    <div className='w-[10%] h-auto flex flex-col items-start justify-start '>
                       {activeItem === 1 && (
                         <div className='flex items-start justify-center'>
                           <div className='flex flex-col items-start justify-center'>
@@ -1620,7 +1620,7 @@ const Header = () => {
                               Immigrate
                             </div> */}
                             {!selectedProgram && (
-                              <div className='ml-14'>
+                              <div className='ml-0 2xl:ml-14'>
                                 {' '}
                                 <div className='px-6 mt-4 w-[25rem]'>
                                   <img src={clipart1} alt='clipart' />
@@ -1639,12 +1639,12 @@ const Header = () => {
                             Work
                           </div> */}
                           {!selectedProgram && (
-                            <div className='ml-14'>
+                            <div className='ml-0 2xl:ml-14'>
                               {' '}
                               <div className='px-6 mt-4 w-[25rem]'>
                                 <img src={clipart2} alt='clipart' />
                               </div>
-                              <p className='ml-6 font-semibold mt-4'>
+                              <p className='ml-6 font-semibold mt-4 w-[20rem]'>
                                 Tap into the rich employment market of Canada
                                 for exciting opportunities
                               </p>
@@ -1658,12 +1658,12 @@ const Header = () => {
                             Study
                           </div> */}
                           {!selectedProgram && (
-                            <div className='ml-14'>
+                            <div className='ml-0 2xl:ml-14'>
                               {' '}
                               <div className='px-6 mt-4 w-[25rem]'>
                                 <img src={clipart3} alt='clipart' />
                               </div>
-                              <p className='ml-6 font-semibold mt-4'>
+                              <p className='ml-6 font-semibold mt-4 w-[20rem]'>
                                 Fulfill your academic dreams and study in
                                 Canada, at the top uni
                               </p>
@@ -1677,12 +1677,12 @@ const Header = () => {
                             Invest
                           </div> */}
                           {!selectedProgram && (
-                            <div className='ml-14'>
+                            <div className='ml-0 2xl:ml-14'>
                               {' '}
                               <div className='px-6 mt-4 w-[25rem]'>
                                 <img src={clipart4} alt='clipart' />
                               </div>
-                              <p className='ml-6 font-semibold mt-4'>
+                              <p className='ml-6 font-semibold mt-4 w-[20rem]'>
                                 Achieve new heights by starting your own
                                 business in Canada
                               </p>
@@ -1696,12 +1696,12 @@ const Header = () => {
                             Visit
                           </div> */}
                           {!selectedProgram && (
-                            <div className='ml-14'>
+                            <div className='ml-0 2xl:ml-14'>
                               {' '}
                               <div className='px-6 mt-4 w-[25rem]'>
                                 <img src={clipart5} alt='clipart' />
                               </div>
-                              <p className='ml-6 font-semibold mt-4'>
+                              <p className='ml-6 font-semibold mt-4 w-[20rem]'>
                                 Visit and experience the beauty and diversity of
                                 canada
                               </p>
@@ -1715,12 +1715,12 @@ const Header = () => {
                             Employers
                           </div> */}
                           {!selectedProgram && (
-                            <div className='ml-14'>
+                            <div className='ml-0 2xl:ml-14'>
                               {' '}
                               <div className='px-6 mt-4 w-[25rem]'>
                                 <img src={clipart6} alt='clipart' />
                               </div>
-                              <p className='ml-6 font-semibold mt-4'>
+                              <p className='ml-6 font-semibold mt-4 w-[20rem]'>
                                 Expand your workforce through intercompany
                                 transfers
                               </p>
@@ -1734,12 +1734,12 @@ const Header = () => {
                             Sponsorship
                           </div> */}
                           {!selectedProgram && (
-                            <div className='ml-14'>
+                            <div className='ml-0 2xl:ml-14'>
                               {' '}
                               <div className='px-6 mt-4 w-[25rem]'>
                                 <img src={clipart7} alt='clipart' />
                               </div>
-                              <p className='ml-6 font-semibold mt-4'>
+                              <p className='ml-6 font-semibold mt-4 w-[20rem]'>
                                 Bring your loved ones closer to you
                               </p>
                             </div>
