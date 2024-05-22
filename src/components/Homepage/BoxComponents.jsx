@@ -24,7 +24,7 @@ const BoxComponents = ({ color, style, imageUrl, data }) => {
       style={{
         ...style,
         backgroundColor: color,
-        maxWidth: hovered ? '32rem' : '17rem',
+        maxWidth: hovered ? '34rem' : '17rem',
         transition: 'all 0.4s ease-in',
       }}
       onMouseEnter={() => setHovered(true)}
