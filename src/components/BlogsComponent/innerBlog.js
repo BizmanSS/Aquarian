@@ -90,7 +90,7 @@ const BlogPosts = () => {
           <img alt="" src={image} />
         </a>
         <p1>{date}</p1>
-        <h1>{title}</h1>
+        <a href={path}><h1>{title}</h1></a>
         <p2>
           {description}{" "}
           <a style={{ color: "#b90124", fontStyle: "italic" }} href={path}>
@@ -124,7 +124,7 @@ const BlogPosts = () => {
           <img alt="" src={image} />
         </a>
         <div>
-          <h1>{title}</h1>
+        <a href={path}><h1>{title}</h1></a>
           <p2>
             <a href={path}>Know more{" >"}</a>
           </p2>
@@ -156,10 +156,30 @@ const BlogPosts = () => {
           <img alt="" src={image} />
         </a>
         <div>
-          <h1>{title}</h1>
+        <a href={path}><h1>{title}</h1></a>
           <p2>
             <a href={path}>Know more{" >"}</a>
           </p2>
+        </div>
+      </div>
+    );
+  };
+  const keywords = [
+    {
+      title: "New Year Edition",
+    },
+    {
+      title: "New Year Edition",
+    },
+    {
+      title: "New Year Edition",
+    },
+  ];
+  const Keywords = ({ title }) => {
+    return (
+      <div className="post-card-keywords">
+        <div>
+        <h1>{title}</h1>
         </div>
       </div>
     );
@@ -230,6 +250,12 @@ const InnerBlog = ({ title, description, date, image}) => {
       </div>
       <div className="left-blog">
         <div>
+        <h1 className="title-heading">Keywords</h1>
+          <div className="blog-card-recent">
+            {keywords.map((post, index) => (
+              <Keywords key={index} {...post} />
+            ))}
+          </div>
           <h1 className="title-heading">Recent Blogs</h1>
           <div className="blog-card-recent">
             {recentBlogs.map((post, index) => (

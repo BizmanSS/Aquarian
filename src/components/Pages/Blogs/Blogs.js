@@ -60,7 +60,7 @@ const BlogPosts = () => {
           <img alt="" src={image} />
         </a>
         <p1>{date}</p1>
-        <h1>{title}</h1>
+        <a href={path}><h1>{title}</h1></a>
         <p2>
           {description}{" "}
           <a style={{ color: "#b90124", fontStyle: "italic" }} href={path}>
@@ -94,7 +94,7 @@ const BlogPosts = () => {
           <img alt="" src={image} />
         </a>
         <div>
-          <h1>{title}</h1>
+        <a href={path}><h1>{title}</h1></a>
           <p2>
             <a href={path}>Know more{" >"}</a>
           </p2>
@@ -126,7 +126,7 @@ const BlogPosts = () => {
           <img alt="" src={image} />
         </a>
         <div>
-          <h1>{title}</h1>
+        <a href={path}><h1>{title}</h1></a>
           <p2>
             <a href={path}>Know more{" >"}</a>
           </p2>
