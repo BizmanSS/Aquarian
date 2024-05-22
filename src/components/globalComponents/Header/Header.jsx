@@ -224,7 +224,7 @@ const Header = () => {
 
               {isHovering ? (
                 <ul
-                  className={`flex items-center justify-center xl:text-[15px] 2xl:text-[16px] text-white gap-0  2xl:gap-2 py-3 px-4 absolute left-[12rem] xl:left-[calc(30vw-10rem)] 2xl:left-[18rem] 3xl:left-[25rem] 4xl:left-[30rem] rounded-t-xl overflow-hidden `}
+                  className={`flex items-center justify-center xl:text-[15px] 2xl:text-[16px] text-white gap-2 xl:gap-3 2xl:gap-4 absolute left-[12rem] xl:left-[calc(30vw-10rem)] 2xl:left-[18rem] 3xl:left-[25rem] 4xl:left-[30rem] overflow-hidden `}
                   onMouseEnter={handleMouseEnter}
                   onMouseLeave={handleMouseLeave}
                 >
@@ -240,7 +240,7 @@ const Header = () => {
                 </li> */}
                   <li
                     onMouseEnter={() => handleItemHover(1)}
-                    className={`cursor-pointer  px-4 py-2.5 lg:w-auto xl:w-[6rem] 2xl:w-[6.5rem] flex items-center justify-center ${
+                    className={`cursor-pointer  flex px-4 py-2.5 justify-center ${
                       activeItem === 1
                         ? 'border-b-[3px] border-b-[#009889] bg-white text-black'
                         : 'border-b-[3px] border-b-transparent'
@@ -250,7 +250,7 @@ const Header = () => {
                   </li>
                   <li
                     onMouseEnter={() => handleItemHover(2)}
-                    className={`cursor-pointer  px-4 py-2.5 lg:w-auto xl:w-[6rem] 2xl:w-[6.5rem] flex items-center justify-center ${
+                    className={`cursor-pointer  flex px-4 py-2.5 justify-center ${
                       activeItem === 2
                         ? 'border-b-[3px] border-b-[#009889] bg-white text-black'
                         : 'border-b-[3px] border-b-transparent'
@@ -260,7 +260,7 @@ const Header = () => {
                   </li>
                   <li
                     onMouseEnter={() => handleItemHover(3)}
-                    className={`cursor-pointer  px-4 py-2.5 lg:w-auto xl:w-[6rem] 2xl:w-[6.5rem] flex items-center justify-center ${
+                    className={`cursor-pointer  flex px-4 py-2.5 justify-center ${
                       activeItem === 3
                         ? 'border-b-[3px] border-b-[#009889] bg-white text-black'
                         : 'border-b-[3px] border-b-transparent'
@@ -270,7 +270,7 @@ const Header = () => {
                   </li>
                   <li
                     onMouseEnter={() => handleItemHover(4)}
-                    className={`cursor-pointer  px-4 py-2.5 lg:w-auto xl:w-[6rem] 2xl:w-[6.5rem] flex items-center justify-center ${
+                    className={`cursor-pointer  flex px-4 py-2.5 justify-center ${
                       activeItem === 4
                         ? 'border-b-[3px] border-b-[#009889] bg-white text-black'
                         : 'border-b-[3px] border-b-transparent'
@@ -280,7 +280,7 @@ const Header = () => {
                   </li>
                   <li
                     onMouseEnter={() => handleItemHover(5)}
-                    className={`cursor-pointer  px-4 py-2.5 lg:w-auto xl:w-[6rem] 2xl:w-[6.5rem] flex items-center justify-center ${
+                    className={`cursor-pointer  flex px-4 py-2.5 justify-center ${
                       activeItem === 5
                         ? 'border-b-[3px] border-b-[#009889] bg-white text-black'
                         : 'border-b-[3px] border-b-transparent'
@@ -290,7 +290,7 @@ const Header = () => {
                   </li>
                   <li
                     onMouseEnter={() => handleItemHover(6)}
-                    className={`cursor-pointer  px-4 py-2.5 lg:w-auto xl:w-[6.5rem] 2xl:w-[7rem] flex items-center justify-center ${
+                    className={`cursor-pointer  flex px-4 py-2.5 justify-center ${
                       activeItem === 6
                         ? 'border-b-[3px] border-b-[#009889] bg-white text-black'
                         : 'border-b-[3px] border-b-transparent'
@@ -300,7 +300,7 @@ const Header = () => {
                   </li>
                   <li
                     onMouseEnter={() => handleItemHover(7)}
-                    className={`cursor-pointer  px-4 py-2.5 lg:w-auto xl:w-[6.5rem] 2xl:w-[7rem] flex items-center justify-center ${
+                    className={`cursor-pointer  flex px-4 py-2.5 justify-center ${
                       activeItem === 7
                         ? 'border-b-[3px] border-b-[#009889] bg-white text-black'
                         : 'border-b-[3px] border-b-transparent'
@@ -311,7 +311,7 @@ const Header = () => {
                 </ul>
               ) : (
                 <ul
-                  className={`flex items-center justify-center text-white xl:text-[15px] 2xl:text-[16px] gap-0 2xl:gap-2 py-3 px-4 absolute left-[12rem] xl:left-[calc(30vw-10rem)] 2xl:left-[18rem] 3xl:left-[25rem] 4xl:left-[30rem] rounded-t-xl hover:text-black overflow-hidden `}
+                  className={`flex items-center justify-center text-white xl:text-[15px] 2xl:text-[16px] gap-2 xl:gap-3 2xl:gap-4  absolute left-[12rem] xl:left-[calc(30vw-10rem)] 2xl:left-[18rem] 3xl:left-[25rem] 4xl:left-[30rem] hover:text-black overflow-hidden `}
                   onMouseEnter={handleMouseEnter}
                   onMouseLeave={handleMouseLeave}
                 >
@@ -327,9 +327,9 @@ const Header = () => {
                 </li> */}
                   <li
                     onMouseEnter={() => handleItemHover(1)}
-                    className={`cursor-pointer transition ease-in delay-100 duration-300 px-4 py-2.5 lg:w-auto xl:w-[6rem] 2xl:w-[6.5rem] flex items-center justify-center ${
+                    className={`cursor-pointer transition ease-in delay-100 duration-300  flex px-4 py-2.5 justify-center ${
                       activeItem === 1
-                        ? ''
+                        ? 'border-b-[3px] border-b-transparent'
                         : 'border-b-[3px] border-b-transparent'
                     }`}
                   >
@@ -337,9 +337,9 @@ const Header = () => {
                   </li>
                   <li
                     onMouseEnter={() => handleItemHover(2)}
-                    className={`cursor-pointer transition ease-in delay-100 duration-300 px-4 py-2.5 lg:w-auto xl:w-[6rem] 2xl:w-[6.5rem] flex items-center justify-center ${
+                    className={`cursor-pointer transition ease-in delay-100 duration-300  flex px-4 py-2.5 justify-center ${
                       activeItem === 2
-                        ? ''
+                        ? 'border-b-[3px] border-b-transparent'
                         : 'border-b-[3px] border-b-transparent'
                     }`}
                   >
@@ -347,9 +347,9 @@ const Header = () => {
                   </li>
                   <li
                     onMouseEnter={() => handleItemHover(3)}
-                    className={`cursor-pointer transition ease-in delay-100 duration-300 px-4 py-2.5 lg:w-auto xl:w-[6rem] 2xl:w-[6.5rem] flex items-center justify-center ${
+                    className={`cursor-pointer transition ease-in delay-100 duration-300  flex px-4 py-2.5 justify-center ${
                       activeItem === 3
-                        ? ''
+                        ? 'border-b-[3px] border-b-transparent'
                         : 'border-b-[3px] border-b-transparent'
                     }`}
                   >
@@ -357,9 +357,9 @@ const Header = () => {
                   </li>
                   <li
                     onMouseEnter={() => handleItemHover(4)}
-                    className={`cursor-pointer transition ease-in delay-100 duration-300 px-4 py-2.5 lg:w-auto xl:w-[6rem] 2xl:w-[6.5rem] flex items-center justify-center ${
+                    className={`cursor-pointer transition ease-in delay-100 duration-300  flex px-4 py-2.5 justify-center ${
                       activeItem === 4
-                        ? ''
+                        ? 'border-b-[3px] border-b-transparent'
                         : 'border-b-[3px] border-b-transparent'
                     }`}
                   >
@@ -367,9 +367,9 @@ const Header = () => {
                   </li>
                   <li
                     onMouseEnter={() => handleItemHover(5)}
-                    className={`cursor-pointer transition ease-in delay-100 duration-300 px-4 py-2.5 lg:w-auto xl:w-[6rem] 2xl:w-[6.5rem] flex items-center justify-center ${
+                    className={`cursor-pointer transition ease-in delay-100 duration-300  flex px-4 py-2.5 justify-center ${
                       activeItem === 5
-                        ? ''
+                        ? 'border-b-[3px] border-b-transparent'
                         : 'border-b-[3px] border-b-transparent'
                     }`}
                   >
@@ -377,9 +377,9 @@ const Header = () => {
                   </li>
                   <li
                     onMouseEnter={() => handleItemHover(6)}
-                    className={`cursor-pointer transition ease-in delay-100 duration-300 px-4 py-2.5 lg:w-auto xl:w-[6.5rem] 2xl:w-[7rem] flex items-center justify-center ${
+                    className={`cursor-pointer transition ease-in delay-100 duration-300  flex px-4 py-2.5 justify-center ${
                       activeItem === 6
-                        ? ''
+                        ? 'border-b-[3px] border-b-transparent'
                         : 'border-b-[3px] border-b-transparent'
                     }`}
                   >
@@ -387,9 +387,9 @@ const Header = () => {
                   </li>
                   <li
                     onMouseEnter={() => handleItemHover(7)}
-                    className={`cursor-pointer transition ease-in delay-100 duration-300 px-4 py-2.5 lg:w-auto xl:w-[6.5rem] 2xl:w-[7rem] flex items-center justify-center ${
+                    className={`cursor-pointer transition ease-in delay-100 duration-300  flex px-4 py-2.5 justify-center ${
                       activeItem === 7
-                        ? ''
+                        ? 'border-b-[3px] border-b-transparent'
                         : 'border-b-[3px] border-b-transparent'
                     }`}
                   >
@@ -399,7 +399,7 @@ const Header = () => {
               )}
               {isHovering && activeItem > 0 && (
                 <div
-                  className={`h-auto bg-[#FFFEFE] px-4 z-40 absolute shadow-2xl 2xl:top-[4.5rem] xl:top-[4rem] top-[3.8rem] left-[13rem] xl:left-[calc(30vw-9rem)] 2xl:left-[19rem] 3xl:left-[26rem] 4xl:left-[31rem] w-[46.0rem] xl:w-[48.0rem] 2xl:w-[54.5rem] rounded-b-xl `}
+                  className={`h-auto bg-[#FFFEFE] px-4 z-40 absolute shadow-2xl 2xl:top-[4.5rem] xl:top-[4rem] top-[3.8rem] left-[12rem] xl:left-[calc(30vw-10rem)] 2xl:left-[18rem] 3xl:left-[25rem] 4xl:left-[30rem] w-[46.0rem] xl:w-[48.0rem] 2xl:w-[54.5rem] rounded-b-xl `}
                   onMouseEnter={handleMouseEnter}
                   onMouseLeave={handleMouseLeave}
                 >
@@ -412,7 +412,7 @@ const Header = () => {
                     {activeItem === 1 && (
                       <div className=' w-[40%] h-auto mt-4'>
                         <div className='flex flex-col '>
-                          <ul className='text-[15px] flex flex-col items-start justify-start gap-4 '>
+                          <ul className='text-[14px] 2xl:text-[15px] flex flex-col items-start justify-start gap-4 '>
                             <li
                               className={`flex items-center justify-between w-full transition ease-in delay-40 duration-200 cursor-pointer ${
                                 selectedProgram === 'Permanent Residency' &&
