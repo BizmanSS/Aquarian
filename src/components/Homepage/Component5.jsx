@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import img1 from '../../Assets/image 37.png';
 import img2 from '../../Assets/image 38.png';
 import img3 from '../../Assets/image 39.png';
@@ -190,13 +190,13 @@ const Component5 = () => {
   };
 
   return (
-    <div className='w-[99%] h-auto px-[8rem]'>
-      <div className='w-[90%] flex items-center justify-center'>
-        <div className='text-[3rem] font-semibold mb-10'>
+    <div className='w-[99%] h-auto'>
+      <div className='w-[90%] flex items-center justify-center '>
+        <div className='text-[3rem] font-semibold mb-10 '>
           Our <span className='text-[#019989]'>Testimonials</span>
         </div>
       </div>
-      <div className='flex items-center justify-end gap-4 my-4 relative'>
+      <div className='flex items-center justify-end gap-4 my-4 relative 2xl:mx-[8rem] mx-[6rem]'>
         {!isMobile && (
           <div className='absolute top-0 flex items-center justify-center -left-20'>
             <img src={img2} alt='logo' className='w-[7rem] relative -top-20' />
@@ -236,7 +236,7 @@ const Component5 = () => {
           data={data[activeIndex + 1]}
         />
       </div>
-      <div className='flex items-center justify-end gap-4 my-4 relative'>
+      <div className='flex items-center justify-end gap-4 my-4 relative 2xl:mx-[8rem] mx-[6rem]'>
         {!isMobile && (
           <div className='absolute top-0 flex items-center justify-center -left-20'>
             {' '}
@@ -271,7 +271,7 @@ const Component5 = () => {
           data={data[activeIndex + 4]}
         />
       </div>
-      <div className='flex items-center justify-end gap-4 my-4'>
+      <div className='flex items-center justify-end gap-4 my-4 2xl:mr-[8rem] mr-[6rem]'>
         <BoxComponents
           color={'#FEFFFE'}
           style={{ backgroundColor: '#01F8E0' }}
@@ -298,7 +298,7 @@ const Component5 = () => {
         />
       </div>
 
-      <div className='w-full flex items-center justify-end gap-8 cursor-pointer p-4'>
+      <div className='w-full flex items-center justify-end gap-8 cursor-pointer p-4 px-[6rem]'>
         {/* <PaginationNav1Presentation /> */}
         <Paginate />
       </div>
