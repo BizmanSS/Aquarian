@@ -66,7 +66,7 @@ const BoxComponents = ({ color, style, imageUrl, data }) => {
                   opacity: visible ? 1 : 0,
                   transition: 'opacity 0.3s ease-in 0.3s',
                 }}
-                className='font-semibold tracking-wide text-[10px] text-center -mt-1'
+                className='font-semibold tracking-tight text-[10px] text-center -mt-1'
               >
                 {data.designation}
               </div>
@@ -110,10 +110,10 @@ const BoxComponents = ({ color, style, imageUrl, data }) => {
               <MdArrowOutward />
             </div>
           </div>
-          <div className='text-[11px] mt-4 font-light font-mono pr-2 mb-2'>
+          <div className='text-[11px] mt-4 font-light font-mono pr-2'>
             {data.describe.slice(0, 230)}...
           </div>
-          <div className='text-sm font-mono'>Read more...</div>
+          {/* <div className='text-sm font-mono'>Read more...</div> */}
         </>
       )}
     </div>
